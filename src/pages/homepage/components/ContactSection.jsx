@@ -29,7 +29,7 @@ const ContactSection = () => {
     {
       icon: 'MessageCircle',
       title: 'WhatsApp',
-      description: 'Atendimento em tempo integral',
+      description: 'Atendimento via WhatsApp é em tempo integral.',
       value: '(66) 99911-1314',
       action: () => window.open('https://wa.me/5566999111314', '_blank'),
       color: 'text-green-600',
@@ -38,7 +38,7 @@ const ContactSection = () => {
     {
       icon: 'Phone',
       title: 'Telefone',
-      description: 'Mediante agendamento',
+      description: 'Atendimento mediante agendamento.',
       value: '(66) 99911-1314',
       action: () => window.location.href = 'tel:+5566999111314',
       color: 'text-blue-600',
@@ -125,8 +125,7 @@ const ContactSection = () => {
               </h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-slate-600">OAB/MT</span>
-                  <span className="font-medium text-slate-900">14.159-B</span>
+                  <span className="text-slate-600">OAB/MT 14.159-B</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-600">Endereço</span>

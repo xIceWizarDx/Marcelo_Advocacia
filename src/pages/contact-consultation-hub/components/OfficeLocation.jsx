@@ -10,13 +10,13 @@ const OfficeLocation = () => {
   };
 
   const businessHours = [
-    { day: 'Segunda-feira', hours: 'Mediante agendamento', isToday: false },
-    { day: 'Terça-feira', hours: 'Mediante agendamento', isToday: false },
-    { day: 'Quarta-feira', hours: 'Mediante agendamento', isToday: true },
-    { day: 'Quinta-feira', hours: 'Mediante agendamento', isToday: false },
-    { day: 'Sexta-feira', hours: 'Mediante agendamento', isToday: false },
-    { day: 'Sábado', hours: 'Mediante agendamento', isToday: false },
-    { day: 'Domingo', hours: 'Mediante agendamento', isToday: false }
+    { day: 'Segunda-feira', hours: 'Atendimento mediante agendamento', isToday: false },
+    { day: 'Terça-feira', hours: 'Atendimento mediante agendamento', isToday: false },
+    { day: 'Quarta-feira', hours: 'Atendimento mediante agendamento', isToday: true },
+    { day: 'Quinta-feira', hours: 'Atendimento mediante agendamento', isToday: false },
+    { day: 'Sexta-feira', hours: 'Atendimento mediante agendamento', isToday: false },
+    { day: 'Sábado', hours: 'Atendimento mediante agendamento', isToday: false },
+    { day: 'Domingo', hours: 'Atendimento mediante agendamento', isToday: false }
   ];
 
   const facilities = [
@@ -158,7 +158,7 @@ const OfficeLocation = () => {
                 <Icon name="MessageCircle" size={24} />
               </div>
               <h4 className="font-semibold mb-1">WhatsApp</h4>
-              <p className="text-indigo-100">Atendimento em tempo integral</p>
+              <p className="text-indigo-100">Atendimento via WhatsApp é em tempo integral.</p>
             </div>
           </div>
         </div>
