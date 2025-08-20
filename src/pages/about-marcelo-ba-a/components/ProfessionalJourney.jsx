@@ -6,7 +6,7 @@ const ProfessionalJourney = () => {
     {
       year: "2015",
       title: "Início da Carreira",
-      description: "Formação em Direito pela Universidade Federal de Mato Grosso (UFMT) e inscrição na OAB/MT",
+      description: "Formação em Direito pela Universidade Federal de Mato Grosso (UFMT) e inscrição na OAB/MT 14.159-B",
       icon: "GraduationCap",
       color: "bg-emerald-500"
     },
@@ -34,7 +34,7 @@ const ProfessionalJourney = () => {
     {
       year: "2023",
       title: "Reconhecimento Profissional",
-      description: "Palestrante em eventos jurídicos regionais e membro ativo da Comissão de Direito Civil da OAB/MT",
+      description: "Palestrante em eventos jurídicos regionais e membro ativo da Comissão de Direito Civil da OAB/MT 14.159-B",
       icon: "Award",
       color: "bg-amber-500"
     },
