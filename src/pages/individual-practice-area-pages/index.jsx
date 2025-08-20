@@ -56,9 +56,32 @@ const IndividualPracticeAreaPages = () => {
         <meta name="keywords" content={`${currentArea === 'civil' ? 'direito civil, contratos, responsabilidade civil' : currentArea === 'consumer' ? 'direito consumidor, defesa consumidor, vícios produtos' : currentArea === 'family' ? 'direito família, divórcio, guarda, pensão' : 'direito empresarial, consultoria jurídica, contratos comerciais'}, advogado rondonópolis, marcelo baía`} />
         <meta property="og:title" content={getPageTitle()} />
         <meta property="og:description" content={getPageDescription()} />
+        <meta property="og:image" content="/imagens/logo-512x512.png" />
+        <meta name="twitter:image" content="/imagens/logo-512x512.png" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://marcelobaia.adv.br/individual-practice-area-pages?area=${currentArea}`} />
         <link rel="canonical" href={`https://marcelobaia.adv.br/individual-practice-area-pages?area=${currentArea}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LegalService",
+            name: "Marcelo Baía Advocacia",
+            telephone: "+55 66 99911-1314",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Rua Tiradentes, 1888",
+              addressLocality: "Rondonópolis",
+              addressRegion: "MT",
+              postalCode: "78700-028",
+              addressCountry: "BR",
+            },
+            openingHoursSpecification: {
+              "@type": "OpeningHoursSpecification",
+              description:
+                "Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.",
+            },
+          })}
+        </script>
       </Helmet>
       <div className="min-h-screen bg-white">
         <Header />

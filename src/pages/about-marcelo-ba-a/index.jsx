@@ -31,8 +31,31 @@ const AboutMarceloBaia = () => {
         <meta name="keywords" content="advogado rondonópolis, marcelo baía, direito civil, direito consumidor, direito família, direito empresarial, oab mt" />
         <meta property="og:title" content="Sobre Marcelo Baía - Advogado Especialista em Rondonópolis/MT" />
         <meta property="og:description" content="Conheça a trajetória profissional de Marcelo Baía, advogado especialista com mais de 8 anos de experiência em Rondonópolis/MT." />
+        <meta property="og:image" content="/imagens/logo-512x512.png" />
+        <meta name="twitter:image" content="/imagens/logo-512x512.png" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://marcelobaia.adv.br/about-marcelo-ba-a" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LegalService",
+            name: "Marcelo Baía Advocacia",
+            telephone: "+55 66 99911-1314",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Rua Tiradentes, 1888",
+              addressLocality: "Rondonópolis",
+              addressRegion: "MT",
+              postalCode: "78700-028",
+              addressCountry: "BR",
+            },
+            openingHoursSpecification: {
+              "@type": "OpeningHoursSpecification",
+              description:
+                "Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.",
+            },
+          })}
+        </script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
