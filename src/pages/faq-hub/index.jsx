@@ -181,24 +181,6 @@ const FAQHub = () => {
     }
   };
 
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "Marcelo Baía Advocacia",
-    "url": "https://marcelobaia.adv.br",
-    "image": "/icon-512.png",
-    "telephone": "+55 66 99911-1314",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Tiradentes, 1888",
-      "addressLocality": "Rondonópolis",
-      "addressRegion": "MT",
-      "postalCode": "78700-028",
-      "addressCountry": "BR",
-    },
-    "description": "Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.",
-  };
-
   return (
     <>
       <Helmet>
@@ -210,13 +192,6 @@ const FAQHub = () => {
         <meta property="og:description" content="Encontre respostas para as principais dúvidas jurídicas. FAQ completo sobre direito civil, consumidor, família e empresarial." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://marcelobaia.adv.br/faq-hub" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta property="og:image" content="/icon-512.png" />
-        <meta name="twitter:image" content="/icon-512.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
