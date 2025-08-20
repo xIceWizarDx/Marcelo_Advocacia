@@ -1,8 +1,85 @@
-
-
 # php -- BEGIN cPanel-generated handler, do not edit
 # Defina o pacote “ea-php83” como a linguagem padrão de programação “PHP”.
 <IfModule mime_module>
   AddHandler application/x-httpd-ea-php83___lsphp .php .php8 .phtml
 </IfModule>
 # php -- END cPanel-generated handler, do not edit
+
+# ----------------------------------------------------------------------
+# Segurança e otimização de desempenho
+# ----------------------------------------------------------------------
+
+# Habilita o mecanismo de reescrita e define regras básicas
+RewriteEngine On
+Options +FollowSymLinks
+Options -Indexes
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule . index.php [L,QSA]
+
+# Impede o acesso a arquivos ocultos e sensíveis
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+<FilesMatch "(composer\.json|composer\.lock|package\.json|package-lock\.json|jsconfig\.json|vite\.config\.mjs|tailwind\.config\.js|postcss\.config\.js|README\.md)">
+  Require all denied
+</FilesMatch>
+
+# ----------------------------------------------------------------------
+# Compressão de arquivos de texto
+# ----------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/xml text/css text/plain
+  AddOutputFilterByType DEFLATE image/svg+xml application/xhtml+xml application/xml
+  AddOutputFilterByType DEFLATE application/rdf+xml application/rss+xml application/atom+xml
+  AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-otf
+  AddOutputFilterByType DEFLATE font/truetype font/opentype
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Expire headers
+# ----------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 5 seconds"
+  ExpiresByType image/x-icon "access plus 31536000 seconds"
+  ExpiresByType image/jpeg "access plus 31536000 seconds"
+  ExpiresByType image/png "access plus 31536000 seconds"
+  ExpiresByType image/gif "access plus 31536000 seconds"
+  ExpiresByType application/x-shockwave-flash "access plus 31536000 seconds"
+  ExpiresByType text/css "access plus 31536000 seconds"
+  ExpiresByType text/javascript "access plus 31536000 seconds"
+  ExpiresByType application/javascript "access plus 31536000 seconds"
+  ExpiresByType application/x-javascript "access plus 31536000 seconds"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Cache-Control e cabeçalhos de segurança
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+  <FilesMatch "\\.(ico|jpe?g|png|gif|swf)$">
+    Header set Cache-Control "public"
+  </FilesMatch>
+  <FilesMatch "\\.(css)$">
+    Header set Cache-Control "public"
+  </FilesMatch>
+  <FilesMatch "\\.(js)$">
+    Header set Cache-Control "private"
+  </FilesMatch>
+  <FilesMatch "\\.(x?html?|php)$">
+    Header set Cache-Control "private, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\\.(woff|woff2|ttf|otf|eot)$">
+    Header set Cache-Control "max-age=31536000, private, must-revalidate"
+  </FilesMatch>
+
+  # Cabeçalhos de segurança
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+</IfModule>
+

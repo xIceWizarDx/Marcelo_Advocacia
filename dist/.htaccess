@@ -1,12 +1,74 @@
+# Configurações MIME
 <IfModule mod_mime.c>
   AddType text/javascript .js
 </IfModule>
 
+# Reescrita para SPA
+Options +FollowSymLinks
+Options -Indexes
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+  RewriteRule . /index.html [L,QSA]
 </IfModule>
+
+# Compressão de arquivos de texto
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/xml text/css text/plain
+  AddOutputFilterByType DEFLATE image/svg+xml application/xhtml+xml application/xml
+  AddOutputFilterByType DEFLATE application/rdf+xml application/rss+xml application/atom+xml
+  AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-otf
+  AddOutputFilterByType DEFLATE font/truetype font/opentype
+</IfModule>
+
+# Expire headers
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 5 seconds"
+  ExpiresByType image/x-icon "access plus 31536000 seconds"
+  ExpiresByType image/jpeg "access plus 31536000 seconds"
+  ExpiresByType image/png "access plus 31536000 seconds"
+  ExpiresByType image/gif "access plus 31536000 seconds"
+  ExpiresByType application/x-shockwave-flash "access plus 31536000 seconds"
+  ExpiresByType text/css "access plus 31536000 seconds"
+  ExpiresByType text/javascript "access plus 31536000 seconds"
+  ExpiresByType application/javascript "access plus 31536000 seconds"
+  ExpiresByType application/x-javascript "access plus 31536000 seconds"
+</IfModule>
+
+# Cache-Control e cabeçalhos de segurança
+<IfModule mod_headers.c>
+  <FilesMatch "\\.(ico|jpe?g|png|gif|swf)$">
+    Header set Cache-Control "public"
+  </FilesMatch>
+  <FilesMatch "\\.(css)$">
+    Header set Cache-Control "public"
+  </FilesMatch>
+  <FilesMatch "\\.(js)$">
+    Header set Cache-Control "private"
+  </FilesMatch>
+  <FilesMatch "\\.(x?html?)$">
+    Header set Cache-Control "private, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\\.(woff|woff2|ttf|otf|eot)$">
+    Header set Cache-Control "max-age=31536000, private, must-revalidate"
+  </FilesMatch>
+
+  # Cabeçalhos de segurança
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+</IfModule>
+
+# Bloqueia arquivos ocultos
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
