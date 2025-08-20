@@ -190,8 +190,8 @@ const FAQHub = () => {
         <link rel="canonical" href="https://marcelobaia.adv.br/faq-hub" />
         <meta property="og:title" content="FAQ - Perguntas Frequentes | Marcelo Baía Advocacia" />
         <meta property="og:description" content="Encontre respostas para as principais dúvidas jurídicas. FAQ completo sobre direito civil, consumidor, família e empresarial." />
-        <meta property="og:image" content="/imagens/logo-512x512.png" />
-        <meta name="twitter:image" content="/imagens/logo-512x512.png" />
+        <meta property="og:image" content="/assets/images/logo-512x512.png" />
+        <meta name="twitter:image" content="/assets/images/logo-512x512.png" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://marcelobaia.adv.br/faq-hub" />
         <script type="application/ld+json">
