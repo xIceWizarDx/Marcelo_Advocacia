@@ -13,7 +13,7 @@ const ContactMethods = ({ onWhatsAppClick, onPhoneClick, onEmailClick }) => {
       buttonColor: 'bg-green-600 hover:bg-green-700',
       action: onWhatsAppClick,
       buttonText: 'Conversar Agora',
-      details: '(66) 99911-1314 • Atendimento em tempo integral',
+      details: '(66) 99911-1314 • Atendimento via WhatsApp é em tempo integral.',
       recommended: true
     },
     {

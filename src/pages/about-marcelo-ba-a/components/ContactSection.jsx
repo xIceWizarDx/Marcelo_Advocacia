@@ -17,7 +17,7 @@ const ContactSection = () => {
     {
       icon: "MessageCircle",
       title: "WhatsApp",
-      description: "Atendimento em tempo integral",
+      description: "Atendimento via WhatsApp é em tempo integral.",
       action: "Conversar Agora",
       color: "from-green-500 to-green-600",
       onClick: () => window.open('https://wa.me/5566999111314', '_blank')
@@ -41,7 +41,7 @@ const ContactSection = () => {
     {
       icon: "MapPin",
       title: "Escritório",
-      description: "Atendimento presencial com agendamento",
+      description: "Atendimento mediante agendamento.",
       action: "Ver Localização",
       color: "from-orange-500 to-orange-600",
       onClick: () => window.open('https://maps.google.com/?q=Rua+Tiradentes,+1888+Centro+Rondonópolis+MT', '_blank')
@@ -137,7 +137,7 @@ const ContactSection = () => {
                 <p>📞 (66) 99911-1314</p>
                 <p>✉️ marcelobaiaadvogado@gmail.com</p>
                 <p>🆔 OAB/MT 14.159-B</p>
-                <p>🕒 Atendimento mediante agendamento. WhatsApp em tempo integral</p>
+                <p>🕒 Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.</p>
               </div>
             </div>
           </div>
