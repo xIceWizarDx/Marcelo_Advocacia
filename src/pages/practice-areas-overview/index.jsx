@@ -101,7 +101,34 @@ const PracticeAreasOverview = () => {
         <title>Áreas de Atuação - Marcelo Baía Advocacia | Especialista em Direito Civil, Consumidor, Família e Empresarial</title>
         <meta name="description" content="Conheça as áreas de especialização do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado em Rondonópolis/MT." />
         <meta name="keywords" content="advocacia, direito civil, direito consumidor, direito família, direito empresarial, Rondonópolis, Mato Grosso" />
-        <link rel="canonical" href="https://marcelobaiaadvocacia.com.br/practice-areas-overview" />
+        <link rel="canonical" href="https://marcelobaia.adv.br/practice-areas-overview" />
+        <meta property="og:title" content="Áreas de Atuação - Marcelo Baía Advocacia | Especialista em Direito Civil, Consumidor, Família e Empresarial" />
+        <meta property="og:description" content="Conheça as áreas de especialização do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado em Rondonópolis/MT." />
+        <meta property="og:image" content="/imagens/logo-512x512.png" />
+        <meta name="twitter:image" content="/imagens/logo-512x512.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://marcelobaia.adv.br/practice-areas-overview" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LegalService",
+            name: "Marcelo Baía Advocacia",
+            telephone: "+55 66 99911-1314",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Rua Tiradentes, 1888",
+              addressLocality: "Rondonópolis",
+              addressRegion: "MT",
+              postalCode: "78700-028",
+              addressCountry: "BR",
+            },
+            openingHoursSpecification: {
+              "@type": "OpeningHoursSpecification",
+              description:
+                "Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.",
+            },
+          })}
+        </script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
