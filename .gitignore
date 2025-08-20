@@ -21,5 +21,10 @@ yarn-error.log*
 pnpm-debug.log*
 *.log
 
+# Generated icons
+public/*icon*.png
+public/apple-touch-icon.png
+public/favicon.ico
+
 # Sistema
 Thumbs.db

@@ -1,0 +1,27 @@
+{
+  "name": "Marcelo Baía Advocacia",
+  "short_name": "MB Advocacia",
+  "description": "Assessoria jurídica em Rondonópolis/MT especializada em Direito Civil, Consumidor, Família e Empresarial.",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "apple touch icon"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}

@@ -95,6 +95,24 @@ const PracticeAreasOverview = () => {
     }
   ];
 
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Marcelo Baía Advocacia",
+    "url": "https://marcelobaia.adv.br",
+    "image": "/icon-512.png",
+    "telephone": "+55 66 99911-1314",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Tiradentes, 1888",
+      "addressLocality": "Rondonópolis",
+      "addressRegion": "MT",
+      "postalCode": "78700-028",
+      "addressCountry": "BR",
+    },
+    "description": "Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.",
+  };
+
   return (
     <>
       <Helmet>
@@ -102,6 +120,13 @@ const PracticeAreasOverview = () => {
         <meta name="description" content="Conheça as áreas de especialização do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado em Rondonópolis/MT." />
         <meta name="keywords" content="advocacia, direito civil, direito consumidor, direito família, direito empresarial, Rondonópolis, Mato Grosso" />
         <link rel="canonical" href="https://marcelobaiaadvocacia.com.br/practice-areas-overview" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta property="og:image" content="/icon-512.png" />
+        <meta name="twitter:image" content="/icon-512.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
