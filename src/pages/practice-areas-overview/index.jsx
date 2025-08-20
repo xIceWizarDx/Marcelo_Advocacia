@@ -323,7 +323,7 @@ const PracticeAreasOverview = () => {
               <div>
                 <h4 className="font-inter font-semibold text-lg mb-4">Links Rápidos</h4>
                 <ul className="space-y-2">
-                  <li><a href="/homepage" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Início</a></li>
+                  <li><a href="/" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Início</a></li>
                   <li><a href="/about-marcelo-ba-a" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Sobre Marcelo</a></li>
                   <li><a href="/faq-hub" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">FAQ</a></li>
                   <li><a href="/contact-consultation-hub" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Contato</a></li>

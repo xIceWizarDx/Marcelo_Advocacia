@@ -19,7 +19,7 @@ const Header = () => {
   }, []);
 
   const navigationItems = [
-    { name: 'Início', path: '/homepage', icon: 'Home' },
+    { name: 'Início', path: '/', icon: 'Home' },
     { name: 'Áreas de Atuação', path: '/practice-areas-overview', icon: 'Scale' },
     { name: 'Sobre Marcelo', path: '/about-marcelo-ba-a', icon: 'User' },
     { name: 'FAQ', path: '/faq-hub', icon: 'HelpCircle' },
@@ -48,8 +48,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-16 lg:h-20 px-4 lg:px-6">
           {/* Logo */}
-          <Link 
-            to="/homepage" 
+          <Link
+            to="/"
             className="flex items-center space-x-3 group"
             onClick={closeMenu}
           >
