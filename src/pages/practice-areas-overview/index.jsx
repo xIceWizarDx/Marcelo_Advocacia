@@ -104,8 +104,8 @@ const PracticeAreasOverview = () => {
         <link rel="canonical" href="https://marcelobaia.adv.br/practice-areas-overview" />
         <meta property="og:title" content="Áreas de Atuação - Marcelo Baía Advocacia | Especialista em Direito Civil, Consumidor, Família e Empresarial" />
         <meta property="og:description" content="Conheça as áreas de especialização do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado em Rondonópolis/MT." />
-        <meta property="og:image" content="/imagens/logo-512x512.png" />
-        <meta name="twitter:image" content="/imagens/logo-512x512.png" />
+        <meta property="og:image" content="/assets/images/logo-512x512.png" />
+        <meta name="twitter:image" content="/assets/images/logo-512x512.png" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://marcelobaia.adv.br/practice-areas-overview" />
         <script type="application/ld+json">
