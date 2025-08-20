@@ -75,9 +75,7 @@ const ContactCTA = ({ practiceArea }) => {
   };
 
   const handleWhatsAppClick = () => {
-    const template = whatsappTemplates?.[practiceArea] || whatsappTemplates?.civil;
-    const encodedMessage = encodeURIComponent(template);
-    window.open(`https://wa.me/5566999111314?text=${encodedMessage}`, '_blank');
+    window.open('https://wa.me/5566999111314', '_blank');
   };
 
   const handlePhoneClick = () => {
@@ -116,7 +114,7 @@ const ContactCTA = ({ practiceArea }) => {
                 iconPosition="left"
                 className="border-green-600 text-green-600 hover:bg-green-50"
               >
-                Ligar Agora
+                (66) 99911-1314
               </Button>
             </div>
           </div>
@@ -238,7 +236,7 @@ const ContactCTA = ({ practiceArea }) => {
                   name="phone"
                   value={formData?.phone}
                   onChange={handleInputChange}
-                  placeholder="(65) 99999-9999"
+                  placeholder="(66) 99911-1314"
                   required
                 />
               </div>

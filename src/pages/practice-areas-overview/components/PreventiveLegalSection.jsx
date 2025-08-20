@@ -31,10 +31,7 @@ const PreventiveLegalSection = () => {
   ];
 
   const handlePreventiveConsultation = () => {
-    const message = encodeURIComponent(
-      "Olá, tenho interesse em consultoria jurídica preventiva. Gostaria de saber mais sobre os serviços disponíveis."
-    );
-    window.open(`https://wa.me/5565999999999?text=${message}`, '_blank');
+    window.open('https://wa.me/5566999111314', '_blank');
   };
 
   return (
@@ -190,13 +187,13 @@ const PreventiveLegalSection = () => {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => window.location.href = 'tel:+5565999999999'}
+                onClick={() => window.location.href = 'tel:+5566999111314'}
                 iconName="Phone"
                 iconPosition="left"
                 iconSize={18}
                 className="border-white text-white hover:bg-white hover:text-brand-primary font-medium px-8 py-3"
               >
-                Falar com Especialista
+                (66) 99911-1314
               </Button>
             </div>
           </div>

@@ -33,7 +33,7 @@ const ContactHero = ({ onWhatsAppClick, onPhoneClick }) => {
             >
               WhatsApp Direto
             </Button>
-            
+
             <Button
               variant="outline"
               size="lg"
@@ -43,7 +43,7 @@ const ContactHero = ({ onWhatsAppClick, onPhoneClick }) => {
               iconSize={20}
               className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 text-lg font-semibold"
             >
-              (65) 99999-9999
+              (66) 99911-1314
             </Button>
           </div>
           

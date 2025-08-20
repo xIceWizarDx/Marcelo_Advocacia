@@ -20,9 +20,7 @@ const HeroSection = () => {
 
   const handleConsultationSubmit = (e) => {
     e?.preventDefault();
-    const whatsappMessage = `Olá! Gostaria de agendar uma consulta.\n\nNome: ${formData?.name}\nTelefone: ${formData?.phone}\nAssunto: ${formData?.message}`;
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-    window.open(`https://wa.me/5565999999999?text=${encodedMessage}`, '_blank');
+    window.open('https://wa.me/5566999111314', '_blank');
   };
 
   return (
@@ -40,7 +38,7 @@ const HeroSection = () => {
             {/* Trust Badge */}
             <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-200 shadow-sm">
               <Icon name="Shield" size={16} className="text-indigo-600" />
-              <span className="text-sm font-medium text-slate-700">OAB/MT 25.847 • Desde 2015</span>
+              <span className="text-sm font-medium text-slate-700">OAB/MT 14.159-B</span>
             </div>
 
             {/* Main Headline */}
@@ -77,7 +75,7 @@ const HeroSection = () => {
               <Button
                 variant="default"
                 size="lg"
-                onClick={() => window.open('https://wa.me/5565999999999?text=Olá! Gostaria de agendar uma consulta jurídica.', '_blank')}
+                onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
                 iconName="MessageCircle"
                 iconPosition="left"
                 iconSize={20}
@@ -88,13 +86,13 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => window.location.href = 'tel:+5565999999999'}
+                onClick={() => window.location.href = 'tel:+5566999111314'}
                 iconName="Phone"
                 iconPosition="left"
                 iconSize={20}
                 className="border-slate-300 text-slate-700 hover:bg-slate-50"
               >
-                (65) 99999-9999
+                (66) 99911-1314
               </Button>
             </div>
           </div>
@@ -129,7 +127,7 @@ const HeroSection = () => {
                   label="Telefone/WhatsApp"
                   type="tel"
                   name="phone"
-                  placeholder="(65) 99999-9999"
+                  placeholder="(66) 99911-1314"
                   value={formData?.phone}
                   onChange={handleInputChange}
                   required

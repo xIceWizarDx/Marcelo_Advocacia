@@ -29,11 +29,7 @@ const ConsultationWidget = () => {
       return;
     }
 
-    const selectedDateObj = availableDates?.find(d => d?.date === selectedDate);
-    const message = encodeURIComponent(
-      `Olá, gostaria de agendar uma consulta para ${selectedDateObj?.day} (${selectedDateObj?.dayNumber}) às ${selectedTimeSlot}.`
-    );
-    window.open(`https://wa.me/5566999111314?text=${message}`, '_blank');
+    window.open('https://wa.me/5566999111314', '_blank');
   };
 
   return (
@@ -146,7 +142,7 @@ const ConsultationWidget = () => {
                   iconSize={18}
                   className="border-white text-white hover:bg-white hover:text-brand-primary font-medium px-8 py-3"
                 >
-                  Ligar para Agendar
+                  (66) 99911-1314
                 </Button>
               </div>
               

@@ -21,20 +21,11 @@ const IndividualPracticeAreaPages = () => {
   }, [searchParams]);
 
   const handleWhatsAppClick = () => {
-    const templates = {
-      civil: 'Olá, preciso de orientação em Direito Civil. Gostaria de agendar uma consulta.',
-      consumer: 'Olá, tenho uma questão de Direito do Consumidor e preciso de ajuda jurídica.',
-      family: 'Olá, preciso de orientação em Direito de Família. Gostaria de conversar sobre minha situação.',
-      business: 'Olá, sou empresário e preciso de consultoria jurídica empresarial.'
-    };
-    
-    const template = templates?.[currentArea] || templates?.civil;
-    const encodedMessage = encodeURIComponent(template);
-    window.open(`https://wa.me/5565999999999?text=${encodedMessage}`, '_blank');
+    window.open('https://wa.me/5566999111314', '_blank');
   };
 
   const handleCallClick = () => {
-    window.location.href = 'tel:+5565999999999';
+    window.location.href = 'tel:+5566999111314';
   };
 
   const getPageTitle = () => {
@@ -99,13 +90,16 @@ const IndividualPracticeAreaPages = () => {
                 <h3 className="font-lora font-semibold text-xl mb-4">Contato</h3>
                 <div className="space-y-3">
                   <p className="font-inter text-slate-300">
-                    📍 Rondonópolis/MT
+                    📍 Rua Tiradentes, 1888 – Centro, Rondonópolis-MT – CEP 78.700-028
                   </p>
                   <p className="font-inter text-slate-300">
-                    📞 (65) 99999-9999
+                    📞 <a href="tel:+5566999111314" className="text-slate-300">(66) 99911-1314</a>
                   </p>
                   <p className="font-inter text-slate-300">
-                    ✉️ contato@marcelobaia.adv.br
+                    💬 <a href="https://wa.me/5566999111314" target="_blank" rel="noopener noreferrer" className="text-slate-300">(66) 99911-1314</a>
+                  </p>
+                  <p className="font-inter text-slate-300">
+                    ✉️ <a href="mailto:marcelobaiaadvogado@gmail.com" className="text-slate-300">marcelobaiaadvogado@gmail.com</a>
                   </p>
                 </div>
               </div>
@@ -126,13 +120,13 @@ const IndividualPracticeAreaPages = () => {
                 <h3 className="font-lora font-semibold text-xl mb-4">Informações Legais</h3>
                 <div className="space-y-2">
                   <p className="font-inter text-slate-300 text-sm">
-                    OAB/MT - Inscrito e Ativo
+                    OAB/MT 14.159-B
                   </p>
                   <p className="font-inter text-slate-300 text-sm">
-                    Atendimento presencial e online
+                    Atendimento mediante agendamento
                   </p>
                   <p className="font-inter text-slate-300 text-sm">
-                    Consultas mediante agendamento
+                    Atendimento via WhatsApp é em tempo integral
                   </p>
                 </div>
               </div>

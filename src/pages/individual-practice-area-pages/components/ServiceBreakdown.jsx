@@ -197,21 +197,21 @@ const ServiceBreakdown = ({ practiceArea }) => {
               Cada situação é única. Agende uma consulta para discutirmos sua questão específica e definirmos a melhor estratégia jurídica.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://wa.me/5565999999999?text=Olá, preciso de orientação jurídica específica."
+              <a
+                href="https://wa.me/5566999111314"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-colors duration-200"
+                className="inline-flex items-center justify-center px-6 py-3 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-colors duração-200"
               >
                 <Icon name="MessageCircle" size={20} className="mr-2" />
                 Consulta via WhatsApp
               </a>
-              <a 
-                href="tel:+5565999999999"
-                className="inline-flex items-center justify-center px-6 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors duration-200"
+              <a
+                href="tel:+5566999111314"
+                className="inline-flex items-center justify-center px-6 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors duração-200"
               >
                 <Icon name="Phone" size={20} className="mr-2" />
-                Ligar Agora
+                (66) 99911-1314
               </a>
             </div>
           </div>

@@ -20,7 +20,7 @@ const StickyCTABar = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5566999111314?text=Olá! Gostaria de agendar uma consulta jurídica.', '_blank');
+    window.open('https://wa.me/5566999111314', '_blank');
   };
 
   const handlePhoneClick = () => {
@@ -79,7 +79,7 @@ const StickyCTABar = () => {
                 iconSize={16}
                 className="hidden sm:inline-flex text-slate-700 border-slate-300 hover:bg-slate-50"
               >
-                Ligar
+                (66) 99911-1314
               </Button>
               
               <Button

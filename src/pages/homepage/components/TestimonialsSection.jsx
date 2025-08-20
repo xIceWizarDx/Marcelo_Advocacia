@@ -145,18 +145,18 @@ const TestimonialsSection = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
-                  onClick={() => window.open('https://wa.me/5565999999999?text=Olá! Vi os depoimentos no site e gostaria de agendar uma consulta.', '_blank')}
+                  onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
                   className="inline-flex items-center space-x-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors duration-300"
                 >
                   <Icon name="MessageCircle" size={18} />
                   <span>Agendar consulta</span>
                 </button>
                 <button
-                  onClick={() => window.location.href = 'tel:+5565999999999'}
+                  onClick={() => window.location.href = 'tel:+5566999111314'}
                   className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-indigo-600 transition-all duration-300"
                 >
                   <Icon name="Phone" size={18} />
-                  <span>Ligar agora</span>
+                  <span>(66) 99911-1314</span>
                 </button>
               </div>
             </div>

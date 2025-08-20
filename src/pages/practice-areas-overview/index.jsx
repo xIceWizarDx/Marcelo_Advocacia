@@ -132,21 +132,18 @@ const PracticeAreasOverview = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
-                  onClick={() => {
-                    const message = encodeURIComponent("Olá, gostaria de uma consulta jurídica. Qual área atende meu caso?");
-                    window.open(`https://wa.me/5565999999999?text=${message}`, '_blank');
-                  }}
+                  onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-primary font-inter font-medium rounded-lg hover:bg-white/90 transition-colors duration-200 shadow-lg"
                 >
                   <Icon name="MessageCircle" size={20} className="mr-2" />
                   Consulta Imediata
                 </button>
                 <button
-                  onClick={() => window.location.href = 'tel:+5565999999999'}
+                  onClick={() => window.location.href = 'tel:+5566999111314'}
                   className="inline-flex items-center justify-center px-8 py-4 border border-white text-white font-inter font-medium rounded-lg hover:bg-white hover:text-brand-primary transition-colors duration-200"
                 >
                   <Icon name="Phone" size={20} className="mr-2" />
-                  (65) 99999-9999
+                  (66) 99911-1314
                 </button>
               </div>
             </div>
@@ -276,18 +273,22 @@ const PracticeAreasOverview = () => {
                   Atendimento humanizado com expertise técnica em Rondonópolis/MT.
                 </p>
                 <div className="flex space-x-4">
-                  <button
-                    onClick={() => window.open('https://wa.me/5565999999999', '_blank')}
+                  <a
+                    href="https://wa.me/5566999111314"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors duration-200"
+                    aria-label="WhatsApp"
                   >
                     <Icon name="MessageCircle" size={20} />
-                  </button>
-                  <button
-                    onClick={() => window.location.href = 'tel:+5565999999999'}
+                  </a>
+                  <a
+                    href="tel:+5566999111314"
                     className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors duration-200"
+                    aria-label="Ligar para (66) 99911-1314"
                   >
                     <Icon name="Phone" size={20} />
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -307,16 +308,31 @@ const PracticeAreasOverview = () => {
                 <h4 className="font-inter font-semibold text-lg mb-4">Contato</h4>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
+                    <Icon name="MessageCircle" size={16} className="text-brand-accent" />
+                    <a
+                      href="https://wa.me/5566999111314"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/80 font-inter text-sm"
+                    >
+                      (66) 99911-1314
+                    </a>
+                  </div>
+                  <div className="flex items-center space-x-3">
                     <Icon name="Phone" size={16} className="text-brand-accent" />
-                    <span className="text-white/80 font-inter text-sm">(65) 99999-9999</span>
+                    <a href="tel:+5566999111314" className="text-white/80 font-inter text-sm">(66) 99911-1314</a>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Icon name="Mail" size={16} className="text-brand-accent" />
-                    <span className="text-white/80 font-inter text-sm">contato@marcelobaiaadvocacia.com.br</span>
+                    <a href="mailto:marcelobaiaadvogado@gmail.com" className="text-white/80 font-inter text-sm">marcelobaiaadvogado@gmail.com</a>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Icon name="MapPin" size={16} className="text-brand-accent mt-0.5" />
-                    <span className="text-white/80 font-inter text-sm">Rondonópolis/MT</span>
+                    <span className="text-white/80 font-inter text-sm">Rua Tiradentes, 1888 – Centro, Rondonópolis-MT – CEP 78.700-028</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Icon name="Clock" size={16} className="text-brand-accent mt-0.5" />
+                    <span className="text-white/80 font-inter text-sm">Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.</span>
                   </div>
                 </div>
               </div>

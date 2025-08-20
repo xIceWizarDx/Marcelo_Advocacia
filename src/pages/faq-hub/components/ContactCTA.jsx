@@ -38,8 +38,7 @@ const ContactCTA = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const message = "Olá! Não encontrei a resposta para minha dúvida no FAQ. Gostaria de conversar com um advogado.";
-    window.open(`https://wa.me/5566999111314?text=${encodeURIComponent(message)}`, '_blank');
+    window.open('https://wa.me/5566999111314', '_blank');
   };
 
   if (isSubmitted) {
@@ -163,7 +162,7 @@ const ContactCTA = () => {
                 <div className="flex-1">
                   <h5 className="font-inter font-medium text-text-primary mb-1">Telefone</h5>
                   <p className="text-text-secondary text-sm mb-3">
-                    Atendimento de segunda a sexta, 8h às 18h
+                    Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.
                   </p>
                   <Button
                     variant="outline"

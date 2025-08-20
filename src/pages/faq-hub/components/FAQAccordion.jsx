@@ -30,9 +30,8 @@ const FAQAccordion = ({ faqs, searchTerm }) => {
     );
   };
 
-  const handleWhatsAppClick = (question) => {
-    const message = `Olá! Tenho uma dúvida sobre: ${question}`;
-    window.open(`https://wa.me/5565999999999?text=${encodeURIComponent(message)}`, '_blank');
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/5566999111314', '_blank');
   };
 
   if (faqs?.length === 0) {
@@ -49,7 +48,7 @@ const FAQAccordion = ({ faqs, searchTerm }) => {
         </p>
         <Button
           variant="outline"
-          onClick={() => handleWhatsAppClick("busca personalizada")}
+          onClick={handleWhatsAppClick}
           iconName="MessageCircle"
           iconPosition="left"
         >
@@ -123,7 +122,7 @@ const FAQAccordion = ({ faqs, searchTerm }) => {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => handleWhatsAppClick(faq?.question)}
+                    onClick={handleWhatsAppClick}
                     iconName="MessageCircle"
                     iconPosition="left"
                     className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
@@ -133,12 +132,12 @@ const FAQAccordion = ({ faqs, searchTerm }) => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    onClick={() => window.location.href = 'tel:+5565999999999'}
+                    onClick={() => window.location.href = 'tel:+5566999111314'}
                     iconName="Phone"
                     iconPosition="left"
                     className="text-text-secondary hover:text-brand-accent"
                   >
-                    Ligar agora
+                    (66) 99911-1314
                   </Button>
                 </div>
               </div>
