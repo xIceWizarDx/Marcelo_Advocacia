@@ -32,7 +32,7 @@ const CredentialsSection = () => {
     },
     {
       title: "Comissão de Direito Civil",
-      description: "Membro ativo da Comissão de Direito Civil da OAB/MT",
+      description: "Membro ativo da Comissão de Direito Civil da OAB/MT 14.159-B",
       icon: "Users",
       status: "Desde 2023"
     },
