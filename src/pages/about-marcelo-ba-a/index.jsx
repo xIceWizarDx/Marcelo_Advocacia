@@ -17,7 +17,7 @@ const AboutMarceloBaia = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5565999999999?text=Olá, gostaria de agendar uma consulta jurídica.', '_blank');
+    window.open('https://wa.me/5566999111314', '_blank');
   };
 
   return (
@@ -76,7 +76,7 @@ const AboutMarceloBaia = () => {
                   Atendimento humanizado e comunicação transparente.
                 </p>
                 <p className="text-slate-400 text-xs">
-                  OAB/MT 12.345 • Ativo desde 2015
+                  OAB/MT 14.159-B
                 </p>
               </div>
 
@@ -84,11 +84,11 @@ const AboutMarceloBaia = () => {
               <div>
                 <h4 className="font-semibold mb-4">Contato</h4>
                 <div className="space-y-2 text-sm text-slate-300">
-                  <p>📍 Rua das Flores, 123 - Centro</p>
-                  <p>Rondonópolis/MT - CEP 78700-000</p>
-                  <p>📞 (65) 99999-9999</p>
-                  <p>✉️ contato@marcelobaia.adv.br</p>
-                  <p>🕒 Segunda a Sexta: 8h às 18h</p>
+                  <p>📍 Rua Tiradentes, 1888 – Centro, Rondonópolis-MT – CEP 78.700-028</p>
+                  <p>📞 <a href="tel:+5566999111314" className="text-slate-300">(66) 99911-1314</a></p>
+                  <p>💬 <a href="https://wa.me/5566999111314" target="_blank" rel="noopener noreferrer" className="text-slate-300">(66) 99911-1314</a></p>
+                  <p>✉️ <a href="mailto:marcelobaiaadvogado@gmail.com" className="text-slate-300">marcelobaiaadvogado@gmail.com</a></p>
+                  <p>🕒 Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.</p>
                 </div>
               </div>
 

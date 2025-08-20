@@ -20,7 +20,7 @@ const ContactSection = () => {
       description: "Atendimento em tempo integral",
       action: "Conversar Agora",
       color: "from-green-500 to-green-600",
-      onClick: () => window.open('https://wa.me/5566999111314?text=Olá, gostaria de agendar uma consulta jurídica.', '_blank')
+      onClick: () => window.open('https://wa.me/5566999111314', '_blank')
     },
     {
       icon: "Phone",
@@ -178,7 +178,7 @@ const ContactSection = () => {
                   name="phone"
                   value={formData?.phone}
                   onChange={handleInputChange}
-                  placeholder="(65) 99999-9999"
+                  placeholder="(66) 99911-1314"
                   required
                 />
                 

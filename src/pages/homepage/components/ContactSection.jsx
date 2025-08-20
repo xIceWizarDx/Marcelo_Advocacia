@@ -22,9 +22,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e?.preventDefault();
-    const whatsappMessage = `*Nova mensagem do site*\n\n*Nome:* ${formData?.name}\n*Email:* ${formData?.email}\n*Telefone:* ${formData?.phone}\n*Assunto:* ${formData?.subject}\n*Mensagem:* ${formData?.message}`;
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-    window.open(`https://wa.me/5566999111314?text=${encodedMessage}`, '_blank');
+    window.open('https://wa.me/5566999111314', '_blank');
   };
 
   const contactMethods = [
@@ -33,7 +31,7 @@ const ContactSection = () => {
       title: 'WhatsApp',
       description: 'Atendimento em tempo integral',
       value: '(66) 99911-1314',
-      action: () => window.open('https://wa.me/5566999111314?text=Olá! Gostaria de conversar sobre uma questão jurídica.', '_blank'),
+      action: () => window.open('https://wa.me/5566999111314', '_blank'),
       color: 'text-green-600',
       bgColor: 'bg-green-50'
     },
@@ -59,7 +57,7 @@ const ContactSection = () => {
       icon: 'MapPin',
       title: 'Escritório',
       description: 'Rondonópolis/MT',
-      value: 'Rua Tiradentes, 1888 – Centro',
+      value: 'Rua Tiradentes, 1888 – Centro, Rondonópolis-MT – CEP 78.700-028',
       action: () => window.open('https://maps.google.com/?q=Rua+Tiradentes,+1888+Centro+Rondonópolis+MT', '_blank'),
       color: 'text-red-600',
       bgColor: 'bg-red-50'
@@ -132,7 +130,7 @@ const ContactSection = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-600">Endereço</span>
-                  <span className="font-medium text-slate-900">CEP 78.700-028</span>
+                  <span className="font-medium text-slate-900 text-right">Rua Tiradentes, 1888 – Centro, Rondonópolis-MT – CEP 78.700-028</span>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-slate-100">
@@ -169,7 +167,7 @@ const ContactSection = () => {
                   label="Telefone"
                   type="tel"
                   name="phone"
-                  placeholder="(65) 99999-9999"
+                  placeholder="(66) 99911-1314"
                   value={formData?.phone}
                   onChange={handleInputChange}
                   required

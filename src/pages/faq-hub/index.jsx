@@ -370,7 +370,7 @@ const FAQHub = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => window.open('https://wa.me/5565999999999?text=Olá! Tenho algumas dúvidas jurídicas e gostaria de conversar.', '_blank')}
+                onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
                 className="flex items-center justify-center space-x-3 px-8 py-4 bg-white text-brand-primary rounded-xl font-inter font-semibold hover:bg-white/90 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <Icon name="MessageCircle" size={20} />
@@ -378,7 +378,7 @@ const FAQHub = () => {
               </button>
               
               <button
-                onClick={() => window.location.href = 'tel:+5565999999999'}
+                onClick={() => window.location.href = 'tel:+5566999111314'}
                 className="flex items-center justify-center space-x-3 px-8 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-inter font-semibold hover:bg-white/20 transition-all duration-300"
               >
                 <Icon name="Phone" size={20} />

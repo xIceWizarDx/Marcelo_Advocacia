@@ -116,21 +116,18 @@ const FAQSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => {
-                const message = encodeURIComponent("Olá, tenho uma dúvida que não está no FAQ. Poderia me ajudar?");
-                window.open(`https://wa.me/5565999999999?text=${message}`, '_blank');
-              }}
-              className="inline-flex items-center justify-center px-6 py-3 bg-brand-accent hover:bg-brand-accent/90 text-white font-inter font-medium rounded-lg transition-colors duration-200"
+              onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
+              className="inline-flex items-center justify-center px-6 py-3 bg-brand-accent hover:bg-brand-accent/90 text-white font-inter font-medium rounded-lg transition-colors duração-200"
             >
               <Icon name="MessageCircle" size={18} className="mr-2" />
               Perguntar no WhatsApp
             </button>
             <button
-              onClick={() => window.location.href = 'tel:+5565999999999'}
-              className="inline-flex items-center justify-center px-6 py-3 border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white font-inter font-medium rounded-lg transition-colors duration-200"
+              onClick={() => window.location.href = 'tel:+5566999111314'}
+              className="inline-flex items-center justify-center px-6 py-3 border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white font-inter font-medium rounded-lg transition-colors duração-200"
             >
               <Icon name="Phone" size={18} className="mr-2" />
-              Ligar Agora
+              (66) 99911-1314
             </button>
           </div>
         </div>

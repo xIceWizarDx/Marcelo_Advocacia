@@ -157,8 +157,8 @@ const ContextualFAQ = ({ practiceArea }) => {
               Entre em contato conosco. Teremos prazer em esclarecer sua questão específica.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://wa.me/5565999999999?text=Olá, tenho uma dúvida jurídica que não encontrei no FAQ."
+              <a
+                href="https://wa.me/5566999111314"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors duration-200"
@@ -166,12 +166,12 @@ const ContextualFAQ = ({ practiceArea }) => {
                 <Icon name="MessageCircle" size={20} className="mr-2" />
                 Perguntar via WhatsApp
               </a>
-              <a 
-                href="tel:+5565999999999"
-                className="inline-flex items-center justify-center px-6 py-3 border border-slate-300 text-slate-700 font-semibold rounded-lg hover:bg-slate-50 transition-colors duration-200"
+              <a
+                href="tel:+5566999111314"
+                className="inline-flex items-center justify-center px-6 py-3 border border-slate-300 text-slate-700 font-semibold rounded-lg hover:bg-slate-50 transition-colors duração-200"
               >
                 <Icon name="Phone" size={20} className="mr-2" />
-                Ligar Agora
+                (66) 99911-1314
               </a>
             </div>
           </div>

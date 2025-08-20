@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
+import { CONTACT } from '../../config/contact';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,13 +26,8 @@ const Header = () => {
     { name: 'Contato', path: '/contact-consultation-hub', icon: 'MessageCircle' }
   ];
 
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5566999111314?text=Olá, gostaria de agendar uma consulta jurídica.', '_blank');
-  };
-
-  const handlePhoneClick = () => {
-    window.location.href = 'tel:+5566999111314';
-  };
+  const whatsappLink = CONTACT.whatsapp;
+  const phoneLink = CONTACT.phone.href;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -94,26 +90,33 @@ const Header = () => {
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-3">
             <Button
+              asChild
               variant="outline"
               size="sm"
-              onClick={handlePhoneClick}
               iconName="Phone"
               iconPosition="left"
               iconSize={16}
               className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
             >
-              Ligar
+              <a href={phoneLink} aria-label={`Ligar para ${CONTACT.phone.display}`}>{CONTACT.phone.display}</a>
             </Button>
             <Button
+              asChild
               variant="default"
               size="sm"
-              onClick={handleWhatsAppClick}
               iconName="MessageCircle"
               iconPosition="left"
               iconSize={16}
               className="bg-brand-accent hover:bg-brand-accent/90 text-white shadow-brand"
             >
-              WhatsApp
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Conversar via WhatsApp"
+              >
+                WhatsApp
+              </a>
             </Button>
           </div>
 
@@ -158,26 +161,33 @@ const Header = () => {
             {/* Mobile CTA Buttons */}
             <div className="flex flex-col space-y-3 mt-6 pt-4 border-t border-border">
               <Button
+                asChild
                 variant="outline"
-                onClick={handlePhoneClick}
                 iconName="Phone"
                 iconPosition="left"
                 iconSize={18}
                 fullWidth
                 className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
               >
-                Ligar Agora
+                <a href={phoneLink} aria-label={`Ligar para ${CONTACT.phone.display}`}>{CONTACT.phone.display}</a>
               </Button>
               <Button
+                asChild
                 variant="default"
-                onClick={handleWhatsAppClick}
                 iconName="MessageCircle"
                 iconPosition="left"
                 iconSize={18}
                 fullWidth
                 className="bg-brand-accent hover:bg-brand-accent/90 text-white shadow-brand"
               >
-                Conversar no WhatsApp
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Conversar via WhatsApp"
+                >
+                  Conversar no WhatsApp
+                </a>
               </Button>
             </div>
           </div>

@@ -15,13 +15,11 @@ const PracticeAreaCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent(whatsappMessage);
-    window.open(`https://wa.me/5565999999999?text=${message}`, '_blank');
+    window.open('https://wa.me/5566999111314', '_blank');
   };
 
   const handleConsultationClick = () => {
-    const message = encodeURIComponent(`Olá, gostaria de agendar uma consulta sobre ${title?.toLowerCase()}.`);
-    window.open(`https://wa.me/5565999999999?text=${message}`, '_blank');
+    window.open('https://wa.me/5566999111314', '_blank');
   };
 
   return (

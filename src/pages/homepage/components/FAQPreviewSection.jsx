@@ -111,17 +111,17 @@ const FAQPreviewSection = () => {
               </Link>
               
               <button
-                onClick={() => window.open('https://wa.me/5565999999999?text=Olá! Tenho uma dúvida específica sobre meu caso.', '_blank')}
+                onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
                 className="inline-flex items-center space-x-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300"
               >
                 <Icon name="MessageCircle" size={18} />
                 <span>Fazer pergunta</span>
               </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
   );
 };
 

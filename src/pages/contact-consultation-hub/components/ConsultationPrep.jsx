@@ -108,7 +108,7 @@ const ConsultationPrep = () => {
     {
       situation: 'Prisão ou Detenção',
       action: 'Ligue imediatamente',
-      contact: '(65) 99999-9999',
+      contact: '(66) 99911-1314',
       timeframe: 'Atendimento imediato'
     },
     {
