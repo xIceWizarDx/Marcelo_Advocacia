@@ -29,7 +29,7 @@ const ContactSection = () => {
     {
       icon: 'MessageCircle',
       title: 'WhatsApp',
-      description: 'Atendimento em tempo integral',
+      description: 'Atendimento via WhatsApp é em tempo integral.',
       value: '(66) 99911-1314',
       action: () => window.open('https://wa.me/5566999111314', '_blank'),
       color: 'text-green-600',
@@ -38,7 +38,7 @@ const ContactSection = () => {
     {
       icon: 'Phone',
       title: 'Telefone',
-      description: 'Mediante agendamento',
+      description: 'Atendimento mediante agendamento.',
       value: '(66) 99911-1314',
       action: () => window.location.href = 'tel:+5566999111314',
       color: 'text-blue-600',
