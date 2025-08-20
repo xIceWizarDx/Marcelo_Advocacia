@@ -1,0 +1,25 @@
+# Dependências
+node_modules/
+
+# Build de produção (nesse caso você QUER versionar dist, então não ignore)
+# dist/
+
+# Configurações locais
+.vscode/
+.idea/
+.DS_Store
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Sistema
+Thumbs.db

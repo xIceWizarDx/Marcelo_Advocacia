@@ -1,0 +1,3327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programador Sincero - Aprenda Programação Web de Verdade</title>
+    <meta name="description"
+      content="Programação web sem enrolação. Cursos práticos que garantem emprego. Sem promessas falsas, só habilidades reais para desenvolvedores web." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+*, ::before, ::after{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+/*
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: Orbitron, Inter, sans-serif;
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: Fira Code, monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+body {
+  font-family: 'Orbitron', 'Inter', sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  background-image: 
+      radial-gradient(circle at 25% 25%, #00D9FF10 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, #8B5CF610 0%, transparent 50%),
+      url("data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%2300D9FF' fill-opacity='0.02'%3e%3cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-shadow: 0 0 8px rgba(0, 217, 255, 0.2);
+}
+
+/* Scrollbar Styling */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--color-primary-400), var(--color-secondary-400));
+}
+
+.container{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
+.card{
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(45 55 72 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 26 46 / var(--tw-bg-opacity, 1));
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(17, 17, 24, 0.9));
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  opacity: 0.3;
+}
+
+.card-hover{
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  box-shadow: var(--shadow-hover), var(--shadow-glow);
+  --tw-translate-y: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-border-opacity: 1;
+  border-color: rgb(0 217 255 / var(--tw-border-opacity, 1));
+  background: linear-gradient(145deg, rgba(26, 26, 46, 0.95), rgba(17, 17, 24, 0.95));
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.text-gradient-secondary {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-padding{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px){
+  .section-padding{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .section-padding{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.container-custom{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px){
+  .container-custom{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .container-custom{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.glass-nav{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+.glass-nav::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  background: inherit;
+  filter: blur(20px);
+  background-color: rgba(26, 26, 46, 0.4);
+  z-index: -1;
+}
+
+.cyber-border {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(var(--color-surface-light), var(--color-surface-light)) padding-box,
+                linear-gradient(135deg, var(--color-primary), var(--color-secondary)) border-box;
+}
+
+.cyber-border:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: inherit;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.neon-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.pointer-events-none{
+  pointer-events: none;
+}
+
+.static{
+  position: static;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.inset-0{
+  inset: 0px;
+}
+
+.bottom-20{
+  bottom: 5rem;
+}
+
+.left-0{
+  left: 0px;
+}
+
+.left-10{
+  left: 2.5rem;
+}
+
+.left-4{
+  left: 1rem;
+}
+
+.right-0{
+  right: 0px;
+}
+
+.right-10{
+  right: 2.5rem;
+}
+
+.right-4{
+  right: 1rem;
+}
+
+.top-0{
+  top: 0px;
+}
+
+.top-2\.5{
+  top: 0.625rem;
+}
+
+.top-20{
+  top: 5rem;
+}
+
+.top-4{
+  top: 1rem;
+}
+
+.top-5{
+  top: 1.25rem;
+}
+
+.z-10{
+  z-index: 10;
+}
+
+.z-50{
+  z-index: 50;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
+.mb-12{
+  margin-bottom: 3rem;
+}
+
+.mb-16{
+  margin-bottom: 4rem;
+}
+
+.mb-20{
+  margin-bottom: 5rem;
+}
+
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
+}
+
+.mr-3{
+  margin-right: 0.75rem;
+}
+
+.mr-4{
+  margin-right: 1rem;
+}
+
+.mr-6{
+  margin-right: 1.5rem;
+}
+
+.mt-1{
+  margin-top: 0.25rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.block{
+  display: block;
+}
+
+.flex{
+  display: flex;
+}
+
+.grid{
+  display: grid;
+}
+
+.hidden{
+  display: none;
+}
+
+.h-0\.5{
+  height: 0.125rem;
+}
+
+.h-10{
+  height: 2.5rem;
+}
+
+.h-16{
+  height: 4rem;
+}
+
+.h-32{
+  height: 8rem;
+}
+
+.h-5{
+  height: 1.25rem;
+}
+
+.h-56{
+  height: 14rem;
+}
+
+.h-6{
+  height: 1.5rem;
+}
+
+.h-72{
+  height: 18rem;
+}
+
+.h-8{
+  height: 2rem;
+}
+
+.h-96{
+  height: 24rem;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.min-h-screen{
+  min-height: 100vh;
+}
+
+.w-10{
+  width: 2.5rem;
+}
+
+.w-16{
+  width: 4rem;
+}
+
+.w-32{
+  width: 8rem;
+}
+
+.w-5{
+  width: 1.25rem;
+}
+
+.w-6{
+  width: 1.5rem;
+}
+
+.w-72{
+  width: 18rem;
+}
+
+.w-8{
+  width: 2rem;
+}
+
+.w-96{
+  width: 24rem;
+}
+
+.w-full{
+  width: 100%;
+}
+
+.max-w-3xl{
+  max-width: 48rem;
+}
+
+.max-w-4xl{
+  max-width: 56rem;
+}
+
+.max-w-5xl{
+  max-width: 64rem;
+}
+
+.flex-shrink-0{
+  flex-shrink: 0;
+}
+
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes pulse{
+  50%{
+    opacity: .5;
+  }
+}
+
+.animate-pulse{
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse{
+  50%{
+    opacity: .5;
+  }
+}
+
+.animate-pulse-slow{
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.resize{
+  resize: both;
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.items-start{
+  align-items: flex-start;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.gap-12{
+  gap: 3rem;
+}
+
+.gap-16{
+  gap: 4rem;
+}
+
+.gap-20{
+  gap: 5rem;
+}
+
+.gap-4{
+  gap: 1rem;
+}
+
+.gap-8{
+  gap: 2rem;
+}
+
+.space-x-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-8 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-8 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.rounded-2xl{
+  border-radius: 1rem;
+}
+
+.rounded-full{
+  border-radius: 9999px;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
+.rounded-xl{
+  border-radius: 0.75rem;
+}
+
+.border-b{
+  border-bottom-width: 1px;
+}
+
+.border-t{
+  border-top-width: 1px;
+}
+
+.border-accent-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 224 112 / var(--tw-border-opacity, 1));
+}
+
+.border-border{
+  --tw-border-opacity: 1;
+  border-color: rgb(45 55 72 / var(--tw-border-opacity, 1));
+}
+
+.border-border-glow{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 217 255 / var(--tw-border-opacity, 1));
+}
+
+.border-border-glow\/50{
+  border-color: rgb(0 217 255 / 0.5);
+}
+
+.border-primary-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 184 219 / var(--tw-border-opacity, 1));
+}
+
+.bg-accent{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 255 136 / var(--tw-bg-opacity, 1));
+}
+
+.bg-background{
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 10 15 / var(--tw-bg-opacity, 1));
+}
+
+.bg-current{
+  background-color: currentColor;
+}
+
+.bg-primary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 217 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-primary\/10{
+  background-color: rgb(0 217 255 / 0.1);
+}
+
+.bg-primary\/20{
+  background-color: rgb(0 217 255 / 0.2);
+}
+
+.bg-secondary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(139 92 246 / var(--tw-bg-opacity, 1));
+}
+
+.bg-secondary\/10{
+  background-color: rgb(139 92 246 / 0.1);
+}
+
+.bg-surface{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 24 / var(--tw-bg-opacity, 1));
+}
+
+.bg-surface-light{
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 26 46 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gradient-to-br{
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.from-accent-900\/20{
+  --tw-gradient-from: rgb(0 131 40 / 0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 131 40 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-accent\/20{
+  --tw-gradient-from: rgb(0 255 136 / 0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 255 136 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-primary{
+  --tw-gradient-from: #00D9FF var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 217 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-primary-900\/20{
+  --tw-gradient-from: rgb(0 86 112 / 0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 86 112 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-primary\/20{
+  --tw-gradient-from: rgb(0 217 255 / 0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 217 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-secondary\/20{
+  --tw-gradient-from: rgb(139 92 246 / 0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(139 92 246 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-surface{
+  --tw-gradient-from: #111118 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(17 17 24 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-background{
+  --tw-gradient-to: rgb(10 10 15 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #0A0A0F var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-accent{
+  --tw-gradient-to: #00FF88 var(--tw-gradient-to-position);
+}
+
+.to-accent\/20{
+  --tw-gradient-to: rgb(0 255 136 / 0.2) var(--tw-gradient-to-position);
+}
+
+.to-primary\/20{
+  --tw-gradient-to: rgb(0 217 255 / 0.2) var(--tw-gradient-to-position);
+}
+
+.to-secondary\/20{
+  --tw-gradient-to: rgb(139 92 246 / 0.2) var(--tw-gradient-to-position);
+}
+
+.to-surface{
+  --tw-gradient-to: #111118 var(--tw-gradient-to-position);
+}
+
+.to-surface-light{
+  --tw-gradient-to: #1A1A2E var(--tw-gradient-to-position);
+}
+
+.p-2{
+  padding: 0.5rem;
+}
+
+.p-6{
+  padding: 1.5rem;
+}
+
+.p-8{
+  padding: 2rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.pb-6{
+  padding-bottom: 1.5rem;
+}
+
+.pt-20{
+  padding-top: 5rem;
+}
+
+.pt-8{
+  padding-top: 2rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.font-futuristic{
+  font-family: Exo 2, sans-serif;
+}
+
+.font-mono{
+  font-family: Fira Code, monospace;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-6xl{
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-black{
+  font-weight: 900;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
+.font-medium{
+  font-weight: 500;
+}
+
+.leading-relaxed{
+  line-height: 1.625;
+}
+
+.leading-tight{
+  line-height: 1.25;
+}
+
+.text-accent{
+  --tw-text-opacity: 1;
+  color: rgb(0 255 136 / var(--tw-text-opacity, 1));
+}
+
+.text-primary{
+  --tw-text-opacity: 1;
+  color: rgb(0 217 255 / var(--tw-text-opacity, 1));
+}
+
+.text-secondary{
+  --tw-text-opacity: 1;
+  color: rgb(139 92 246 / var(--tw-text-opacity, 1));
+}
+
+.text-success{
+  --tw-text-opacity: 1;
+  color: rgb(0 255 136 / var(--tw-text-opacity, 1));
+}
+
+.text-surface-light{
+  --tw-text-opacity: 1;
+  color: rgb(26 26 46 / var(--tw-text-opacity, 1));
+}
+
+.text-text-primary{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-text-secondary{
+  --tw-text-opacity: 1;
+  color: rgb(160 174 192 / var(--tw-text-opacity, 1));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.opacity-10{
+  opacity: 0.1;
+}
+
+.opacity-20{
+  opacity: 0.2;
+}
+
+.opacity-30{
+  opacity: 0.3;
+}
+
+.shadow-cta{
+  --tw-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
+  --tw-shadow-colored: 0 0 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-glow{
+  --tw-shadow: 0 0 50px rgba(0, 217, 255, 0.3);
+  --tw-shadow-colored: 0 0 50px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-neon{
+  --tw-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
+  --tw-shadow-colored: 0 0 30px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-purple{
+  --tw-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+  --tw-shadow-colored: 0 0 30px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.blur-3xl{
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.blur-md{
+  --tw-blur: blur(12px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-colors{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-transform{
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
+}
+
+.duration-500{
+  transition-duration: 500ms;
+}
+
+.ease-in{
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-out{
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.shadow-cta {
+  box-shadow: var(--shadow-cta);
+}
+
+.shadow-neon {
+  box-shadow: var(--shadow-neon);
+}
+
+.shadow-purple {
+  box-shadow: var(--shadow-purple);
+}
+
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+:root {
+  /* Primary Colors - Neon cyan/electric blue for futuristic tech */
+  --color-primary: #00D9FF;
+  /* Bright cyan */
+  --color-primary-50: #E6FCFF;
+  --color-primary-100: #CCF9FF;
+  --color-primary-200: #99F3FF;
+  --color-primary-300: #66EDFF;
+  --color-primary-400: #33E7FF;
+  --color-primary-500: #00D9FF;
+  --color-primary-600: #00B8DB;
+  --color-primary-700: #0097B7;
+  --color-primary-800: #007693;
+  --color-primary-900: #005670;
+  /* Secondary Colors - Electric purple for supporting elements */
+  --color-secondary: #8B5CF6;
+  /* Vibrant purple */
+  --color-secondary-50: #F5F3FF;
+  --color-secondary-100: #EDE9FE;
+  --color-secondary-200: #DDD6FE;
+  --color-secondary-300: #C4B5FD;
+  --color-secondary-400: #A78BFA;
+  --color-secondary-500: #8B5CF6;
+  --color-secondary-600: #7C3AED;
+  --color-secondary-700: #6D28D9;
+  --color-secondary-800: #5B21B6;
+  --color-secondary-900: #4C1D95;
+  /* Accent Colors - Neon green for high-contrast CTAs */
+  --color-accent: #00FF88;
+  /* Electric green */
+  --color-accent-50: #E6FFEE;
+  --color-accent-100: #CCFFDD;
+  --color-accent-200: #99FFBB;
+  --color-accent-300: #66FF99;
+  --color-accent-400: #33FF77;
+  --color-accent-500: #00FF88;
+  --color-accent-600: #00E070;
+  --color-accent-700: #00C158;
+  --color-accent-800: #00A240;
+  --color-accent-900: #008328;
+  /* Background Colors - Dark theme */
+  --color-background: #0A0A0F;
+  /* Very dark blue-black */
+  --color-surface: #111118;
+  /* Slightly lighter dark */
+  --color-surface-light: #1A1A2E;
+  /* Card backgrounds */
+  --color-surface-hover: #16213E;
+  /* Hover states */
+  /* Text Colors */
+  --color-text-primary: #FFFFFF;
+  /* Pure white */
+  --color-text-secondary: #A0AEC0;
+  /* Light gray */
+  --color-text-muted: #718096;
+  /* Darker gray */
+  /* Success Colors - Bright green for achievements */
+  --color-success: #00FF88;
+  /* Same as accent for consistency */
+  --color-success-50: #E6FFEE;
+  --color-success-100: #CCFFDD;
+  --color-success-200: #99FFBB;
+  --color-success-300: #66FF99;
+  --color-success-400: #33FF77;
+  --color-success-500: #00FF88;
+  --color-success-600: #00E070;
+  --color-success-700: #00C158;
+  --color-success-800: #00A240;
+  --color-success-900: #008328;
+  /* Warning Colors - Neon orange for urgency */
+  --color-warning: #FF6B35;
+  /* Bright orange */
+  --color-warning-50: #FFF4F1;
+  --color-warning-100: #FFE9E3;
+  --color-warning-200: #FFD3C7;
+  --color-warning-300: #FFBDAB;
+  --color-warning-400: #FFA78F;
+  --color-warning-500: #FF9173;
+  --color-warning-600: #FF7B57;
+  --color-warning-700: #FF653B;
+  --color-warning-800: #FF6B35;
+  --color-warning-900: #E55A2E;
+  /* Error Colors - Neon red for validation */
+  --color-error: #FF3366;
+  /* Bright red */
+  --color-error-50: #FFF0F3;
+  --color-error-100: #FFE1E7;
+  --color-error-200: #FFC3CF;
+  --color-error-300: #FFA5B7;
+  --color-error-400: #FF879F;
+  --color-error-500: #FF6987;
+  --color-error-600: #FF4B6F;
+  --color-error-700: #FF2D57;
+  --color-error-800: #FF3366;
+  --color-error-900: #E52E5C;
+  /* Border Colors */
+  --color-border: #2D3748;
+  /* Dark border */
+  --color-border-light: #4A5568;
+  /* Lighter border */
+  --color-border-glow: #00D9FF;
+  /* Glowing border */
+  /* Shadow Variables - Reduced intensity */
+  --shadow-cta: 0 0 15px rgba(0, 217, 255, 0.25);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 12px 30px rgba(0, 217, 255, 0.15);
+  --shadow-neon: 0 0 20px rgba(0, 255, 136, 0.4);
+  --shadow-purple: 0 0 20px rgba(139, 92, 246, 0.3);
+  --shadow-glow: 0 0 30px rgba(0, 217, 255, 0.2);
+}
+
+/* Smooth scrolling for anchor links */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Loading animation for images with softer effect */
+
+img[loading="lazy"] {
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.1);
+}
+
+img[loading="lazy"]:hover {
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+}
+
+/* Better focus outlines for accessibility with softer effect */
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+}
+
+/* Selection styling */
+
+::-moz-selection {
+  background: rgba(0, 217, 255, 0.3);
+  color: white;
+}
+
+::selection {
+  background: rgba(0, 217, 255, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(0, 217, 255, 0.3);
+  color: white;
+}
+
+/* Advanced keyframes - reduced intensity */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 2px rgba(0, 217, 255, 0.1);
+  }
+
+  to {
+    text-shadow: 0 0 4px rgba(0, 217, 255, 0.25), 0 0 6px rgba(0, 217, 255, 0.15);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Intersection Observer Animation Classes */
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Print styles */
+
+@media print {
+  nav,
+  footer,
+  .mobile-cta,
+  script {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Mobile optimizations */
+
+@media (max-width: 768px) {
+  .card{
+    padding: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+/* Dark theme utility classes */
+
+.dark-gradient {
+  background: linear-gradient(135deg, var(--color-surface-light) 0%, var(--color-surface) 100%);
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(0, 217, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 217, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.hologram-effect {
+  background: linear-gradient(45deg, rgba(0, 217, 255, 0.1), rgba(139, 92, 246, 0.1));
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+/* Animated mobile hamburger menu */
+
+#menu-toggle span {
+  background: var(--color-text-primary);
+}
+
+#menu-toggle.open span:nth-child(1) {
+  top: 0.625rem;
+  transform: rotate(45deg);
+}
+
+#menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle.open span:nth-child(3) {
+  top: 0.625rem;
+  transform: rotate(-45deg);
+}
+
+/* Neon CTA button */
+
+.neon-cta {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 2px solid var(--color-primary);
+  color: var(--color-text-primary);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: color .3s, box-shadow .3s;
+}
+
+.neon-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, var(--color-primary), transparent);
+  transition: left .5s;
+}
+
+.neon-cta:hover::before {
+  left: 100%;
+}
+
+.neon-cta:hover {
+  color: var(--color-primary);
+  box-shadow: 0 0 20px var(--color-primary);
+}
+
+/* Segmented control for tech filters */
+
+.segmented-control {
+  position: relative;
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.segmented-control button {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  transition: color .3s;
+}
+
+.segmented-control button.active {
+  color: var(--color-background);
+}
+
+.segmented-control__indicator {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 25%;
+  background: var(--color-primary);
+  border-radius: 10px;
+  transition: transform .3s;
+  box-shadow: var(--shadow-cta);
+}
+
+/* Tilt card effect */
+
+.tilt-card {
+  transition: transform .2s ease;
+  transform-style: preserve-3d;
+}
+
+/* FAQ accordion */
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  animation: slideDown .3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll progress bar */
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  z-index: 1000;
+}
+
+.hover\:text-primary:hover{
+  --tw-text-opacity: 1;
+  color: rgb(0 217 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:shadow-cta:hover{
+  --tw-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
+  --tw-shadow-colored: 0 0 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-neon:hover{
+  --tw-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
+  --tw-shadow-colored: 0 0 30px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-cta:hover {
+  box-shadow: var(--shadow-cta);
+}
+
+.hover\:shadow-neon:hover {
+  box-shadow: var(--shadow-neon);
+}
+
+@media (min-width: 768px){
+  .md\:flex{
+    display: flex;
+  }
+
+  .md\:hidden{
+    display: none;
+  }
+
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-8xl{
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script type="module"
+      src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fprogramado5163back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+    <style>
+            #typing-container {
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-align: center;
+                margin: 0 auto;
+            }
+            #typing-text {
+                display: inline-block;
+                border-right: 2px solid var(--color-primary);
+                animation: blink-caret 0.75s step-end infinite;
+                white-space: nowrap;
+            }
+            @keyframes blink-caret {
+                from,
+                to {
+                    border-color: transparent;
+                }
+                50% {
+                    border-color: var(--color-primary);
+                }
+            }
+            #matrix-rain {
+                position: fixed;
+                inset: 0;
+                z-index: 0;
+            }
+            .logo-glass {
+                display: inline-flex;
+                gap: 0.05em;
+                outline: none;
+            }
+            .logo-glass:focus {
+                outline: none;
+            }
+            #logo {
+                --logo-stroke-width: 1px; /* default stroke width */
+            }
+            .glass-letter {
+                position: relative;
+                display: inline-block;
+                color: transparent;
+                -webkit-text-stroke: var(--logo-stroke-width, 0.5px) rgba(255, 255, 255, 0.22);
+                text-shadow: none;
+                transition: color 0.3s, -webkit-text-stroke 0.3s, transform 0.3s;
+            }
+            .glass-letter::after {
+                content: none;
+            }
+            .glass-letter.on {
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: var(--logo-stroke-width, 0.5px) var(--logo-color, var(--color-primary));
+                text-shadow:
+                    0 0 8px rgba(var(--logo-color-rgb, 0, 217, 255), 0.4),
+                    0 0 16px rgba(var(--logo-color-rgb, 0, 217, 255), 0.3),
+                    0 0 32px rgba(var(--logo-color-rgb, 0, 217, 255), 0.25);
+                filter: drop-shadow(0 0 8px rgba(var(--logo-color-rgb, 0, 217, 255), 0.35));
+                animation: none;
+            }
+            @keyframes neonPulse {
+                from {
+                    text-shadow: 0 0 0.5px var(--color-primary), 0 0 1px var(--color-primary), 0 0 2px var(--color-secondary);
+                }
+                to {
+                    text-shadow: 0 0 1px var(--color-primary), 0 0 2px var(--color-primary), 0 0 4px var(--color-secondary);
+                }
+            }
+            .enter-tip {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: var(--color-text-secondary);
+                font-family: 'Exo 2', sans-serif;
+                z-index: 2;
+                font-size: 0.875rem;
+                opacity: 0.8;
+            }
+            .enter-tip kbd {
+                font-family: 'Fira Code', monospace;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+        </style>
+  </head>
+  <body class="bg-background overflow-x-hidden">
+    <div id="scroll-progress"></div>
+    <!-- Navigation -->
+    <nav
+      class="glass-nav fixed top-0 left-0 right-0 w-full border-b border-border-glow/50 z-50 shadow-glow py-4">
+      <div class="container-custom">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <div class="relative">
+              <svg class="w-10 h-10 text-primary neon-glow"
+                fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+              <div
+                class="absolute inset-0 w-10 h-10 bg-primary/20 rounded-full blur-md animate-pulse-slow"></div>
+            </div>
+            <h1 id="logo" data-text="Programador Sincero"
+              class="logo-glass text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black font-futuristic"></h1>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#cursos"
+              class="text-text-secondary hover:text-primary transition-all duration-300 hover:text-shadow-glow font-medium">Cursos</a>
+            <a href="#sobre"
+              class="text-text-secondary hover:text-primary transition-all duration-300 hover:text-shadow-glow font-medium">Sobre</a>
+            <a href="#tecnologias"
+              class="text-text-secondary hover:text-primary transition-all duration-300 hover:text-shadow-glow font-medium">Tecnologias</a>
+            <a href="#comunidade"
+              class="text-text-secondary hover:text-primary transition-all duration-300 hover:text-shadow-glow font-medium">Comunidade</a>
+          </div>
+          <button id="menu-toggle"
+            class="md:hidden relative w-8 h-6 text-text-primary">
+            <span
+              class="absolute block w-full h-0.5 bg-current top-0 transition-all duration-300"></span>
+            <span
+              class="absolute block w-full h-0.5 bg-current top-2.5 transition-all duration-300"></span>
+            <span
+              class="absolute block w-full h-0.5 bg-current top-5 transition-all duration-300"></span>
+          </button>
+        </div>
+        <div id="mobile-menu"
+          class="md:hidden hidden flex flex-col items-center space-y-4 mt-4">
+          <a href="#cursos"
+            class="text-text-secondary hover:text-primary transition-all duration-300 hover:text-shadow-glow font-medium">Cursos</a>
+          <a href="#sobre"
+            class="text-text-secondary hover:text-primary transition-all duration-300 hover:text-shadow-glow font-medium">Sobre</a>
+          <a href="#tecnologias"
+            class="text-text-secondary hover:text-primary transition-all duration-300 hover:text-shadow-glow font-medium">Tecnologias</a>
+          <a href="#comunidade"
+            class="text-text-secondary hover:text-primary transition-all duration-300 hover:text-shadow-glow font-medium">Comunidade</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-surface via-background to-surface pt-20 overflow-hidden">
+      <div id="matrix-rain"
+        class="absolute inset-0 overflow-hidden pointer-events-none">
+        <canvas id="matrix-canvas"
+          class="w-full h-full opacity-30"></canvas>
+      </div>
+      <div class="absolute inset-0 cyber-grid opacity-30"></div>
+      <div
+        class="absolute top-20 left-10 w-40 h-40 md:w-72 md:h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div
+        class="absolute bottom-20 right-10 w-56 h-56 md:w-96 md:h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-slow"
+        style="animation-delay: 1.5s;"></div>
+
+      <div class="container-custom relative z-10">
+        <div class="text-center">
+          <h1
+            class="text-4xl sm:text-6xl md:text-8xl font-black text-text-primary mb-8 leading-tight">
+            <span id="typing-container">
+              <span id="typing-text" class="text-gradient"></span>
+            </span>
+          </h1>
+          <p
+            class="text-base sm:text-lg md:text-2xl text-text-secondary mb-10 leading-relaxed font-medium max-w-4xl mx-auto">
+            Descubra uma forma revolucionária de aprender
+            programação.
+            Nossa plataforma utiliza técnicas comprovadas para
+            acelerar seu aprendizado e dominar as tecnologias
+            essenciais.
+          </p>
+          <button id="cta-btn" class="neon-cta mb-16">Conheça os Cursos</button>
+
+          <!-- Tech Stats -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-16">
+            <div
+              class="card p-6 hover:shadow-neon transition-all duration-500">
+              <div
+                class="text-4xl font-black text-primary counter soft-glow"
+                id="lines-counter" data-target="50000" data-suffix="+">0</div>
+              <div
+                class="text-sm text-text-secondary font-medium mt-2">Linhas
+                de Código</div>
+            </div>
+            <div
+              class="card p-6 hover:shadow-neon transition-all duration-500">
+              <div
+                class="text-4xl font-black text-accent counter soft-glow"
+                id="projects-counter" data-target="200" data-suffix="+">0</div>
+              <div
+                class="text-sm text-text-secondary font-medium mt-2">Projetos
+                Entregues</div>
+            </div>
+            <div
+              class="card p-6 hover:shadow-neon transition-all duration-500">
+              <div
+                class="text-4xl font-black text-secondary counter soft-glow"
+                id="tech-counter" data-target="30" data-suffix="+">0</div>
+              <div
+                class="text-sm text-text-secondary font-medium mt-2">Tecnologias
+                Exploradas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programming Philosophy Section -->
+    <section class="section-padding bg-surface relative overflow-hidden">
+      <div class="absolute inset-0 cyber-grid opacity-20"></div>
+      <div class="container-custom relative z-10">
+        <div class="text-center mb-20">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-black text-text-primary mb-8 text-gradient-secondary">
+            A Arte de Programar
+          </h2>
+          <p
+            class="text-base sm:text-lg md:text-2xl text-text-secondary max-w-4xl mx-auto font-medium">
+            Programação é mais que código - é criatividade, lógica e
+            a capacidade de transformar ideias abstratas em soluções
+            concretas.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div
+            class="card border-primary-600 bg-gradient-to-br from-primary-900/20 to-surface-light hover:shadow-neon transition-all duration-500">
+            <h3
+              class="text-2xl font-black text-primary mb-8 flex items-center">
+              <svg class="w-8 h-8 mr-4 animate-pulse-slow"
+                fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Pensamento Lógico
+            </h3>
+            <ul class="space-y-6">
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-primary mt-1 mr-4 flex-shrink-0 animate-pulse"
+                  fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span
+                  class="text-text-secondary font-medium">Decomposição
+                  de problemas complexos</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-primary mt-1 mr-4 flex-shrink-0 animate-pulse"
+                  fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span
+                  class="text-text-secondary font-medium">Algoritmos
+                  elegantes e eficientes</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-primary mt-1 mr-4 flex-shrink-0 animate-pulse"
+                  fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span
+                  class="text-text-secondary font-medium">Padrões
+                  de design e arquitetura</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-primary mt-1 mr-4 flex-shrink-0 animate-pulse"
+                  fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span
+                  class="text-text-secondary font-medium">Otimização
+                  e performance</span>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="card border-accent-600 bg-gradient-to-br from-accent-900/20 to-surface-light hover:shadow-neon transition-all duration-500">
+            <h3
+              class="text-2xl font-black text-accent mb-8 flex items-center neon-glow">
+              <svg class="w-8 h-8 mr-4 animate-pulse-slow"
+                fill="currentColor" viewBox="0 0 24 24">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              Criatividade Digital
+            </h3>
+            <ul class="space-y-6">
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-accent mt-1 mr-4 flex-shrink-0 animate-pulse"
+                  fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span
+                  class="text-text-secondary font-medium">Interfaces
+                  intuitivas e bonitas</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-accent mt-1 mr-4 flex-shrink-0 animate-pulse"
+                  fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span
+                  class="text-text-secondary font-medium">Experiências
+                  interativas únicas</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-accent mt-1 mr-4 flex-shrink-0 animate-pulse"
+                  fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span
+                  class="text-text-secondary font-medium">Animações
+                  e transições fluidas</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-accent mt-1 mr-4 flex-shrink-0 animate-pulse"
+                  fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span
+                  class="text-text-secondary font-medium">Soluções
+                  inovadoras e funcionais</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Showcase -->
+    <section id="tecnologias"
+      class="section-padding relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-surface via-background to-surface"></div>
+      <div class="absolute inset-0 cyber-grid opacity-10"></div>
+      <div class="container-custom relative z-10">
+        <div class="text-center mb-20">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-black text-text-primary mb-8 text-gradient">
+            Tecnologias do Futuro
+          </h2>
+          <p
+            class="text-base sm:text-lg md:text-2xl text-text-secondary max-w-4xl mx-auto font-medium">
+            Explore as tecnologias que estão moldando o futuro da
+            web e da programação.
+          </p>
+        </div>
+        <div class="flex justify-center mb-16">
+          <div class="segmented-control" id="tech-filters">
+            <button class="active" data-tech-filter="all">Todas</button>
+            <button data-tech-filter="frontend">Frontend</button>
+            <button data-tech-filter="backend">Backend</button>
+            <button data-tech-filter="tools">Ferramentas</button>
+            <div class="segmented-control__indicator"></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Frontend Technologies -->
+          <div class="card card-hover cyber-border tech-card tilt-card"
+            data-tech-category="frontend">
+            <div class="relative mb-8">
+              <div
+                class="w-full h-56 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center shadow-glow">
+                <div
+                  class="text-6xl font-mono font-bold text-primary neon-glow">&lt;/&gt;</div>
+              </div>
+              <div
+                class="absolute top-4 left-4 bg-secondary text-white px-4 py-2 rounded-full text-sm font-black shadow-purple">
+                Frontend
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-primary text-surface-light px-4 py-2 rounded-full text-sm font-black">
+                Modern
+              </div>
+            </div>
+            <h3
+              class="text-2xl font-black text-text-primary mb-4">React
+              & TypeScript</h3>
+            <p class="text-text-secondary mb-6 font-medium">
+              Bibliotecas modernas para criar interfaces reativas
+              e tipadas com máxima produtividade.
+            </p>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-text-secondary font-medium">Popularidade:</span>
+                <span
+                  class="font-black text-success neon-glow">★★★★★</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-text-secondary font-medium">Demanda:</span>
+                <span
+                  class="font-black text-success neon-glow">Alto</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-text-secondary font-medium">Ecosistema:</span>
+                <span
+                  class="font-black text-text-primary">Vasto</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Technologies -->
+          <div class="card card-hover cyber-border tech-card tilt-card"
+            data-tech-category="backend">
+            <div class="relative mb-8">
+              <div
+                class="w-full h-56 bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl flex items-center justify-center shadow-glow">
+                <div
+                  class="text-6xl font-mono font-bold text-accent neon-glow">{
+                  }</div>
+              </div>
+              <div
+                class="absolute top-4 left-4 bg-accent text-surface-light px-4 py-2 rounded-full text-sm font-black shadow-neon">
+                Backend
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-secondary text-white px-4 py-2 rounded-full text-sm font-black">
+                Server
+              </div>
+            </div>
+            <h3
+              class="text-2xl font-black text-text-primary mb-4">Node.js
+              & Python</h3>
+            <p class="text-text-secondary mb-6 font-medium">
+              Plataformas poderosas para criar APIs escaláveis e
+              sistemas distribuídos modernos.
+            </p>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-text-secondary font-medium">Performance:</span>
+                <span
+                  class="font-black text-success neon-glow">★★★★★</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-text-secondary font-medium">Escalabilidade:</span>
+                <span
+                  class="font-black text-success neon-glow">Excelente</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-text-secondary font-medium">Comunidade:</span>
+                <span
+                  class="font-black text-text-primary">Ativa</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Development Tools -->
+          <div class="card card-hover cyber-border tech-card tilt-card"
+            data-tech-category="tools">
+            <div class="relative mb-8">
+              <div
+                class="w-full h-56 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-xl flex items-center justify-center shadow-glow">
+                <div
+                  class="text-6xl font-mono font-bold text-secondary neon-glow">⚡</div>
+              </div>
+              <div
+                class="absolute top-4 left-4 bg-primary text-surface-light px-4 py-2 rounded-full text-sm font-black shadow-cta">
+                Ferramentas
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-accent text-surface-light px-4 py-2 rounded-full text-sm font-black">
+                DevOps
+              </div>
+            </div>
+            <h3
+              class="text-2xl font-black text-text-primary mb-4">Git
+              & Docker</h3>
+            <p class="text-text-secondary mb-6 font-medium">
+              Ferramentas essenciais para versionamento de código
+              e containerização de aplicações.
+            </p>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-text-secondary font-medium">Essencialidade:</span>
+                <span
+                  class="font-black text-success neon-glow">★★★★★</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-text-secondary font-medium">Adoção:</span>
+                <span
+                  class="font-black text-success neon-glow">Universal</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-text-secondary font-medium">Produtividade:</span>
+                <span
+                  class="font-black text-text-primary">Alta</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Philosophy -->
+    <section id="sobre" class="section-padding relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-surface via-background to-surface"></div>
+      <div class="absolute inset-0 cyber-grid opacity-10"></div>
+      <div
+        class="absolute bottom-20 left-10 w-56 h-56 md:w-96 md:h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="container-custom relative z-10">
+        <div class="text-center mb-20">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-black text-text-primary mb-8 text-gradient">
+            Filosofia do Aprendizado
+          </h2>
+          <p
+            class="text-base sm:text-lg md:text-2xl text-text-secondary max-w-4xl mx-auto font-medium">
+            O verdadeiro conhecimento vem da prática, experimentação
+            e da paixão por criar soluções elegantes.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div
+                  class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mr-6 flex-shrink-0 shadow-cta">
+                  <svg class="w-8 h-8 text-surface-light"
+                    fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4
+                    class="font-black text-text-primary mb-3 text-xl">Aprendizado
+                    Prático</h4>
+                  <p
+                    class="text-text-secondary font-medium">Teoria
+                    é importante, mas nada substitui colocar
+                    a mão no código e ver suas ideias
+                    ganharem vida.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mr-6 flex-shrink-0 shadow-purple">
+                  <svg class="w-8 h-8 text-white"
+                    fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4
+                    class="font-black text-text-primary mb-3 text-xl">Experimentação
+                    Constante</h4>
+                  <p
+                    class="text-text-secondary font-medium">Cada
+                    erro é uma oportunidade de aprender. A
+                    programação recompensa a curiosidade e a
+                    persistência.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mr-6 flex-shrink-0 shadow-neon">
+                  <svg class="w-8 h-8 text-surface-light"
+                    fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4
+                    class="font-black text-text-primary mb-3 text-xl">Código
+                    Limpo e Elegante</h4>
+                  <p
+                    class="text-text-secondary font-medium">Programar
+                    é uma arte. Code beautiful, think
+                    beautiful, create beautiful
+                    solutions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="card cyber-border p-8">
+              <div class="text-center">
+                <div
+                  class="w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-6 shadow-glow">
+                  <div
+                    class="text-4xl font-mono font-bold text-surface-light neon-glow">∞</div>
+                </div>
+                <h3
+                  class="text-2xl font-black text-text-primary mb-4">Aprendizado
+                  Infinito</h3>
+                <p class="text-text-secondary font-medium mb-6">
+                  "O que sabemos é uma gota, o que ignoramos é o oceano. Na programação, sempre há algo novo para descobrir."
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-center">
+                  <div>
+                    <div
+                      class="text-2xl font-black text-primary neon-glow">∞</div>
+                    <div
+                      class="text-xs text-text-secondary">Possibilidades</div>
+                  </div>
+                  <div>
+                    <div
+                      class="text-2xl font-black text-accent neon-glow">∞</div>
+                    <div
+                      class="text-xs text-text-secondary">Criatividade</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community & Exploration -->
+    <section id="comunidade"
+      class="section-padding relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-surface via-background to-surface"></div>
+      <div class="absolute inset-0 cyber-grid opacity-10"></div>
+      <div class="container-custom relative z-10">
+        <div class="text-center mb-20">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-black text-text-primary mb-8 text-gradient">
+            Comunidade e Exploração
+          </h2>
+          <p
+            class="text-base sm:text-lg md:text-2xl text-text-secondary max-w-4xl mx-auto font-medium">
+            Descubra conceitos, participe de discussões e explore o
+            vasto universo da programação.
+          </p>
+        </div>
+        <div class="max-w-5xl mx-auto space-y-6">
+          <details class="card cyber-border faq-item">
+            <summary class="w-full flex justify-between items-center p-6">
+              <h4 class="font-black text-text-primary text-lg">O que torna a
+                programação uma arte?</h4>
+              <svg
+                class="w-6 h-6 text-text-secondary transition-transform duration-300"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"><path
+                  stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="faq-content px-6 pb-6">
+              <p class="text-text-secondary font-medium leading-relaxed">
+                A programação é arte porque combina criatividade com precisão
+                técnica. Como um poeta escolhe cada palavra, um programador
+                escolhe cada linha de código. Existe beleza na simplicidade de
+                um algoritmo elegante, na arquitetura bem pensada de um sistema,
+                e na forma como soluções complexas podem emergir de regras
+                simples.
+              </p>
+            </div>
+          </details>
+          <details class="card cyber-border faq-item">
+            <summary class="w-full flex justify-between items-center p-6">
+              <h4 class="font-black text-text-primary text-lg">Como as
+                linguagens de programação evoluem?</h4>
+              <svg
+                class="w-6 h-6 text-text-secondary transition-transform duration-300"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"><path
+                  stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="faq-content px-6 pb-6">
+              <p class="text-text-secondary font-medium leading-relaxed">
+                As linguagens de programação evoluem como organismos vivos. Elas
+                se adaptam às necessidades da comunidade, incorporam novos
+                paradigmas e aprendem com os erros do passado. JavaScript nasceu
+                em 10 dias e se tornou onipresente. Python priorizou
+                legibilidade e conquistou cientistas de dados. Cada linguagem
+                reflete as necessidades de sua época.
+              </p>
+            </div>
+          </details>
+          <details class="card cyber-border faq-item">
+            <summary class="w-full flex justify-between items-center p-6">
+              <h4 class="font-black text-text-primary text-lg">Qual o futuro da
+                programação web?</h4>
+              <svg
+                class="w-6 h-6 text-text-secondary transition-transform duration-300"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"><path
+                  stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="faq-content px-6 pb-6">
+              <p class="text-text-secondary font-medium leading-relaxed">
+                O futuro da web é emocionante: WebAssembly permitirá performance
+                nativa no navegador, Progressive Web Apps tornarão a linha entre
+                web e nativo ainda mais tênue, e tecnologias como WebGL e WebXR
+                abrirão portas para experiências imersivas. A web está se
+                tornando uma plataforma universal de computação.
+              </p>
+            </div>
+          </details>
+          <details class="card cyber-border faq-item">
+            <summary class="w-full flex justify-between items-center p-6">
+              <h4 class="font-black text-text-primary text-lg">Como a IA está
+                transformando o desenvolvimento?</h4>
+              <svg
+                class="w-6 h-6 text-text-secondary transition-transform duration-300"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"><path
+                  stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="faq-content px-6 pb-6">
+              <p class="text-text-secondary font-medium leading-relaxed">
+                A IA não está substituindo programadores, está os
+                potencializando. Ferramentas como GitHub Copilot aceleram a
+                escrita de código, permitindo que foquemos na arquitetura e
+                resolução de problemas complexos. É uma parceria: a IA cuida da
+                sintaxe, nós cuidamos da criatividade e do pensamento
+                estratégico.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-surface-light text-white section-padding border-t border-border-glow relative overflow-hidden">
+      <div class="absolute inset-0 cyber-grid opacity-10"></div>
+      <div class="container-custom relative z-10">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-12">
+          <div>
+            <div class="flex items-center space-x-3 mb-6">
+              <div class="relative">
+                <svg class="w-10 h-10 text-primary neon-glow"
+                  fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                <div
+                  class="absolute inset-0 w-10 h-10 bg-primary/20 rounded-full blur-md animate-pulse-slow"></div>
+              </div>
+              <span
+                class="text-2xl font-black text-gradient">Programador
+                Sincero</span>
+            </div>
+            <p class="text-text-secondary mb-6 font-medium">
+              Explorando o futuro da programação através da arte,
+              ciência e criatividade digital.
+            </p>
+            <div class="flex space-x-4">
+              <a href="javascript:void(0)"
+                class="text-text-secondary hover:text-primary transition-all duration-300 hover:shadow-cta p-2 rounded-lg">
+                <svg class="w-6 h-6" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                </svg>
+              </a>
+              <a href="javascript:void(0)"
+                class="text-text-secondary hover:text-primary transition-all duration-300 hover:shadow-cta p-2 rounded-lg">
+                <svg class="w-6 h-6" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-.64-1.98A2.26 2.26 0 0 0 15.97 10a2.86 2.86 0 0 0-2.46 1.3v-1.11h-2.48v8.31h2.48v-4.75c0-.42.06-.8.18-1.13a1.54 1.54 0 0 1 1.33-.8 1.13 1.13 0 0 1 .85.33 1.49 1.49 0 0 1 .33 1.06v5.29h2.5M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.24 9.94v-8.31H5.64v8.31h2.48z" />
+                </svg>
+              </a>
+              <a href="javascript:void(0)"
+                class="text-text-secondary hover:text-primary transition-all duration-300 hover:shadow-cta p-2 rounded-lg">
+                <svg class="w-6 h-6" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4
+              class="font-black mb-6 text-lg text-text-primary">Explorar</h4>
+            <ul class="space-y-3 text-text-secondary">
+              <li><a href="javascript:void(0)"
+                  class="hover:text-primary transition-colors font-medium">Tecnologias</a></li>
+              <li><a href="javascript:void(0)"
+                  class="hover:text-primary transition-colors font-medium">Conceitos</a></li>
+              <li><a href="javascript:void(0)"
+                  class="hover:text-primary transition-colors font-medium">Filosofia</a></li>
+              <li><a href="javascript:void(0)"
+                  class="hover:text-primary transition-colors font-medium">Futuro</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-black mb-6 text-lg text-text-primary">Conectar</h4>
+            <ul class="space-y-3 text-text-secondary">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-3 text-primary"
+                  fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                hello@programadorsincero.dev
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-3 text-primary"
+                  fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+                Comunidade Global
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-border pt-8 text-center text-text-secondary">
+          <p class="font-medium">&copy; 2025 Programador Sincero.
+            Explorando o infinito digital.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+    // Matrix Rain Animation
+    const canvas = document.getElementById('matrix-canvas');
+    const ctx = canvas.getContext('2d');
+
+    const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+    const matrixArray = matrix.split("");
+
+    const fontSize = 10;
+    let columns;
+    let drops;
+    let highlightTimers;
+
+    function initMatrix() {
+        columns = Math.floor(canvas.width / fontSize);
+        drops = Array.from({ length: columns }, () => 1);
+        highlightTimers = Array.from({ length: columns }, () => 0);
+    }
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        initMatrix();
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(10, 10, 15, 0.04)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.font = fontSize + 'px monospace';
+
+        for (let i = 0; i < drops.length; i++) {
+            const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+
+            if (highlightTimers[i] > 0) {
+                ctx.fillStyle = '#00FFFF';
+                highlightTimers[i]--;
+            } else {
+                if (Math.random() < 0.005) {
+                    highlightTimers[i] = 20;
+                    ctx.fillStyle = '#00FFFF';
+                } else {
+                    ctx.fillStyle = '#00D9FF';
+                }
+            }
+
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+
+        requestAnimationFrame(drawMatrix);
+    }
+
+    // Enhanced animated counters
+    function animateCounter(elementId, target, suffix = '', duration = 3000) {
+        const element = document.getElementById(elementId);
+        if (!element) return;
+        
+        const start = 0;
+        const increment = target / (duration / 16);
+        let current = start;
+
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+                element.classList.add('soft-glow', 'animate-pulse');
+            }
+            element.textContent = Math.floor(current).toLocaleString() + suffix;
+        }, 16);
+    }
+
+    // Interactive elements initialization
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const ctaBtn = document.getElementById('cta-btn');
+        const filterButtons = document.querySelectorAll('[data-tech-filter]');
+        const techCards = document.querySelectorAll('[data-tech-category]');
+        const indicator = document.querySelector('.segmented-control__indicator');
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('open');
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        if (ctaBtn) {
+            ctaBtn.addEventListener('click', () => {
+                document.querySelector('#cursos')?.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+
+        document.querySelectorAll('.tilt-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const midX = rect.width / 2;
+                const midY = rect.height / 2;
+                const rotateX = (y - midY) / 15;
+                const rotateY = (midX - x) / 15;
+                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+
+        if (filterButtons.length && indicator) {
+            filterButtons.forEach((button, index) => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-tech-filter');
+                    indicator.style.transform = `translateX(${index * 100}%)`;
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    techCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-tech-category') === filter) {
+                            card.style.display = 'block';
+                            card.style.animation = 'slideUp 0.5s ease-out';
+                        } else {
+                            card.style.animation = 'fadeOut 0.3s ease-in';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        }
+
+        const progressBar = document.getElementById('scroll-progress');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = (scrollTop / docHeight) * 100;
+                progressBar.style.width = progress + '%';
+            });
+        }
+    });
+
+    // Start animations when page loads
+    window.addEventListener('load', function() {
+        // Start background animations
+        resizeCanvas();
+        requestAnimationFrame(drawMatrix);
+    });
+
+    // Counter animations on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    const target = parseInt(entry.target.getAttribute('data-target'), 10) || 0;
+                    const suffix = entry.target.getAttribute('data-suffix') || '';
+                    animateCounter(entry.target.id, target, suffix);
+                    entry.target.classList.add('counted');
+                }
+            });
+        }, { threshold: 0.6 });
+
+        counters.forEach(counter => counterObserver.observe(counter));
+    });
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, observerOptions);
+
+    // Add CSS for new animations
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Observe all cards and tech cards for animation
+    document.addEventListener('DOMContentLoaded', function() {
+        const animatedElements = document.querySelectorAll('.card, .tech-card');
+        animatedElements.forEach(el => {
+            el.classList.add('fade-in-up');
+            observer.observe(el);
+        });
+    });
+
+    // Add soft glowing cursor effect for interactive elements
+    document.addEventListener('DOMContentLoaded', function() {
+        const interactiveElements = document.querySelectorAll('.card-hover, [data-tech-filter], [onclick]');
+        
+        interactiveElements.forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.cursor = 'pointer';
+                if (this.classList.contains('card-hover')) {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                }
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                if (this.classList.contains('card-hover')) {
+                    this.style.transform = '';
+                }
+            });
+        });
+    });
+
+    // Smooth scroll for navigation links
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const phrases = [
+            'Aprendizado Eficiente',
+            'Estudo Otimizado',
+            'Prática Focada',
+            'Memorização Ativa',
+            'Aplicação Prática'
+        ];
+        const container = document.getElementById('typing-container');
+        const textEl = document.getElementById('typing-text');
+        if (container && textEl) {
+            const hiddenSpan = document.createElement('span');
+            hiddenSpan.style.visibility = 'hidden';
+            hiddenSpan.style.position = 'absolute';
+            hiddenSpan.style.whiteSpace = 'nowrap';
+            container.appendChild(hiddenSpan);
+            let maxWidth = 0;
+            let maxHeight = 0;
+            phrases.forEach(phrase => {
+                hiddenSpan.textContent = phrase;
+                const rect = hiddenSpan.getBoundingClientRect();
+                maxWidth = Math.max(maxWidth, rect.width);
+                maxHeight = Math.max(maxHeight, rect.height);
+            });
+            hiddenSpan.remove();
+            container.style.width = maxWidth + 'px';
+            container.style.height = maxHeight + 'px';
+            container.style.display = 'flex';
+            container.style.alignItems = 'center';
+            container.style.justifyContent = 'center';
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            function type() {
+                const current = phrases[phraseIndex];
+                if (isDeleting) {
+                    charIndex--;
+                    textEl.textContent = current.substring(0, charIndex);
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        phraseIndex = (phraseIndex + 1) % phrases.length;
+                    }
+                } else {
+                    charIndex++;
+                    textEl.textContent = current.substring(0, charIndex);
+                    if (charIndex === current.length) {
+                        isDeleting = true;
+                        setTimeout(type, 2000);
+                        return;
+                    }
+                }
+                const delay = isDeleting ? 50 : 120;
+                setTimeout(type, delay);
+            }
+            type();
+        }
+    });
+</script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.logo-glass').forEach(logo => {
+            const text = logo.dataset.text || logo.textContent;
+
+            function renderLogo(t) {
+                logo.innerHTML = '';
+                t.split('').forEach(ch => {
+                    const span = document.createElement('span');
+                    span.className = 'glass-letter';
+                    span.innerHTML = ch === ' ' ? '&nbsp;' : ch;
+                    logo.appendChild(span);
+                });
+            }
+
+            renderLogo(text);
+            const letters = logo.querySelectorAll('.glass-letter');
+
+            const neonColors = [
+                '#39FF14', '#CCFF00', '#FF073A', '#00FFFF', '#FF00FF',
+                '#FF6700', '#FFFF33', '#FF1493', '#00FF7F', '#7DF9FF',
+                '#DFFF00', '#FF4D00', '#00FF00', '#FF0099', '#00BFFF',
+                '#FF00CC', '#00FFEF', '#FFFF00', '#FF8C00', '#00FFBF'
+            ];
+            let colorIndex = neonColors.indexOf('#00FFEF');
+            if (colorIndex === -1) { colorIndex = 0; }
+
+            function hexToRgb(hex) {
+                hex = hex.replace('#', '');
+                if (hex.length === 3) {
+                    hex = hex.split('').map(c => c + c).join('');
+                }
+                const bigint = parseInt(hex, 16);
+                const r = (bigint >> 16) & 255;
+                const g = (bigint >> 8) & 255;
+                const b = bigint & 255;
+                return `${r}, ${g}, ${b}`;
+            }
+
+            function applyColor(index) {
+                const color = neonColors[index];
+                logo.style.setProperty('--logo-color', color);
+                logo.style.setProperty('--logo-color-rgb', hexToRgb(color));
+            }
+
+            applyColor(colorIndex);
+
+            letters.forEach((letter, i) => {
+                setTimeout(() => {
+                    letter.classList.add('on');
+                    letter.style.transform = 'translateY(-2px)';
+                    setTimeout(() => { letter.style.transform = ''; }, 220);
+                }, i * 100);
+            });
+
+            const totalTime = letters.length * 100 + 300;
+            const available = Array.from(letters);
+
+            function failRandomLetter() {
+                if (available.length === 0) return;
+                const index = Math.floor(Math.random() * available.length);
+                const letter = available.splice(index, 1)[0];
+                let count = 0;
+                const interval = setInterval(() => {
+                    if (letter.classList.contains('on')) {
+                        letter.style.transition = 'none';
+                        letter.classList.remove('on');
+                    } else {
+                        letter.style.transition = '';
+                        letter.classList.add('on');
+                    }
+                    count++;
+                    if (count === 6) {
+                        clearInterval(interval);
+                        letter.style.transition = '';
+                        letter.classList.add('on');
+                        if (available.length > 0) {
+                            setTimeout(failRandomLetter, 10000);
+                        }
+                    }
+                }, 200);
+            }
+
+            setTimeout(failRandomLetter, totalTime);
+
+            logo.setAttribute('tabindex', '0');
+            logo.addEventListener('click', () => logo.focus());
+
+            logo.addEventListener('keydown', e => {
+                if (e.key === 'ArrowRight') {
+                    colorIndex = (colorIndex + 1) % neonColors.length;
+                    applyColor(colorIndex);
+                } else if (e.key === 'ArrowLeft') {
+                    colorIndex = (colorIndex - 1 + neonColors.length) % neonColors.length;
+                    applyColor(colorIndex);
+                }
+            });
+        });
+    });
+</script>
+  </body>
+</html>

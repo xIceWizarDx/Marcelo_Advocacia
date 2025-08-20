@@ -1,0 +1,122 @@
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import Header from '../../components/ui/Header';
+import HeroSection from './components/HeroSection';
+import ProfessionalJourney from './components/ProfessionalJourney';
+import MethodologySection from './components/MethodologySection';
+import CredentialsSection from './components/CredentialsSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import ContactSection from './components/ContactSection';
+
+const AboutMarceloBaia = () => {
+  const handleContactClick = () => {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/5565999999999?text=Olá, gostaria de agendar uma consulta jurídica.', '_blank');
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>Sobre Marcelo Baía - Advogado Especialista em Rondonópolis/MT</title>
+        <meta 
+          name="description" 
+          content="Conheça a trajetória profissional de Marcelo Baía, advogado especialista em Direito Civil, Consumidor, Família e Empresarial em Rondonópolis/MT. Mais de 8 anos de experiência com atendimento humanizado." 
+        />
+        <meta name="keywords" content="advogado rondonópolis, marcelo baía, direito civil, direito consumidor, direito família, direito empresarial, oab mt" />
+        <meta property="og:title" content="Sobre Marcelo Baía - Advogado Especialista em Rondonópolis/MT" />
+        <meta property="og:description" content="Conheça a trajetória profissional de Marcelo Baía, advogado especialista com mais de 8 anos de experiência em Rondonópolis/MT." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://marcelobaia.adv.br/about-marcelo-ba-a" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
+        <Header />
+        
+        <main>
+          {/* Hero Section */}
+          <HeroSection 
+            onContactClick={handleContactClick}
+            onWhatsAppClick={handleWhatsAppClick}
+          />
+
+          {/* Professional Journey */}
+          <ProfessionalJourney />
+
+          {/* Methodology */}
+          <MethodologySection />
+
+          {/* Credentials */}
+          <CredentialsSection />
+
+          {/* Testimonials */}
+          <TestimonialsSection />
+
+          {/* Contact Section */}
+          <div id="contact-section">
+            <ContactSection />
+          </div>
+        </main>
+
+        {/* Footer */}
+        <footer className="bg-brand-primary text-white py-12">
+          <div className="max-w-7xl mx-auto px-4 lg:px-6">
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Brand */}
+              <div>
+                <h3 className="font-lora text-xl font-semibold mb-4">
+                  Marcelo Baía Advocacia
+                </h3>
+                <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                  Assessoria jurídica clara e segura para decisões importantes da sua vida. 
+                  Atendimento humanizado e comunicação transparente.
+                </p>
+                <p className="text-slate-400 text-xs">
+                  OAB/MT 12.345 • Ativo desde 2015
+                </p>
+              </div>
+
+              {/* Contact Info */}
+              <div>
+                <h4 className="font-semibold mb-4">Contato</h4>
+                <div className="space-y-2 text-sm text-slate-300">
+                  <p>📍 Rua das Flores, 123 - Centro</p>
+                  <p>Rondonópolis/MT - CEP 78700-000</p>
+                  <p>📞 (65) 99999-9999</p>
+                  <p>✉️ contato@marcelobaia.adv.br</p>
+                  <p>🕒 Segunda a Sexta: 8h às 18h</p>
+                </div>
+              </div>
+
+              {/* Areas */}
+              <div>
+                <h4 className="font-semibold mb-4">Áreas de Atuação</h4>
+                <ul className="space-y-1 text-sm text-slate-300">
+                  <li>• Direito Civil</li>
+                  <li>• Direito do Consumidor</li>
+                  <li>• Direito de Família</li>
+                  <li>• Direito Empresarial</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="border-t border-slate-700 mt-8 pt-8 text-center">
+              <p className="text-slate-400 text-sm">
+                © {new Date()?.getFullYear()} Marcelo Baía Advocacia. Todos os direitos reservados.
+              </p>
+              <p className="text-slate-500 text-xs mt-2">
+                Este site está em conformidade com o Provimento 205/2021 da OAB e a LGPD.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </>
+  );
+};
+
+export default AboutMarceloBaia;

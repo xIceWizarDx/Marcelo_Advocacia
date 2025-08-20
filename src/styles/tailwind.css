@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background Colors */
+    --color-background: #fafafa; /* zinc-50 */
+    --color-foreground: #1e293b; /* slate-800 */
+    --color-card: #f8fafc; /* slate-50 */
+    --color-card-foreground: #1e293b; /* slate-800 */
+    --color-popover: #ffffff; /* white */
+    --color-popover-foreground: #1e293b; /* slate-800 */
+    --color-muted: #f1f5f9; /* slate-100 */
+    --color-muted-foreground: #64748b; /* slate-500 */
+    
+    /* Border and Input */
+    --color-border: #e2e8f0; /* slate-200 */
+    --color-input: #f1f5f9; /* slate-100 */
+    --color-ring: #4f46e5; /* indigo-600 */
+    
+    /* Brand Colors */
+    --color-primary: #0f172a; /* slate-900 */
+    --color-primary-foreground: #ffffff; /* white */
+    --color-secondary: #334155; /* slate-700 */
+    --color-secondary-foreground: #ffffff; /* white */
+    
+    /* Action Colors */
+    --color-accent: #4f46e5; /* indigo-600 */
+    --color-accent-foreground: #ffffff; /* white */
+    --color-destructive: #dc2626; /* red-600 */
+    --color-destructive-foreground: #ffffff; /* white */
+    
+    /* Status Colors */
+    --color-success: #059669; /* emerald-600 */
+    --color-success-foreground: #ffffff; /* white */
+    --color-warning: #d97706; /* amber-600 */
+    --color-warning-foreground: #ffffff; /* white */
+    --color-error: #dc2626; /* red-600 */
+    --color-error-foreground: #ffffff; /* white */
+    
+    /* Text Colors */
+    --color-text-primary: #1e293b; /* slate-800 */
+    --color-text-secondary: #64748b; /* slate-500 */
+    
+    /* Surface Colors */
+    --color-surface: #f8fafc; /* slate-50 */
+    --color-surface-foreground: #1e293b; /* slate-800 */
+    
+    /* Brand Specific */
+    --color-brand-primary: #020617; /* slate-950 */
+    --color-brand-secondary: #0f172a; /* slate-900 */
+    --color-brand-accent: #4f46e5; /* indigo-600 */
+    --color-brand-warm: #f59e0b; /* amber-500 */
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-default: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    
+    /* Border Radius */
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-lora;
+  }
+}
+
+@layer utilities {
+  .font-lora {
+    font-family: 'Lora', serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hero-gradient {
+    background: radial-gradient(ellipse at center, #020617 0%, #0f172a 100%);
+  }
+  
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .underline-animation {
+    position: relative;
+  }
+  
+  .underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .underline-animation:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .pulse-gentle {
+    animation: pulse-gentle 3s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-gentle {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+  
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .stagger-1 { transition-delay: 0.2s; }
+  .stagger-2 { transition-delay: 0.4s; }
+  .stagger-3 { transition-delay: 0.6s; }
+}
