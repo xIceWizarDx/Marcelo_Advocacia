@@ -135,7 +135,7 @@ const MethodologySection = () => {
         {/* Principles */}
         <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-sm">
           <h3 className="font-lora text-2xl lg:text-3xl font-bold text-brand-primary text-center mb-12">
-            Princípios que Norteiam Meu Trabalho
+            Princípios que Norteiam Nosso Trabalho
           </h3>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
