@@ -30,7 +30,7 @@ const ContactCTA = ({ practiceArea }) => {
   };
 
   const whatsappTemplates = {
-    civil: 'Olá, preciso de orientação em Direito Civil. Gostaria de agendar uma consulta.',
+    civil: 'Olá, preciso de orientação em Direito Civil. Gostaria de agendar um atendimento.',
     consumer: 'Olá, tenho uma questão de Direito do Consumidor e preciso de ajuda jurídica.',
     family: 'Olá, preciso de orientação em Direito de Família. Gostaria de conversar sobre minha situação.',
     business: 'Olá, sou empresário e preciso de consultoria jurídica empresarial.'
@@ -133,7 +133,7 @@ const ContactCTA = ({ practiceArea }) => {
               Precisa de Orientação Jurídica?
             </h2>
             <p className="font-inter text-lg text-white/80 leading-relaxed mb-8">
-              Entre em contato conosco para uma consulta personalizada em {practiceAreaNames?.[practiceArea] || 'Direito Civil'}. 
+              Entre em contato conosco para um atendimento personalizado em {practiceAreaNames?.[practiceArea] || 'Direito Civil'}.
               Oferecemos atendimento humanizado e soluções jurídicas eficazes.
             </p>
 
@@ -165,7 +165,7 @@ const ContactCTA = ({ practiceArea }) => {
                 </div>
                 <div>
                   <h4 className="font-inter font-semibold text-white mb-1">E-mail</h4>
-                  <p className="font-inter text-sm text-white/70">Resposta em até 24 horas</p>
+                  <p className="font-inter text-sm text-white/70">Resposta imediata</p>
                 </div>
               </div>
             </div>

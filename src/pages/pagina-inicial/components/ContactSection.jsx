@@ -29,7 +29,7 @@ const ContactSection = () => {
     {
       icon: 'MessageCircle',
       title: 'WhatsApp',
-      description: 'Atendimento via WhatsApp é em tempo integral.',
+      description: 'Disponível 24h por dia, 7 dias por semana.',
       value: '(66) 99911-1314',
       action: () => window.open('https://wa.me/5566999111314', '_blank'),
       color: 'text-green-600',
@@ -38,7 +38,7 @@ const ContactSection = () => {
     {
       icon: 'Phone',
       title: 'Telefone',
-      description: 'Atendimento mediante agendamento.',
+      description: 'Atendimento em horário comercial.',
       value: '(66) 99911-1314',
       action: () => window.location.href = 'tel:+5566999111314',
       color: 'text-blue-600',
@@ -47,9 +47,9 @@ const ContactSection = () => {
     {
       icon: 'Mail',
       title: 'E-mail',
-      description: 'Resposta em até 4h',
-      value: 'marcelobaiaadvogado@gmail.com',
-      action: () => window.location.href = 'mailto:marcelobaiaadvogado@gmail.com',
+      description: 'Resposta imediata',
+      value: 'contato@marcelobaia.adv.br',
+      action: () => window.location.href = 'mailto:contato@marcelobaia.adv.br',
       color: 'text-indigo-600',
       bgColor: 'bg-indigo-50'
     },
@@ -82,7 +82,7 @@ const ContactSection = () => {
           </h2>
           
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Escolha a forma de contato mais conveniente para você. Estamos sempre disponíveis para esclarecer dúvidas e agendar consultas.
+            Escolha a forma de contato mais conveniente para você. Estamos sempre disponíveis para esclarecer dúvidas e agendar atendimentos.
           </p>
         </div>
 
@@ -131,7 +131,7 @@ const ContactSection = () => {
               </div>
               <div className="mt-4 pt-4 border-t border-slate-100">
                 <p className="text-xs text-slate-500">
-                  Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.
+                  Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.
                 </p>
               </div>
             </div>

@@ -151,7 +151,7 @@ const ContextualFAQ = ({ practiceArea }) => {
           <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
             <Icon name="MessageSquare" size={48} className="text-indigo-600 mx-auto mb-4" />
             <h3 className="font-lora font-semibold text-xl text-slate-900 mb-4">
-              Não encontrou sua dúvida?
+              Precisa de outras orientações?
             </h3>
             <p className="font-inter text-slate-600 mb-6">
               Entre em contato conosco. Teremos prazer em esclarecer sua questão específica.

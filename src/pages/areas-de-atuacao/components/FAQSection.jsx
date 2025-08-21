@@ -112,7 +112,7 @@ const FAQSection = () => {
         {/* CTA */}
         <div className="text-center mt-12">
           <p className="text-text-secondary font-inter mb-6">
-            Não encontrou a resposta que procurava?
+            Precisa de outras orientações?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

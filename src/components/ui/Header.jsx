@@ -21,7 +21,7 @@ const Header = () => {
     const navigationItems = [
       { name: 'Início', path: '/', icon: 'Home' },
       { name: 'Áreas de Atuação', path: '/areas-de-atuacao', icon: 'Scale' },
-      { name: 'Sobre Marcelo', path: '/sobre-marcelo-baia', icon: 'User' },
+      { name: 'Sobre Nós', path: '/sobre-marcelo-baia', icon: 'User' },
       { name: 'FAQ', path: '/perguntas-frequentes', icon: 'HelpCircle' },
       { name: 'Contato', path: '/contato-consulta', icon: 'MessageCircle' }
     ];

@@ -99,11 +99,11 @@ const AreasDeAtuacao = () => {
     <>
       <Helmet>
         <title>Áreas de Atuação - Marcelo Baía Advocacia | Especialista em Direito Civil, Consumidor, Família e Empresarial</title>
-        <meta name="description" content="Conheça as áreas de especialização do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado em Rondonópolis/MT." />
+        <meta name="description" content="Conheça as áreas de especialização do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado online." />
         <meta name="keywords" content="advocacia, direito civil, direito consumidor, direito família, direito empresarial, Rondonópolis, Mato Grosso" />
           <link rel="canonical" href="https://marcelobaia.adv.br/areas-de-atuacao" />
         <meta property="og:title" content="Áreas de Atuação - Marcelo Baía Advocacia | Especialista em Direito Civil, Consumidor, Família e Empresarial" />
-        <meta property="og:description" content="Conheça as áreas de especialização do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado em Rondonópolis/MT." />
+        <meta property="og:description" content="Conheça as áreas de especialização do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado online." />
         <meta property="og:image" content="/assets/images/logo-512x512.png" />
         <meta name="twitter:image" content="/assets/images/logo-512x512.png" />
         <meta property="og:type" content="website" />
@@ -125,7 +125,7 @@ const AreasDeAtuacao = () => {
             openingHoursSpecification: {
               "@type": "OpeningHoursSpecification",
               description:
-                "Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.",
+                "Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.",
             },
           })}
         </script>
@@ -297,7 +297,7 @@ const AreasDeAtuacao = () => {
                 </div>
                 <p className="text-white/80 font-inter leading-relaxed mb-4">
                   Assessoria jurídica clara e segura para decisões importantes. 
-                  Atendimento humanizado com expertise técnica em Rondonópolis/MT.
+                  Atendimento humanizado online com expertise técnica.
                 </p>
                 <div className="flex space-x-4">
                   <a
@@ -324,7 +324,7 @@ const AreasDeAtuacao = () => {
                 <h4 className="font-inter font-semibold text-lg mb-4">Links Rápidos</h4>
                 <ul className="space-y-2">
                   <li><a href="/" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Início</a></li>
-                    <li><a href="/sobre-marcelo-baia" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Sobre Marcelo</a></li>
+                    <li><a href="/sobre-marcelo-baia" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Sobre Nós</a></li>
                     <li><a href="/perguntas-frequentes" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">FAQ</a></li>
                     <li><a href="/contato-consulta" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Contato</a></li>
                 </ul>
@@ -351,7 +351,7 @@ const AreasDeAtuacao = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Icon name="Mail" size={16} className="text-brand-accent" />
-                    <a href="mailto:marcelobaiaadvogado@gmail.com" className="text-white/80 font-inter text-sm">marcelobaiaadvogado@gmail.com</a>
+                    <a href="mailto:contato@marcelobaia.adv.br" className="text-white/80 font-inter text-sm">contato@marcelobaia.adv.br</a>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Icon name="MapPin" size={16} className="text-brand-accent mt-0.5" />
@@ -359,7 +359,7 @@ const AreasDeAtuacao = () => {
                   </div>
                   <div className="flex items-start space-x-3">
                     <Icon name="Clock" size={16} className="text-brand-accent mt-0.5" />
-                    <span className="text-white/80 font-inter text-sm">Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.</span>
+                    <span className="text-white/80 font-inter text-sm">Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.</span>
                   </div>
                 </div>
               </div>

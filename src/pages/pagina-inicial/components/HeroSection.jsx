@@ -45,7 +45,7 @@ const HeroSection = () => {
                 para decisões importantes
               </h1>
               <p className="text-lg lg:text-xl text-slate-600 font-inter leading-relaxed max-w-2xl">
-                Atendimento facilitado vitualmente para a atuação em todo o território nacional, e presencialmente em Rondonópolis-MT.
+                Orientação técnica com linguagem simples. Prevenção de riscos e solução de conflitos com atendimento humanizado. Atendimento facilitado por meios virtuais para atuação em todo o território nacional, e presencialmente em Rondonópolis-MT.
               </p>
             </div>
 
@@ -99,10 +99,10 @@ const HeroSection = () => {
                   <Icon name="Calendar" size={24} className="text-indigo-600" />
                 </div>
                 <h3 className="font-lora text-xl font-semibold text-slate-900 mb-2">
-                  Consulta Gratuita
+                  Diga-nos como podemos ajudar
                 </h3>
                 <p className="text-slate-600 text-sm">
-                  Agende uma conversa inicial sem compromisso
+                  Envie sua mensagem e retornaremos rapidamente
                 </p>
               </div>
 
@@ -129,7 +129,7 @@ const HeroSection = () => {
 
                 <div className="space-y-2">
                   <label className="block text-sm font-medium text-slate-700">
-                    Assunto da consulta
+                    Motivo do contato
                   </label>
                   <textarea
                     name="message"
@@ -152,7 +152,7 @@ const HeroSection = () => {
                   iconSize={18}
                   className="bg-indigo-600 hover:bg-indigo-700 text-white"
                 >
-                  Solicitar Consulta
+                  Enviar Mensagem
                 </Button>
 
                 <p className="text-xs text-slate-500 text-center">

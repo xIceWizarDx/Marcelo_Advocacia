@@ -50,7 +50,7 @@ const ContactHero = ({ onWhatsAppClick, onPhoneClick }) => {
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
             <div className="flex items-center gap-2">
               <Icon name="Clock" size={16} />
-              <span>Resposta em até 2 horas</span>
+              <span>Resposta imediata</span>
             </div>
             <div className="flex items-center gap-2">
               <Icon name="Shield" size={16} />

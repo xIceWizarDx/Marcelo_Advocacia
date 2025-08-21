@@ -23,13 +23,13 @@ const SobreMarceloBaia = () => {
   return (
     <>
       <Helmet>
-        <title>Sobre Marcelo Baía - Advogado Especialista em Rondonópolis/MT</title>
+        <title>Sobre Nós - Advocacia Especializada em Rondonópolis/MT</title>
         <meta 
           name="description" 
           content="Conheça a trajetória profissional de Marcelo Baía, advogado especialista em Direito Civil, Consumidor, Família e Empresarial em Rondonópolis/MT. Mais de 8 anos de experiência com atendimento humanizado." 
         />
         <meta name="keywords" content="advogado rondonópolis, marcelo baía, direito civil, direito consumidor, direito família, direito empresarial, oab mt" />
-        <meta property="og:title" content="Sobre Marcelo Baía - Advogado Especialista em Rondonópolis/MT" />
+        <meta property="og:title" content="Sobre Nós - Advocacia Especializada em Rondonópolis/MT" />
         <meta property="og:description" content="Conheça a trajetória profissional de Marcelo Baía, advogado especialista com mais de 8 anos de experiência em Rondonópolis/MT." />
         <meta property="og:image" content="/assets/images/logo-512x512.png" />
         <meta name="twitter:image" content="/assets/images/logo-512x512.png" />
@@ -52,7 +52,7 @@ const SobreMarceloBaia = () => {
             openingHoursSpecification: {
               "@type": "OpeningHoursSpecification",
               description:
-                "Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.",
+                "Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.",
             },
           })}
         </script>
@@ -110,8 +110,8 @@ const SobreMarceloBaia = () => {
                   <p>📍 Rua Tiradentes, 1888 – Centro, Rondonópolis-MT – CEP 78.700-028</p>
                   <p>📞 <a href="tel:+5566999111314" className="text-slate-300">(66) 99911-1314</a></p>
                   <p>💬 <a href="https://wa.me/5566999111314" target="_blank" rel="noopener noreferrer" className="text-slate-300">(66) 99911-1314</a></p>
-                  <p>✉️ <a href="mailto:marcelobaiaadvogado@gmail.com" className="text-slate-300">marcelobaiaadvogado@gmail.com</a></p>
-                  <p>🕒 Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.</p>
+                  <p>✉️ <a href="mailto:contato@marcelobaia.adv.br" className="text-slate-300">contato@marcelobaia.adv.br</a></p>
+                  <p>🕒 Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.</p>
                 </div>
               </div>
 

@@ -10,13 +10,13 @@ const OfficeLocation = () => {
   };
 
   const businessHours = [
-    { day: 'Segunda-feira', hours: 'Atendimento mediante agendamento', isToday: false },
-    { day: 'Terça-feira', hours: 'Atendimento mediante agendamento', isToday: false },
-    { day: 'Quarta-feira', hours: 'Atendimento mediante agendamento', isToday: true },
-    { day: 'Quinta-feira', hours: 'Atendimento mediante agendamento', isToday: false },
-    { day: 'Sexta-feira', hours: 'Atendimento mediante agendamento', isToday: false },
-    { day: 'Sábado', hours: 'Atendimento mediante agendamento', isToday: false },
-    { day: 'Domingo', hours: 'Atendimento mediante agendamento', isToday: false }
+    { day: 'Segunda-feira', hours: 'Atendimento em horário comercial', isToday: false },
+    { day: 'Terça-feira', hours: 'Atendimento em horário comercial', isToday: false },
+    { day: 'Quarta-feira', hours: 'Atendimento em horário comercial', isToday: true },
+    { day: 'Quinta-feira', hours: 'Atendimento em horário comercial', isToday: false },
+    { day: 'Sexta-feira', hours: 'Atendimento em horário comercial', isToday: false },
+    { day: 'Sábado', hours: 'Atendimento em horário comercial', isToday: false },
+    { day: 'Domingo', hours: 'Atendimento em horário comercial', isToday: false }
   ];
 
   const facilities = [
@@ -111,7 +111,7 @@ const OfficeLocation = () => {
               <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
                 <p className="text-sm text-green-800 flex items-center gap-2">
                   <Icon name="Info" size={16} />
-                  <span>Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.</span>
+                  <span>Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.</span>
                 </p>
               </div>
             </div>
@@ -150,7 +150,7 @@ const OfficeLocation = () => {
                 <Icon name="Mail" size={24} />
               </div>
               <h4 className="font-semibold mb-1">E-mail</h4>
-              <p className="text-indigo-100">marcelobaiaadvogado@gmail.com</p>
+              <p className="text-indigo-100">contato@marcelobaia.adv.br</p>
             </div>
             
             <div className="flex flex-col items-center">
@@ -158,7 +158,7 @@ const OfficeLocation = () => {
                 <Icon name="MessageCircle" size={24} />
               </div>
               <h4 className="font-semibold mb-1">WhatsApp</h4>
-              <p className="text-indigo-100">Atendimento via WhatsApp é em tempo integral.</p>
+              <p className="text-indigo-100">WhatsApp 24h por dia, 7 dias por semana.</p>
             </div>
           </div>
         </div>

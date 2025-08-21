@@ -29,8 +29,8 @@ const PerguntasFrequentes = () => {
       categoryId: "primeiros-passos",
       isPopular: true,
         relatedLinks: [
-          { title: "Agendar consulta", url: "/contato-consulta" },
-          { title: "Sobre Marcelo Baía", url: "/sobre-marcelo-baia" }
+          { title: "Agendar atendimento", url: "/contato-consulta" },
+          { title: "Sobre Nós", url: "/sobre-marcelo-baia" }
         ]
     },
     {
@@ -211,7 +211,7 @@ const PerguntasFrequentes = () => {
             openingHoursSpecification: {
               "@type": "OpeningHoursSpecification",
               description:
-                "Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.",
+                "Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.",
             },
           })}
         </script>
