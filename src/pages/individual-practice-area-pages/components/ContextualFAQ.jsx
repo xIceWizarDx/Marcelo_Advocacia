@@ -56,7 +56,7 @@ const ContextualFAQ = ({ practiceArea }) => {
         },
         {
           question: "Qual o valor da pensão alimentícia?",
-          answer: `A pensão alimentícia considera:\n\n• Necessidades do alimentando\n• Possibilidades do alimentante\n• Proporcionalidade e razoabilidade\n\nPercentuais comuns:\n• 20% a 30% da renda líquida (1 filho)\n• 15% a 25% por filho (múltiplos filhos)\n• Salário mínimo (valor mínimo)\n\nIncluem:\n• Alimentação, vestuário, moradia\n• Educação e saúde\n• Lazer proporcional\n\nPode ser revista a qualquer tempo se houver mudança na situação financeira.`
+          answer: `A pensão alimentícia considera:\n\n• Necessidades do alimentando\n• Possibilidades do alimentante\n• Proporcionalidade e razoabilidade\n\nO valor é definido pelo juiz conforme o binômio necessidade‑possibilidade (art. 1.694 do CC), sem percentual fixo.\n\nIncluem:\n• Alimentação, vestuário, moradia\n• Educação e saúde\n• Lazer proporcional\n\nPode ser revista a qualquer tempo se houver mudança na situação financeira.`
         },
         {
           question: "Guarda compartilhada é obrigatória?",
