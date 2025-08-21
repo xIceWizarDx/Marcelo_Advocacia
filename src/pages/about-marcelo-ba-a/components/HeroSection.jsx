@@ -61,9 +61,9 @@ const HeroSection = ({ onContactClick, onWhatsAppClick }) => {
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="public\assets\images\Marcelo.png"
-                  alt="Marcelo Baía - Advogado especialista em Direito Civil, Consumidor, Família e Empresarial"
-                  className="w-full h-full object-cover"
-                />
+                    alt="Marcelo Baía - Advogado com foco em Direito Civil, Consumidor, Família e Empresarial"
+                    className="w-full h-full object-cover"
+                  />
               </div>
               
               {/* Floating credential card */}
@@ -77,9 +77,9 @@ const HeroSection = ({ onContactClick, onWhatsAppClick }) => {
                     <p className="text-sm text-text-secondary">Ativo desde 2015</p>
                   </div>
                 </div>
-                <p className="text-sm text-text-primary">
-                  Especialista em Direito Civil, Consumidor, Família e Empresarial
-                </p>
+                  <p className="text-sm text-text-primary">
+                    Foco em Direito Civil, Consumidor, Família e Empresarial
+                  </p>
               </div>
             </div>
           </div>

@@ -40,7 +40,7 @@ const IndividualPracticeAreaPages = () => {
 
   const getPageDescription = () => {
     const descriptions = {
-      civil: 'Especialista em Direito Civil em Rondonópolis/MT. Contratos, responsabilidade civil, direitos reais e questões patrimoniais com atendimento personalizado.',
+        civil: 'Foco em Direito Civil em Rondonópolis/MT. Contratos, responsabilidade civil, direitos reais e questões patrimoniais com atendimento personalizado.',
       consumer: 'Defesa do Consumidor em Rondonópolis/MT. Proteção contra práticas abusivas, vícios de produtos, serviços bancários e direitos do consumidor.',
       family: 'Direito de Família em Rondonópolis/MT. Divórcio, guarda, pensão alimentícia e questões familiares com atendimento humanizado e discreto.',
       business: 'Direito Empresarial em Rondonópolis/MT. Consultoria jurídica para empresas, contratos comerciais, recuperação judicial e compliance.'

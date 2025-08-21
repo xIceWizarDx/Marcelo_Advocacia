@@ -98,12 +98,12 @@ const PracticeAreasOverview = () => {
   return (
     <>
       <Helmet>
-        <title>Áreas de Atuação - Marcelo Baía Advocacia | Especialista em Direito Civil, Consumidor, Família e Empresarial</title>
-        <meta name="description" content="Conheça as áreas de especialização do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado em Rondonópolis/MT." />
+        <title>Áreas de Atuação - Marcelo Baía Advocacia | Foco em Direito Civil, Consumidor, Família e Empresarial</title>
+        <meta name="description" content="Conheça as áreas de atuação do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado em Rondonópolis/MT." />
         <meta name="keywords" content="advocacia, direito civil, direito consumidor, direito família, direito empresarial, Rondonópolis, Mato Grosso" />
         <link rel="canonical" href="https://marcelobaia.adv.br/practice-areas-overview" />
-        <meta property="og:title" content="Áreas de Atuação - Marcelo Baía Advocacia | Especialista em Direito Civil, Consumidor, Família e Empresarial" />
-        <meta property="og:description" content="Conheça as áreas de especialização do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado em Rondonópolis/MT." />
+        <meta property="og:title" content="Áreas de Atuação - Marcelo Baía Advocacia | Foco em Direito Civil, Consumidor, Família e Empresarial" />
+        <meta property="og:description" content="Conheça as áreas de atuação do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado em Rondonópolis/MT." />
         <meta property="og:image" content="/assets/images/logo-512x512.png" />
         <meta name="twitter:image" content="/assets/images/logo-512x512.png" />
         <meta property="og:type" content="website" />
@@ -153,7 +153,7 @@ const PracticeAreasOverview = () => {
               </h1>
               
               <p className="text-xl lg:text-2xl text-white/90 font-inter mb-8 leading-relaxed">
-                Expertise jurídica especializada para proteger seus direitos e interesses 
+                Atuação jurídica dedicada para proteger seus direitos e interesses
                 com atendimento humanizado e soluções eficazes
               </p>
               
@@ -182,7 +182,7 @@ const PracticeAreasOverview = () => {
           <div className="max-w-7xl mx-auto px-4 lg:px-6">
             <div className="text-center mb-16">
               <h2 className="font-lora font-semibold text-3xl lg:text-4xl text-brand-primary mb-4">
-                Especialidades Jurídicas
+                Focos Jurídicos
               </h2>
               <p className="text-lg text-text-secondary font-inter max-w-3xl mx-auto">
                 Cada área de atuação é tratada com expertise técnica e abordagem humanizada, 
