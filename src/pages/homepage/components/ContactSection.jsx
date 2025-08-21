@@ -82,7 +82,7 @@ const ContactSection = () => {
           </h2>
           
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Escolha a forma de contato mais conveniente para você. Estou sempre disponível para esclarecer dúvidas e agendar consultas.
+            Escolha a forma de contato mais conveniente para você. Estamos sempre disponíveis para esclarecer dúvidas e agendar consultas.
           </p>
         </div>
 
@@ -147,7 +147,7 @@ const ContactSection = () => {
                 Envie sua mensagem
               </h3>
               <p className="text-slate-600">
-                Preencha o formulário e entrarei em contato em até 2 horas úteis.
+                Preencha o formulário e entraremos em contato em até 2 horas úteis.
               </p>
             </div>
 
