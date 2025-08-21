@@ -9,6 +9,7 @@ import FAQHub from './pages/faq-hub';
 import PracticeAreasOverview from './pages/practice-areas-overview';
 import ContactConsultationHub from './pages/contact-consultation-hub';
 import Homepage from './pages/homepage';
+import PrivacyPolicy from './pages/privacy-policy';
 
 const Routes = () => {
   return (
@@ -24,6 +25,7 @@ const Routes = () => {
         <Route path="/practice-areas-overview" element={<PracticeAreasOverview />} />
         <Route path="/contact-consultation-hub" element={<ContactConsultationHub />} />
         <Route path="/homepage" element={<Homepage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>

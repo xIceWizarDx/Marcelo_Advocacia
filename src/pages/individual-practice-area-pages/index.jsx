@@ -159,6 +159,11 @@ const IndividualPracticeAreaPages = () => {
               <p className="font-inter text-slate-400 text-sm">
                 © {new Date()?.getFullYear()} Marcelo Baía Advocacia. Todos os direitos reservados.
               </p>
+              <p className="font-inter text-slate-400 text-sm mt-2">
+                <a href="/privacy-policy" className="hover:text-white">
+                  Política de Privacidade
+                </a>
+              </p>
             </div>
           </div>
         </footer>
