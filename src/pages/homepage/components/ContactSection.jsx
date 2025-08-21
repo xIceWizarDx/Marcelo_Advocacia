@@ -115,6 +115,9 @@ const ContactSection = () => {
                   </button>
                 ))}
               </div>
+              <p className="mt-2 text-xs text-slate-500">
+                Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+              </p>
             </div>
 
             {/* Office Hours */}
@@ -222,6 +225,9 @@ const ContactSection = () => {
               </Button>
 
               <p className="text-xs text-slate-500 text-center">
+                Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+              </p>
+              <p className="text-xs text-slate-500 text-center mt-1">
                 Ao enviar, você concorda com nossa política de privacidade e proteção de dados.
               </p>
             </form>

@@ -143,22 +143,25 @@ const TestimonialsSection = () => {
               <p className="text-indigo-100 mb-6">
                 Agende uma consulta gratuita e descubra como posso ajudar você a alcançar os melhores resultados.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
-                  className="inline-flex items-center space-x-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors duration-300"
-                >
-                  <Icon name="MessageCircle" size={18} />
-                  <span>Agendar consulta</span>
-                </button>
-                <button
-                  onClick={() => window.location.href = 'tel:+5566999111314'}
-                  className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-indigo-600 transition-all duration-300"
-                >
-                  <Icon name="Phone" size={18} />
-                  <span>(66) 99911-1314</span>
-                </button>
-              </div>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button
+                    onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
+                    className="inline-flex items-center space-x-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors duration-300"
+                  >
+                    <Icon name="MessageCircle" size={18} />
+                    <span>Agendar consulta</span>
+                  </button>
+                  <button
+                    onClick={() => window.location.href = 'tel:+5566999111314'}
+                    className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-indigo-600 transition-all duration-300"
+                  >
+                    <Icon name="Phone" size={18} />
+                    <span>(66) 99911-1314</span>
+                  </button>
+                </div>
+                <p className="mt-2 text-xs text-white/80">
+                  Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+                </p>
             </div>
           </div>
         </div>

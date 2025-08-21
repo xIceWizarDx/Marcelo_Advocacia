@@ -68,6 +68,9 @@ const ContactConsultationHub = () => {
             (66) 99911-1314
           </button>
         </div>
+        <p className="mt-2 text-xs text-slate-600 text-center">
+          Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+        </p>
       </div>
     </div>
   );

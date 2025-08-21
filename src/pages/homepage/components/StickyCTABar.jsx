@@ -69,31 +69,36 @@ const StickyCTABar = () => {
             </div>
 
             {/* Right - CTA Buttons */}
-            <div className="flex items-center space-x-3">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handlePhoneClick}
-                iconName="Phone"
-                iconPosition="left"
-                iconSize={16}
-                className="hidden sm:inline-flex text-slate-700 border-slate-300 hover:bg-slate-50"
-              >
-                (66) 99911-1314
-              </Button>
-              
-              <Button
-                variant="default"
-                size="sm"
-                onClick={handleWhatsAppClick}
-                iconName="MessageCircle"
-                iconPosition="left"
-                iconSize={16}
-                className="bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg"
-              >
-                <span className="hidden sm:inline">WhatsApp</span>
-                <span className="sm:hidden">Conversar</span>
-              </Button>
+            <div className="flex flex-col items-end space-y-1">
+              <div className="flex items-center space-x-3">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handlePhoneClick}
+                  iconName="Phone"
+                  iconPosition="left"
+                  iconSize={16}
+                  className="hidden sm:inline-flex text-slate-700 border-slate-300 hover:bg-slate-50"
+                >
+                  (66) 99911-1314
+                </Button>
+
+                <Button
+                  variant="default"
+                  size="sm"
+                  onClick={handleWhatsAppClick}
+                  iconName="MessageCircle"
+                  iconPosition="left"
+                  iconSize={16}
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg"
+                >
+                  <span className="hidden sm:inline">WhatsApp</span>
+                  <span className="sm:hidden">Conversar</span>
+                </Button>
+              </div>
+              <p className="text-[10px] text-slate-600 text-right">
+                Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+              </p>
             </div>
           </div>
         </div>

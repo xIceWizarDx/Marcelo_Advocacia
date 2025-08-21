@@ -110,27 +110,30 @@ const FAQSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <p className="text-text-secondary font-inter mb-6">
-            Não encontrou a resposta que procurava?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
-              className="inline-flex items-center justify-center px-6 py-3 bg-brand-accent hover:bg-brand-accent/90 text-white font-inter font-medium rounded-lg transition-colors duração-200"
-            >
-              <Icon name="MessageCircle" size={18} className="mr-2" />
-              Perguntar no WhatsApp
-            </button>
-            <button
-              onClick={() => window.location.href = 'tel:+5566999111314'}
-              className="inline-flex items-center justify-center px-6 py-3 border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white font-inter font-medium rounded-lg transition-colors duração-200"
-            >
-              <Icon name="Phone" size={18} className="mr-2" />
-              (66) 99911-1314
-            </button>
+          <div className="text-center mt-12">
+            <p className="text-text-secondary font-inter mb-6">
+              Não encontrou a resposta que procurava?
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
+                className="inline-flex items-center justify-center px-6 py-3 bg-brand-accent hover:bg-brand-accent/90 text-white font-inter font-medium rounded-lg transition-colors duração-200"
+              >
+                <Icon name="MessageCircle" size={18} className="mr-2" />
+                Perguntar no WhatsApp
+              </button>
+              <button
+                onClick={() => window.location.href = 'tel:+5566999111314'}
+                className="inline-flex items-center justify-center px-6 py-3 border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white font-inter font-medium rounded-lg transition-colors duração-200"
+              >
+                <Icon name="Phone" size={18} className="mr-2" />
+                (66) 99911-1314
+              </button>
+            </div>
+            <p className="mt-2 text-xs text-text-secondary">
+              Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+            </p>
           </div>
-        </div>
       </div>
     </section>
   );

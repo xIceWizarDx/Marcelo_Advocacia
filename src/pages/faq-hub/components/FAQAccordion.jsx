@@ -54,6 +54,9 @@ const FAQAccordion = ({ faqs, searchTerm }) => {
         >
           Fazer Pergunta Personalizada
         </Button>
+        <p className="mt-2 text-xs text-text-secondary">
+          Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+        </p>
       </div>
     );
   }
@@ -140,6 +143,9 @@ const FAQAccordion = ({ faqs, searchTerm }) => {
                     (66) 99911-1314
                   </Button>
                 </div>
+                <p className="mt-2 text-xs text-text-secondary">
+                  Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+                </p>
               </div>
             </div>
           )}

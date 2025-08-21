@@ -121,6 +121,9 @@ const IndividualPracticeAreaPages = () => {
                   <p className="font-inter text-slate-300">
                     💬 <a href="https://wa.me/5566999111314" target="_blank" rel="noopener noreferrer" className="text-slate-300">(66) 99911-1314</a>
                   </p>
+                  <p className="font-inter text-xs text-slate-400 mt-1">
+                    Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+                  </p>
                   <p className="font-inter text-slate-300">
                     ✉️ <a href="mailto:marcelobaiaadvogado@gmail.com" className="text-slate-300">marcelobaiaadvogado@gmail.com</a>
                   </p>
