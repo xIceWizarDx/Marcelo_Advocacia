@@ -124,8 +124,8 @@ const PracticeAreasSection = () => {
                 </div>
 
                 {/* CTA Link */}
-                <Link
-                  to="/practice-areas-overview"
+                  <Link
+                    to="/areas-de-atuacao"
                   className="inline-flex items-center space-x-2 text-indigo-600 hover:text-indigo-700 font-medium text-sm group-hover:underline transition-colors duration-300"
                 >
                   <span>Saiba mais</span>
@@ -141,8 +141,8 @@ const PracticeAreasSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-12">
-          <Link
-            to="/practice-areas-overview"
+            <Link
+              to="/areas-de-atuacao"
             className="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             <span>Ver todas as áreas de atuação</span>

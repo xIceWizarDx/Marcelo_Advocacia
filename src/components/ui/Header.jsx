@@ -18,13 +18,13 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navigationItems = [
-    { name: 'Início', path: '/', icon: 'Home' },
-    { name: 'Áreas de Atuação', path: '/practice-areas-overview', icon: 'Scale' },
-    { name: 'Sobre Marcelo', path: '/about-marcelo-ba-a', icon: 'User' },
-    { name: 'FAQ', path: '/faq-hub', icon: 'HelpCircle' },
-    { name: 'Contato', path: '/contact-consultation-hub', icon: 'MessageCircle' }
-  ];
+    const navigationItems = [
+      { name: 'Início', path: '/', icon: 'Home' },
+      { name: 'Áreas de Atuação', path: '/areas-de-atuacao', icon: 'Scale' },
+      { name: 'Sobre Marcelo', path: '/sobre-marcelo-baia', icon: 'User' },
+      { name: 'FAQ', path: '/perguntas-frequentes', icon: 'HelpCircle' },
+      { name: 'Contato', path: '/contato-consulta', icon: 'MessageCircle' }
+    ];
 
   const whatsappLink = CONTACT.whatsapp;
   const phoneLink = CONTACT.phone.href;

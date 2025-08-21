@@ -7,7 +7,7 @@ import ConsultationWidget from './components/ConsultationWidget';
 import PreventiveLegalSection from './components/PreventiveLegalSection';
 import Icon from '../../components/AppIcon';
 
-const PracticeAreasOverview = () => {
+const AreasDeAtuacao = () => {
   const practiceAreas = [
     {
       title: "Direito Civil",
@@ -101,13 +101,13 @@ const PracticeAreasOverview = () => {
         <title>Áreas de Atuação - Marcelo Baía Advocacia | Especialista em Direito Civil, Consumidor, Família e Empresarial</title>
         <meta name="description" content="Conheça as áreas de especialização do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado em Rondonópolis/MT." />
         <meta name="keywords" content="advocacia, direito civil, direito consumidor, direito família, direito empresarial, Rondonópolis, Mato Grosso" />
-        <link rel="canonical" href="https://marcelobaia.adv.br/practice-areas-overview" />
+          <link rel="canonical" href="https://marcelobaia.adv.br/areas-de-atuacao" />
         <meta property="og:title" content="Áreas de Atuação - Marcelo Baía Advocacia | Especialista em Direito Civil, Consumidor, Família e Empresarial" />
         <meta property="og:description" content="Conheça as áreas de especialização do escritório Marcelo Baía Advocacia: Direito Civil, Consumidor, Família e Empresarial. Atendimento humanizado em Rondonópolis/MT." />
         <meta property="og:image" content="/assets/images/logo-512x512.png" />
         <meta name="twitter:image" content="/assets/images/logo-512x512.png" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://marcelobaia.adv.br/practice-areas-overview" />
+          <meta property="og:url" content="https://marcelobaia.adv.br/areas-de-atuacao" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -324,9 +324,9 @@ const PracticeAreasOverview = () => {
                 <h4 className="font-inter font-semibold text-lg mb-4">Links Rápidos</h4>
                 <ul className="space-y-2">
                   <li><a href="/" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Início</a></li>
-                  <li><a href="/about-marcelo-ba-a" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Sobre Marcelo</a></li>
-                  <li><a href="/faq-hub" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">FAQ</a></li>
-                  <li><a href="/contact-consultation-hub" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Contato</a></li>
+                    <li><a href="/sobre-marcelo-baia" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Sobre Marcelo</a></li>
+                    <li><a href="/perguntas-frequentes" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">FAQ</a></li>
+                    <li><a href="/contato-consulta" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Contato</a></li>
                 </ul>
               </div>
 
@@ -386,4 +386,4 @@ const PracticeAreasOverview = () => {
   );
 };
 
-export default PracticeAreasOverview;
+export default AreasDeAtuacao;
