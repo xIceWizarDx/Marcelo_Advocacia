@@ -225,7 +225,7 @@ const PracticeAreasOverview = () => {
                 Nossa Metodologia
               </h2>
               <p className="text-lg text-text-secondary font-inter max-w-3xl mx-auto">
-                Um processo estruturado que garante atendimento de qualidade e resultados eficazes
+                Um processo estruturado que busca oferecer atendimento de qualidade e resultados eficazes
               </p>
             </div>
 
