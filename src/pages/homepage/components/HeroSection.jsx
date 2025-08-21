@@ -35,13 +35,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left space-y-8">
-            {/* Trust Badge */}
-            <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-200 shadow-sm">
-              <Icon name="Shield" size={16} className="text-indigo-600" />
-              <span className="text-sm font-medium text-slate-700">OAB/MT 14.159-B</span>
-            </div>
-
-            {/* Main Headline */}
+          {/* Main Headline */}
             <div className="space-y-4">
               <h1 className="font-lora text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight">
                 Assessoria jurídica{' '}
@@ -51,7 +45,7 @@ const HeroSection = () => {
                 para decisões importantes
               </h1>
               <p className="text-lg lg:text-xl text-slate-600 font-inter leading-relaxed max-w-2xl">
-                Orientação técnica com linguagem simples. Prevenção de riscos e solução de conflitos com atendimento humanizado em Rondonópolis/MT.
+                Atendimento facilitado por meios virtuais para atuação em todo o território nacional, e presencialmente em Rondonópolis-MT.
               </p>
             </div>
 
@@ -59,9 +53,9 @@ const HeroSection = () => {
             <div className="grid sm:grid-cols-2 gap-4">
               {[
                 { icon: 'MessageCircle', text: 'Comunicação direta' },
-                { icon: 'Clock', text: 'Resposta em até 2h' },
+                { icon: 'Clock', text: 'Resposta imediata' },
                 { icon: 'Shield', text: 'Sigilo garantido' },
-                { icon: 'MapPin', text: 'Atendimento local' }
+                { icon: 'MapPin', text: 'Atendimento facilitado' }
               ]?.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-lg border border-slate-200">
                   <Icon name={benefit?.icon} size={20} className="text-indigo-600 flex-shrink-0" />
@@ -162,7 +156,7 @@ const HeroSection = () => {
                 </Button>
 
                 <p className="text-xs text-slate-500 text-center">
-                  Resposta garantida em até 2 horas úteis
+                  Resposta imediata
                 </p>
               </form>
             </div>
