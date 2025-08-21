@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 import Input from '../../../components/ui/Input';
+import { Checkbox } from '../../../components/ui/Checkbox';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -9,14 +10,15 @@ const ContactSection = () => {
     email: '',
     phone: '',
     subject: '',
-    message: ''
+    message: '',
+    consent: false
   });
 
   const handleInputChange = (e) => {
-    const { name, value } = e?.target;
+    const { name, value, type, checked } = e?.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value
     }));
   };
 
@@ -207,6 +209,14 @@ const ContactSection = () => {
                   required
                 />
               </div>
+
+              <Checkbox
+                label="Autorizo o tratamento dos meus dados para contato e análise do meu caso, conforme a Política de Privacidade"
+                name="consent"
+                checked={formData?.consent}
+                onChange={handleInputChange}
+                required
+              />
 
               <Button
                 type="submit"

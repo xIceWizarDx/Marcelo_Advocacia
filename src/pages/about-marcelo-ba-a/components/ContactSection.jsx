@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 import Input from '../../../components/ui/Input';
+import { Checkbox } from '../../../components/ui/Checkbox';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +10,8 @@ const ContactSection = () => {
     email: '',
     phone: '',
     subject: '',
-    message: ''
+    message: '',
+    consent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -49,10 +51,10 @@ const ContactSection = () => {
   ];
 
   const handleInputChange = (e) => {
-    const { name, value } = e?.target;
+    const { name, value, type, checked } = e?.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value
     }));
   };
 
@@ -68,7 +70,8 @@ const ContactSection = () => {
         email: '',
         phone: '',
         subject: '',
-        message: ''
+        message: '',
+        consent: false
       });
       setIsSubmitting(false);
     }, 2000);
@@ -207,6 +210,14 @@ const ContactSection = () => {
                   required
                 />
               </div>
+
+              <Checkbox
+                label="Autorizo o tratamento dos meus dados para contato e análise do meu caso, conforme a Política de Privacidade"
+                name="consent"
+                checked={formData?.consent}
+                onChange={handleInputChange}
+                required
+              />
 
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
                 <div className="flex items-start space-x-3">
