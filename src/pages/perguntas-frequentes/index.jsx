@@ -24,7 +24,7 @@ const PerguntasFrequentes = () => {
     {
       id: 1,
       question: "Como funciona a primeira consulta?",
-      answer: `A primeira consulta é uma conversa inicial onde você pode expor sua situação jurídica sem compromisso. Durante este encontro, analisamos seu caso, esclarecemos suas dúvidas principais e apresentamos as possíveis estratégias legais.\n\nA consulta tem duração média de 60 minutos e pode ser realizada presencialmente em nosso escritório em Rondonópolis ou por videoconferência. Ao final, você receberá uma orientação clara sobre os próximos passos e os custos envolvidos.`,
+      answer: `O contato inicial é uma conversa onde você pode expor sua situação jurídica sem compromisso. Durante este encontro, analisamos seu caso, esclarecemos suas dúvidas principais e apresentamos as possíveis estratégias legais.\n\nO contato inicial tem duração média de 60 minutos e pode ser realizado presencialmente em nosso escritório em Rondonópolis ou por videoconferência. Ao final, você receberá uma orientação clara sobre os próximos passos e os custos envolvidos.`,
       category: "Primeiros Passos",
       categoryId: "primeiros-passos",
       isPopular: true,
@@ -35,8 +35,8 @@ const PerguntasFrequentes = () => {
     },
     {
       id: 2,
-      question: "Quais documentos preciso trazer?",
-      answer: `Os documentos necessários variam conforme o tipo de caso, mas geralmente incluem:\n\n• Documentos pessoais (RG, CPF, comprovante de residência)\n• Contratos relacionados ao caso\n• Correspondências e notificações recebidas\n• Comprovantes de pagamento ou recibos\n• Laudos, perícias ou documentos técnicos\n• Procurações anteriores (se houver)\n\nAntes da consulta, enviamos uma lista específica dos documentos necessários para seu tipo de caso, otimizando nosso tempo de atendimento.`,
+      question: "Quais documentos preciso enviar?",
+      answer: `Os documentos necessários variam conforme o tipo de caso, mas geralmente incluem:\n\n• Documentos pessoais (RG, CPF, comprovante de residência)\n• Contratos relacionados ao caso\n• Correspondências e notificações recebidas\n• Comprovantes de pagamento ou recibos\n• Laudos, perícias ou documentos técnicos\n• Procurações anteriores (se houver).\n\nAntes da consulta, enviamos uma lista específica dos documentos necessários para seu tipo de caso, otimizando nosso tempo de atendimento.`,
       category: "Primeiros Passos",
       categoryId: "primeiros-passos",
       isPopular: true,
@@ -55,7 +55,7 @@ const PerguntasFrequentes = () => {
     {
       id: 4,
       question: "Como são calculados os honorários advocatícios?",
-      answer: `Os honorários são calculados considerando diversos fatores:\n\n• Complexidade do caso\n• Tempo estimado de dedicação\n• Valor da causa (quando aplicável)\n• Urgência do atendimento\n• Modalidade de cobrança escolhida\n\nOferecemos três modalidades:\n1. Honorários fixos: valor determinado no início\n2. Honorários por hora: cobrança pelo tempo efetivamente trabalhado\n3. Honorários de êxito: percentual sobre o resultado obtido\n\nTodos os valores são transparentes e formalizados em contrato, sem surpresas ou custos ocultos.`,
+      answer: `Os honorários são calculados considerando diversos fatores:\n\n• Complexidade do caso\n• Tempo estimado de dedicação\n• Valor da causa (quando aplicável)\n• Urgência do atendimento\n• Modalidade de cobrança escolhida\n\nOferecemos três modalidades:\n1. Honorários fixos: valor determinado no início\n2. Honorários por hora: cobrança pelo tempo efetivamente trabalhado\n3. Honorários de êxito: percentual sobre o resultado obtido.\n\nTodos os valores são transparentes e formalizados em contrato, sem surpresas ou custos ocultos.`,
       category: "Custos e Honorários",
       categoryId: "custos-honorarios",
       isPopular: false
@@ -63,7 +63,7 @@ const PerguntasFrequentes = () => {
     {
       id: 5,
       question: "Posso acompanhar o andamento do meu processo?",
-      answer: `Sim, você terá acesso completo ao andamento do seu processo através de:\n\n• Relatórios mensais por email\n• Acesso ao sistema de acompanhamento processual\n• WhatsApp para dúvidas rápidas\n• Reuniões presenciais quando necessário\n\nMantemos comunicação transparente e proativa, informando sobre cada movimentação importante e explicando os próximos passos de forma clara e acessível.`,
+      answer: `Os Tribunais de Justiça fornecem mecanismos de consulta pública de processos (caso não haja sigilo) disponíveis 24h por dia, 7 dias por semana. Qualquer dúvida pode ser obtida de maneira rápida por WhatsApp. Em casos mais complexos serão marcadas reuniões e envio de relatórios.`,
       category: "Processo Legal",
       categoryId: "processo-legal",
       isPopular: false
@@ -71,7 +71,7 @@ const PerguntasFrequentes = () => {
     {
       id: 6,
       question: "Atende casos em outras cidades além de Rondonópolis?",
-      answer: `Sim, atendemos clientes em toda a região de Rondonópolis e cidades vizinhas. Para casos em outras comarcas, avaliamos a viabilidade considerando:\n\n• Complexidade do caso\n• Necessidade de deslocamento\n• Possibilidade de atendimento remoto\n• Custos adicionais de deslocamento\n\nMuitos atendimentos podem ser realizados por videoconferência, especialmente consultas iniciais e acompanhamentos. Para audiências e atos presenciais obrigatórios, organizamos a agenda para otimizar custos e tempo.`,
+      answer: `Sim, atendemos clientes em toda a região de Rondonópolis e cidades vizinhas. Para casos em outras comarcas, avaliamos a viabilidade considerando:\n\n• Complexidade do caso\n• Necessidade de deslocamento\n• Possibilidade de atendimento remoto\n• Custos adicionais de deslocamento.\n\nMuitos atendimentos podem ser realizados por videoconferência, especialmente consultas iniciais e acompanhamentos. Para audiências e atos presenciais obrigatórios, organizamos a agenda para otimizar custos e tempo.`,
       category: "Atendimento",
       categoryId: "atendimento",
       isPopular: false
@@ -79,7 +79,7 @@ const PerguntasFrequentes = () => {
     {
       id: 7,
       question: "Qual a diferença entre Direito Civil e Direito do Consumidor?",
-      answer: `O Direito Civil regula as relações entre pessoas físicas e jurídicas em geral, incluindo:\n• Contratos diversos\n• Responsabilidade civil\n• Direitos reais (propriedade)\n• Família e sucessões\n\nO Direito do Consumidor é uma especialização que protege especificamente as relações de consumo:\n• Compra e venda de produtos\n• Prestação de serviços\n• Publicidade enganosa\n• Cobrança abusiva\n• Defeitos e vícios\n\nAmbas as áreas se complementam, e muitas vezes um caso pode envolver aspectos dos dois ramos do direito.`,
+      answer: `O Direito Civil regula as relações entre pessoas físicas e jurídicas em geral, incluindo:\n• Contratos diversos\n• Responsabilidade civil\n• Direitos reais (propriedade)\n• Família e sucessões.\n\nO Direito do Consumidor é uma especialização que protege especificamente as relações de consumo:\n• Compra e venda de produtos\n• Prestação de serviços\n• Publicidade enganosa\n• Cobrança abusiva\n• Defeitos e vícios\n\nAmbas as áreas se complementam, e muitas vezes um caso pode envolver aspectos dos dois ramos do direito.`,
       category: "Direito Civil",
       categoryId: "direito-civil",
       isPopular: false,
@@ -91,7 +91,7 @@ const PerguntasFrequentes = () => {
     {
       id: 8,
       question: "Como funciona a pensão alimentícia?",
-      answer: `A pensão alimentícia é uma obrigação legal que visa garantir o sustento de quem não pode prover suas próprias necessidades. Principais aspectos:\n\n• Pode ser para filhos menores, cônjuges ou pais idosos\n• Valor baseado na necessidade de quem recebe e possibilidade de quem paga\n• Inclui alimentação, moradia, saúde, educação e lazer\n• Pode ser revista a qualquer tempo mediante mudança de circunstâncias\n• Descumprimento pode levar à prisão civil\n\nO processo de fixação considera a renda do alimentante, as necessidades do alimentado e o padrão de vida anterior da família.`,
+      answer: `A pensão alimentícia é uma obrigação legal que visa garantir o sustento de quem não pode prover suas próprias necessidades. Principais aspectos:\n\n• Pode ser para filhos menores, cônjuges ou pais idosos\n• Valor baseado na necessidade de quem recebe e possibilidade de quem paga\n• Inclui alimentação, moradia, saúde, educação e lazer\n• Pode ser revista a qualquer tempo mediante mudança de circunstâncias\n• Descumprimento pode levar à prisão civil.\n\nO processo de fixação considera a renda do alimentante, as necessidades do alimentado e o padrão de vida anterior da família.`,
       category: "Direito de Família",
       categoryId: "direito-familia",
       isPopular: false,
