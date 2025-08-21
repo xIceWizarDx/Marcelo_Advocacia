@@ -95,6 +95,9 @@ const HeroSection = () => {
                 (66) 99911-1314
               </Button>
             </div>
+            <p className="text-xs text-slate-600 mt-2">
+              Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+            </p>
           </div>
 
           {/* Right Column - Quick Consultation Form */}
@@ -161,9 +164,12 @@ const HeroSection = () => {
                   Solicitar Consulta
                 </Button>
 
-                <p className="text-xs text-slate-500 text-center">
-                  Resposta garantida em até 2 horas úteis
-                </p>
+                  <p className="text-xs text-slate-500 text-center">
+                    Resposta garantida em até 2 horas úteis
+                  </p>
+                  <p className="text-xs text-slate-500 text-center mt-1">
+                    Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+                  </p>
               </form>
             </div>
           </div>

@@ -88,45 +88,51 @@ const PracticeAreaCard = ({
           </div>
         </div>
 
-        {/* Actions */}
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Button
-            variant="outline"
-            onClick={() => setIsExpanded(!isExpanded)}
-            iconName={isExpanded ? "ChevronUp" : "ChevronDown"}
-            iconPosition="right"
-            iconSize={16}
-            className="flex-1 text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
-          >
-            {isExpanded ? 'Ver Menos' : 'Ver Detalhes'}
-          </Button>
-          
-          <Button
-            variant="default"
-            onClick={handleWhatsAppClick}
-            iconName="MessageCircle"
-            iconPosition="left"
-            iconSize={16}
-            className="flex-1 bg-brand-accent hover:bg-brand-accent/90 text-white"
-          >
-            Consultar
-          </Button>
-        </div>
+          {/* Actions */}
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Button
+              variant="outline"
+              onClick={() => setIsExpanded(!isExpanded)}
+              iconName={isExpanded ? "ChevronUp" : "ChevronDown"}
+              iconPosition="right"
+              iconSize={16}
+              className="flex-1 text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
+            >
+              {isExpanded ? 'Ver Menos' : 'Ver Detalhes'}
+            </Button>
 
-        {/* Quick Consultation */}
-        <div className="mt-4 pt-4 border-t border-border">
-          <Button
-            variant="ghost"
-            onClick={handleConsultationClick}
-            iconName="Calendar"
-            iconPosition="left"
-            iconSize={14}
-            fullWidth
-            className="text-brand-secondary hover:text-brand-accent hover:bg-accent/10 text-sm"
-          >
-            Agendar Consulta Presencial
-          </Button>
-        </div>
+            <Button
+              variant="default"
+              onClick={handleWhatsAppClick}
+              iconName="MessageCircle"
+              iconPosition="left"
+              iconSize={16}
+              className="flex-1 bg-brand-accent hover:bg-brand-accent/90 text-white"
+            >
+              Consultar
+            </Button>
+          </div>
+          <p className="text-xs text-text-secondary mt-2">
+            Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+          </p>
+
+          {/* Quick Consultation */}
+          <div className="mt-4 pt-4 border-t border-border">
+            <Button
+              variant="ghost"
+              onClick={handleConsultationClick}
+              iconName="Calendar"
+              iconPosition="left"
+              iconSize={14}
+              fullWidth
+              className="text-brand-secondary hover:text-brand-accent hover:bg-accent/10 text-sm"
+            >
+              Agendar Consulta Presencial
+            </Button>
+            <p className="text-xs text-text-secondary mt-2">
+              Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+            </p>
+          </div>
       </div>
     </div>
   );
