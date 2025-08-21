@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
       author: "Cliente - Direito Civil",
       rating: 5,
       case: "Resolução de conflito contratual",
-      outcome: "Acordo extrajudicial em 45 dias"
+      outcome: "Acordo extrajudicial em prazo breve"
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const TestimonialsSection = () => {
       author: "Cliente - Direito de Família",
       rating: 5,
       case: "Divórcio consensual",
-      outcome: "Processo finalizado em 60 dias"
+      outcome: "Processo finalizado em período aproximado"
     }
   ];
 
@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
     { number: "500+", label: "Casos resolvidos", icon: "CheckCircle" },
     { number: "95%", label: "Taxa de sucesso", icon: "TrendingUp" },
     { number: "8+", label: "Anos de experiência", icon: "Calendar" },
-    { number: "2h", label: "Tempo médio de resposta", icon: "Clock" }
+    { number: "Poucas horas", label: "Tempo médio de resposta", icon: "Clock" }
   ];
 
   return (
