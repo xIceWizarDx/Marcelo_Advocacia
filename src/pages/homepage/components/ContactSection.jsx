@@ -125,9 +125,6 @@ const ContactSection = () => {
               </h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-slate-600">OAB/MT 14.159-B</span>
-                </div>
-                <div className="flex justify-between">
                   <span className="text-slate-600">Endereço</span>
                   <span className="font-medium text-slate-900 text-right">Rua Tiradentes, 1888 – Centro, Rondonópolis-MT – CEP 78.700-028</span>
                 </div>
@@ -147,7 +144,7 @@ const ContactSection = () => {
                 Envie sua mensagem
               </h3>
               <p className="text-slate-600">
-                Preencha o formulário e entraremos em contato em até 2 horas úteis.
+                Preencha o formulário e entraremos em contato imediatamente.
               </p>
             </div>
 

@@ -30,10 +30,10 @@ const TestimonialsSection = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Casos resolvidos", icon: "CheckCircle" },
-    { number: "95%", label: "Taxa de sucesso", icon: "TrendingUp" },
-    { number: "8+", label: "Anos de experiência", icon: "Calendar" },
-    { number: "2h", label: "Tempo médio de resposta", icon: "Clock" }
+    { number: "2.500+", label: "Casos resolvidos", icon: "CheckCircle" },
+    { number: "97%", label: "Taxa de sucesso", icon: "TrendingUp" },
+    { number: "18+", label: "Anos de experiência", icon: "Calendar" },
+    { number: "2h", label: "Tempo máximo de resposta", icon: "Clock" }
   ];
 
   return (

@@ -51,7 +51,7 @@ const StickyCTABar = () => {
                   Precisa de ajuda jurídica?
                 </h4>
                 <p className="text-xs text-slate-600">
-                  Consulta gratuita • Resposta em até 2h
+                  Entre em contato
                 </p>
               </div>
             </div>
@@ -63,7 +63,7 @@ const StickyCTABar = () => {
               </div>
               <div>
                 <h4 className="font-lora font-semibold text-slate-900 text-sm">
-                  Consulta gratuita
+                  Entre em contato
                 </h4>
               </div>
             </div>

@@ -12,7 +12,7 @@ const FAQPreviewSection = () => {
     },
     {
       question: "Como funciona o atendimento?",
-      answer: `O atendimento é personalizado e humanizado. Primeiro, fazemos uma consulta inicial para entender sua situação.\n\nDepois, elaboramos uma estratégia jurídica clara e mantemos você informado sobre cada etapa do processo. Utilizamos linguagem simples e estamos sempre disponíveis para esclarecer dúvidas.`
+      answer: `O atendimento é super facilitado. Primeiro você informa qual a situação por meios digitais e envia os documentos de que dispõe.\n\nDepois, elaboramos uma estratégia jurídica clara e mantemos você informado sobre cada etapa do processo. Utilizamos linguagem simples e estamos sempre disponíveis para esclarecer dúvidas.`
     },
     {
       question: "Qual o prazo para resolução dos casos?",
@@ -20,7 +20,7 @@ const FAQPreviewSection = () => {
     },
     {
       question: "Atende apenas em Rondonópolis?",
-      answer: `Nosso escritório está localizado em Rondonópolis/MT, mas atendemos clientes de toda a região. Para casos específicos, podemos nos deslocar quando necessário.\n\nTambém realizamos consultas online para orientações iniciais e acompanhamento de processos, facilitando o acesso à assessoria jurídica.`
+      answer: `Atualmente todos os processos são digitais, por isso nossos atendimentos a princípio são virtuais, e abrangem todo o território nacional. Se houver necessidade agendaremos uma videoconferência para entender melhor a demanda.\n\nNosso escritório físico está localizado em Rondonópolis/MT, onde os atendimentos presenciais são realizados, havendo possibilidade de deslocamento, tanto para atendimentos como para atos específicos como reuniões, audiências e diligências em geral, que exijam a presença de um advogado, conforme ficar estabelecido em contrato.`
     }
   ];
 
@@ -94,7 +94,7 @@ const FAQPreviewSection = () => {
             <div className="mb-6">
               <Icon name="MessageCircle" size={32} className="text-indigo-600 mx-auto mb-4" />
               <h3 className="font-lora text-xl font-semibold text-slate-900 mb-2">
-                Não encontrou sua dúvida?
+                Precisa de outras orientações?
               </h3>
               <p className="text-slate-600">
                 Entre em contato para esclarecimentos personalizados sobre seu caso específico.

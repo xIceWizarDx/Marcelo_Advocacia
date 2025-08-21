@@ -77,7 +77,6 @@ const Homepage = () => {
             <div className="space-y-4">
               <h4 className="font-semibold text-white">Informações</h4>
               <div className="space-y-2 text-sm text-slate-400">
-                <p>OAB/MT 14.159-B</p>
                 <p>CNPJ: 12.345.678/0001-90</p>
                 <p>Registro profissional ativo</p>
               </div>
