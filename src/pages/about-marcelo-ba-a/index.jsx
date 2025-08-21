@@ -134,6 +134,11 @@ const AboutMarceloBaia = () => {
               <p className="text-slate-500 text-xs mt-2">
                 Este site está em conformidade com o Provimento 205/2021 da OAB e a LGPD.
               </p>
+              <p className="text-slate-400 text-sm mt-2">
+                <a href="/privacy-policy" className="hover:text-white">
+                  Política de Privacidade
+                </a>
+              </p>
             </div>
           </div>
         </footer>

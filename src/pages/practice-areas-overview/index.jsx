@@ -371,7 +371,7 @@ const PracticeAreasOverview = () => {
                 © {new Date()?.getFullYear()} Marcelo Baía Advocacia. Todos os direitos reservados.
               </p>
               <div className="flex space-x-6">
-                <a href="#" className="text-white/60 hover:text-white font-inter text-sm transition-colors duration-200">
+                <a href="/privacy-policy" className="text-white/60 hover:text-white font-inter text-sm transition-colors duration-200">
                   Política de Privacidade
                 </a>
                 <a href="#" className="text-white/60 hover:text-white font-inter text-sm transition-colors duration-200">

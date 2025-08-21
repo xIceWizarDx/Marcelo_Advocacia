@@ -88,6 +88,11 @@ const Homepage = () => {
             <p className="text-slate-400 text-sm">
               © {new Date()?.getFullYear()} Marcelo Baía Advocacia. Todos os direitos reservados.
             </p>
+            <p className="mt-2">
+              <a href="/privacy-policy" className="text-slate-400 text-sm hover:text-white">
+                Política de Privacidade
+              </a>
+            </p>
           </div>
         </div>
       </footer>
