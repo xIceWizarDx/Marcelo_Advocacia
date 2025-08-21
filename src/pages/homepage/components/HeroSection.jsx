@@ -105,10 +105,10 @@ const HeroSection = () => {
                   <Icon name="Calendar" size={24} className="text-indigo-600" />
                 </div>
                 <h3 className="font-lora text-xl font-semibold text-slate-900 mb-2">
-                  Consulta Gratuita
+                  Fale com a equipe para uma avaliação do seu caso
                 </h3>
                 <p className="text-slate-600 text-sm">
-                  Agende uma conversa inicial sem compromisso
+                  Nossa equipe está pronta para avaliar sua situação
                 </p>
               </div>
 

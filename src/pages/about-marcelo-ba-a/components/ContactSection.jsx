@@ -212,9 +212,9 @@ const ContactSection = () => {
                 <div className="flex items-start space-x-3">
                   <Icon name="Info" size={20} color="rgb(245 158 11)" className="flex-shrink-0 mt-0.5" />
                   <div className="text-sm text-amber-800">
-                    <p className="font-medium mb-1">Consulta Inicial Gratuita</p>
+                    <p className="font-medium mb-1">Fale com a equipe para uma avaliação do seu caso</p>
                     <p>
-                      A primeira consulta é gratuita e sem compromisso. Vamos analisar seu caso 
+                      Fale com a equipe para uma avaliação do seu caso. Vamos analisar as informações
                       e apresentar as melhores opções para sua situação.
                     </p>
                   </div>
