@@ -45,7 +45,7 @@ const HeroSection = () => {
                 para decisões importantes
               </h1>
               <p className="text-lg lg:text-xl text-slate-600 font-inter leading-relaxed max-w-2xl">
-                Atendimento facilitado por meios virtuais para atuação em todo o território nacional, e presencialmente em Rondonópolis-MT.
+                Atendimento facilitado vitualmente para a atuação em todo o território nacional, e presencialmente em Rondonópolis-MT.
               </p>
             </div>
 
