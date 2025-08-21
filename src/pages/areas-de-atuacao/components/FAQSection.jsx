@@ -8,7 +8,7 @@ const FAQSection = () => {
     {
       id: 1,
       question: "Como funciona a primeira consulta?",
-      answer: `A primeira consulta é uma conversa detalhada onde analisamos sua situação específica.\n\nDurante este encontro:\n• Ouvimos sua questão com atenção e sigilo\n• Explicamos as opções legais disponíveis\n• Definimos a melhor estratégia para seu caso\n• Esclarecemos prazos e procedimentos\n\nA consulta pode ser presencial ou por videoconferência, conforme sua preferência.`
+      answer: `A primeira consulta é uma conversa detalhada onde analisamos sua situação específica.\n\nDurante este encontro:\n• Ouvimos sua questão com atenção e sigilo\n• Explicamos as opções legais disponíveis\n• Definimos a melhor estratégia para seu caso\n• Esclarecemos prazos e procedimentos\n\nO primeiro contato é sempre por meios digitais para sua maior comodidade, que geralmente é suficiente, para casos menos complexos, podendo ser realizada videoconferência para melhor elucidação da lide, reservando-se atendimento presencial para casos específicos.`
     },
     {
       id: 2,
@@ -18,22 +18,22 @@ const FAQSection = () => {
     {
       id: 3,
       question: "Quanto tempo demora para resolver um processo?",
-      answer: `O prazo varia significativamente conforme o tipo de caso e complexidade:\n\n**Casos Administrativos:** 30 a 90 dias\n**Questões Contratuais:** 6 meses a 2 anos\n**Processos Familiares:** 6 meses a 1 ano\n**Ações Consumeristas:** 3 meses a 1 ano\n\nSempre buscamos a resolução mais rápida possível, priorizando acordos quando vantajosos para você.`
+      answer: `O prazo varia significativamente conforme o tipo de caso e complexidade:\n\n**Casos Administrativos:** 30 a 90 dias\n**Questões Contratuais:** 6 meses a 2 anos\n**Processos Familiares:** 6 meses a 1 ano\n**Ações Consumeristas:** 3 meses a 1 ano\n\nSempre buscamos a resolução mais rápida possível, priorizando acordos quando vantajosos para você. Os prazos apresentados levam por base nossa experiência em casos semelhantes, mas não são em absoluto uma promessa de resultado a curto prazo.`
     },
     {
       id: 4,
-      question: "É possível resolver sem ir ao tribunal?",
-      answer: `Sim, priorizamos soluções extrajudiciais sempre que possível:\n\n**Negociação Direta:** Conversas com a outra parte\n**Mediação:** Processo assistido por mediador\n**Arbitragem:** Decisão por árbitro especializado\n**Acordos:** Soluções consensuais\n\nEssas alternativas são mais rápidas, econômicas e preservam relacionamentos. Só recorremos ao tribunal quando necessário.`
-    },
+      question: "É possível resolver sem recorrer à justiça?",
+      answer: `Sim, priorizamos soluções extrajudiciais sempre que possível:\n\n**Negociação Direta:** Conversas com a outra parte\n**Mediação:** Processo assistido por mediador\n**Arbitragem:** Decisão por árbitro especializado\n**Acordos:** Soluções consensuais\n\nEssas alternativas são mais rápidas, econômicas e preservam relacionamentos. Em último caso, quando não há viabilidade em um acordo satisfatório ao cliente, recomendamos o processo judicial, após orientar sobre os riscos da demanda.`
+      },
     {
       id: 5,
       question: "Como são calculados os honorários?",
-      answer: `Os honorários são definidos de forma transparente e justa:\n\n**Consulta Inicial:** Valor fixo acessível\n**Casos Simples:** Honorários fixos pré-definidos\n**Casos Complexos:** Percentual sobre o resultado\n**Acompanhamento:** Valores mensais para casos longos\n\nSempre explicamos todos os custos antes de iniciar qualquer trabalho. Não há surpresas.`
+      answer: `Os honorários são definidos de forma transparente e justa no momento da contratação, sempre respeitando a lei e a tabela de honorários emitida pela Ordem dos Advogados do Brasil, seccional Mato Grosso.\n\nConsulta inicial: gratuita, para orientações simples e gerais.\nConsulta com auditoria: valor pré-fixado em horas de trabalho, quando o cliente não busca contratar imediatamente nossos serviços para demandas judidiciais, e sim obter orientação jurídica aprofundada sobre situação jurídica complexa que demande análise pormenorizada e orientação preventiva de ação específica.\nCausas sem proveito econômico: valor pré-fixado em conformidade com a tabela da OAB/MT e complexidade da causa.\nCausas com proveito econômico: percentual sobre o resultado útil do processo.\nDependendo das peculiaridades do caso contratações diversas ou híbridas podem ser realizadas, sempre de modo transparente, antes de iniciar qualquer trabalho, com orientação adequada sobre os custos envolvidos. Não há surpresa.`
     },
     {
       id: 6,
       question: "Atende casos em outras cidades?",
-      answer: `Sim, atendemos clientes em todo o estado de Mato Grosso:\n\n**Rondonópolis e Região:** Atendimento presencial\n**Outras Cidades de MT:** Videoconferência e deslocamento quando necessário\n**Casos Digitais:** Processos eletrônicos podem ser acompanhados remotamente\n\nA tecnologia nos permite oferecer o mesmo nível de atendimento independente da localização.`
+      answer: `Nosso escritório atende em todo o território nacional, em razão da virtualização dos processos no Brasil, permitindo interposição, defesa e acompanhamento de qualquer lugar do mundo pela rede mundial de computadores.\n\nA maioria dos serviços, desde a consulta inicial até a finalização da demanda, podem ser efetivados por meios digitais, sem necessidade de comparecimento presencial do cliente ao escritório ou fórum, e sem necessidade de comparecimento físico de um advogado ao local em que tramita o processo.\n\nSe houver necessidade de deslocamento, as taxas são previstas em contrato. Serviços praticados na cidade de Rondonópolis-MT não tem custo de deslocamento ou diligência. Em casos específicos o cliente pode ser orientado a procurar um profissional em sua localidade, se houver necessidade de comparecimento presencial constante em órgãos públicos ou comarcas, de modo que o custo de deslocamento se torne excessivamente expressivo.`
     }
   ];
 
@@ -82,9 +82,9 @@ const FAQSection = () => {
               
               <div
                 className={`transition-all duration-300 ease-in-out ${
-                  openFAQ === faq?.id
-                    ? 'max-h-96 opacity-100' :'max-h-0 opacity-0 overflow-hidden'
-                }`}
+                    openFAQ === faq?.id
+                      ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+                  }`}
               >
                 <div className="px-6 pb-5 border-t border-border/50">
                   <div className="pt-4">

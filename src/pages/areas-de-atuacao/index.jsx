@@ -21,9 +21,9 @@ const AreasDeAtuacao = () => {
         "Cobranças e inadimplência"
       ],
       commonCases: [
-        "Contratos de compra e venda",
-        "Locação residencial e comercial",
-        "Responsabilidade civil por danos",
+        "Inventário e Partilha de Bens",
+        "Regularização de Imóveis",
+        "Indenizações",
         "Usucapião e questões possessórias",
         "Cobranças judiciais e extrajudiciais"
       ],
@@ -42,11 +42,11 @@ const AreasDeAtuacao = () => {
         "Problemas com planos de saúde e seguros"
       ],
       commonCases: [
-        "Vícios em produtos e serviços",
-        "Cobranças indevidas",
-        "Negativação irregular",
-        "Problemas com planos de saúde",
-        "Contratos abusivos"
+        "Produtos defeituosos",
+        "Direito de devolução",
+        "Negativação indevida",
+        "Recusa de atendimento por planos de saúde",
+        "Revisão de contratos de consumo"
       ],
       estimatedTimeline: "2 a 12 meses, com possibilidade de acordo extrajudicial mais rápido",
       whatsappMessage: "Olá, estou com um problema como consumidor e preciso de orientação jurídica."
@@ -60,13 +60,13 @@ const AreasDeAtuacao = () => {
         "Questões familiares delicadas",
         "Separação e divórcio consensual ou litigioso",
         "Guarda e pensão alimentícia",
-        "Inventário e partilha de bens"
+        "Partilha de bens"
       ],
       commonCases: [
         "Divórcio consensual e litigioso",
         "Guarda de filhos",
         "Pensão alimentícia",
-        "Inventário e partilha",
+        "Regime de casamento e partilha de bens",
         "União estável"
       ],
       estimatedTimeline: "4 a 24 meses, priorizando acordos para preservar relacionamentos familiares",
@@ -81,14 +81,14 @@ const AreasDeAtuacao = () => {
         "Proteção empresarial e compliance",
         "Contratos comerciais e parcerias",
         "Questões trabalhistas e tributárias",
-        "Recuperação judicial e falência"
+        "Estratégias comerciais e empresariais refinadas"
       ],
       commonCases: [
-        "Constituição de empresas",
-        "Contratos comerciais",
-        "Questões societárias",
-        "Recuperação judicial",
-        "Compliance empresarial"
+        "Tipos societários e suas nuances",
+        "Recuperação de ativos",
+        "Questões entre os sócios",
+        "Análise de contratos bancários",
+        "Revisão de juros"
       ],
       estimatedTimeline: "1 a 36 meses, com foco em soluções preventivas e estratégicas",
       whatsappMessage: "Olá, sou empresário e preciso de consultoria jurídica para meu negócio."
