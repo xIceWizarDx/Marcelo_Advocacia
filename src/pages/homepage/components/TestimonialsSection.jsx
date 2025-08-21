@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
       author: "Cliente - Direito Civil",
       rating: 5,
       case: "Resolução de conflito contratual",
-      outcome: "Acordo extrajudicial em 45 dias"
+      outcome: "Acordo extrajudicial alcançado rapidamente"
     },
     {
       id: 2,
@@ -25,15 +25,14 @@ const TestimonialsSection = () => {
       author: "Cliente - Direito de Família",
       rating: 5,
       case: "Divórcio consensual",
-      outcome: "Processo finalizado em 60 dias"
+      outcome: "Processo concluído de forma célere"
     }
   ];
 
   const stats = [
     { number: "500+", label: "Casos resolvidos", icon: "CheckCircle" },
-    { number: "95%", label: "Taxa de sucesso", icon: "TrendingUp" },
     { number: "8+", label: "Anos de experiência", icon: "Calendar" },
-    { number: "2h", label: "Tempo médio de resposta", icon: "Clock" }
+    { number: "Ágil", label: "Tempo de resposta", icon: "Clock" }
   ];
 
   return (
@@ -141,7 +140,7 @@ const TestimonialsSection = () => {
                 Pronto para resolver sua questão jurídica?
               </h3>
               <p className="text-indigo-100 mb-6">
-                Agende uma consulta gratuita e descubra como posso ajudar você a alcançar os melhores resultados.
+                Agende uma avaliação do seu caso e descubra como posso ajudar você a alcançar os melhores resultados.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
@@ -149,7 +148,7 @@ const TestimonialsSection = () => {
                   className="inline-flex items-center space-x-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors duration-300"
                 >
                   <Icon name="MessageCircle" size={18} />
-                  <span>Agendar consulta</span>
+                  <span>Agende uma avaliação do seu caso</span>
                 </button>
                 <button
                   onClick={() => window.location.href = 'tel:+5566999111314'}
