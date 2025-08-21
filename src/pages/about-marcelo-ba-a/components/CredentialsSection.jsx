@@ -25,7 +25,7 @@ const CredentialsSection = () => {
 
   const certifications = [
     {
-      title: "OAB/MT 14.159-B",
+      title: "Marcelo Baía — OAB/MT 14.159-B",
       description: "Inscrito e ativo na Ordem dos Advogados do Brasil - Seção Mato Grosso",
       icon: "Scale",
       status: "Ativo desde 2015"

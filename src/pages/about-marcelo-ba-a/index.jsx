@@ -99,7 +99,7 @@ const AboutMarceloBaia = () => {
                   Atendimento humanizado e comunicação transparente.
                 </p>
                 <p className="text-slate-400 text-xs">
-                  OAB/MT 14.159-B
+                  Marcelo Baía — OAB/MT 14.159-B
                 </p>
               </div>
 

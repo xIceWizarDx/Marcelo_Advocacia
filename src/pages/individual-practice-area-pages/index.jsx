@@ -143,7 +143,7 @@ const IndividualPracticeAreaPages = () => {
                 <h3 className="font-lora font-semibold text-xl mb-4">Informações Legais</h3>
                 <div className="space-y-2">
                   <p className="font-inter text-slate-300 text-sm">
-                    OAB/MT 14.159-B
+                    Marcelo Baía — OAB/MT 14.159-B
                   </p>
                   <p className="font-inter text-slate-300 text-sm">
                     Atendimento mediante agendamento

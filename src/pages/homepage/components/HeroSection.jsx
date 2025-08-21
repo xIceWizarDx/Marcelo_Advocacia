@@ -38,7 +38,7 @@ const HeroSection = () => {
             {/* Trust Badge */}
             <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-200 shadow-sm">
               <Icon name="Shield" size={16} className="text-indigo-600" />
-              <span className="text-sm font-medium text-slate-700">OAB/MT 14.159-B</span>
+              <span className="text-sm font-medium text-slate-700">Marcelo Baía — OAB/MT 14.159-B</span>
             </div>
 
             {/* Main Headline */}
