@@ -4,46 +4,74 @@ import Icon from '../../../components/AppIcon';
 const ProfessionalJourney = () => {
   const milestones = [
     {
-      year: "2015",
-      title: "Início da Carreira",
-      description: "Formação em Direito pela Universidade Federal de Mato Grosso (UFMT) e inscrição na OAB/MT 14.159-B",
-      icon: "GraduationCap",
+      year: "2005",
+      title: "Início na OAB como Estagiário",
+      description: "Inscrição como estagiário na OAB/GO nº 17.604/E, realizando atos jurídicos e peticionamento.",
+      icon: "FileSignature",
       color: "bg-emerald-500"
     },
     {
-      year: "2017",
-      title: "Especialização em Direito Civil",
-      description: "Pós-graduação em Direito Civil e Processual Civil, aprofundando conhecimentos em contratos e responsabilidade civil",
-      icon: "BookOpen",
+      year: "2006",
+      title: "Graduação em Direito",
+      description: "Formado em Direito pelo Centro Universitário de Goiás, em Goiânia-GO.",
+      icon: "GraduationCap",
       color: "bg-blue-500"
     },
     {
-      year: "2019",
-      title: "Expansão para Direito do Consumidor",
-      description: "Certificação em Direito do Consumidor e início da atuação especializada em defesa dos direitos consumeristas",
-      icon: "Shield",
+      year: "2008",
+      title: "Inscrição como Advogado",
+      description: "OAB/GO nº 27.669, com atuação em cerca de 2.500 processos pela Procuradoria de Assistência Judiciária do Estado de Goiás.",
+      icon: "Gavel",
       color: "bg-purple-500"
     },
     {
-      year: "2021",
-      title: "Direito de Família e Empresarial",
-      description: "Ampliação da atuação para Direito de Família e Empresarial, oferecendo assessoria completa para pessoas físicas e jurídicas",
-      icon: "Users",
+      year: "2010",
+      title: "Transferência para OAB/MT",
+      description: "Inscrição por transferência na OAB/MT nº 14.159-B.",
+      icon: "MapPin",
       color: "bg-orange-500"
     },
     {
-      year: "2023",
-      title: "Reconhecimento Profissional",
-      description: "Palestrante em eventos jurídicos regionais e membro ativo da Comissão de Direito Civil da OAB/MT 14.159-B",
-      icon: "Award",
+      year: "2011",
+      title: "Analista Jurídico TRF1",
+      description: "Aprovação no concurso de Analista Jurídico do Tribunal Regional Federal da 1ª Região.",
+      icon: "Landmark",
       color: "bg-amber-500"
     },
     {
-      year: "2024",
-      title: "Inovação Digital",
-      description: "Implementação de atendimento digital integrado e criação de conteúdo educativo para democratizar o acesso à informação jurídica",
-      icon: "Smartphone",
+      year: "2012",
+      title: "Pós-Graduação em Direito Público",
+      description: "Especialização em Direito Público Material pelo Centro Universitário de Araras-MG.",
+      icon: "BookOpenCheck",
       color: "bg-indigo-500"
+    },
+    {
+      year: "2012",
+      title: "Início na Docência",
+      description: "Atuação como professor de Direito Civil, Processual Civil, Empresarial e Trabalhista.",
+      icon: "Users",
+      color: "bg-teal-500"
+    },
+    {
+      year: "2016",
+      title: "Inovação Digital",
+      description: "Implementação de virtualização de processos e soluções digitais.",
+      icon: "Laptop",
+      color: "bg-pink-500"
+    },
+    {
+      year: "2018",
+      title: "Procurador em Alto Garças-MT",
+      description: "Aprovação no concurso de Procurador Jurídico do Município de Alto Garças-MT.",
+      icon: "Award",
+      color: "bg-red-500"
+    },
+    {
+      year: "2023",
+      title: "Procurador em São José do Povo-MT",
+      description: "Aprovação no concurso de Procurador Jurídico do Município de São José do Povo-MT, com posse em 2024.",
+      icon: "CheckCircle",
+      color: "bg-green-500"
     }
   ];
 

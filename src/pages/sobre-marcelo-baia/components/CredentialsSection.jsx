@@ -44,32 +44,33 @@ const CredentialsSection = () => {
     }
   ];
 
-  const achievements = [
-    {
-      title: "Palestrante Jurídico",
-      description: "Participação em eventos e seminários sobre Direito Civil e do Consumidor",
-      count: "15+",
-      label: "Palestras"
-    },
-    {
-      title: "Casos Resolvidos",
-      description: "Histórico de sucesso em diversas áreas do direito",
-      count: "500+",
-      label: "Casos"
-    },
-    {
-      title: "Anos de Experiência",
-      description: "Dedicação contínua à advocacia em Rondonópolis/MT",
-      count: "8+",
-      label: "Anos"
-    },
-    {
-      title: "Clientes Atendidos",
-      description: "Pessoas físicas e jurídicas assessoradas com excelência",
-      count: "300+",
-      label: "Clientes"
-    }
-  ];
+  // Achievements section temporarily disabled
+  // const achievements = [
+  //   {
+  //     title: "Palestrante Jurídico",
+  //     description: "Participação em eventos e seminários sobre Direito Civil e do Consumidor",
+  //     count: "15+",
+  //     label: "Palestras"
+  //   },
+  //   {
+  //     title: "Casos Resolvidos",
+  //     description: "Histórico de sucesso em diversas áreas do direito",
+  //     count: "500+",
+  //     label: "Casos"
+  //   },
+  //   {
+  //     title: "Anos de Experiência",
+  //     description: "Dedicação contínua à advocacia em Rondonópolis/MT",
+  //     count: "8+",
+  //     label: "Anos"
+  //   },
+  //   {
+  //     title: "Clientes Atendidos",
+  //     description: "Pessoas físicas e jurídicas assessoradas com excelência",
+  //     count: "300+",
+  //     label: "Clientes"
+  //   }
+  // ];
 
   return (
     <section className="py-20 bg-white">
@@ -152,33 +153,35 @@ const CredentialsSection = () => {
           </div>
         </div>
 
-        {/* Achievements */}
-        <div className="bg-gradient-to-br from-slate-50 to-zinc-100 rounded-2xl p-8 lg:p-12">
-          <h3 className="font-lora text-2xl font-semibold text-brand-primary mb-8 text-center">
-            Números que Refletem a Experiência
-          </h3>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements?.map((achievement, index) => (
-              <div key={index} className="text-center">
-                <div className="mb-4">
-                  <span className="text-4xl lg:text-5xl font-bold text-brand-accent">
-                    {achievement?.count}
-                  </span>
-                  <p className="text-sm font-medium text-brand-accent mt-1">
-                    {achievement?.label}
+        {/* Achievements section is temporarily disabled */}
+        {false && (
+          <div className="bg-gradient-to-br from-slate-50 to-zinc-100 rounded-2xl p-8 lg:p-12">
+            <h3 className="font-lora text-2xl font-semibold text-brand-primary mb-8 text-center">
+              Números que Refletem a Experiência
+            </h3>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {achievements?.map((achievement, index) => (
+                <div key={index} className="text-center">
+                  <div className="mb-4">
+                    <span className="text-4xl lg:text-5xl font-bold text-brand-accent">
+                      {achievement?.count}
+                    </span>
+                    <p className="text-sm font-medium text-brand-accent mt-1">
+                      {achievement?.label}
+                    </p>
+                  </div>
+                  <h4 className="font-semibold text-brand-primary mb-2">
+                    {achievement?.title}
+                  </h4>
+                  <p className="text-sm text-text-secondary">
+                    {achievement?.description}
                   </p>
                 </div>
-                <h4 className="font-semibold text-brand-primary mb-2">
-                  {achievement?.title}
-                </h4>
-                <p className="text-sm text-text-secondary">
-                  {achievement?.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
