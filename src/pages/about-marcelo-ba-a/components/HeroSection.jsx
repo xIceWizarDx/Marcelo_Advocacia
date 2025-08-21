@@ -23,8 +23,8 @@ const HeroSection = ({ onContactClick, onWhatsAppClick }) => {
             
             <div className="prose prose-lg text-text-primary mb-10">
               <p>
-                Com mais de 8 anos de experiência em Rondonópolis/MT, dedico-me a transformar 
-                complexidades jurídicas em orientações claras e acessíveis. Minha missão é 
+                Com mais de 8 anos de experiência em Rondonópolis/MT, dedicamo-nos a transformar 
+                complexidades jurídicas em orientações claras e acessíveis. Nossa missão é 
                 oferecer assessoria técnica de excelência com linguagem simples, garantindo 
                 que você compreenda cada etapa do processo legal.
               </p>
