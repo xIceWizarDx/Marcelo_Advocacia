@@ -7,7 +7,7 @@ import OfficeLocation from './components/OfficeLocation';
 import ConsultationPrep from './components/ConsultationPrep';
 import TrustSignals from './components/TrustSignals';
 
-const ContactConsultationHub = () => {
+const ContatoConsulta = () => {
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/5566999111314', '_blank');
   };
@@ -73,4 +73,4 @@ const ContactConsultationHub = () => {
   );
 };
 
-export default ContactConsultationHub;
+export default ContatoConsulta;

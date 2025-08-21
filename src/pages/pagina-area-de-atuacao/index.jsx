@@ -9,7 +9,7 @@ import CaseStudyApproach from './components/CaseStudyApproach';
 import PracticeAreaSelector from './components/PracticeAreaSelector';
 import ContactCTA from './components/ContactCTA';
 
-const IndividualPracticeAreaPages = () => {
+const PaginaAreaDeAtuacao = () => {
   const [searchParams] = useSearchParams();
   const [currentArea, setCurrentArea] = useState('civil');
 
@@ -59,8 +59,8 @@ const IndividualPracticeAreaPages = () => {
         <meta property="og:image" content="/assets/images/logo-512x512.png" />
         <meta name="twitter:image" content="/assets/images/logo-512x512.png" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://marcelobaia.adv.br/individual-practice-area-pages?area=${currentArea}`} />
-        <link rel="canonical" href={`https://marcelobaia.adv.br/individual-practice-area-pages?area=${currentArea}`} />
+          <meta property="og:url" content={`https://marcelobaia.adv.br/pagina-area-de-atuacao?area=${currentArea}`} />
+          <link rel="canonical" href={`https://marcelobaia.adv.br/pagina-area-de-atuacao?area=${currentArea}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -167,4 +167,4 @@ const IndividualPracticeAreaPages = () => {
   );
 };
 
-export default IndividualPracticeAreaPages;
+export default PaginaAreaDeAtuacao;

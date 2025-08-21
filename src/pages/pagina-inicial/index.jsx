@@ -7,7 +7,7 @@ import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 import StickyCTABar from './components/StickyCTABar';
 
-const Homepage = () => {
+const PaginaInicial = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -94,4 +94,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default PaginaInicial;

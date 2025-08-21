@@ -189,7 +189,7 @@ const ContactCTA = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => window.location.href = '/contact-consultation-hub'}
+                    onClick={() => window.location.href = '/contato-consulta'}
                     iconName="MapPin"
                     iconPosition="left"
                     className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
