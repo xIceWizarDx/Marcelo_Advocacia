@@ -88,36 +88,41 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-3">
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              iconName="Phone"
-              iconPosition="left"
-              iconSize={16}
-              className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
-            >
-              <a href={phoneLink} aria-label={`Ligar para ${CONTACT.phone.display}`}>{CONTACT.phone.display}</a>
-            </Button>
-            <Button
-              asChild
-              variant="default"
-              size="sm"
-              iconName="MessageCircle"
-              iconPosition="left"
-              iconSize={16}
-              className="bg-brand-accent hover:bg-brand-accent/90 text-white shadow-brand"
-            >
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Conversar via WhatsApp"
+          <div className="hidden lg:flex flex-col items-end space-y-2">
+            <div className="flex items-center space-x-3">
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                iconName="Phone"
+                iconPosition="left"
+                iconSize={16}
+                className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
               >
-                WhatsApp
-              </a>
-            </Button>
+                <a href={phoneLink} aria-label={`Ligar para ${CONTACT.phone.display}`}>{CONTACT.phone.display}</a>
+              </Button>
+              <Button
+                asChild
+                variant="default"
+                size="sm"
+                iconName="MessageCircle"
+                iconPosition="left"
+                iconSize={16}
+                className="bg-brand-accent hover:bg-brand-accent/90 text-white shadow-brand"
+              >
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Conversar via WhatsApp"
+                >
+                  WhatsApp
+                </a>
+              </Button>
+            </div>
+            <p className="text-[10px] text-text-secondary">
+              Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+            </p>
           </div>
 
           {/* Mobile Menu Button */}
@@ -158,38 +163,41 @@ const Header = () => {
               ))}
             </nav>
             
-            {/* Mobile CTA Buttons */}
-            <div className="flex flex-col space-y-3 mt-6 pt-4 border-t border-border">
-              <Button
-                asChild
-                variant="outline"
-                iconName="Phone"
-                iconPosition="left"
-                iconSize={18}
-                fullWidth
-                className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
-              >
-                <a href={phoneLink} aria-label={`Ligar para ${CONTACT.phone.display}`}>{CONTACT.phone.display}</a>
-              </Button>
-              <Button
-                asChild
-                variant="default"
-                iconName="MessageCircle"
-                iconPosition="left"
-                iconSize={18}
-                fullWidth
-                className="bg-brand-accent hover:bg-brand-accent/90 text-white shadow-brand"
-              >
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Conversar via WhatsApp"
+              {/* Mobile CTA Buttons */}
+              <div className="flex flex-col space-y-3 mt-6 pt-4 border-t border-border">
+                <Button
+                  asChild
+                  variant="outline"
+                  iconName="Phone"
+                  iconPosition="left"
+                  iconSize={18}
+                  fullWidth
+                  className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
                 >
-                  Conversar no WhatsApp
-                </a>
-              </Button>
-            </div>
+                  <a href={phoneLink} aria-label={`Ligar para ${CONTACT.phone.display}`}>{CONTACT.phone.display}</a>
+                </Button>
+                <Button
+                  asChild
+                  variant="default"
+                  iconName="MessageCircle"
+                  iconPosition="left"
+                  iconSize={18}
+                  fullWidth
+                  className="bg-brand-accent hover:bg-brand-accent/90 text-white shadow-brand"
+                >
+                  <a
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Conversar via WhatsApp"
+                  >
+                    Conversar no WhatsApp
+                  </a>
+                </Button>
+              </div>
+              <p className="text-xs text-text-secondary mt-3 text-center">
+                Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+              </p>
           </div>
         </div>
       </div>

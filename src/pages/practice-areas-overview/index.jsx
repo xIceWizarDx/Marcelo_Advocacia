@@ -157,25 +157,28 @@ const PracticeAreasOverview = () => {
                 com atendimento humanizado e soluções eficazes
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-primary font-inter font-medium rounded-lg hover:bg-white/90 transition-colors duration-200 shadow-lg"
-                >
-                  <Icon name="MessageCircle" size={20} className="mr-2" />
-                  Consulta Imediata
-                </button>
-                <button
-                  onClick={() => window.location.href = 'tel:+5566999111314'}
-                  className="inline-flex items-center justify-center px-8 py-4 border border-white text-white font-inter font-medium rounded-lg hover:bg-white hover:text-brand-primary transition-colors duration-200"
-                >
-                  <Icon name="Phone" size={20} className="mr-2" />
-                  (66) 99911-1314
-                </button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button
+                    onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
+                    className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-primary font-inter font-medium rounded-lg hover:bg-white/90 transition-colors duration-200 shadow-lg"
+                  >
+                    <Icon name="MessageCircle" size={20} className="mr-2" />
+                    Consulta Imediata
+                  </button>
+                  <button
+                    onClick={() => window.location.href = 'tel:+5566999111314'}
+                    className="inline-flex items-center justify-center px-8 py-4 border border-white text-white font-inter font-medium rounded-lg hover:bg-white hover:text-brand-primary transition-colors duration-200"
+                  >
+                    <Icon name="Phone" size={20} className="mr-2" />
+                    (66) 99911-1314
+                  </button>
+                </div>
+                <p className="text-xs text-white/80 mt-4">
+                  Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+                </p>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Practice Areas Grid */}
         <section className="py-16 lg:py-20 bg-muted/30">
