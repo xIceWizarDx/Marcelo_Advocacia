@@ -13,7 +13,7 @@ const ContactMethods = ({ onWhatsAppClick, onPhoneClick, onEmailClick }) => {
       buttonColor: 'bg-green-600 hover:bg-green-700',
       action: onWhatsAppClick,
       buttonText: 'Conversar Agora',
-      details: '(66) 99911-1314 • Atendimento via WhatsApp é em tempo integral.',
+      details: '(66) 99911-1314 • WhatsApp 24h por dia, 7 dias por semana.',
       recommended: true
     },
     {
@@ -25,7 +25,7 @@ const ContactMethods = ({ onWhatsAppClick, onPhoneClick, onEmailClick }) => {
       buttonColor: 'bg-blue-600 hover:bg-blue-700',
       action: onPhoneClick,
       buttonText: 'Ligar Agora',
-      details: '(66) 99911-1314 • Atendimento mediante agendamento'
+      details: '(66) 99911-1314 • Atendimento em horário comercial'
     },
     {
       id: 'email',
@@ -36,7 +36,7 @@ const ContactMethods = ({ onWhatsAppClick, onPhoneClick, onEmailClick }) => {
       buttonColor: 'bg-slate-600 hover:bg-slate-700',
       action: onEmailClick,
       buttonText: 'Enviar E-mail',
-      details: 'marcelobaiaadvogado@gmail.com • Resposta em 24h'
+      details: 'contato@marcelobaia.adv.br • Resposta imediata'
     }
   ];
 

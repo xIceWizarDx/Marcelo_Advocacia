@@ -17,7 +17,7 @@ const ContatoConsulta = () => {
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:marcelobaiaadvogado@gmail.com';
+    window.location.href = 'mailto:contato@marcelobaia.adv.br';
   };
 
   return (

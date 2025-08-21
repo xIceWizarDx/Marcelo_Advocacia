@@ -141,7 +141,7 @@ const TestimonialsSection = () => {
                 Pronto para resolver sua questão jurídica?
               </h3>
               <p className="text-indigo-100 mb-6">
-                Agende sua consulta e descubra como podemos ajudar você a alcançar os melhores resultados.
+                Agende seu atendimento e descubra como podemos ajudar você a alcançar os melhores resultados.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
@@ -149,7 +149,7 @@ const TestimonialsSection = () => {
                   className="inline-flex items-center space-x-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors duration-300"
                 >
                   <Icon name="MessageCircle" size={18} />
-                  <span>Agendar consulta</span>
+                  <span>Agendar atendimento</span>
                 </button>
                 <button
                   onClick={() => window.location.href = 'tel:+5566999111314'}

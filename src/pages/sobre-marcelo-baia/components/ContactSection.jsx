@@ -17,7 +17,7 @@ const ContactSection = () => {
     {
       icon: "MessageCircle",
       title: "WhatsApp",
-      description: "Atendimento via WhatsApp é em tempo integral.",
+      description: "Disponível 24h por dia, 7 dias por semana.",
       action: "Conversar Agora",
       color: "from-green-500 to-green-600",
       onClick: () => window.open('https://wa.me/5566999111314', '_blank')
@@ -25,7 +25,7 @@ const ContactSection = () => {
     {
       icon: "Phone",
       title: "Telefone",
-      description: "Atendimento mediante agendamento",
+      description: "Atendimento em horário comercial.",
       action: "Ligar Agora",
       color: "from-blue-500 to-blue-600",
       onClick: () => window.location.href = 'tel:+5566999111314'
@@ -36,12 +36,12 @@ const ContactSection = () => {
       description: "Envie sua dúvida detalhada",
       action: "Enviar E-mail",
       color: "from-purple-500 to-purple-600",
-      onClick: () => window.location.href = 'mailto:marcelobaiaadvogado@gmail.com'
+      onClick: () => window.location.href = 'mailto:contato@marcelobaia.adv.br'
     },
     {
       icon: "MapPin",
       title: "Escritório",
-      description: "Atendimento mediante agendamento.",
+      description: "Atendimento presencial mediante agendamento.",
       action: "Ver Localização",
       color: "from-orange-500 to-orange-600",
       onClick: () => window.open('https://maps.google.com/?q=Rua+Tiradentes,+1888+Centro+Rondonópolis+MT', '_blank')
@@ -134,9 +134,9 @@ const ContactSection = () => {
               <div className="space-y-2 text-sm text-text-secondary">
                 <p>📍 Rua Tiradentes, 1888 – Centro, CEP 78.700-028</p>
                 <p>📞 (66) 99911-1314</p>
-                <p>✉️ marcelobaiaadvogado@gmail.com</p>
+                <p>✉️ contato@marcelobaia.adv.br</p>
                 <p>🆔 OAB/MT 14.159-B</p>
-                <p>🕒 Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.</p>
+                <p>🕒 Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.</p>
               </div>
             </div>
           </div>

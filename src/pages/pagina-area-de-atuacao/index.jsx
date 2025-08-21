@@ -78,7 +78,7 @@ const PaginaAreaDeAtuacao = () => {
             openingHoursSpecification: {
               "@type": "OpeningHoursSpecification",
               description:
-                "Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.",
+                "Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.",
             },
           })}
         </script>
@@ -122,7 +122,7 @@ const PaginaAreaDeAtuacao = () => {
                     💬 <a href="https://wa.me/5566999111314" target="_blank" rel="noopener noreferrer" className="text-slate-300">(66) 99911-1314</a>
                   </p>
                   <p className="font-inter text-slate-300">
-                    ✉️ <a href="mailto:marcelobaiaadvogado@gmail.com" className="text-slate-300">marcelobaiaadvogado@gmail.com</a>
+                    ✉️ <a href="mailto:contato@marcelobaia.adv.br" className="text-slate-300">contato@marcelobaia.adv.br</a>
                   </p>
                 </div>
               </div>
@@ -146,10 +146,10 @@ const PaginaAreaDeAtuacao = () => {
                     OAB/MT 14.159-B
                   </p>
                   <p className="font-inter text-slate-300 text-sm">
-                    Atendimento mediante agendamento
+                    Atendimento presencial mediante agendamento
                   </p>
                   <p className="font-inter text-slate-300 text-sm">
-                    Atendimento via WhatsApp é em tempo integral
+                    Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana
                   </p>
                 </div>
               </div>

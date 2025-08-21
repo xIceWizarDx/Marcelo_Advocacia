@@ -37,8 +37,8 @@ const PaginaInicial = () => {
                 </div>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Assessoria jurídica clara e segura para decisões importantes. 
-                Atendimento humanizado em Rondonópolis/MT.
+                Assessoria jurídica clara e segura para decisões importantes.
+                Atendimento humanizado online.
               </p>
             </div>
 
@@ -50,7 +50,7 @@ const PaginaInicial = () => {
                   <svg className="w-4 h-4 text-slate-400" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                   </svg>
-                  <a href="mailto:marcelobaiaadvogado@gmail.com" className="text-slate-400">marcelobaiaadvogado@gmail.com</a>
+                  <a href="mailto:contato@marcelobaia.adv.br" className="text-slate-400">contato@marcelobaia.adv.br</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <svg className="w-4 h-4 text-slate-400" fill="currentColor" viewBox="0 0 24 24">
@@ -68,7 +68,7 @@ const PaginaInicial = () => {
                   <svg className="w-4 h-4 text-slate-400" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 8a2 2 0 100 4 2 2 0 000-4z"/>
                   </svg>
-                  <span className="text-slate-400">Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.</span>
+                  <span className="text-slate-400">Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.</span>
                 </div>
               </div>
             </div>
@@ -77,8 +77,8 @@ const PaginaInicial = () => {
             <div className="space-y-4">
               <h4 className="font-semibold text-white">Informações</h4>
               <div className="space-y-2 text-sm text-slate-400">
-                <p>CNPJ: 12.345.678/0001-90</p>
-                <p>Registro profissional ativo</p>
+                <p>CNPJ: 34.362.076/0001-89</p>
+                <p>OAB/MT: 14.159-B</p>
               </div>
             </div>
           </div>

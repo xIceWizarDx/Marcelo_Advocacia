@@ -65,7 +65,7 @@ const ContactCTA = () => {
             <Icon name="HelpCircle" size={20} />
           </div>
           <div>
-            <h3 className="font-lora font-semibold text-xl">Não encontrou sua resposta?</h3>
+            <h3 className="font-lora font-semibold text-xl">Precisa de outras orientações?</h3>
             <p className="text-white/80 text-sm">Envie sua pergunta ou entre em contato diretamente</p>
           </div>
         </div>
@@ -162,7 +162,7 @@ const ContactCTA = () => {
                 <div className="flex-1">
                   <h5 className="font-inter font-medium text-text-primary mb-1">Telefone</h5>
                   <p className="text-text-secondary text-sm mb-3">
-                    Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.
+                    Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.
                   </p>
                   <Button
                     variant="outline"
@@ -184,7 +184,7 @@ const ContactCTA = () => {
                 <div className="flex-1">
                   <h5 className="font-inter font-medium text-text-primary mb-1">Consulta Presencial</h5>
                   <p className="text-text-secondary text-sm mb-3">
-                    Agende uma consulta em nosso escritório
+                    Agende seu atendimento em nosso escritório
                   </p>
                   <Button
                     variant="outline"
@@ -194,7 +194,7 @@ const ContactCTA = () => {
                     iconPosition="left"
                     className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
                   >
-                    Agendar consulta
+                    Agendar atendimento
                   </Button>
                 </div>
               </div>
