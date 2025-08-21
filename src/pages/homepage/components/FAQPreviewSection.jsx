@@ -8,19 +8,19 @@ const FAQPreviewSection = () => {
   const faqs = [
     {
       question: "Quanto custa uma consulta jurídica?",
-      answer: `A primeira consulta é gratuita e sem compromisso. Durante esta conversa inicial, avalio seu caso e apresento as opções disponíveis.\n\nApós a análise, apresento um orçamento transparente baseado na complexidade do caso e tempo estimado. Trabalho com valores fixos sempre que possível, evitando surpresas.`
+      answer: `A primeira consulta é gratuita e sem compromisso. Durante esta conversa inicial, avaliamos seu caso e apresentamos as opções disponíveis.\n\nApós a análise, apresentamos um orçamento transparente baseado na complexidade do caso e tempo estimado. Trabalhamos com valores fixos sempre que possível, evitando surpresas.`
     },
     {
       question: "Como funciona o atendimento?",
-      answer: `O atendimento é personalizado e humanizado. Primeiro, fazemos uma consulta inicial para entender sua situação.\n\nDepois, elaboro uma estratégia jurídica clara e mantenho você informado sobre cada etapa do processo. Utilizo linguagem simples e estou sempre disponível para esclarecer dúvidas.`
+      answer: `O atendimento é personalizado e humanizado. Primeiro, fazemos uma consulta inicial para entender sua situação.\n\nDepois, elaboramos uma estratégia jurídica clara e mantemos você informado sobre cada etapa do processo. Utilizamos linguagem simples e estamos sempre disponíveis para esclarecer dúvidas.`
     },
     {
       question: "Qual o prazo para resolução dos casos?",
-      answer: `Os prazos variam conforme a complexidade e natureza de cada caso. Na consulta inicial, apresento uma estimativa realista baseada na minha experiência.\n\nSempre priorizo soluções extrajudiciais quando possível, pois são mais rápidas e econômicas. Mantenho você informado sobre o andamento regularmente.`
+      answer: `Os prazos variam conforme a complexidade e natureza de cada caso. Na consulta inicial, apresentamos uma estimativa realista baseada na nossa experiência.\n\nSempre priorizamos soluções extrajudiciais quando possível, pois são mais rápidas e econômicas. Mantemos você informado sobre o andamento regularmente.`
     },
     {
       question: "Atende apenas em Rondonópolis?",
-      answer: `Meu escritório está localizado em Rondonópolis/MT, mas atendo clientes de toda a região. Para casos específicos, posso me deslocar quando necessário.\n\nTambém realizo consultas online para orientações iniciais e acompanhamento de processos, facilitando o acesso à assessoria jurídica.`
+      answer: `Nosso escritório está localizado em Rondonópolis/MT, mas atendemos clientes de toda a região. Para casos específicos, podemos nos deslocar quando necessário.\n\nTambém realizamos consultas online para orientações iniciais e acompanhamento de processos, facilitando o acesso à assessoria jurídica.`
     }
   ];
 
