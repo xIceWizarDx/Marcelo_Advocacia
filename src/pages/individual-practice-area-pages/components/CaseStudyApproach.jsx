@@ -18,21 +18,21 @@ const CaseStudyApproach = ({ practiceArea }) => {
             "Ação judicial com pedido de tutela antecipada",
             "Produção de provas da negativação indevida"
           ],
-          outcome: "Resolução em 8 meses com indenização de R$ 12.000 e exclusão imediata do nome dos órgãos de proteção.",
+          outcome: "Resolução em prazo breve com indenização de R$ 12.000 e exclusão imediata do nome dos órgãos de proteção.",
           methodology: "Estratégia preventiva com foco na resolução mais rápida possível"
         },
         {
           icon: "Home",
           category: "Direitos Reais",
           title: "Regularização de Propriedade",
-          scenario: "Família ocupava terreno há 20 anos sem escritura, enfrentando ameaça de despejo.",
+          scenario: "Família ocupava terreno há muitos anos sem escritura, enfrentando ameaça de despejo.",
           approach: [
             "Levantamento histórico da ocupação",
             "Coleta de testemunhas e documentos",
             "Análise da cadeia dominial do imóvel",
             "Ação de usucapião com pedido liminar"
           ],
-          outcome: "Reconhecimento da propriedade em 18 meses, garantindo segurança jurídica à família.",
+          outcome: "Reconhecimento da propriedade em período aproximado, garantindo segurança jurídica à família.",
           methodology: "Abordagem técnica com sensibilidade social"
         }
       ]
@@ -59,7 +59,7 @@ const CaseStudyApproach = ({ practiceArea }) => {
           icon: "Plane",
           category: "Direito do Turismo",
           title: "Voo Cancelado em Viagem Familiar",
-          scenario: "Família perdeu conexão internacional por atraso de 6 horas em voo doméstico.",
+          scenario: "Família perdeu conexão internacional por atraso de várias horas em voo doméstico.",
           approach: [
             "Documentação completa dos prejuízos",
             "Protocolo administrativo na companhia aérea",
@@ -86,7 +86,7 @@ const CaseStudyApproach = ({ practiceArea }) => {
             "Cálculo justo da pensão alimentícia",
             "Homologação judicial em processo consensual"
           ],
-          outcome: "Divórcio concluído em 45 dias com acordo satisfatório para ambas as partes.",
+          outcome: "Divórcio concluído em prazo breve com acordo satisfatório para ambas as partes.",
           methodology: "Mediação humanizada priorizando o bem-estar das crianças"
         },
         {
@@ -120,7 +120,7 @@ const CaseStudyApproach = ({ practiceArea }) => {
             "Negociação com credores e fornecedores",
             "Acompanhamento da execução do plano"
           ],
-          outcome: "Empresa recuperada em 24 meses, mantendo empregos e retomando crescimento.",
+          outcome: "Empresa recuperada em período aproximado, mantendo empregos e retomando crescimento.",
           methodology: "Visão estratégica com responsabilidade social"
         },
         {
