@@ -136,7 +136,7 @@ const ContactSection = () => {
                 <p>📍 Rua Tiradentes, 1888 – Centro, CEP 78.700-028</p>
                 <p>📞 (66) 99911-1314</p>
                 <p>✉️ marcelobaiaadvogado@gmail.com</p>
-                <p>🆔 OAB/MT 14.159-B</p>
+                <p>🆔 Marcelo Baía — OAB/MT 14.159-B</p>
                 <p>🕒 Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.</p>
               </div>
             </div>

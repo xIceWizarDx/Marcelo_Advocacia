@@ -6,7 +6,7 @@ const TrustSignals = () => {
   const credentials = [
     {
       icon: 'Award',
-      title: 'OAB/MT 14.159-B',
+      title: 'Marcelo Baía — OAB/MT 14.159-B',
       description: 'Registro ativo na Ordem dos Advogados do Brasil'
     },
     {

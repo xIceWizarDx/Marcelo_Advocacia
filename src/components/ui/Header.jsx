@@ -63,7 +63,7 @@ const Header = () => {
             </div>
             <div className="hidden sm:block">
               <h1 className="font-lora font-semibold text-lg lg:text-xl text-brand-primary leading-tight">
-                Marcelo Baía
+                {CONTACT.oab}
               </h1>
               <p className="text-xs lg:text-sm text-text-secondary font-inter font-light -mt-1">
                 Advocacia

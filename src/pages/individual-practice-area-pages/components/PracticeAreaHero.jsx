@@ -98,7 +98,7 @@ const PracticeAreaHero = ({ practiceArea, onWhatsAppClick, onCallClick }) => {
             <div className="flex items-center space-x-6 mt-8 pt-8 border-t border-white/20">
               <div className="flex items-center space-x-2">
                 <Icon name="CheckCircle" size={20} color="white" className="opacity-80" />
-                <span className="text-white/80 font-inter text-sm">OAB/MT 14.159-B</span>
+                <span className="text-white/80 font-inter text-sm">Marcelo Baía — OAB/MT 14.159-B</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Icon name="Clock" size={20} color="white" className="opacity-80" />

@@ -8,7 +8,7 @@ export const CONTACT = {
     text: 'marcelobaiaadvogado@gmail.com',
     href: 'mailto:marcelobaiaadvogado@gmail.com'
   },
-  oab: 'OAB/MT 14.159-B',
+  oab: 'Marcelo Baía — OAB/MT 14.159-B',
   address: 'Rua Tiradentes, 1888 – Centro, Rondonópolis-MT – CEP 78.700-028',
   schedule: 'Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.'
 };

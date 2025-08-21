@@ -125,7 +125,7 @@ const ContactSection = () => {
               </h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-slate-600">OAB/MT 14.159-B</span>
+                  <span className="text-slate-600">Marcelo Baía — OAB/MT 14.159-B</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-600">Endereço</span>
