@@ -14,19 +14,19 @@ const HeroSection = ({ onContactClick, onWhatsAppClick }) => {
             </div>
             
             <h1 className="font-lora text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-primary mb-6 leading-tight">
-              Marcelo Baía
+              Marcelo Baía Advocacia
             </h1>
-            
+
             <p className="text-xl lg:text-2xl text-text-secondary font-light mb-8 leading-relaxed">
-              Advocacia clara e segura para decisões importantes da sua vida
+              Nossa missão é oferecer um trabalho profissional, com informações claras, seguras e confiáveis para possibilitá-lo a tomar decisões importantes que trazem grandes repercussões em sua vida.
             </p>
-            
+
             <div className="prose prose-lg text-text-primary mb-10">
               <p>
-                Com mais de 8 anos de experiência em Rondonópolis/MT, dedicamo-nos a transformar
-                complexidades jurídicas em orientações claras e acessíveis. Nossa missão é
-                oferecer assessoria técnica de excelência com linguagem simples, garantindo
-                que você compreenda cada etapa do processo legal.
+                Nossa empresa é dirigida pelo Advogado Marcelo Andrigo Baía Eduardo, atualmente com endereço profissional em Rondonópolis-MT, OAB/MT 14.159-B, inscrito inicialmente no Estado de Goiás com a OAB/GO – 17.604-E como estagiário, em 2005, e posteriormente nº 27.669 já como advogado, em 2008, contando com larga experiência jurídica, tendo atuado nos estados de Tocantins, Goiás, Mato Grosso do Sul, Mato Grosso, Rondônia, Santa Catarina e São Paulo.
+              </p>
+              <p>
+                Nossa equipe conta com tecnologia atualizada e métodos de trabalho comprovadamente eficazes para entregar o melhor resultado no menor tempo possível, com excelência, sigilo e segurança.
               </p>
             </div>
             
