@@ -18,7 +18,7 @@ const CaseStudyApproach = ({ practiceArea }) => {
             "Ação judicial com pedido de tutela antecipada",
             "Produção de provas da negativação indevida"
           ],
-          outcome: "Resolução em 8 meses com indenização de R$ 12.000 e exclusão imediata do nome dos órgãos de proteção.",
+          outcome: "Resolução em prazo adequado com indenização de valor relevante e exclusão imediata do nome dos órgãos de proteção.",
           methodology: "Estratégia preventiva com foco na resolução mais rápida possível"
         },
         {
@@ -32,7 +32,7 @@ const CaseStudyApproach = ({ practiceArea }) => {
             "Análise da cadeia dominial do imóvel",
             "Ação de usucapião com pedido liminar"
           ],
-          outcome: "Reconhecimento da propriedade em 18 meses, garantindo segurança jurídica à família.",
+          outcome: "Reconhecimento da propriedade em prazo adequado, garantindo segurança jurídica à família.",
           methodology: "Abordagem técnica com sensibilidade social"
         }
       ]
@@ -52,7 +52,7 @@ const CaseStudyApproach = ({ practiceArea }) => {
             "Tentativa de acordo extrajudicial",
             "Ação revisional com pedido de consignação"
           ],
-          outcome: "Redução de 40% no valor das parcelas e restituição de R$ 35.000 pagos a mais.",
+          outcome: "Redução significativa no valor das parcelas e restituição de valores relevantes pagos a mais.",
           methodology: "Análise técnica especializada com negociação estratégica"
         },
         {
@@ -66,7 +66,7 @@ const CaseStudyApproach = ({ practiceArea }) => {
             "Ação judicial por danos morais e materiais",
             "Produção de provas dos gastos extras"
           ],
-          outcome: "Indenização de R$ 25.000 por danos morais e R$ 8.000 por danos materiais.",
+          outcome: "Indenização de valores relevantes por danos morais e materiais.",
           methodology: "Atuação rápida com foco na reparação integral"
         }
       ]
@@ -86,7 +86,7 @@ const CaseStudyApproach = ({ practiceArea }) => {
             "Cálculo justo da pensão alimentícia",
             "Homologação judicial em processo consensual"
           ],
-          outcome: "Divórcio concluído em 45 dias com acordo satisfatório para ambas as partes.",
+          outcome: "Divórcio concluído em prazo adequado com acordo satisfatório para ambas as partes.",
           methodology: "Mediação humanizada priorizando o bem-estar das crianças"
         },
         {
