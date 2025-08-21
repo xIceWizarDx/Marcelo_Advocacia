@@ -155,7 +155,7 @@ const ContactCTA = ({ practiceArea }) => {
                 </div>
                 <div>
                   <h4 className="font-inter font-semibold text-white mb-1">Telefone</h4>
-                  <p className="font-inter text-sm text-white/70">(66) 99911-1314 - Atendimento mediante agendamento</p>
+                  <p className="font-inter text-sm text-white/70">(66) 99911-1314 - Atendimento em horário comercial</p>
                 </div>
               </div>
 
