@@ -152,7 +152,7 @@ const ConsultationWidget = () => {
                 <div className="text-center mt-6">
                   <p className="text-sm text-white/80 font-inter">
                     <Icon name="Shield" size={14} className="inline mr-1" />
-                    Consulta inicial com valor acessível • Sigilo profissional garantido
+                    Consulta inicial • Compromisso com o sigilo profissional
                   </p>
                 </div>
               </div>

@@ -62,7 +62,7 @@ const HeroSection = () => {
               {[
                 { icon: 'MessageCircle', text: 'Comunicação direta' },
                 { icon: 'Clock', text: 'Resposta em até 2h' },
-                { icon: 'Shield', text: 'Sigilo garantido' },
+                { icon: 'Shield', text: 'Compromisso com o sigilo' },
                 { icon: 'MapPin', text: 'Atendimento local' }
               ]?.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-lg border border-slate-200">
@@ -175,7 +175,7 @@ const HeroSection = () => {
                 </Button>
 
                 <p className="text-xs text-slate-500 text-center">
-                  Resposta garantida em até 2 horas úteis
+                  Buscamos responder em até 2 horas úteis
                 </p>
                 <p className="text-xs text-slate-500 text-center mt-1">
                   Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.

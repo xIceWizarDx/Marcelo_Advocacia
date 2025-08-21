@@ -25,7 +25,7 @@ const OfficeLocation = () => {
     { icon: 'Coffee', label: 'Café cortesia' },
     { icon: 'Accessibility', label: 'Acessível para PCD' },
     { icon: 'Shield', label: 'Ambiente seguro' },
-    { icon: 'Clock', label: 'Pontualidade garantida' }
+    { icon: 'Clock', label: 'Compromisso com a pontualidade' }
   ];
 
   const handleDirectionsClick = () => {

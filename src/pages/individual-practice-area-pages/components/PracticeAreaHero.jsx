@@ -124,7 +124,7 @@ const PracticeAreaHero = ({ practiceArea, onWhatsAppClick, onCallClick }) => {
                     Atendimento Especializado
                   </h3>
                   <p className="text-white/80 font-inter leading-relaxed">
-                    Cada caso é único. Nossa abordagem personalizada garante que você receba a orientação jurídica mais adequada para sua situação específica.
+                    Cada caso é único. Nossa abordagem personalizada busca oferecer a orientação jurídica mais adequada para sua situação específica.
                   </p>
                 </div>
               </div>

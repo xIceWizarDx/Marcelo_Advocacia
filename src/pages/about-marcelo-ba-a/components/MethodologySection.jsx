@@ -89,7 +89,7 @@ const MethodologySection = () => {
             Metodologia de Trabalho
           </h2>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto">
-            Um processo estruturado e transparente que garante o melhor resultado 
+            Um processo estruturado e transparente que busca o melhor resultado
             para o seu caso, com comunicação clara em cada etapa.
           </p>
         </div>
