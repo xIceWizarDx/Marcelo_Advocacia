@@ -141,7 +141,7 @@ const TestimonialsSection = () => {
                 Pronto para resolver sua questão jurídica?
               </h3>
               <p className="text-indigo-100 mb-6">
-                Agende uma consulta gratuita e descubra como posso ajudar você a alcançar os melhores resultados.
+                Agende uma consulta gratuita e descubra como podemos ajudar você a alcançar os melhores resultados.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
