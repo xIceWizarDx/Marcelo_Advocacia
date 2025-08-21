@@ -24,7 +24,7 @@ const FAQHub = () => {
     {
       id: 1,
       question: "Como funciona a primeira consulta?",
-      answer: `A primeira consulta é uma conversa inicial onde você pode expor sua situação jurídica sem compromisso. Durante este encontro, analiso seu caso, esclareço suas dúvidas principais e apresento as possíveis estratégias legais.\n\nA consulta tem duração média de 60 minutos e pode ser realizada presencialmente em nosso escritório em Rondonópolis ou por videoconferência. Ao final, você receberá uma orientação clara sobre os próximos passos e os custos envolvidos.`,
+      answer: `A primeira consulta é uma conversa inicial onde você pode expor sua situação jurídica sem compromisso. Durante este encontro, analisamos seu caso, esclarecemos suas dúvidas principais e apresentamos as possíveis estratégias legais.\n\nA consulta tem duração média de 60 minutos e pode ser realizada presencialmente em nosso escritório em Rondonópolis ou por videoconferência. Ao final, você receberá uma orientação clara sobre os próximos passos e os custos envolvidos.`,
       category: "Primeiros Passos",
       categoryId: "primeiros-passos",
       isPopular: true,
@@ -36,7 +36,7 @@ const FAQHub = () => {
     {
       id: 2,
       question: "Quais documentos preciso trazer?",
-      answer: `Os documentos necessários variam conforme o tipo de caso, mas geralmente incluem:\n\n• Documentos pessoais (RG, CPF, comprovante de residência)\n• Contratos relacionados ao caso\n• Correspondências e notificações recebidas\n• Comprovantes de pagamento ou recibos\n• Laudos, perícias ou documentos técnicos\n• Procurações anteriores (se houver)\n\nAntes da consulta, envio uma lista específica dos documentos necessários para seu tipo de caso, otimizando nosso tempo de atendimento.`,
+      answer: `Os documentos necessários variam conforme o tipo de caso, mas geralmente incluem:\n\n• Documentos pessoais (RG, CPF, comprovante de residência)\n• Contratos relacionados ao caso\n• Correspondências e notificações recebidas\n• Comprovantes de pagamento ou recibos\n• Laudos, perícias ou documentos técnicos\n• Procurações anteriores (se houver)\n\nAntes da consulta, enviamos uma lista específica dos documentos necessários para seu tipo de caso, otimizando nosso tempo de atendimento.`,
       category: "Primeiros Passos",
       categoryId: "primeiros-passos",
       isPopular: true,
@@ -47,7 +47,7 @@ const FAQHub = () => {
     {
       id: 3,
       question: "Quanto tempo demora um processo?",
-      answer: `O tempo de duração varia significativamente conforme o tipo de processo e a complexidade do caso:\n\n• Processos administrativos: 3 a 12 meses\n• Ações de cobrança: 6 a 18 meses\n• Processos trabalhistas: 12 a 24 meses\n• Ações de família: 6 a 36 meses\n• Processos criminais: 12 meses a vários anos\n\nEstes prazos são estimativas baseadas na experiência prática. Durante a consulta, forneço uma previsão mais precisa considerando as particularidades do seu caso e a comarca onde será processado.`,
+      answer: `O tempo de duração varia significativamente conforme o tipo de processo e a complexidade do caso:\n\n• Processos administrativos: 3 a 12 meses\n• Ações de cobrança: 6 a 18 meses\n• Processos trabalhistas: 12 a 24 meses\n• Ações de família: 6 a 36 meses\n• Processos criminais: 12 meses a vários anos\n\nEstes prazos são estimativas baseadas na experiência prática. Durante a consulta, fornecemos uma previsão mais precisa considerando as particularidades do seu caso e a comarca onde será processado.`,
       category: "Processo Legal",
       categoryId: "processo-legal",
       isPopular: true
@@ -55,7 +55,7 @@ const FAQHub = () => {
     {
       id: 4,
       question: "Como são calculados os honorários advocatícios?",
-      answer: `Os honorários são calculados considerando diversos fatores:\n\n• Complexidade do caso\n• Tempo estimado de dedicação\n• Valor da causa (quando aplicável)\n• Urgência do atendimento\n• Modalidade de cobrança escolhida\n\nOfereço três modalidades:\n1. Honorários fixos: valor determinado no início\n2. Honorários por hora: cobrança pelo tempo efetivamente trabalhado\n3. Honorários de êxito: percentual sobre o resultado obtido\n\nTodos os valores são transparentes e formalizados em contrato, sem surpresas ou custos ocultos.`,
+      answer: `Os honorários são calculados considerando diversos fatores:\n\n• Complexidade do caso\n• Tempo estimado de dedicação\n• Valor da causa (quando aplicável)\n• Urgência do atendimento\n• Modalidade de cobrança escolhida\n\nOferecemos três modalidades:\n1. Honorários fixos: valor determinado no início\n2. Honorários por hora: cobrança pelo tempo efetivamente trabalhado\n3. Honorários de êxito: percentual sobre o resultado obtido\n\nTodos os valores são transparentes e formalizados em contrato, sem surpresas ou custos ocultos.`,
       category: "Custos e Honorários",
       categoryId: "custos-honorarios",
       isPopular: false
@@ -71,7 +71,7 @@ const FAQHub = () => {
     {
       id: 6,
       question: "Atende casos em outras cidades além de Rondonópolis?",
-      answer: `Sim, atendo clientes em toda a região de Rondonópolis e cidades vizinhas. Para casos em outras comarcas, avalio a viabilidade considerando:\n\n• Complexidade do caso\n• Necessidade de deslocamento\n• Possibilidade de atendimento remoto\n• Custos adicionais de deslocamento\n\nMuitos atendimentos podem ser realizados por videoconferência, especialmente consultas iniciais e acompanhamentos. Para audiências e atos presenciais obrigatórios, organizo a agenda para otimizar custos e tempo.`,
+      answer: `Sim, atendemos clientes em toda a região de Rondonópolis e cidades vizinhas. Para casos em outras comarcas, avaliamos a viabilidade considerando:\n\n• Complexidade do caso\n• Necessidade de deslocamento\n• Possibilidade de atendimento remoto\n• Custos adicionais de deslocamento\n\nMuitos atendimentos podem ser realizados por videoconferência, especialmente consultas iniciais e acompanhamentos. Para audiências e atos presenciais obrigatórios, organizamos a agenda para otimizar custos e tempo.`,
       category: "Atendimento",
       categoryId: "atendimento",
       isPopular: false
@@ -102,7 +102,7 @@ const FAQHub = () => {
     {
       id: 9,
       question: "Minha empresa precisa de assessoria jurídica permanente?",
-      answer: `A assessoria jurídica permanente é recomendada para empresas que:\n\n• Têm contratos frequentes com fornecedores/clientes\n• Lidam com questões trabalhistas regularmente\n• Precisam de orientação em decisões estratégicas\n• Querem prevenir problemas legais\n• Têm faturamento acima de R$ 500.000/ano\n\nPara empresas menores, ofereço consultoria pontual e plantão jurídico mensal. A assessoria permanente inclui:\n• Análise de contratos\n• Orientação trabalhista\n• Compliance básico\n• Atendimento prioritário\n• Desconto em demandas judiciais`,
+      answer: `A assessoria jurídica permanente é recomendada para empresas que:\n\n• Têm contratos frequentes com fornecedores/clientes\n• Lidam com questões trabalhistas regularmente\n• Precisam de orientação em decisões estratégicas\n• Querem prevenir problemas legais\n• Têm faturamento acima de R$ 500.000/ano\n\nPara empresas menores, oferecemos consultoria pontual e plantão jurídico mensal. A assessoria permanente inclui:\n• Análise de contratos\n• Orientação trabalhista\n• Compliance básico\n• Atendimento prioritário\n• Desconto em demandas judiciais`,
       category: "Direito Empresarial",
       categoryId: "direito-empresarial",
       isPopular: false,
