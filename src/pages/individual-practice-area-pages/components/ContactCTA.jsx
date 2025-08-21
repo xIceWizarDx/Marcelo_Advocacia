@@ -3,6 +3,7 @@ import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 import Input from '../../../components/ui/Input';
 import Select from '../../../components/ui/Select';
+import { Checkbox } from '../../../components/ui/Checkbox';
 
 const ContactCTA = ({ practiceArea }) => {
   const [formData, setFormData] = useState({
@@ -10,7 +11,8 @@ const ContactCTA = ({ practiceArea }) => {
     email: '',
     phone: '',
     urgency: '',
-    message: ''
+    message: '',
+    consent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -37,10 +39,10 @@ const ContactCTA = ({ practiceArea }) => {
   };
 
   const handleInputChange = (e) => {
-    const { name, value } = e?.target;
+    const { name, value, type, checked } = e?.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value
     }));
   };
 
@@ -69,7 +71,8 @@ const ContactCTA = ({ practiceArea }) => {
         email: '',
         phone: '',
         urgency: '',
-        message: ''
+        message: '',
+        consent: false
       });
     }, 3000);
   };
@@ -270,6 +273,14 @@ const ContactCTA = ({ practiceArea }) => {
                   required
                 />
               </div>
+
+              <Checkbox
+                label="Autorizo o tratamento dos meus dados para contato e análise do meu caso, conforme a Política de Privacidade"
+                name="consent"
+                checked={formData?.consent}
+                onChange={handleInputChange}
+                required
+              />
 
               <Button
                 type="submit"

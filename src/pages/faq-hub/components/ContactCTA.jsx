@@ -2,21 +2,23 @@ import React, { useState } from 'react';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 import Input from '../../../components/ui/Input';
+import { Checkbox } from '../../../components/ui/Checkbox';
 
 const ContactCTA = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    question: ''
+    question: '',
+    consent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e) => {
-    const { name, value } = e?.target;
+    const { name, value, type, checked } = e?.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value
     }));
   };
 
@@ -33,7 +35,7 @@ const ContactCTA = () => {
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
-      setFormData({ name: '', email: '', question: '' });
+      setFormData({ name: '', email: '', question: '', consent: false });
     }, 3000);
   };
 
@@ -112,6 +114,14 @@ const ContactCTA = () => {
                   className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent resize-none"
                 />
               </div>
+
+              <Checkbox
+                label="Autorizo o tratamento dos meus dados para contato e análise do meu caso, conforme a Política de Privacidade"
+                name="consent"
+                checked={formData?.consent}
+                onChange={handleInputChange}
+                required
+              />
               
               <Button
                 type="submit"
