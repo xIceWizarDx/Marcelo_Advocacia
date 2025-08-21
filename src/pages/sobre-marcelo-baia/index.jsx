@@ -8,7 +8,7 @@ import CredentialsSection from './components/CredentialsSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 
-const AboutMarceloBaia = () => {
+const SobreMarceloBaia = () => {
   const handleContactClick = () => {
     const contactSection = document.getElementById('contact-section');
     if (contactSection) {
@@ -33,8 +33,8 @@ const AboutMarceloBaia = () => {
         <meta property="og:description" content="Conheça a trajetória profissional de Marcelo Baía, advogado especialista com mais de 8 anos de experiência em Rondonópolis/MT." />
         <meta property="og:image" content="/assets/images/logo-512x512.png" />
         <meta name="twitter:image" content="/assets/images/logo-512x512.png" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://marcelobaia.adv.br/about-marcelo-ba-a" />
+          <meta property="og:type" content="website" />
+          <link rel="canonical" href="https://marcelobaia.adv.br/sobre-marcelo-baia" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -142,4 +142,4 @@ const AboutMarceloBaia = () => {
   );
 };
 
-export default AboutMarceloBaia;
+export default SobreMarceloBaia;

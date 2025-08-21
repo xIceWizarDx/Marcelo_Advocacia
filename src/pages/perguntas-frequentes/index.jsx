@@ -8,7 +8,7 @@ import PopularQuestions from './components/PopularQuestions';
 import ContactCTA from './components/ContactCTA';
 import Icon from '../../components/AppIcon';
 
-const FAQHub = () => {
+const PerguntasFrequentes = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('todos');
   const [currentLanguage, setCurrentLanguage] = useState('pt-BR');
@@ -28,10 +28,10 @@ const FAQHub = () => {
       category: "Primeiros Passos",
       categoryId: "primeiros-passos",
       isPopular: true,
-      relatedLinks: [
-        { title: "Agendar consulta", url: "/contact-consultation-hub" },
-        { title: "Sobre Marcelo Baía", url: "/about-marcelo-ba-a" }
-      ]
+        relatedLinks: [
+          { title: "Agendar consulta", url: "/contato-consulta" },
+          { title: "Sobre Marcelo Baía", url: "/sobre-marcelo-baia" }
+        ]
     },
     {
       id: 2,
@@ -40,9 +40,9 @@ const FAQHub = () => {
       category: "Primeiros Passos",
       categoryId: "primeiros-passos",
       isPopular: true,
-      relatedLinks: [
-        { title: "Áreas de Atuação", url: "/practice-areas-overview" }
-      ]
+        relatedLinks: [
+          { title: "Áreas de Atuação", url: "/areas-de-atuacao" }
+        ]
     },
     {
       id: 3,
@@ -84,8 +84,8 @@ const FAQHub = () => {
       categoryId: "direito-civil",
       isPopular: false,
       relatedLinks: [
-        { title: "Direito Civil", url: "/individual-practice-area-pages" },
-        { title: "Direito do Consumidor", url: "/individual-practice-area-pages" }
+        { title: "Direito Civil", url: "/pagina-area-de-atuacao" },
+        { title: "Direito do Consumidor", url: "/pagina-area-de-atuacao" }
       ]
     },
     {
@@ -96,7 +96,7 @@ const FAQHub = () => {
       categoryId: "direito-familia",
       isPopular: false,
       relatedLinks: [
-        { title: "Direito de Família", url: "/individual-practice-area-pages" }
+        { title: "Direito de Família", url: "/pagina-area-de-atuacao" }
       ]
     },
     {
@@ -107,7 +107,7 @@ const FAQHub = () => {
       categoryId: "direito-empresarial",
       isPopular: false,
       relatedLinks: [
-        { title: "Direito Empresarial", url: "/individual-practice-area-pages" }
+        { title: "Direito Empresarial", url: "/pagina-area-de-atuacao" }
       ]
     },
     {
@@ -118,7 +118,7 @@ const FAQHub = () => {
       categoryId: "direito-consumidor",
       isPopular: false,
       relatedLinks: [
-        { title: "Direito do Consumidor", url: "/individual-practice-area-pages" }
+        { title: "Direito do Consumidor", url: "/pagina-area-de-atuacao" }
       ]
     }
   ];
@@ -187,13 +187,13 @@ const FAQHub = () => {
         <title>FAQ - Perguntas Frequentes | Marcelo Baía Advocacia</title>
         <meta name="description" content="Encontre respostas para as principais dúvidas jurídicas. FAQ completo sobre direito civil, consumidor, família e empresarial em Rondonópolis-MT." />
         <meta name="keywords" content="FAQ jurídico, perguntas frequentes direito, dúvidas advocacia, Rondonópolis MT, consulta jurídica" />
-        <link rel="canonical" href="https://marcelobaia.adv.br/faq-hub" />
+          <link rel="canonical" href="https://marcelobaia.adv.br/perguntas-frequentes" />
         <meta property="og:title" content="FAQ - Perguntas Frequentes | Marcelo Baía Advocacia" />
         <meta property="og:description" content="Encontre respostas para as principais dúvidas jurídicas. FAQ completo sobre direito civil, consumidor, família e empresarial." />
         <meta property="og:image" content="/assets/images/logo-512x512.png" />
         <meta name="twitter:image" content="/assets/images/logo-512x512.png" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://marcelobaia.adv.br/faq-hub" />
+          <meta property="og:url" content="https://marcelobaia.adv.br/perguntas-frequentes" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -346,10 +346,10 @@ const FAQHub = () => {
                   </h3>
                   <div className="space-y-2">
                     {[
-                      { name: 'Direito Civil', icon: 'Scale', url: '/individual-practice-area-pages' },
-                      { name: 'Direito do Consumidor', icon: 'ShoppingCart', url: '/individual-practice-area-pages' },
-                      { name: 'Direito de Família', icon: 'Users', url: '/individual-practice-area-pages' },
-                      { name: 'Direito Empresarial', icon: 'Building', url: '/individual-practice-area-pages' }
+                      { name: 'Direito Civil', icon: 'Scale', url: '/pagina-area-de-atuacao' },
+                      { name: 'Direito do Consumidor', icon: 'ShoppingCart', url: '/pagina-area-de-atuacao' },
+                      { name: 'Direito de Família', icon: 'Users', url: '/pagina-area-de-atuacao' },
+                      { name: 'Direito Empresarial', icon: 'Building', url: '/pagina-area-de-atuacao' }
                     ]?.map((area) => (
                       <a
                         key={area?.name}
@@ -415,4 +415,4 @@ const FAQHub = () => {
   );
 };
 
-export default FAQHub;
+  export default PerguntasFrequentes;

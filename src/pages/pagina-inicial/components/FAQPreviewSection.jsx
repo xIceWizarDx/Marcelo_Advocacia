@@ -103,7 +103,7 @@ const FAQPreviewSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/faq-hub"
+                to="/perguntas-frequentes"
                 className="inline-flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700 px-6 py-3 rounded-lg font-medium transition-colors duration-300"
               >
                 <Icon name="Search" size={18} />

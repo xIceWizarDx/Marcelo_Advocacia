@@ -2,13 +2,13 @@ import React from "react";
 import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop";
 import ErrorBoundary from "components/ErrorBoundary";
-import NotFound from "pages/NotFound";
-import IndividualPracticeAreaPages from './pages/individual-practice-area-pages';
-import AboutMarceloBaia from './pages/about-marcelo-ba-a';
-import FAQHub from './pages/faq-hub';
-import PracticeAreasOverview from './pages/practice-areas-overview';
-import ContactConsultationHub from './pages/contact-consultation-hub';
-import Homepage from './pages/homepage';
+import PaginaNaoEncontrada from "pages/PaginaNaoEncontrada";
+import PaginaAreaDeAtuacao from './pages/pagina-area-de-atuacao';
+import SobreMarceloBaia from './pages/sobre-marcelo-baia';
+import PerguntasFrequentes from './pages/perguntas-frequentes';
+import AreasDeAtuacao from './pages/areas-de-atuacao';
+import ContatoConsulta from './pages/contato-consulta';
+import PaginaInicial from './pages/pagina-inicial';
 
 const Routes = () => {
   return (
@@ -17,14 +17,14 @@ const Routes = () => {
       <ScrollToTop />
       <RouterRoutes>
         {/* Define your route here */}
-        <Route path="/" element={<Homepage />} />
-        <Route path="/individual-practice-area-pages" element={<IndividualPracticeAreaPages />} />
-        <Route path="/about-marcelo-ba-a" element={<AboutMarceloBaia />} />
-        <Route path="/faq-hub" element={<FAQHub />} />
-        <Route path="/practice-areas-overview" element={<PracticeAreasOverview />} />
-        <Route path="/contact-consultation-hub" element={<ContactConsultationHub />} />
-        <Route path="/homepage" element={<Homepage />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<PaginaInicial />} />
+        <Route path="/pagina-area-de-atuacao" element={<PaginaAreaDeAtuacao />} />
+        <Route path="/sobre-marcelo-baia" element={<SobreMarceloBaia />} />
+        <Route path="/perguntas-frequentes" element={<PerguntasFrequentes />} />
+        <Route path="/areas-de-atuacao" element={<AreasDeAtuacao />} />
+        <Route path="/contato-consulta" element={<ContatoConsulta />} />
+        <Route path="/pagina-inicial" element={<PaginaInicial />} />
+        <Route path="*" element={<PaginaNaoEncontrada />} />
       </RouterRoutes>
       </ErrorBoundary>
     </BrowserRouter>

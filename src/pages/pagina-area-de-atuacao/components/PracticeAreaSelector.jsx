@@ -130,8 +130,8 @@ const PracticeAreaSelector = ({ currentArea }) => {
 
         {/* Back to Overview */}
         <div className="text-center mt-8">
-          <Link
-            to="/practice-areas-overview"
+            <Link
+              to="/areas-de-atuacao"
             className="inline-flex items-center px-6 py-3 bg-white border border-slate-300 text-slate-700 font-semibold rounded-lg hover:bg-slate-50 hover:border-slate-400 transition-all duration-200"
           >
             <Icon name="ArrowLeft" size={18} className="mr-2" />
