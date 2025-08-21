@@ -83,8 +83,7 @@ const ContactSection = () => {
             Vamos Conversar Sobre Seu Caso
           </h2>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto">
-            Entre em contato para uma consulta inicial. Estou aqui para esclarecer suas dúvidas 
-            e orientá-lo sobre os melhores caminhos para resolver sua questão jurídica.
+            Entre em contato para uma consulta inicial. Estamos aqui para esclarecer suas dúvidas.
           </p>
         </div>
 
