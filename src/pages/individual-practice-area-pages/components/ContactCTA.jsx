@@ -97,26 +97,29 @@ const ContactCTA = ({ practiceArea }) => {
               Recebemos sua solicitação e entraremos em contato em até 24 horas. 
               Para questões urgentes, utilize nossos canais diretos.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="default"
-                onClick={handleWhatsAppClick}
-                iconName="MessageCircle"
-                iconPosition="left"
-                className="bg-green-600 hover:bg-green-700"
-              >
-                WhatsApp Direto
-              </Button>
-              <Button
-                variant="outline"
-                onClick={handlePhoneClick}
-                iconName="Phone"
-                iconPosition="left"
-                className="border-green-600 text-green-600 hover:bg-green-50"
-              >
-                (66) 99911-1314
-              </Button>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              variant="default"
+              onClick={handleWhatsAppClick}
+              iconName="MessageCircle"
+              iconPosition="left"
+              className="bg-green-600 hover:bg-green-700"
+            >
+              WhatsApp Direto
+            </Button>
+            <Button
+              variant="outline"
+              onClick={handlePhoneClick}
+              iconName="Phone"
+              iconPosition="left"
+              className="border-green-600 text-green-600 hover:bg-green-50"
+            >
+              (66) 99911-1314
+            </Button>
+          </div>
+          <p className="mt-4 text-xs text-slate-600">
+            Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+          </p>
           </div>
         </div>
       </section>
@@ -195,6 +198,9 @@ const ContactCTA = ({ practiceArea }) => {
                 Ligar Agora
               </Button>
             </div>
+            <p className="mt-2 text-xs text-white/70">
+              Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+            </p>
           </div>
 
           {/* Contact Form */}

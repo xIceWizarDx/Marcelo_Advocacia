@@ -399,15 +399,18 @@ const FAQHub = () => {
                 <Icon name="MessageCircle" size={20} />
                 <span>Conversar no WhatsApp</span>
               </button>
-              
+
               <button
                 onClick={() => window.location.href = 'tel:+5566999111314'}
-                className="flex items-center justify-center space-x-3 px-8 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-inter font-semibold hover:bg-white/20 transition-all duration-300"
+                className="flex items-center justify-center space-x-3 px-8 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-inter font-semibold hover:bg-white/20 transition-all duração-300"
               >
                 <Icon name="Phone" size={20} />
                 <span>Ligar Agora</span>
               </button>
             </div>
+            <p className="mt-4 text-xs text-white/80">
+              Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+            </p>
           </div>
         </section>
       </div>

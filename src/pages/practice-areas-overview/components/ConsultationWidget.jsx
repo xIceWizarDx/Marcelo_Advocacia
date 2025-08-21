@@ -122,37 +122,40 @@ const ConsultationWidget = () => {
             </div>
 
             {/* Booking Actions */}
-            <div className="mt-8 pt-8 border-t border-white/20">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  variant="default"
-                  onClick={handleBooking}
-                  iconName="MessageCircle"
-                  iconPosition="left"
-                  iconSize={18}
-                  className="bg-white text-brand-primary hover:bg-white/90 font-medium px-8 py-3"
-                >
-                  Confirmar via WhatsApp
-                </Button>
-                <Button
-                  variant="outline"
-                  onClick={() => window.location.href = 'tel:+5566999111314'}
-                  iconName="Phone"
-                  iconPosition="left"
-                  iconSize={18}
-                  className="border-white text-white hover:bg-white hover:text-brand-primary font-medium px-8 py-3"
-                >
-                  (66) 99911-1314
-                </Button>
-              </div>
-              
-              <div className="text-center mt-6">
-                <p className="text-sm text-white/80 font-inter">
-                  <Icon name="Shield" size={14} className="inline mr-1" />
-                  Consulta inicial com valor acessível • Sigilo profissional garantido
+              <div className="mt-8 pt-8 border-t border-white/20">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    variant="default"
+                    onClick={handleBooking}
+                    iconName="MessageCircle"
+                    iconPosition="left"
+                    iconSize={18}
+                    className="bg-white text-brand-primary hover:bg-white/90 font-medium px-8 py-3"
+                  >
+                    Confirmar via WhatsApp
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={() => window.location.href = 'tel:+5566999111314'}
+                    iconName="Phone"
+                    iconPosition="left"
+                    iconSize={18}
+                    className="border-white text-white hover:bg-white hover:text-brand-primary font-medium px-8 py-3"
+                  >
+                    (66) 99911-1314
+                  </Button>
+                </div>
+                <p className="mt-2 text-xs text-white/80 text-center">
+                  Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
                 </p>
+
+                <div className="text-center mt-6">
+                  <p className="text-sm text-white/80 font-inter">
+                    <Icon name="Shield" size={14} className="inline mr-1" />
+                    Consulta inicial com valor acessível • Sigilo profissional garantido
+                  </p>
+                </div>
               </div>
-            </div>
           </div>
         </div>
       </div>

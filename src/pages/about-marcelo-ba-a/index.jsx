@@ -110,6 +110,9 @@ const AboutMarceloBaia = () => {
                   <p>📍 Rua Tiradentes, 1888 – Centro, Rondonópolis-MT – CEP 78.700-028</p>
                   <p>📞 <a href="tel:+5566999111314" className="text-slate-300">(66) 99911-1314</a></p>
                   <p>💬 <a href="https://wa.me/5566999111314" target="_blank" rel="noopener noreferrer" className="text-slate-300">(66) 99911-1314</a></p>
+                  <p className="text-xs text-slate-400 mt-1">
+                    Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+                  </p>
                   <p>✉️ <a href="mailto:marcelobaiaadvogado@gmail.com" className="text-slate-300">marcelobaiaadvogado@gmail.com</a></p>
                   <p>🕒 Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.</p>
                 </div>

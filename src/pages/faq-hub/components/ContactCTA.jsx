@@ -152,6 +152,9 @@ const ContactCTA = () => {
                   >
                     Conversar agora
                   </Button>
+                  <p className="mt-2 text-xs text-text-secondary">
+                    Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+                  </p>
                 </div>
               </div>
               

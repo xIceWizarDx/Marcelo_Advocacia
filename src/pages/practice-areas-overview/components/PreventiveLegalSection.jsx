@@ -174,30 +174,33 @@ const PreventiveLegalSection = () => {
               de forma proativa e inteligente.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="default"
-                onClick={handlePreventiveConsultation}
-                iconName="Shield"
-                iconPosition="left"
-                iconSize={18}
-                className="bg-white text-brand-primary hover:bg-white/90 font-medium px-8 py-3"
-              >
-                Consultoria Preventiva
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => window.location.href = 'tel:+5566999111314'}
-                iconName="Phone"
-                iconPosition="left"
-                iconSize={18}
-                className="border-white text-white hover:bg-white hover:text-brand-primary font-medium px-8 py-3"
-              >
-                (66) 99911-1314
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  variant="default"
+                  onClick={handlePreventiveConsultation}
+                  iconName="Shield"
+                  iconPosition="left"
+                  iconSize={18}
+                  className="bg-white text-brand-primary hover:bg-white/90 font-medium px-8 py-3"
+                >
+                  Consultoria Preventiva
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => window.location.href = 'tel:+5566999111314'}
+                  iconName="Phone"
+                  iconPosition="left"
+                  iconSize={18}
+                  className="border-white text-white hover:bg-white hover:text-brand-primary font-medium px-8 py-3"
+                >
+                  (66) 99911-1314
+                </Button>
+              </div>
+              <p className="mt-2 text-xs text-white/80">
+                Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+              </p>
             </div>
           </div>
-        </div>
       </div>
     </section>
   );

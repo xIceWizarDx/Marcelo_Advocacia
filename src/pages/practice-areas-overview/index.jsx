@@ -173,6 +173,9 @@ const PracticeAreasOverview = () => {
                   (66) 99911-1314
                 </button>
               </div>
+              <p className="mt-2 text-xs text-white/80">
+                Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+              </p>
             </div>
           </div>
         </section>
@@ -317,6 +320,9 @@ const PracticeAreasOverview = () => {
                     <Icon name="Phone" size={20} />
                   </a>
                 </div>
+                <p className="mt-2 text-xs text-white/70">
+                  Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+                </p>
               </div>
 
               {/* Quick Links */}
@@ -345,6 +351,9 @@ const PracticeAreasOverview = () => {
                       (66) 99911-1314
                     </a>
                   </div>
+                  <p className="mt-2 text-xs text-white/70">
+                    Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+                  </p>
                   <div className="flex items-center space-x-3">
                     <Icon name="Phone" size={16} className="text-brand-accent" />
                     <a href="tel:+5566999111314" className="text-white/80 font-inter text-sm">(66) 99911-1314</a>

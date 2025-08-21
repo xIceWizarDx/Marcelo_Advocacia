@@ -120,6 +120,11 @@ const ContactSection = () => {
                       >
                         {method?.action}
                       </Button>
+                      {method?.title === 'WhatsApp' && (
+                        <p className="mt-2 text-xs text-text-secondary">
+                          Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>

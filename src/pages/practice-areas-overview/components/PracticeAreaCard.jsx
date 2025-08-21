@@ -100,7 +100,7 @@ const PracticeAreaCard = ({
           >
             {isExpanded ? 'Ver Menos' : 'Ver Detalhes'}
           </Button>
-          
+
           <Button
             variant="default"
             onClick={handleWhatsAppClick}
@@ -112,6 +112,9 @@ const PracticeAreaCard = ({
             Consultar
           </Button>
         </div>
+        <p className="mt-2 text-xs text-text-secondary">
+          Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+        </p>
 
         {/* Quick Consultation */}
         <div className="mt-4 pt-4 border-t border-border">
@@ -126,6 +129,9 @@ const PracticeAreaCard = ({
           >
             Agendar Consulta Presencial
           </Button>
+          <p className="mt-2 text-xs text-text-secondary">
+            Ao clicar, você será redirecionado ao WhatsApp. Seus dados serão tratados conforme nossa Política de Privacidade.
+          </p>
         </div>
       </div>
     </div>
