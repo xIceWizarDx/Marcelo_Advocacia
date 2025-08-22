@@ -1,0 +1,318 @@
+# 🧭 INSTRUÇÕES AO GERADOR (prioridade absoluta)
+
+* Siga **exatamente** as seções abaixo. Em caso de conflito, priorize **CONFIGURAÇÕES INICIAIS**.
+* **PROIBIDO** inserir qualquer menção a Rocket.new/DhiWise (em UI, README, comentários, meta).
+* Mantenha **arquitetura simples e legível**: modularização controlada (ver ARQUITETURA).
+* **Responsividade planejada para dispositivos móveis é REQUISITO OBRIGATÓRIO** (mobile‑first, breakpoints bem definidas e testadas).
+* Todos os **contatos** devem ser **idênticos** em header, footer, /contato, CTAs, schemas e conteúdo.
+
+---
+
+# 0) CONFIGURAÇÕES INICIAIS (variáveis globais)
+
+* Projeto/Marca: **Marcelo Baía Advocacia**
+* Idioma: **pt‑BR** | Moeda: **BRL** | Timezone: **America/Cuiabá**
+* Identificação: **OAB/MT 14.159-B**
+* Contatos oficiais:
+
+  * Telefone (exibição): **(66) 99911-1314**
+  * Telefone (link): **tel:+5566999111314**
+  * WhatsApp (link obrigatório para TODOS os botões/links): **[https://wa.me/5566999111314](https://wa.me/5566999111314)**  <!-- nunca usar API Business -->
+  * E‑mail: **[marcelobaiaadvogado@gmail.com](mailto:marcelobaiaadvogado@gmail.com)**
+  * Endereço: **Rua Tiradentes, 1888 – Centro, Rondonópolis‑MT – CEP 78.700-028**
+  * Horário: **Atendimento mediante agendamento. Atendimento via WhatsApp é em tempo integral.**
+* CTA padrão: **Falar no WhatsApp** (primário) | **Ligar agora** (secundário)
+* Tom & estilo: **sério, técnico, confiável; estética refinada, didática e empática**
+* Regras OAB (Provimento 205/2021): sem promessas de resultado; conteúdo informativo; privacidade e consentimento claros.
+* **Branding do gerador:** **NÃO INCLUIR** (texto, link, comentário, meta, README).
+
+---
+
+# 1) STYLE / THEME (Design Tokens para Bootstrap)
+
+* Personalidade: sério, técnico, confiável; estética refinada e discreta.
+* **Mobile‑first obrigatório**: conteúdo e layout priorizam telas pequenas; escalam progressivamente nos breakpoints.
+* Cores (HEX + mapeamento Bootstrap):
+
+  * Primary: **#0f172a**  → `--bs-primary`
+  * Primary Hover: **#111827**
+  * Accent (secondary de UI): **#4f46e5**  → pode mapear para `--bs-secondary` ou variável custom `--mb-accent`
+  * Success: **#16a34a**  → `--bs-success`
+  * Warning: **#f59e0b**   → `--bs-warning`
+  * Text forte: **#334155** | Text suave: **#475569**
+  * Surface: **#fafafa**   | Border: \*\*#e4e4e7\`
+* Tipografia:
+
+  * Headings: **"Merriweather", serif** | Corpo: **"Inter", sans-serif**
+  * Hierarquia sugerida: H1 **36/44**, H2 **28/36**, H3 **22/30**, Body **16/26**, Small **14/22** (px/line‑height)
+* Espaçamento: seções verticais \~ **5rem**; usar utilitários Bootstrap (`py-4/py-5`) + classes utilitárias próprias quando necessário.
+* Raios: **.5rem** padrão para botões/cards.
+* Sombras: **shadow** padrão Bootstrap; hover com **shadow-lg** sutil.
+* Motion (respeitar `prefers-reduced-motion`): transições **150–400ms**; easing `cubic-bezier(0.2,0.8,0.2,1)`.
+* Componentes (regras visuais):
+
+  * Botão primário: `btn btn-primary` com foco visível (outline + ring via CSS).
+  * Links: sublinhado animado em hover (pseudo‑elemento).
+  * Cards: `card` com borda suave; hover eleva levemente.
+  * Tabs/Nav: usar **Nav + Tabs** do Bootstrap com ARIA correta; estado ativo com underline/weight.
+* Implementação de tema:
+
+  * Criar **`src/config/theme.ts`** com tokens exportados (cores, tipografia, motion, raios).
+  * Criar **`src/styles/custom.scss`** ou **`src/styles/custom.css`** para mapear variáveis:
+
+    * `:root { --bs-primary: #0f172a; --mb-accent: #4f46e5; /* etc. */ }`
+  * **Não** criar design system gigante; use utilitários e componentes nativos do Bootstrap.
+
+---
+
+# 2) STACK
+
+* **Next.js + TypeScript + Bootstrap 5 (CSS + JS bundle)**
+* **Sem Tailwind**.
+* JS do Bootstrap (bundle com Popper) habilitado para `Collapse/Accordion/Offcanvas/Tabs`.
+* Acessibilidade: usar padrões do Bootstrap + atributos **ARIA** quando necessário.
+* Conteúdo majoritariamente estático (institucional) — evitar SSR complexo.
+* Build pronto para **Vercel** (preferência) e **Netlify** (alternativo).
+
+---
+
+# 3) ARQUITETURA (modularização controlada)
+
+* Pastas permitidas:
+
+```
+/src
+  /pages
+    index.tsx
+    sobre.tsx
+    atuacao/index.tsx
+    atuacao/civel.tsx
+    atuacao/consumidor.tsx
+    atuacao/familia.tsx
+    atuacao/empresarial.tsx
+    faq.tsx
+    conteudo/index.tsx
+    contato.tsx
+    politica-de-privacidade.tsx
+    termos.tsx
+    acessibilidade.tsx
+  /components   -> essenciais: SiteHeader (Navbar/Offcanvas), StickyCTA, Hero, FeatureGrid,
+                   PracticeCard, FAQAccordion (Accordion), ContactStrip, FooterLegal
+  /config       -> site.ts (contatos/identidade/SEO/flags), theme.ts (tokens)
+  /content      -> index.ts (textos/listas/FAQs/cards/menus), /mdx (4 artigos iniciais)
+  /lib          -> seo.ts (helpers simples)
+  /styles       -> custom.scss|css
+```
+
+* **Proibido**: `atoms/`, `molecules/`, `organisms/`, `features/`, `services/`, `store/`, `hooks/` genéricos.
+* **Regra 3×**: só extrair componente se reutilizado **3+** vezes.
+* **Views** consomem apenas `config/site.ts`, `config/theme.ts` e `content/index.ts`.
+
+---
+
+# 3.1) ASSETS ESTÁTICOS (imagens) — obrigatórios
+
+* **Local único** para imagens estáticas: `public/images`. **Proibido** manter imagens em `node_modules`, `src/`, `.next/` ou pastas externas.
+* **Estrutura recomendada**:
+
+```
+/public
+  /images
+    /brand        -> logotipo (SVG preferencial), favicon/ícones da marca, ícones sociais
+    /ui           -> ilustrações/decorativas leves (SVG/PNG), gráficos simples
+    /content      -> imagens usadas em artigos MDX e seções de conteúdo (WebP/AVIF + fallback PNG)
+    og-image.png  -> imagem social padrão (Open Graph), 1200×630
+```
+
+* **Regras de uso**:
+
+  * Importar via `next/image` ou `<img>` com caminho absoluto a partir de `/public` (ex.: `src="/images/brand/logo.svg"`).
+  * Preferir **SVG** para vetores; para fotos/ilustrações raster, preferir **AVIF/WebP** com fallback **PNG**.
+  * **Tamanhos responsivos**: fornecer variações (ex.: 320/640/960/1280) para imagens de conteúdo; usar `sizes="(max-width: 768px) 100vw, 50vw"` quando aplicável.
+  * **Peso**: alvo ≤ **200–300 KB** por imagem (Hero ≤ **200 KB**). Comprimir antes de incluir.
+  * **Acessibilidade**: `alt` descritivo em todas as imagens; evitar texto embutido em imagem.
+  * **Nomenclatura**: kebab-case, sem espaços (ex.: `hero-office-01.webp`).
+  * **OG por rota (opcional)**: arquivos específicos em `public/images/og/slug.png`; caso ausente, usar `public/images/og-image.png` padrão.
+  * **Favicon/manifest**: manter na raiz de `public/` (`favicon.ico`, `site.webmanifest`) e assets da marca em `public/images/brand/`.
+
+# 4) ROTAS & ARQUITETURA DE INFORMAÇÃO
+
+* `/` (Home)
+* `/sobre`
+* `/atuacao` (visão geral)
+
+  * `/atuacao/civel`
+  * `/atuacao/consumidor`
+  * `/atuacao/familia`
+  * `/atuacao/empresarial`
+* `/faq` (hub por área, com busca/filtro)
+* `/conteudo` (MDX – 4 artigos iniciais)
+* `/contato`
+* Legais: `/politica-de-privacidade`, `/termos`, `/acessibilidade`
+* Técnicos: `sitemap.xml`, `robots.txt`, `humans.txt` gerados no build
+
+---
+
+# 5) RESPONSIVIDADE (obrigatória) — critérios
+
+* **Mobile‑first**: projetar e implementar começando de \~**360×640**.
+* **Breakpoints Bootstrap**: **xs** (mobile), **sm**, **md**, **lg**, **xl**, **xxl**.
+* **Grid**: usar `container`/`container-fluid`, `row`, `col‑12 col‑md‑6 col‑lg‑4` etc. com espaçamentos adequados.
+* **Navbar**: colapsada em mobile (hambúrguer) e expansiva em desktop; utilizar `navbar` + `offcanvas`/`collapse` do Bootstrap.
+* **CTAs**: botões grandes e legíveis em mobile; hit area ≥ 44×44px.
+* **Imagens**: responsivas com `img-fluid`/`<Image />` do Next (priority no LCP quando fizer sentido).
+* **Aceitação**: aparência e uso consistentes em 360×640, 390×844, 768×1024, 1280+.
+
+---
+
+# 6) CONTEÚDO BASE (rascunhos — gerar e ajustar ao tom)
+
+* **Home/Hero**
+
+  * Headline: **“Assessoria jurídica clara e segura para decisões importantes.”**
+  * Sub: **“Atuação em Direito Cível, do Consumidor, de Família e Empresarial.”**
+  * CTAs: **Falar no WhatsApp** (primário) | **Ligar agora** (secundário) | microcópia: **“Responderemos o quanto antes.”**
+  * Quick Contact (3 campos): nome, e‑mail/telefone, área de interesse + checkbox consentimento LGPD.
+
+* **Credibilidade (bullets, 3–4)**: atendimento humanizado; linguagem clara; estratégia preventiva; acompanhamento transparente.
+
+* **Áreas (cards, 4)**: Cível | Consumidor | Família | Empresarial, cada uma com micro‑ícone e CTA.
+
+* **Casos típicos (por área)**: listas objetivas na Home (link para páginas de prática).
+
+* **Bloco empresarial preventivo**: “Negócios seguros começam com contratos bem feitos…”
+
+* **Conteúdo (educacional)**: listar **3 artigos** recentes do MDX.
+
+* **Contato + mapa (estático)**: telefone/WhatsApp/e‑mail/endereço.
+
+* **Footer legal**: dados completos + OAB/UF + privacidade + cookies + **disclaimer**:
+
+  > “O conteúdo deste site é informativo e não substitui consulta jurídica. Não enviamos publicidade não solicitada. O envio de mensagem não cria relação cliente‑advogado.”
+
+* **Páginas de prática `/atuacao/[slug]`** — para cada área gerar:
+
+  * Intro (dor do cliente + como ajudamos), Cenários comuns (bullets), Processo (Passo 1→2→3),
+  * **FAQ específico (10–12 Q\&A)** com **schema `FAQPage`**,
+  * CTA: WhatsApp/Ligar/Agendar,
+  * Artigo curto MDX “Noções básicas” com links internos.
+
+* **/faq (hub)**: busca por termos (ex.: “pensão”, “negativação”, “contrato”), filtro por área, accordion acessível com deep link `#pergunta-slug`, schema `FAQPage` consolidado.
+
+* **/conteudo (MDX)**: criar 4 artigos iniciais:
+
+  1. “Quando vale a pena tentar acordo antes do processo?”
+  2. “Cobrança indevida: passos práticos para se proteger.”
+  3. “Divórcio consensual ou litigioso: diferenças e documentos.”
+  4. “Checklist de contrato com fornecedor (o que não pode faltar).”
+
+* **/sobre**: bio do advogado, valores, método (diagnóstico → estratégia → execução → acompanhamento), foto discreta, CTA visível.
+
+* **/contato**: cards (tel/WhatsApp/e‑mail), formulário (Zod/Yup), honeypot anti‑spam, aviso **“não envie dados sensíveis”**, endereço + “Traçar rota”.
+
+---
+
+# 7) FORMULÁRIOS & CONTATO
+
+* Validação com **Zod** (ou Yup). **Sem upload** de arquivos.
+* **Honeypot** anti‑spam; mensagens claras de erro/acesso.
+* Todos os CTAs e links de WhatsApp usam **[https://wa.me/5566999111314](https://wa.me/5566999111314)** (nunca API Business).
+* Telefone sempre com **tel:+5566999111314**.
+* Propagar contatos uniformemente em header, footer, /contato e componentes.
+
+---
+
+# 8) SEO TÉCNICO + SCHEMA
+
+* Metadados por rota; OpenGraph/Twitter.
+* JSON‑LD:
+
+  * `LegalService`/`LocalBusiness` (nome, endereço completo, telefone, e‑mail, horário)
+  * `Person` (advogado)
+  * `FAQPage` nas práticas e no `/faq`
+  * `BreadcrumbList`
+* Slugs/cópias em pt‑BR; keywords locais (Rondonópolis/MT).
+* Gerar **sitemap.xml**, **robots.txt**, **humans.txt** no build.
+
+---
+
+# 9) ACESSIBILIDADE & QUALIDADE
+
+* WCAG **2.2 AA**: contraste, foco visível, navegação por teclado, skip‑link.
+* `prefers-reduced-motion` respeitado.
+* Accordion/Tabs com ARIA ok (ou componentes Bootstrap nativos bem configurados).
+* Lint/axe; Lighthouse alvo: A11y/Best/SEO ≥ **90**.
+
+---
+
+# 10) ANIMAÇÕES & MICROINTERAÇÕES
+
+* Entrada suave de seções (fade + translateY leve) via CSS/Bootstrap utilities.
+* Hovers: sublinhado animado em links; cards elevam (`shadow` → `shadow-lg`).
+* FAQ com easing suave; StickyCTA aparece após **40%** do scroll (WhatsApp + Ligar).
+* **Orçamento JS público < 150 KB**, **LCP < 2,5s**, **CLS < 0,1**.
+
+---
+
+# 11) ANALÍTICA & CONSENTIMENTO
+
+* Eventos básicos: clique WhatsApp, Ligar, Enviar formulário, scroll‑depth.
+* **Sem cookies de tracking por padrão**; habilitar somente após **consentimento granular** (banner de cookies).
+
+---
+
+# 12) VARIÁVEIS DE AMBIENTE (.env)
+
+* Criar `.env.example` contendo:
+
+  * `NEXT_PUBLIC_PHONE="+5566999111314"`
+  * `NEXT_PUBLIC_WPP_URL="https://wa.me/5566999111314"`
+  * `NEXT_PUBLIC_EMAIL="marcelobaiaadvogado@gmail.com"`
+  * `NEXT_PUBLIC_ADDRESS="Rua Tiradentes, 1888 – Centro, Rondonópolis‑MT – CEP 78.700-028"`
+  * `NEXT_PUBLIC_OAB="OAB/MT 14.159-B"`
+* Views/Componentes devem ler **apenas** dessas variáveis e de `config/site.ts`.
+
+---
+
+# 13) BUILD & DEPLOY
+
+* Projeto **deploy‑ready** (Vercel preferencial; Netlify alternativo).
+* `next-sitemap` (ou equivalente) para sitemap/robots no build.
+* **README.md** simples com:
+
+  * Como editar `config/site.ts`, `config/theme.ts`, `content/index.ts` e MDX.
+  * Como alterar contatos/CTAs e rodar o projeto.
+  * Como importar **Bootstrap 5** (CSS/JS) corretamente no app.
+
+---
+
+# 14) PROIBIÇÕES & LIMPEZA
+
+* **Não** usar Redux/Zustand/React Query/Storybook/SSR complexo.
+* **Não** criar camadas `services/`, `store/`, `hooks/` genéricos.
+* **Não** inserir **qualquer** menção a Rocket.new/DhiWise (UI, meta, comentários, README).
+* **Não** usar API de WhatsApp Business; **sempre** `wa.me/5566999111314`.
+* Remover placeholders genéricos; usar **somente** os dados oficiais das CONFIGURAÇÕES INICIAIS.
+
+---
+
+# 15) SAÍDA ESPERADA (lista de arquivos mínima)
+
+* Pastas/arquivos conforme **ARQUITETURA**; **/public/images** preparado com estrutura inicial (`brand/logo.svg`, `og-image.png`, diretórios `ui/` e `content/` com placeholders).
+* `config/site.ts`, `config/theme.ts`, `content/index.ts`, `styles/custom.scss|css`, `lib/seo.ts`.
+* Páginas criadas com conteúdo inicial (rascunhos acima) e CTAs funcionais.
+* **Sumário final**: liste o que foi criado e onde editar conteúdo/contatos/tema.
+
+---
+
+# 16) CHECKLIST FINAL (automatizado)
+
+* [ ] **Mobile‑first** implementado e validado em 360×640, 390×844, 768×1024, 1280+
+* [ ] Nenhuma menção a Rocket/DhiWise em UI/README/comentários/meta
+* [ ] WhatsApp **apenas** `https://wa.me/5566999111314`
+* [ ] Telefone `tel:+5566999111314` e e‑mail corretos em todas as páginas
+* [ ] OAB/UF visível e consistente
+* [ ] Conteúdo centralizado em `content/index.ts`; contatos/identidade em `config/site.ts`; tokens em `config/theme.ts`
+* [ ] A11y/SEO ≥ 90; Performance ≥ 80; LCP < 2,5s; CLS < 0,1
+* [ ] Sitemap/robots/humans gerados no build
+* [ ] README com instruções de edição, Bootstrap e variáveis
