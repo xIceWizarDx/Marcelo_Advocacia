@@ -74,9 +74,6 @@ const SobreMarceloBaia = () => {
           {/* Methodology */}
           <MethodologySection />
 
-          {/* Credentials */}
-          <CredentialsSection />
-
           {/* Testimonials */}
           <TestimonialsSection />
 
