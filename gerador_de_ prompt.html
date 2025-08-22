@@ -4,121 +4,85 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gerador de SITE_CONFIG → site-config.js + Prompt (TXT)</title>
-  <style>
-    :root{
-      /* Tema claro fixo */
-      --bg:#f8fafc; --card:#ffffff; --muted:#64748b; --text:#0f172a; --line:#e2e8f0; --pri:#4f46e5;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);font:14px/1.6 system-ui,Segoe UI,Roboto,Inter;color:var(--text)}
-    .wrap{max-width:1100px;margin:28px auto;padding:0 16px}
-    .title{display:flex;gap:12px;align-items:center;margin-bottom:16px}
-    .title h1{font-size:20px;margin:0}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:16px;box-shadow:0 10px 30px rgba(15,23,42,.06)}
-    fieldset{border:1px dashed var(--line);border-radius:12px;padding:12px;margin:12px 0}
-    legend{padding:0 6px;color:var(--muted);font-weight:700}
-    label{display:block;font-weight:600;margin:8px 0 4px}
-    input[type="text"], input[type="email"], input[type="url"]{
-      width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--text);
-    }
-    .row{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
-    .col-6{grid-column:span 6} .col-4{grid-column:span 4} .col-3{grid-column:span 3} .col-8{grid-column:span 8} .col-12{grid-column:span 12}
-    @media (max-width: 820px){ .col-6,.col-4,.col-3,.col-8{grid-column:span 12} }
-    .muted{color:var(--muted);font-size:12px}
-    .chips{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);padding:6px 8px;border-radius:999px}
-    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-    button{background:var(--pri);color:white;border:none;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:700;box-shadow:0 6px 16px rgba(79,70,229,.20)}
-    button.ghost{background:transparent;border:1px solid var(--line);color:#334155}
-    .small{font-size:12px}
-    .hr{height:1px;background:var(--line);margin:12px 0}
-    .grid-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-    @media (max-width:700px){.grid-list{grid-template-columns:1fr}}
-    .checkbox{display:flex;gap:8px;align-items:center}
-    .tabs{display:flex;gap:6px;margin:8px 0}
-    .tab{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 10px;cursor:pointer}
-    .tab[aria-selected="true"]{outline:2px solid #c7d2fe}
-    .preview{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;min-height:120px}
-    .pill{font-size:11px;border:1px solid var(--line);padding:2px 6px;border-radius:999px;color:#475569}
-  </style>
-</head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
 <body>
-  <div class="wrap">
-    <div class="title">
-      <h1>Formulário do <span class="pill">SITE_CONFIG</span> → gera <code>site-config.js</code> e <code>Prompt (TXT)</code></h1>
+  <div class="container my-4">
+    <div class="d-flex gap-2 align-items-center mb-3">
+      <h1>Formulário do <span class="badge rounded-pill text-bg-secondary">SITE_CONFIG</span> → gera <code>site-config.js</code> e <code>Prompt (TXT)</code></h1>
     </div>
 
-    <div class="card">
-      <p class="muted">Preencha os campos abaixo (baseado no bloco <strong>0) SITE_CONFIG</strong> do seu PROMPT). No final, clique em <em>Gerar arquivo JS</em> ou <em>Gerar Prompt (TXT)</em>.</p>
+    <div class="card p-3 mb-3">
+      <p class="text-muted">Preencha os campos abaixo (baseado no bloco <strong>0) SITE_CONFIG</strong> do seu PROMPT). No final, clique em <em>Gerar arquivo JS</em> ou <em>Gerar Prompt (TXT)</em>.</p>
     </div>
 
-    <form id="form" class="card">
+    <form id="form" class="card p-3 mb-3">
       <!-- PROJECT -->
-      <fieldset>
-        <legend>Projeto</legend>
-        <div class="row">
-          <div class="col-6">
-            <label>Nome da empresa</label>
-            <input type="text" id="project.name" placeholder="Ex.: Marcelo Baía Advocacia" required>
+      <fieldset class="mb-3">
+        <legend class="fw-semibold text-muted">Projeto</legend>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Nome da empresa</label>
+            <input type="text" class="form-control" id="project.name" placeholder="Ex.: Marcelo Baía Advocacia" required>
           </div>
-          <div class="col-6">
-            <label>Slogan (opcional)</label>
-            <input type="text" id="project.tagline" placeholder="Ex.: Assessoria jurídica clara e segura">
+          <div class="col-md-6">
+            <label class="form-label">Slogan (opcional)</label>
+            <input type="text" class="form-control" id="project.tagline" placeholder="Ex.: Assessoria jurídica clara e segura">
           </div>
 
-          <div class="col-4">
-            <label>Sector Pack</label>
-            <input type="text" id="project.sector_pack" list="sectors" value="servicos">
+          <div class="col-md-4">
+            <label class="form-label">Sector Pack</label>
+            <input type="text" class="form-control" id="project.sector_pack" list="sectors" value="servicos">
             <datalist id="sectors">
               <option value="advocacia"><option value="saude"><option value="financas">
               <option value="educacao"><option value="restaurante"><option value="servicos">
               <option value="varejo"><option value="tecnologia"><option value="evento"><option value="outro">
             </datalist>
           </div>
-          <div class="col-4">
-            <label>Archetype</label>
-            <input type="text" id="project.archetype" list="archs" value="institucional">
+          <div class="col-md-4">
+            <label class="form-label">Archetype</label>
+            <input type="text" class="form-control" id="project.archetype" list="archs" value="institucional">
             <datalist id="archs">
               <option value="institucional"><option value="landing"><option value="portfolio">
               <option value="catalogo"><option value="saas"><option value="evento">
             </datalist>
           </div>
-          <div class="col-4">
-            <label>Region Pack</label>
-            <input type="text" id="project.region_pack" list="regions" value="br">
+          <div class="col-md-4">
+            <label class="form-label">Region Pack</label>
+            <input type="text" class="form-control" id="project.region_pack" list="regions" value="br">
             <datalist id="regions">
               <option value="br"><option value="eu"><option value="us"><option value="latam"><option value="global">
             </datalist>
           </div>
 
-          <div class="col-6">
-            <label>Channel primário</label>
-            <input type="text" id="project.channel_pack.primary" list="channels" value="whatsapp">
+          <div class="col-md-6">
+            <label class="form-label">Channel primário</label>
+            <input type="text" class="form-control" id="project.channel_pack.primary" list="channels" value="whatsapp">
           </div>
-          <div class="col-6">
-            <label>Channel secundário</label>
-            <input type="text" id="project.channel_pack.secondary" list="channels" value="telefone">
+          <div class="col-md-6">
+            <label class="form-label">Channel secundário</label>
+            <input type="text" class="form-control" id="project.channel_pack.secondary" list="channels" value="telefone">
             <datalist id="channels">
               <option value="whatsapp"><option value="telefone"><option value="formulario"><option value="telegram"><option value="email"><option value="none">
             </datalist>
           </div>
 
-          <div class="col-4">
-            <label>Idioma</label>
-            <input type="text" id="project.locale.lang" value="pt-BR">
+          <div class="col-md-4">
+            <label class="form-label">Idioma</label>
+            <input type="text" class="form-control" id="project.locale.lang" value="pt-BR">
           </div>
-          <div class="col-4">
-            <label>Moeda</label>
-            <input type="text" id="project.locale.currency" value="BRL">
+          <div class="col-md-4">
+            <label class="form-label">Moeda</label>
+            <input type="text" class="form-control" id="project.locale.currency" value="BRL">
           </div>
-          <div class="col-4">
-            <label>Timezone</label>
-            <input type="text" id="project.locale.timezone" value="America/Cuiaba">
+          <div class="col-md-4">
+            <label class="form-label">Timezone</label>
+            <input type="text" class="form-control" id="project.locale.timezone" value="America/Cuiaba">
           </div>
 
           <div class="col-12">
-            <label>Tom de voz</label>
-            <input type="text" id="project.tone" list="tones" value="serio">
+            <label class="form-label">Tom de voz</label>
+            <input type="text" class="form-control" id="project.tone" list="tones" value="serio">
             <datalist id="tones">
               <option value="serio"><option value="tecnico"><option value="amigavel"><option value="premium"><option value="criativo">
             </datalist>
@@ -127,128 +91,128 @@
       </fieldset>
 
       <!-- IDENTIDADE -->
-      <fieldset>
-        <legend>Identidade & Contatos</legend>
-        <div class="row">
-          <div class="col-6">
-            <label>Registro (tipo)</label>
-            <input type="text" id="identity.registration.type" placeholder="Ex.: OAB/MT">
+      <fieldset class="mb-3">
+        <legend class="fw-semibold text-muted">Identidade & Contatos</legend>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Registro (tipo)</label>
+            <input type="text" class="form-control" id="identity.registration.type" placeholder="Ex.: OAB/MT">
           </div>
-          <div class="col-6">
-            <label>Registro (valor)</label>
-            <input type="text" id="identity.registration.value" placeholder="Ex.: OAB/MT 14.159-B">
-          </div>
-          <div class="col-12">
-            <label>Endereço completo</label>
-            <input type="text" id="identity.address" placeholder="Rua, número – bairro, cidade – UF – CEP">
-          </div>
-          <div class="col-6">
-            <label>Telefone (exibição)</label>
-            <input type="text" id="identity.phone_display" placeholder="(66) 99911-1314">
-          </div>
-          <div class="col-6">
-            <label>Telefone (link tel:)</label>
-            <input type="text" id="identity.phone_link" placeholder="tel:+5566999111314">
-          </div>
-          <div class="col-6">
-            <label>WhatsApp (wa.me)</label>
-            <input type="text" id="identity.whatsapp_wa_me" placeholder="https://wa.me/5566999111314">
-          </div>
-          <div class="col-6">
-            <label>E-mail</label>
-            <input type="email" id="identity.email" placeholder="mailto:contato@exemplo.com">
+          <div class="col-md-6">
+            <label class="form-label">Registro (valor)</label>
+            <input type="text" class="form-control" id="identity.registration.value" placeholder="Ex.: OAB/MT 14.159-B">
           </div>
           <div class="col-12">
-            <label>Horário de atendimento</label>
-            <input type="text" id="identity.hours" placeholder="Seg a Sex, 9h–18h">
+            <label class="form-label">Endereço completo</label>
+            <input type="text" class="form-control" id="identity.address" placeholder="Rua, número – bairro, cidade – UF – CEP">
           </div>
-          <div class="col-6">
-            <label>CTA primário</label>
-            <input type="text" id="identity.default_cta.primary" value="Falar no WhatsApp">
+          <div class="col-md-6">
+            <label class="form-label">Telefone (exibição)</label>
+            <input type="text" class="form-control" id="identity.phone_display" placeholder="(66) 99911-1314">
           </div>
-          <div class="col-6">
-            <label>CTA secundário</label>
-            <input type="text" id="identity.default_cta.secondary" value="Ligar agora">
+          <div class="col-md-6">
+            <label class="form-label">Telefone (link tel:)</label>
+            <input type="text" class="form-control" id="identity.phone_link" placeholder="tel:+5566999111314">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">WhatsApp (wa.me)</label>
+            <input type="text" class="form-control" id="identity.whatsapp_wa_me" placeholder="https://wa.me/5566999111314">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="identity.email" placeholder="mailto:contato@exemplo.com">
+          </div>
+          <div class="col-12">
+            <label class="form-label">Horário de atendimento</label>
+            <input type="text" class="form-control" id="identity.hours" placeholder="Seg a Sex, 9h–18h">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">CTA primário</label>
+            <input type="text" class="form-control" id="identity.default_cta.primary" value="Falar no WhatsApp">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">CTA secundário</label>
+            <input type="text" class="form-control" id="identity.default_cta.secondary" value="Ligar agora">
           </div>
         </div>
       </fieldset>
 
       <!-- THEME -->
-      <fieldset>
-        <legend>Tema (tokens)</legend>
-        <div class="row">
-          <div class="col-3"><label>primary</label><input type="text" id="theme.colors.primary" value="#0f172a"></div>
-          <div class="col-3"><label>accent</label><input type="text" id="theme.colors.accent" value="#4f46e5"></div>
-          <div class="col-3"><label>success</label><input type="text" id="theme.colors.success" value="#16a34a"></div>
-          <div class="col-3"><label>warning</label><input type="text" id="theme.colors.warning" value="#f59e0b"></div>
-          <div class="col-3"><label>textStrong</label><input type="text" id="theme.colors.textStrong" value="#334155"></div>
-          <div class="col-3"><label>textSoft</label><input type="text" id="theme.colors.textSoft" value="#475569"></div>
-          <div class="col-3"><label>surface</label><input type="text" id="theme.colors.surface" value="#fafafa"></div>
-          <div class="col-3"><label>border</label><input type="text" id="theme.colors.border" value="#e4e4e7"></div>
+      <fieldset class="mb-3">
+        <legend class="fw-semibold text-muted">Tema (tokens)</legend>
+        <div class="row g-3">
+          <div class="col-md-3"><label class="form-label">primary</label><input type="text" class="form-control" id="theme.colors.primary" value="#0f172a"></div>
+          <div class="col-md-3"><label class="form-label">accent</label><input type="text" class="form-control" id="theme.colors.accent" value="#4f46e5"></div>
+          <div class="col-md-3"><label class="form-label">success</label><input type="text" class="form-control" id="theme.colors.success" value="#16a34a"></div>
+          <div class="col-md-3"><label class="form-label">warning</label><input type="text" class="form-control" id="theme.colors.warning" value="#f59e0b"></div>
+          <div class="col-md-3"><label class="form-label">textStrong</label><input type="text" class="form-control" id="theme.colors.textStrong" value="#334155"></div>
+          <div class="col-md-3"><label class="form-label">textSoft</label><input type="text" class="form-control" id="theme.colors.textSoft" value="#475569"></div>
+          <div class="col-md-3"><label class="form-label">surface</label><input type="text" class="form-control" id="theme.colors.surface" value="#fafafa"></div>
+          <div class="col-md-3"><label class="form-label">border</label><input type="text" class="form-control" id="theme.colors.border" value="#e4e4e7"></div>
 
-          <div class="col-6"><label>Tipografia (headings)</label><input type="text" id="theme.typography.headings" value="Merriweather, serif"></div>
-          <div class="col-6"><label>Tipografia (body)</label><input type="text" id="theme.typography.body" value="Inter, sans-serif"></div>
+          <div class="col-md-6"><label class="form-label">Tipografia (headings)</label><input type="text" class="form-control" id="theme.typography.headings" value="Merriweather, serif"></div>
+          <div class="col-md-6"><label class="form-label">Tipografia (body)</label><input type="text" class="form-control" id="theme.typography.body" value="Inter, sans-serif"></div>
 
-          <div class="col-6"><label>Raios (radii)</label><input type="text" id="theme.radii" value="0.5rem"></div>
-          <div class="col-3"><label>Motion: duração min (ms)</label><input type="text" id="theme.motion.duration_min" value="150"></div>
-          <div class="col-3"><label>Motion: duração max (ms)</label><input type="text" id="theme.motion.duration_max" value="400"></div>
-          <div class="col-12"><label>Motion: easing</label><input type="text" id="theme.motion.easing" value="cubic-bezier(0.2,0.8,0.2,1)"></div>
+          <div class="col-md-6"><label class="form-label">Raios (radii)</label><input type="text" class="form-control" id="theme.radii" value="0.5rem"></div>
+          <div class="col-md-3"><label class="form-label">Motion: duração min (ms)</label><input type="text" class="form-control" id="theme.motion.duration_min" value="150"></div>
+          <div class="col-md-3"><label class="form-label">Motion: duração max (ms)</label><input type="text" class="form-control" id="theme.motion.duration_max" value="400"></div>
+          <div class="col-12"><label class="form-label">Motion: easing</label><input type="text" class="form-control" id="theme.motion.easing" value="cubic-bezier(0.2,0.8,0.2,1)"></div>
         </div>
       </fieldset>
 
       <!-- EDIÇÃO DO PROJETO -->
-      <fieldset>
-        <legend>Edição do projeto</legend>
-        <div class="chips" role="radiogroup" aria-label="Edição do projeto">
-          <label class="chip"><input type="radio" name="edition" id="edition.bootstrap" checked> Bootstrap (recomendado)</label>
-          <label class="chip"><input type="radio" name="edition" id="edition.tailwind"> Tailwind</label>
+      <fieldset class="mb-3">
+        <legend class="fw-semibold text-muted">Edição do projeto</legend>
+        <div class="d-flex flex-wrap gap-2" role="radiogroup" aria-label="Edição do projeto">
+          <label class="form-check form-check-inline border rounded-pill px-2"><input type="radio" class="form-check-input" name="edition" id="edition.bootstrap" checked> Bootstrap (recomendado)</label>
+          <label class="form-check form-check-inline border rounded-pill px-2"><input type="radio" class="form-check-input" name="edition" id="edition.tailwind"> Tailwind</label>
         </div>
-        <p class="muted small">Ao trocar a edição ajustamos os chips do Stack automaticamente.</p>
+        <p class="text-muted small">Ao trocar a edição ajustamos os chips do Stack automaticamente.</p>
       </fieldset>
 
       <!-- STACK -->
-      <fieldset>
-        <legend>Stack</legend>
-        <div class="chips">
-          <span class="chip"><input type="checkbox" id="stack.framework" checked>Next.js</span>
-          <span class="chip"><input type="checkbox" id="stack.typescript" checked>TypeScript</span>
-          <span class="chip"><input type="checkbox" id="stack.tailwind">Tailwind</span>
-          <span class="chip"><input type="checkbox" id="stack.bootstrap" checked>Bootstrap</span>
-          <span class="chip"><input type="checkbox" id="stack.hosting" checked>Vercel</span>
+      <fieldset class="mb-3">
+        <legend class="fw-semibold text-muted">Stack</legend>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.framework" checked>Next.js</span>
+          <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.typescript" checked>TypeScript</span>
+          <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.tailwind">Tailwind</span>
+          <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.bootstrap" checked>Bootstrap</span>
+          <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.hosting" checked>Vercel</span>
         </div>
-        <p class="muted small">Bootstrap marcado para edição Bootstrap; Tailwind marcado para edição Tailwind.</p>
+        <p class="text-muted small">Bootstrap marcado para edição Bootstrap; Tailwind marcado para edição Tailwind.</p>
       </fieldset>
 
       <!-- PAGES -->
-      <fieldset>
-        <legend>Páginas</legend>
-        <div class="row">
-          <div class="col-6">
-            <label>Incluir</label>
-            <div class="grid-list" id="includeList"></div>
+      <fieldset class="mb-3">
+        <legend class="fw-semibold text-muted">Páginas</legend>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Incluir</label>
+            <div class="row row-cols-1 row-cols-md-2 g-2" id="includeList"></div>
           </div>
-          <div class="col-6">
-            <label>Opcionais</label>
-            <div class="grid-list" id="optionalList"></div>
+          <div class="col-md-6">
+            <label class="form-label">Opcionais</label>
+            <div class="row row-cols-1 row-cols-md-2 g-2" id="optionalList"></div>
           </div>
         </div>
-        <p class="muted small">Marque as páginas que deseja gerar.</p>
+        <p class="text-muted small">Marque as páginas que deseja gerar.</p>
       </fieldset>
 
-      <div class="actions">
-        <button type="submit">Gerar arquivo JS</button>
-        <button type="button" id="previewJsonBtn" class="ghost">Pré-visualizar JSON</button>
-        <button type="button" id="previewPromptBtn" class="ghost">Pré-visualizar PROMPT</button>
-        <button type="button" id="downloadPromptBtn">Gerar Prompt (TXT)</button>
+      <div class="d-flex flex-wrap gap-2 mt-2">
+        <button type="submit" class="btn btn-primary">Gerar arquivo JS</button>
+        <button type="button" id="previewJsonBtn" class="btn btn-outline-secondary">Pré-visualizar JSON</button>
+        <button type="button" id="previewPromptBtn" class="btn btn-outline-secondary">Pré-visualizar PROMPT</button>
+        <button type="button" id="downloadPromptBtn" class="btn btn-primary">Gerar Prompt (TXT)</button>
       </div>
     </form>
 
-    <div class="card">
-      <div class="tabs">
-        <button class="tab" id="tabJson" aria-selected="true">JSON</button>
-        <button class="tab" id="tabPrompt" aria-selected="false">PROMPT</button>
+    <div class="card p-3 mb-3">
+      <div class="btn-group mb-3">
+        <button type="button" class="btn btn-outline-secondary" id="tabJson" aria-selected="true">JSON</button>
+        <button type="button" class="btn btn-outline-secondary" id="tabPrompt" aria-selected="false">PROMPT</button>
       </div>
-      <div id="preview" class="preview"></div>
+      <div id="preview" class="border rounded p-3 bg-white"></div>
     </div>
   </div>
 
@@ -266,8 +230,8 @@
       items.forEach(name => {
         const id = containerId + '-' + name;
         const wrap = document.createElement('label');
-        wrap.className = 'checkbox';
-        wrap.innerHTML = \`<input type="checkbox" id="\${id}" \${checked ? 'checked':''}> <span>\${name}</span>\`;
+        wrap.className = 'form-check d-flex align-items-center gap-2';
+        wrap.innerHTML = \`<input type="checkbox" class="form-check-input" id="\${id}" \${checked ? 'checked':''}> <span class="form-check-label">\${name}</span>\`;
         el.appendChild(wrap);
       });
     }
@@ -465,8 +429,12 @@ ${cfg.pages.optional.map(p=>`  * ${p}`).join('\n')}
     document.getElementById('tabJson').addEventListener('click', ()=>{ currentTab='json'; setTabs(); showJson(); });
     document.getElementById('tabPrompt').addEventListener('click', ()=>{ currentTab='prompt'; setTabs(); showPrompt(); });
     function setTabs(){
-      document.getElementById('tabJson').setAttribute('aria-selected', currentTab==='json');
-      document.getElementById('tabPrompt').setAttribute('aria-selected', currentTab==='prompt');
+      const jsonBtn = document.getElementById('tabJson');
+      const promptBtn = document.getElementById('tabPrompt');
+      jsonBtn.setAttribute('aria-selected', currentTab==='json');
+      promptBtn.setAttribute('aria-selected', currentTab==='prompt');
+      jsonBtn.classList.toggle('active', currentTab==='json');
+      promptBtn.classList.toggle('active', currentTab==='prompt');
     }
 
     // ===== Downloaders
@@ -498,5 +466,6 @@ ${cfg.pages.optional.map(p=>`  * ${p}`).join('\n')}
     // Pré-visualização inicial
     showJson(); setTabs();
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
