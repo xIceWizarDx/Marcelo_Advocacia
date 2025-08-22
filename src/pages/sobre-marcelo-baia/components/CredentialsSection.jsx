@@ -6,7 +6,7 @@ const CredentialsSection = () => {
     {
       degree: "Bacharel em Direito",
       institution: "Universidade Federal de Mato Grosso (UFMT)",
-      year: "2015",
+      year: "2005",
       description: "Formação sólida em Ciências Jurídicas com ênfase em Direito Civil e Processual Civil"
     },
     {
@@ -28,7 +28,7 @@ const CredentialsSection = () => {
       title: "OAB/MT 14.159-B",
       description: "Inscrito e ativo na Ordem dos Advogados do Brasil - Seção Mato Grosso",
       icon: "Scale",
-      status: "Ativo desde 2015"
+      status: "Ativo desde 2005"
     },
     {
       title: "Comissão de Direito Civil",

@@ -10,7 +10,7 @@ const HeroSection = ({ onContactClick, onWhatsAppClick }) => {
           {/* Content */}
           <div className="order-2 lg:order-1">
             <div className="inline-flex items-center px-4 py-2 bg-brand-accent/10 rounded-full text-brand-accent text-sm font-medium mb-6">
-              <span>OAB/MT 14.159-B • Advocacia desde 2015</span>
+              <span>OAB/MT 14.159-B • Advocacia desde 2005</span>
             </div>
             
             <h1 className="font-lora text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-primary mb-6 leading-tight">
@@ -74,7 +74,7 @@ const HeroSection = ({ onContactClick, onWhatsAppClick }) => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-brand-primary">OAB/MT 14.159-B</h3>
-                    <p className="text-sm text-text-secondary">Ativo desde 2015</p>
+                    <p className="text-sm text-text-secondary">Ativo desde 2005</p>
                   </div>
                 </div>
                 <p className="text-sm text-text-primary">
