@@ -6,15 +6,11 @@
   <title>Gerador de SITE_CONFIG → site-config.js + Prompt (TXT)</title>
   <style>
     :root{
-      /* CLARO por padrão */
+      /* Tema claro fixo */
       --bg:#f8fafc; --card:#ffffff; --muted:#64748b; --text:#0f172a; --line:#e2e8f0; --pri:#4f46e5;
     }
-    /* Dark opcional via preferências do sistema */
-    @media (prefers-color-scheme: dark){
-      :root{ --bg:#0b1220; --card:#0f172a; --muted:#8a9db7; --text:#e5e7eb; --line:#1f2a40; --pri:#4f46e5; }
-    }
     *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef2ff);font:14px/1.6 system-ui,Segoe UI,Roboto,Inter;color:var(--text)}
+    body{margin:0;background:var(--bg);font:14px/1.6 system-ui,Segoe UI,Roboto,Inter;color:var(--text)}
     .wrap{max-width:1100px;margin:28px auto;padding:0 16px}
     .title{display:flex;gap:12px;align-items:center;margin-bottom:16px}
     .title h1{font-size:20px;margin:0}
