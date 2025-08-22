@@ -3,23 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gerador de SITE_CONFIG → site-config.js + Prompt (TXT)</title>
+  <title>Gerador de Configuração do Site</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
 <body>
   <div class="container my-4">
     <div class="d-flex gap-2 align-items-center mb-3">
-      <h1>Formulário do <span class="badge rounded-pill text-bg-secondary">SITE_CONFIG</span> → gera <code>site-config.js</code> e <code>Prompt (TXT)</code></h1>
+      <h1>Gerador de Configuração do Site</h1>
     </div>
 
     <div class="card p-3 mb-3">
-      <p class="text-muted">Preencha os campos abaixo (baseado no bloco <strong>0) SITE_CONFIG</strong> do seu PROMPT). No final, clique em <em>Gerar arquivo JS</em> ou <em>Gerar Prompt (TXT)</em>.</p>
+      <p class="text-muted">
+        Preencha as informações abaixo sobre sua empresa.
+        Ao final, escolha baixar a configuração (JS) ou o texto do prompt (TXT).
+      </p>
     </div>
 
     <form id="form" class="card p-3 mb-3">
       <!-- PROJECT -->
       <fieldset class="mb-3">
-        <legend class="fw-semibold text-muted">Projeto</legend>
+        <legend class="fw-semibold text-muted">Informações da empresa</legend>
         <div class="row g-3">
           <div class="col-md-6">
             <label class="form-label">Nome da empresa</label>
@@ -31,7 +34,7 @@
           </div>
 
           <div class="col-md-4">
-            <label class="form-label">Sector Pack</label>
+            <label class="form-label">Segmento de atuação</label>
             <input type="text" class="form-control" id="project.sector_pack" list="sectors" value="servicos">
             <datalist id="sectors">
               <option value="advocacia"><option value="saude"><option value="financas">
@@ -40,7 +43,7 @@
             </datalist>
           </div>
           <div class="col-md-4">
-            <label class="form-label">Archetype</label>
+            <label class="form-label">Tipo de site</label>
             <input type="text" class="form-control" id="project.archetype" list="archs" value="institucional">
             <datalist id="archs">
               <option value="institucional"><option value="landing"><option value="portfolio">
@@ -48,7 +51,7 @@
             </datalist>
           </div>
           <div class="col-md-4">
-            <label class="form-label">Region Pack</label>
+            <label class="form-label">Região</label>
             <input type="text" class="form-control" id="project.region_pack" list="regions" value="br">
             <datalist id="regions">
               <option value="br"><option value="eu"><option value="us"><option value="latam"><option value="global">
@@ -56,11 +59,11 @@
           </div>
 
           <div class="col-md-6">
-            <label class="form-label">Channel primário</label>
+            <label class="form-label">Canal de contato principal</label>
             <input type="text" class="form-control" id="project.channel_pack.primary" list="channels" value="whatsapp">
           </div>
           <div class="col-md-6">
-            <label class="form-label">Channel secundário</label>
+            <label class="form-label">Canal de contato secundário</label>
             <input type="text" class="form-control" id="project.channel_pack.secondary" list="channels" value="telefone">
             <datalist id="channels">
               <option value="whatsapp"><option value="telefone"><option value="formulario"><option value="telegram"><option value="email"><option value="none">
@@ -68,20 +71,20 @@
           </div>
 
           <div class="col-md-4">
-            <label class="form-label">Idioma</label>
+            <label class="form-label">Idioma do site</label>
             <input type="text" class="form-control" id="project.locale.lang" value="pt-BR">
           </div>
           <div class="col-md-4">
-            <label class="form-label">Moeda</label>
+            <label class="form-label">Moeda padrão</label>
             <input type="text" class="form-control" id="project.locale.currency" value="BRL">
           </div>
           <div class="col-md-4">
-            <label class="form-label">Timezone</label>
+            <label class="form-label">Fuso horário</label>
             <input type="text" class="form-control" id="project.locale.timezone" value="America/Cuiaba">
           </div>
 
           <div class="col-12">
-            <label class="form-label">Tom de voz</label>
+            <label class="form-label">Tom de voz (estilo)</label>
             <input type="text" class="form-control" id="project.tone" list="tones" value="serio">
             <datalist id="tones">
               <option value="serio"><option value="tecnico"><option value="amigavel"><option value="premium"><option value="criativo">
@@ -92,14 +95,14 @@
 
       <!-- IDENTIDADE -->
       <fieldset class="mb-3">
-        <legend class="fw-semibold text-muted">Identidade & Contatos</legend>
+        <legend class="fw-semibold text-muted">Identidade e Contatos</legend>
         <div class="row g-3">
           <div class="col-md-6">
-            <label class="form-label">Registro (tipo)</label>
+            <label class="form-label">Tipo de registro profissional</label>
             <input type="text" class="form-control" id="identity.registration.type" placeholder="Ex.: OAB/MT">
           </div>
           <div class="col-md-6">
-            <label class="form-label">Registro (valor)</label>
+            <label class="form-label">Número do registro</label>
             <input type="text" class="form-control" id="identity.registration.value" placeholder="Ex.: OAB/MT 14.159-B">
           </div>
           <div class="col-12">
@@ -107,15 +110,15 @@
             <input type="text" class="form-control" id="identity.address" placeholder="Rua, número – bairro, cidade – UF – CEP">
           </div>
           <div class="col-md-6">
-            <label class="form-label">Telefone (exibição)</label>
+            <label class="form-label">Telefone para exibição</label>
             <input type="text" class="form-control" id="identity.phone_display" placeholder="(66) 99911-1314">
           </div>
           <div class="col-md-6">
-            <label class="form-label">Telefone (link tel:)</label>
+            <label class="form-label">Telefone com link (tel:+...)</label>
             <input type="text" class="form-control" id="identity.phone_link" placeholder="tel:+5566999111314">
           </div>
           <div class="col-md-6">
-            <label class="form-label">WhatsApp (wa.me)</label>
+            <label class="form-label">Link do WhatsApp (wa.me)</label>
             <input type="text" class="form-control" id="identity.whatsapp_wa_me" placeholder="https://wa.me/5566999111314">
           </div>
           <div class="col-md-6">
@@ -127,11 +130,11 @@
             <input type="text" class="form-control" id="identity.hours" placeholder="Seg a Sex, 9h–18h">
           </div>
           <div class="col-md-6">
-            <label class="form-label">CTA primário</label>
+            <label class="form-label">Texto do botão principal (CTA)</label>
             <input type="text" class="form-control" id="identity.default_cta.primary" value="Falar no WhatsApp">
           </div>
           <div class="col-md-6">
-            <label class="form-label">CTA secundário</label>
+            <label class="form-label">Texto do botão secundário</label>
             <input type="text" class="form-control" id="identity.default_cta.secondary" value="Ligar agora">
           </div>
         </div>
@@ -139,78 +142,78 @@
 
       <!-- THEME -->
       <fieldset class="mb-3">
-        <legend class="fw-semibold text-muted">Tema (tokens)</legend>
+        <legend class="fw-semibold text-muted">Cores e estilo</legend>
         <div class="row g-3">
-          <div class="col-md-3"><label class="form-label">primary</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.primary" value="#0f172a" title="Escolha a cor primária"></div>
-          <div class="col-md-3"><label class="form-label">accent</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.accent" value="#4f46e5" title="Escolha a cor de destaque"></div>
-          <div class="col-md-3"><label class="form-label">success</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.success" value="#16a34a" title="Escolha a cor de sucesso"></div>
-          <div class="col-md-3"><label class="form-label">warning</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.warning" value="#f59e0b" title="Escolha a cor de alerta"></div>
-          <div class="col-md-3"><label class="form-label">textStrong</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.textStrong" value="#334155" title="Escolha a cor de texto forte"></div>
-          <div class="col-md-3"><label class="form-label">textSoft</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.textSoft" value="#475569" title="Escolha a cor de texto suave"></div>
-          <div class="col-md-3"><label class="form-label">surface</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.surface" value="#fafafa" title="Escolha a cor de superfície"></div>
-          <div class="col-md-3"><label class="form-label">border</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.border" value="#e4e4e7" title="Escolha a cor de borda"></div>
+          <div class="col-md-3"><label class="form-label">Cor primária</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.primary" value="#0f172a" title="Escolha a cor primária"></div>
+          <div class="col-md-3"><label class="form-label">Cor de destaque</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.accent" value="#4f46e5" title="Escolha a cor de destaque"></div>
+          <div class="col-md-3"><label class="form-label">Cor de sucesso</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.success" value="#16a34a" title="Escolha a cor de sucesso"></div>
+          <div class="col-md-3"><label class="form-label">Cor de alerta</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.warning" value="#f59e0b" title="Escolha a cor de alerta"></div>
+          <div class="col-md-3"><label class="form-label">Cor do texto principal</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.textStrong" value="#334155" title="Escolha a cor do texto principal"></div>
+          <div class="col-md-3"><label class="form-label">Cor do texto secundário</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.textSoft" value="#475569" title="Escolha a cor do texto secundário"></div>
+          <div class="col-md-3"><label class="form-label">Cor de fundo</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.surface" value="#fafafa" title="Escolha a cor de fundo"></div>
+          <div class="col-md-3"><label class="form-label">Cor da borda</label><input type="color" class="form-control form-control-color w-100" id="theme.colors.border" value="#e4e4e7" title="Escolha a cor da borda"></div>
 
-          <div class="col-md-6"><label class="form-label">Tipografia (headings)</label><input type="text" class="form-control" id="theme.typography.headings" value="Merriweather, serif"></div>
-          <div class="col-md-6"><label class="form-label">Tipografia (body)</label><input type="text" class="form-control" id="theme.typography.body" value="Inter, sans-serif"></div>
+          <div class="col-md-6"><label class="form-label">Fonte dos títulos</label><input type="text" class="form-control" id="theme.typography.headings" value="Merriweather, serif"></div>
+          <div class="col-md-6"><label class="form-label">Fonte do texto</label><input type="text" class="form-control" id="theme.typography.body" value="Inter, sans-serif"></div>
 
-          <div class="col-md-6"><label class="form-label">Raios (radii)</label><input type="text" class="form-control" id="theme.radii" value="0.5rem"></div>
-          <div class="col-md-3"><label class="form-label">Motion: duração min (ms)</label><input type="text" class="form-control" id="theme.motion.duration_min" value="150"></div>
-          <div class="col-md-3"><label class="form-label">Motion: duração max (ms)</label><input type="text" class="form-control" id="theme.motion.duration_max" value="400"></div>
-          <div class="col-12"><label class="form-label">Motion: easing</label><input type="text" class="form-control" id="theme.motion.easing" value="cubic-bezier(0.2,0.8,0.2,1)"></div>
+          <div class="col-md-6"><label class="form-label">Arredondamento das bordas</label><input type="text" class="form-control" id="theme.radii" value="0.5rem"></div>
+          <div class="col-md-3"><label class="form-label">Animação: duração mínima (ms)</label><input type="text" class="form-control" id="theme.motion.duration_min" value="150"></div>
+          <div class="col-md-3"><label class="form-label">Animação: duração máxima (ms)</label><input type="text" class="form-control" id="theme.motion.duration_max" value="400"></div>
+          <div class="col-12"><label class="form-label">Animação: easing</label><input type="text" class="form-control" id="theme.motion.easing" value="cubic-bezier(0.2,0.8,0.2,1)"></div>
         </div>
       </fieldset>
 
       <!-- EDIÇÃO DO PROJETO -->
       <fieldset class="mb-3">
-        <legend class="fw-semibold text-muted">Edição do projeto</legend>
-        <div class="d-flex flex-wrap gap-2" role="radiogroup" aria-label="Edição do projeto">
-          <label class="form-check form-check-inline border rounded-pill px-2"><input type="radio" class="form-check-input" name="edition" id="edition.bootstrap" checked> Bootstrap (recomendado)</label>
-          <label class="form-check form-check-inline border rounded-pill px-2"><input type="radio" class="form-check-input" name="edition" id="edition.tailwind"> Tailwind</label>
+        <legend class="fw-semibold text-muted">Estilo do projeto</legend>
+        <div class="d-flex flex-wrap gap-2" role="radiogroup" aria-label="Estilo do projeto">
+          <label class="form-check form-check-inline border rounded-pill px-2"><input type="radio" class="form-check-input" name="edition" id="edition.bootstrap" checked> Padrão (Bootstrap)</label>
+          <label class="form-check form-check-inline border rounded-pill px-2"><input type="radio" class="form-check-input" name="edition" id="edition.tailwind"> Avançado (Tailwind)</label>
         </div>
-        <p class="text-muted small">Ao trocar a edição ajustamos os chips do Stack automaticamente.</p>
+        <p class="text-muted small">Alterar o estilo ajusta automaticamente as tecnologias abaixo.</p>
       </fieldset>
 
       <!-- STACK -->
       <fieldset class="mb-3">
-        <legend class="fw-semibold text-muted">Stack</legend>
+        <legend class="fw-semibold text-muted">Tecnologias (opcional)</legend>
         <div class="d-flex flex-wrap gap-2">
-          <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.framework" checked>Next.js</span>
+          <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.framework" checked>Next.js (estrutura)</span>
           <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.typescript" checked>TypeScript</span>
-          <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.tailwind">Tailwind</span>
+          <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.tailwind">Tailwind CSS</span>
           <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.bootstrap" checked>Bootstrap</span>
-          <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.hosting" checked>Vercel</span>
+          <span class="form-check form-check-inline border rounded-pill px-2"><input type="checkbox" class="form-check-input" id="stack.hosting" checked>Vercel (hospedagem)</span>
         </div>
-        <p class="text-muted small">Bootstrap marcado para edição Bootstrap; Tailwind marcado para edição Tailwind.</p>
+        <p class="text-muted small">Deixe as opções padrão se não souber.</p>
       </fieldset>
 
       <!-- PAGES -->
       <fieldset class="mb-3">
-        <legend class="fw-semibold text-muted">Páginas</legend>
+        <legend class="fw-semibold text-muted">Páginas do site</legend>
         <div class="row g-3">
           <div class="col-md-6">
-            <label class="form-label">Incluir</label>
+            <label class="form-label">Páginas principais</label>
             <div class="row row-cols-1 row-cols-md-2 g-2" id="includeList"></div>
           </div>
           <div class="col-md-6">
-            <label class="form-label">Opcionais</label>
+            <label class="form-label">Extras</label>
             <div class="row row-cols-1 row-cols-md-2 g-2" id="optionalList"></div>
           </div>
         </div>
-        <p class="text-muted small">Marque as páginas que deseja gerar.</p>
+        <p class="text-muted small">Selecione as páginas que deseja gerar.</p>
       </fieldset>
 
       <div class="d-flex flex-wrap gap-2 mt-2">
-        <button type="submit" class="btn btn-primary">Gerar arquivo JS</button>
-        <button type="button" id="previewJsonBtn" class="btn btn-outline-secondary">Pré-visualizar JSON</button>
-        <button type="button" id="previewPromptBtn" class="btn btn-outline-secondary">Pré-visualizar PROMPT</button>
-        <button type="button" id="downloadPromptBtn" class="btn btn-primary">Gerar Prompt (TXT)</button>
+        <button type="submit" class="btn btn-primary">Baixar Configuração (JS)</button>
+        <button type="button" id="previewJsonBtn" class="btn btn-outline-secondary">Ver JSON</button>
+        <button type="button" id="previewPromptBtn" class="btn btn-outline-secondary">Ver Prompt</button>
+        <button type="button" id="downloadPromptBtn" class="btn btn-primary">Baixar Prompt (TXT)</button>
       </div>
     </form>
 
     <div class="card p-3 mb-3">
-      <div class="btn-group mb-3">
+      <div class="btn-group mb-3" role="group" aria-label="Visualização">
         <button type="button" class="btn btn-outline-secondary" id="tabJson" aria-selected="true">JSON</button>
-        <button type="button" class="btn btn-outline-secondary" id="tabPrompt" aria-selected="false">PROMPT</button>
+        <button type="button" class="btn btn-outline-secondary" id="tabPrompt" aria-selected="false">Prompt</button>
       </div>
       <div id="preview" class="border rounded p-3 bg-white"></div>
     </div>
