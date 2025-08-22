@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
+import SocialLinks from './SocialLinks';
 import { CONTACT } from '../../config/contact';
 
 const Header = () => {
@@ -89,6 +90,7 @@ const Header = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-3">
+            <SocialLinks iconClassName="text-slate-700 hover:text-brand-accent" />
             <Button
               asChild
               variant="outline"
@@ -157,7 +159,9 @@ const Header = () => {
                 </Link>
               ))}
             </nav>
-            
+
+            <SocialLinks className="justify-center mt-6" iconClassName="text-slate-700 hover:text-brand-accent" />
+
             {/* Mobile CTA Buttons */}
             <div className="flex flex-col space-y-3 mt-6 pt-4 border-t border-border">
               <Button

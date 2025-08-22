@@ -1,0 +1,31 @@
+import React from 'react';
+import Icon from '../AppIcon';
+
+const SocialLinks = ({ className = '', iconClassName = 'text-slate-400 hover:text-white' }) => {
+  const links = [
+    { href: 'https://www.youtube.com/@MarceloBa%C3%ADa-c8h', icon: 'Youtube', label: 'YouTube' },
+    { href: 'https://www.linkedin.com/in/marcelo-ba%C3%ADa-29433662/', icon: 'Linkedin', label: 'LinkedIn' },
+    { href: 'https://www.facebook.com/share/1K2HTpSdcG/', icon: 'Facebook', label: 'Facebook' },
+    { href: 'https://www.instagram.com/advocaciamarcelobaia', icon: 'Instagram', label: 'Instagram' },
+  ];
+
+  return (
+    <div className={`flex space-x-4 ${className}`}>
+      {links.map((link) => (
+        <a
+          key={link.href}
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={link.label}
+          className={iconClassName}
+        >
+          <Icon name={link.icon} size={20} />
+        </a>
+      ))}
+    </div>
+  );
+};
+
+export default SocialLinks;
+
