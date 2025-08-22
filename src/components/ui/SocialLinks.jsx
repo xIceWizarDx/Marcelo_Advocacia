@@ -10,7 +10,7 @@ const SocialLinks = ({ className = '', iconClassName = 'text-slate-400 hover:tex
   ];
 
   return (
-    <div className={`flex space-x-4 ${className}`}>
+    <div className={`flex items-center gap-2 ${className}`}>
       {links.map((link) => (
         <a
           key={link.href}
@@ -20,7 +20,7 @@ const SocialLinks = ({ className = '', iconClassName = 'text-slate-400 hover:tex
           aria-label={link.label}
           className={iconClassName}
         >
-          <Icon name={link.icon} size={20} />
+          <Icon name={link.icon} size={18} strokeWidth={1.25} />
         </a>
       ))}
     </div>
