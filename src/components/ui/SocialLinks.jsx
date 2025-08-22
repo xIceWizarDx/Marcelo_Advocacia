@@ -18,7 +18,7 @@ const SocialLinks = ({ className = '', iconClassName = 'text-slate-400 hover:tex
           target="_blank"
           rel="noopener noreferrer"
           aria-label={link.label}
-          className={iconClassName}
+          className={`flex h-5 w-5 items-center justify-center ${iconClassName}`}
         >
           <Icon name={link.icon} size={18} strokeWidth={1.25} />
         </a>
