@@ -6,6 +6,7 @@ import ContactForm from './components/ContactForm';
 import OfficeLocation from './components/OfficeLocation';
 import ConsultationPrep from './components/ConsultationPrep';
 import TrustSignals from './components/TrustSignals';
+import Footer from '../../components/ui/Footer';
 
 const ContatoConsulta = () => {
   const handleWhatsAppClick = () => {
@@ -41,9 +42,11 @@ const ContatoConsulta = () => {
         <OfficeLocation />
         
         <ConsultationPrep />
-        
+
         <TrustSignals />
       </main>
+
+      <Footer />
 
       {/* Sticky Contact Bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-4 lg:hidden">

@@ -6,6 +6,7 @@ import FAQSection from './components/FAQSection';
 import ConsultationWidget from './components/ConsultationWidget';
 import PreventiveLegalSection from './components/PreventiveLegalSection';
 import Icon from '../../components/AppIcon';
+import Footer from '../../components/ui/Footer';
 
 const AreasDeAtuacao = () => {
   const practiceAreas = [
@@ -279,108 +280,7 @@ const AreasDeAtuacao = () => {
 
         {/* Consultation Widget */}
         <ConsultationWidget />
-
-        {/* Footer */}
-        <footer className="bg-brand-primary text-white py-12 lg:py-16">
-          <div className="max-w-7xl mx-auto px-4 lg:px-6">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-              {/* Logo and Description */}
-              <div className="lg:col-span-2">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-brand-accent to-brand-accent/80 rounded-lg flex items-center justify-center">
-                    <Icon name="Scale" size={24} color="white" />
-                  </div>
-                  <div>
-                    <h3 className="font-lora font-semibold text-xl">Marcelo Baía</h3>
-                    <p className="text-white/80 text-sm">Advocacia</p>
-                  </div>
-                </div>
-                <p className="text-white/80 font-inter leading-relaxed mb-4">
-                  Assessoria jurídica clara e segura para decisões importantes. 
-                  Atendimento humanizado online com expertise técnica.
-                </p>
-                <div className="flex space-x-4">
-                  <a
-                    href="https://wa.me/5566999111314"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors duration-200"
-                    aria-label="WhatsApp"
-                  >
-                    <Icon name="MessageCircle" size={20} />
-                  </a>
-                  <a
-                    href="tel:+5566999111314"
-                    className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors duration-200"
-                    aria-label="Ligar para (66) 99911-1314"
-                  >
-                    <Icon name="Phone" size={20} />
-                  </a>
-                </div>
-              </div>
-
-              {/* Quick Links */}
-              <div>
-                <h4 className="font-inter font-semibold text-lg mb-4">Links Rápidos</h4>
-                <ul className="space-y-2">
-                  <li><a href="/" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Início</a></li>
-                    <li><a href="/sobre-marcelo-baia" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Sobre Nós</a></li>
-                    <li><a href="/perguntas-frequentes" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">FAQ</a></li>
-                    <li><a href="/contato-consulta" className="text-white/80 hover:text-white font-inter text-sm transition-colors duration-200">Contato</a></li>
-                </ul>
-              </div>
-
-              {/* Contact Info */}
-              <div>
-                <h4 className="font-inter font-semibold text-lg mb-4">Contato</h4>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <Icon name="MessageCircle" size={16} className="text-brand-accent" />
-                    <a
-                      href="https://wa.me/5566999111314"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white/80 font-inter text-sm"
-                    >
-                      (66) 99911-1314
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Icon name="Phone" size={16} className="text-brand-accent" />
-                    <a href="tel:+5566999111314" className="text-white/80 font-inter text-sm">(66) 99911-1314</a>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Icon name="Mail" size={16} className="text-brand-accent" />
-                    <a href="mailto:contato@marcelobaia.adv.br" className="text-white/80 font-inter text-sm">contato@marcelobaia.adv.br</a>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Icon name="MapPin" size={16} className="text-brand-accent mt-0.5" />
-                    <span className="text-white/80 font-inter text-sm">Rua Tiradentes, 1888 – Centro, Rondonópolis-MT – CEP 78.700-028</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Icon name="Clock" size={16} className="text-brand-accent mt-0.5" />
-                    <span className="text-white/80 font-inter text-sm">Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom Bar */}
-            <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-white/60 font-inter text-sm mb-4 md:mb-0">
-                © {new Date()?.getFullYear()} Marcelo Baía Advocacia. Todos os direitos reservados.
-              </p>
-              <div className="flex space-x-6">
-                <a href="#" className="text-white/60 hover:text-white font-inter text-sm transition-colors duration-200">
-                  Política de Privacidade
-                </a>
-                <a href="#" className="text-white/60 hover:text-white font-inter text-sm transition-colors duration-200">
-                  Termos de Uso
-                </a>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );
