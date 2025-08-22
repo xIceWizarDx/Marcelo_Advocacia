@@ -9,26 +9,20 @@ const HeroSection = ({ onContactClick, onWhatsAppClick }) => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="order-2 lg:order-1">
-            <div className="inline-flex items-center px-4 py-2 bg-brand-accent/10 rounded-full text-brand-accent text-sm font-medium mb-6">
-              <span>OAB/MT 14.159-B • Advocacia desde 2005</span>
-            </div>
             
             <h1 className="font-lora text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-primary mb-6 leading-tight">
               Marcelo Baía Advocacia
             </h1>
+            <div className="prose prose-lg text-text-primary mb-10">
+              <p>
+                Nossa empresa é dirigida pelo advogado Marcelo Andrigo Baía Eduardo, com endereço profissional em Rondonópolis-MT, tendo atuado nos estados de Tocantins, Goiás, Mato Grosso do Sul, Mato Grosso, Rondônia, Santa Catarina e São Paulo.
+              </p>
+            </div>
 
             <p className="text-xl lg:text-2xl text-text-secondary font-light mb-8 leading-relaxed">
               Nossa missão é oferecer um trabalho profissional, com informações claras, seguras e confiáveis para possibilitá-lo a tomar decisões importantes que trazem grandes repercussões em sua vida.
             </p>
 
-            <div className="prose prose-lg text-text-primary mb-10">
-              <p>
-                Nossa empresa é dirigida pelo Advogado Marcelo Andrigo Baía Eduardo, atualmente com endereço profissional em Rondonópolis-MT, OAB/MT 14.159-B, inscrito inicialmente no Estado de Goiás com a OAB/GO – 17.604-E como estagiário, em 2005, e posteriormente nº 27.669 já como advogado, em 2008, contando com larga experiência jurídica, tendo atuado nos estados de Tocantins, Goiás, Mato Grosso do Sul, Mato Grosso, Rondônia, Santa Catarina e São Paulo.
-              </p>
-              <p>
-                Nossa equipe conta com tecnologia atualizada e métodos de trabalho comprovadamente eficazes para entregar o melhor resultado no menor tempo possível, com excelência, sigilo e segurança.
-              </p>
-            </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
