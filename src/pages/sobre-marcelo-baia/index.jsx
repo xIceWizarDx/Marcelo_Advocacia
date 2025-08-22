@@ -7,6 +7,7 @@ import MethodologySection from './components/MethodologySection';
 import CredentialsSection from './components/CredentialsSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
+import Footer from '../../components/ui/Footer';
 
 const SobreMarceloBaia = () => {
   const handleContactClick = () => {
@@ -84,59 +85,7 @@ const SobreMarceloBaia = () => {
             <ContactSection />
           </div>
         </main>
-
-        {/* Footer */}
-        <footer className="bg-brand-primary text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 lg:px-6">
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Brand */}
-              <div>
-                <h3 className="font-lora text-xl font-semibold mb-4">
-                  Marcelo Baía Advocacia
-                </h3>
-                <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                  Assessoria jurídica clara e segura para decisões importantes da sua vida. 
-                  Atendimento humanizado e comunicação transparente.
-                </p>
-                <p className="text-slate-400 text-xs">
-                  OAB/MT 14.159-B
-                </p>
-              </div>
-
-              {/* Contact Info */}
-              <div>
-                <h4 className="font-semibold mb-4">Contato</h4>
-                <div className="space-y-2 text-sm text-slate-300">
-                  <p>📍 Rua Tiradentes, 1888 – Centro, Rondonópolis-MT – CEP 78.700-028</p>
-                  <p>📞 <a href="tel:+5566999111314" className="text-slate-300">(66) 99911-1314</a></p>
-                  <p>💬 <a href="https://wa.me/5566999111314" target="_blank" rel="noopener noreferrer" className="text-slate-300">(66) 99911-1314</a></p>
-                  <p>✉️ <a href="mailto:contato@marcelobaia.adv.br" className="text-slate-300">contato@marcelobaia.adv.br</a></p>
-                  <p>🕒 Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.</p>
-                </div>
-              </div>
-
-              {/* Areas */}
-              <div>
-                <h4 className="font-semibold mb-4">Áreas de Atuação</h4>
-                <ul className="space-y-1 text-sm text-slate-300">
-                  <li>• Direito Civil</li>
-                  <li>• Direito do Consumidor</li>
-                  <li>• Direito de Família</li>
-                  <li>• Direito Empresarial</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="border-t border-slate-700 mt-8 pt-8 text-center">
-              <p className="text-slate-400 text-sm">
-                © {new Date()?.getFullYear()} Marcelo Baía Advocacia. Todos os direitos reservados.
-              </p>
-              <p className="text-slate-500 text-xs mt-2">
-                Este site está em conformidade com o Provimento 205/2021 da OAB e a LGPD.
-              </p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );

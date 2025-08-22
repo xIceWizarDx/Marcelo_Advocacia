@@ -7,6 +7,7 @@ import FAQAccordion from './components/FAQAccordion';
 import PopularQuestions from './components/PopularQuestions';
 import ContactCTA from './components/ContactCTA';
 import Icon from '../../components/AppIcon';
+import Footer from '../../components/ui/Footer';
 
 const PerguntasFrequentes = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -410,9 +411,10 @@ const PerguntasFrequentes = () => {
             </div>
           </div>
         </section>
+        <Footer />
       </div>
     </>
   );
 };
 
-  export default PerguntasFrequentes;
+export default PerguntasFrequentes;
