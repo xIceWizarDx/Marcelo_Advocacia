@@ -7,7 +7,7 @@ function Icon({
     size = 24,
     color = "currentColor",
     className = "",
-    strokeWidth = 2,
+    strokeWidth = 1.5,
     ...props
 }) {
     const IconComponent = LucideIcons?.[name];
