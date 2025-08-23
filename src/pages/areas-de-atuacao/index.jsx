@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/ui/Header';
-import Icon from '@/components/AppIcon';
+import * as Icons from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Footer from '@/components/ui/Footer';
 
@@ -34,7 +34,7 @@ const PracticeAreaCard = ({
         {/* Header */}
         <div className="flex items-start space-x-4 mb-6">
           <div className={`flex-shrink-0 w-12 h-12 lg:w-14 lg:h-14 ${gradient} rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300`}>
-            <Icon name={icon} size={24} color="white" />
+            {(() => { const IconComponent = Icons[icon]; return <IconComponent size={24} color="white" />; })()}
           </div>
           <div className="flex-1">
             <h3 className="font-lora font-semibold text-xl lg:text-2xl text-brand-primary mb-2">
@@ -49,13 +49,13 @@ const PracticeAreaCard = ({
         {/* Scenarios */}
         <div className="mb-6">
           <h4 className="font-inter font-medium text-brand-secondary mb-3 flex items-center">
-            <Icon name="AlertCircle" size={16} className="mr-2 text-brand-accent" />
+            <Icons.AlertCircle size={16} className="mr-2 text-brand-accent" />
             Situações Comuns
           </h4>
           <div className="grid gap-2">
             {scenarios?.map((scenario, index) => (
               <div key={index} className="flex items-start space-x-3 p-3 bg-muted/50 rounded-lg">
-                <Icon name="ArrowRight" size={14} className="mt-0.5 text-brand-accent flex-shrink-0" />
+                <Icons.ArrowRight size={14} className="mt-0.5 text-brand-accent flex-shrink-0" />
                 <span className="text-sm text-text-primary font-inter">{scenario}</span>
               </div>
             ))}
@@ -68,13 +68,13 @@ const PracticeAreaCard = ({
             {/* Common Cases */}
             <div className="mb-4">
               <h5 className="font-inter font-medium text-brand-secondary mb-2 flex items-center">
-                <Icon name="FileText" size={14} className="mr-2 text-brand-accent" />
+                <Icons.FileText size={14} className="mr-2 text-brand-accent" />
                 Tipos de Casos
               </h5>
               <ul className="space-y-1">
                 {commonCases?.map((caseType, index) => (
                   <li key={index} className="text-sm text-text-secondary font-inter flex items-center">
-                    <Icon name="Check" size={12} className="mr-2 text-success flex-shrink-0" />
+                    <Icons.Check size={12} className="mr-2 text-success flex-shrink-0" />
                     {caseType}
                   </li>
                 ))}
@@ -84,7 +84,7 @@ const PracticeAreaCard = ({
             {/* Timeline */}
             <div className="mb-4">
               <h5 className="font-inter font-medium text-brand-secondary mb-2 flex items-center">
-                <Icon name="Clock" size={14} className="mr-2 text-brand-accent" />
+                <Icons.Clock size={14} className="mr-2 text-brand-accent" />
                 Prazo Estimado
               </h5>
               <p className="text-sm text-text-secondary font-inter">{estimatedTimeline}</p>
@@ -184,7 +184,7 @@ const FAQSection = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-brand-accent to-brand-accent/80 rounded-full mb-6">
-            <Icon name="HelpCircle" size={28} color="white" />
+            <Icons.HelpCircle size={28} color="white" />
           </div>
           <h2 className="font-lora font-semibold text-3xl lg:text-4xl text-brand-primary mb-4">
             Perguntas Frequentes
@@ -208,13 +208,12 @@ const FAQSection = () => {
                 <h3 className="font-inter font-medium text-lg text-brand-primary pr-4">
                   {faq?.question}
                 </h3>
-                <Icon
-                  name={openFAQ === faq?.id ? "ChevronUp" : "ChevronDown"}
+                {(() => { const IconComponent = Icons[openFAQ === faq?.id ? "ChevronUp" : "ChevronDown"]; return <IconComponent
                   size={20}
                   className={`text-brand-accent transition-transform duration-200 flex-shrink-0 ${
                     openFAQ === faq?.id ? 'rotate-180' : ''
                   }`}
-                />
+                />; })()}
               </button>
               
               <div
@@ -256,14 +255,14 @@ const FAQSection = () => {
               onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
               className="inline-flex items-center justify-center px-6 py-3 bg-brand-accent hover:bg-brand-accent/90 text-white font-inter font-medium rounded-lg transition-colors duração-200"
             >
-              <Icon name="MessageCircle" size={18} className="mr-2" />
+              <Icons.MessageCircle size={18} className="mr-2" />
               Perguntar no WhatsApp
             </button>
             <button
               onClick={() => window.location.href = 'tel:+5566999111314'}
               className="inline-flex items-center justify-center px-6 py-3 border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white font-inter font-medium rounded-lg transition-colors duração-200"
             >
-              <Icon name="Phone" size={18} className="mr-2" />
+              <Icons.Phone size={18} className="mr-2" />
               (66) 99911-1314
             </button>
           </div>
@@ -320,7 +319,7 @@ const ConsultationWidget = () => {
             {/* Header */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-4">
-                <Icon name="Calendar" size={28} color="white" />
+                <Icons.Calendar size={28} color="white" />
               </div>
               <h2 className="font-lora font-semibold text-3xl lg:text-4xl mb-4">
                 Agende sua Consulta
@@ -334,7 +333,7 @@ const ConsultationWidget = () => {
               {/* Date Selection */}
               <div>
                 <h3 className="font-inter font-medium text-lg mb-4 flex items-center">
-                  <Icon name="CalendarDays" size={20} className="mr-2" />
+                  <Icons.CalendarDays size={20} className="mr-2" />
                   Escolha a Data
                 </h3>
                 <div className="grid grid-cols-5 gap-2">
@@ -362,7 +361,7 @@ const ConsultationWidget = () => {
               {/* Time Selection */}
               <div>
                 <h3 className="font-inter font-medium text-lg mb-4 flex items-center">
-                  <Icon name="Clock" size={20} className="mr-2" />
+                  <Icons.Clock size={20} className="mr-2" />
                   Escolha o Horário
                 </h3>
                 <div className="space-y-2">
@@ -385,7 +384,7 @@ const ConsultationWidget = () => {
                           <span className="text-xs text-white/50">Ocupado</span>
                         )}
                         {slot?.available && selectedTimeSlot === slot?.time && (
-                          <Icon name="Check" size={16} />
+                          <Icons.Check size={16} />
                         )}
                       </div>
                     </button>
@@ -421,7 +420,7 @@ const ConsultationWidget = () => {
               
               <div className="text-center mt-6">
                 <p className="text-sm text-white/80 font-inter">
-                  <Icon name="Shield" size={14} className="inline mr-1" />
+                  <Icons.Shield size={14} className="inline mr-1" />
                   Consulta inicial com valor acessível • Sigilo profissional garantido
                 </p>
               </div>
@@ -473,7 +472,7 @@ const PreventiveLegalSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-success to-success/80 rounded-full mb-6">
-            <Icon name="Shield" size={28} color="white" />
+            <Icons.Shield size={28} color="white" />
           </div>
           <h2 className="font-lora font-semibold text-3xl lg:text-4xl text-brand-primary mb-4">
             Advocacia Preventiva
@@ -492,7 +491,7 @@ const PreventiveLegalSection = () => {
               className="bg-white rounded-xl p-6 shadow-sm border border-border hover:shadow-lg transition-all duration-300 group"
             >
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-success to-success/80 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Icon name={service?.icon} size={24} color="white" />
+                {(() => { const IconComponent = Icons[service?.icon]; return <IconComponent size={24} color="white" />; })()}
               </div>
               
               <h3 className="font-lora font-semibold text-lg text-brand-primary mb-3">
@@ -506,7 +505,7 @@ const PreventiveLegalSection = () => {
               <ul className="space-y-2">
                 {service?.benefits?.map((benefit, benefitIndex) => (
                   <li key={benefitIndex} className="flex items-start space-x-2">
-                    <Icon name="Check" size={14} className="mt-0.5 text-success flex-shrink-0" />
+                    <Icons.Check size={14} className="mt-0.5 text-success flex-shrink-0" />
                     <span className="text-xs text-text-secondary font-inter">{benefit}</span>
                   </li>
                 ))}
@@ -525,32 +524,32 @@ const PreventiveLegalSection = () => {
             {/* Preventive */}
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-success to-success/80 rounded-full mb-4">
-                <Icon name="Shield" size={28} color="white" />
+                <Icons.Shield size={28} color="white" />
               </div>
               <h4 className="font-inter font-semibold text-lg text-success mb-4">
                 Advocacia Preventiva
               </h4>
               <ul className="space-y-3 text-left">
                 <li className="flex items-start space-x-3">
-                  <Icon name="Check" size={16} className="mt-0.5 text-success flex-shrink-0" />
+                  <Icons.Check size={16} className="mt-0.5 text-success flex-shrink-0" />
                   <span className="text-text-secondary font-inter text-sm">
                     <strong>Menor custo:</strong> Investimento inicial menor que litígios
                   </span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <Icon name="Check" size={16} className="mt-0.5 text-success flex-shrink-0" />
+                  <Icons.Check size={16} className="mt-0.5 text-success flex-shrink-0" />
                   <span className="text-text-secondary font-inter text-sm">
                     <strong>Menos estresse:</strong> Evita desgaste emocional de processos
                   </span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <Icon name="Check" size={16} className="mt-0.5 text-success flex-shrink-0" />
+                  <Icons.Check size={16} className="mt-0.5 text-success flex-shrink-0" />
                   <span className="text-text-secondary font-inter text-sm">
                     <strong>Tempo otimizado:</strong> Soluções rápidas e eficientes
                   </span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <Icon name="Check" size={16} className="mt-0.5 text-success flex-shrink-0" />
+                  <Icons.Check size={16} className="mt-0.5 text-success flex-shrink-0" />
                   <span className="text-text-secondary font-inter text-sm">
                     <strong>Relacionamentos preservados:</strong> Evita conflitos desnecessários
                   </span>
@@ -561,32 +560,32 @@ const PreventiveLegalSection = () => {
             {/* Reactive */}
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-warning to-warning/80 rounded-full mb-4">
-                <Icon name="AlertTriangle" size={28} color="white" />
+                <Icons.AlertTriangle size={28} color="white" />
               </div>
               <h4 className="font-inter font-semibold text-lg text-warning mb-4">
                 Advocacia Reativa
               </h4>
               <ul className="space-y-3 text-left">
                 <li className="flex items-start space-x-3">
-                  <Icon name="X" size={16} className="mt-0.5 text-warning flex-shrink-0" />
+                  <Icons.X size={16} className="mt-0.5 text-warning flex-shrink-0" />
                   <span className="text-text-secondary font-inter text-sm">
                     <strong>Maior custo:</strong> Processos judiciais são mais caros
                   </span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <Icon name="X" size={16} className="mt-0.5 text-warning flex-shrink-0" />
+                  <Icons.X size={16} className="mt-0.5 text-warning flex-shrink-0" />
                   <span className="text-text-secondary font-inter text-sm">
                     <strong>Alto estresse:</strong> Desgaste emocional significativo
                   </span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <Icon name="X" size={16} className="mt-0.5 text-warning flex-shrink-0" />
+                  <Icons.X size={16} className="mt-0.5 text-warning flex-shrink-0" />
                   <span className="text-text-secondary font-inter text-sm">
                     <strong>Tempo prolongado:</strong> Processos podem durar anos
                   </span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <Icon name="X" size={16} className="mt-0.5 text-warning flex-shrink-0" />
+                  <Icons.X size={16} className="mt-0.5 text-warning flex-shrink-0" />
                   <span className="text-text-secondary font-inter text-sm">
                     <strong>Relacionamentos prejudicados:</strong> Conflitos podem ser irreversíveis
                   </span>
@@ -775,7 +774,7 @@ const AreasDeAtuacao = () => {
           <div className="max-w-7xl mx-auto px-4 lg:px-6 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full mb-8">
-                <Icon name="Scale" size={36} color="white" />
+                <Icons.Scale size={36} color="white" />
               </div>
               
               <h1 className="font-lora font-semibold text-4xl lg:text-6xl mb-6 leading-tight">
@@ -792,14 +791,14 @@ const AreasDeAtuacao = () => {
                   onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-primary font-inter font-medium rounded-lg hover:bg-white/90 transition-colors duration-200 shadow-lg"
                 >
-                  <Icon name="MessageCircle" size={20} className="mr-2" />
+                  <Icons.MessageCircle size={20} className="mr-2" />
                   Consulta Imediata
                 </button>
                 <button
                   onClick={() => window.location.href = 'tel:+5566999111314'}
                   className="inline-flex items-center justify-center px-8 py-4 border border-white text-white font-inter font-medium rounded-lg hover:bg-white hover:text-brand-primary transition-colors duration-200"
                 >
-                  <Icon name="Phone" size={20} className="mr-2" />
+                  <Icons.Phone size={20} className="mr-2" />
                   (66) 99911-1314
                 </button>
               </div>
@@ -846,7 +845,7 @@ const AreasDeAtuacao = () => {
           <div className="max-w-7xl mx-auto px-4 lg:px-6">
             <div className="text-center mb-16">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-brand-accent to-brand-accent/80 rounded-full mb-6">
-                <Icon name="Target" size={28} color="white" />
+                <Icons.Target size={28} color="white" />
               </div>
               <h2 className="font-lora font-semibold text-3xl lg:text-4xl text-brand-primary mb-4">
                 Nossa Metodologia
@@ -886,7 +885,7 @@ const AreasDeAtuacao = () => {
                 <div key={index} className="text-center group">
                   <div className="relative mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-brand-accent to-brand-accent/80 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <Icon name={item?.icon} size={24} color="white" />
+                      {(() => { const IconComponent = Icons[item?.icon]; return <IconComponent size={24} color="white" />; })()}
                     </div>
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center text-sm font-bold">
                       {item?.step}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@/components/ui/Button';
-import Icon from '@/components/AppIcon';
+import * as Icons from 'lucide-react';
 import Footer from '@/components/ui/Footer';
 
 const PaginaNaoEncontrada = () => {
@@ -29,7 +29,7 @@ const PaginaNaoEncontrada = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="primary"
-              icon={<Icon name="ArrowLeft" />}
+              icon={<Icons.ArrowLeft />}
               iconPosition="left"
               onClick={() => window.history?.back()}
             >
@@ -38,7 +38,7 @@ const PaginaNaoEncontrada = () => {
 
             <Button
               variant="outline"
-              icon={<Icon name="Home" />}
+              icon={<Icons.Home />}
               iconPosition="left"
               onClick={handleGoHome}
             >

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/ui/Header';
-import Icon from '@/components/AppIcon';
+import * as Icons from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Footer from '@/components/ui/Footer';
@@ -62,7 +62,7 @@ const HeroSection = () => {
                 { icon: 'MapPin', text: 'Atendimento facilitado' }
               ]?.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-lg border border-slate-200">
-                  <Icon name={benefit?.icon} size={20} className="text-indigo-600 flex-shrink-0" />
+                  {(() => { const IconComponent = Icons[benefit?.icon]; return <IconComponent size={20} className="text-indigo-600 flex-shrink-0" />; })()}
                   <span className="text-slate-700 font-medium">{benefit?.text}</span>
                 </div>
               ))}
@@ -100,7 +100,7 @@ const HeroSection = () => {
             <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl border border-slate-200 p-8">
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-full mb-4">
-                  <Icon name="Calendar" size={24} className="text-indigo-600" />
+                  <Icons.Calendar size={24} className="text-indigo-600" />
                 </div>
                 <h3 className="font-lora text-xl font-semibold text-slate-900 mb-2">
                   Diga-nos como podemos ajudar
@@ -243,7 +243,7 @@ const PracticeAreasSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-slate-100 px-4 py-2 rounded-full mb-6">
-            <Icon name="Scale" size={16} className="text-slate-600" />
+            <Icons.Scale size={16} className="text-slate-600" />
             <span className="text-sm font-medium text-slate-600">Áreas de Atuação</span>
           </div>
           
@@ -273,7 +273,7 @@ const PracticeAreasSection = () => {
               <div className="relative p-6">
                 {/* Icon */}
                 <div className={`inline-flex items-center justify-center w-12 h-12 ${area?.bgColor} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon name={area?.icon} size={24} className={area?.iconColor} />
+                  {(() => { const IconComponent = Icons[area?.icon]; return <IconComponent size={24} className={area?.iconColor} />; })()}
                 </div>
 
                 {/* Title & Description */}
@@ -288,7 +288,7 @@ const PracticeAreasSection = () => {
                 <div className="space-y-2 mb-6">
                   {area?.scenarios?.map((scenario, scenarioIndex) => (
                     <div key={scenarioIndex} className="flex items-start space-x-2">
-                      <Icon name="Check" size={14} className="text-indigo-600 mt-0.5 flex-shrink-0" />
+                      <Icons.Check size={14} className="text-indigo-600 mt-0.5 flex-shrink-0" />
                       <span className="text-xs text-slate-600">{scenario}</span>
                     </div>
                   ))}
@@ -300,7 +300,7 @@ const PracticeAreasSection = () => {
                   className="inline-flex items-center space-x-2 text-indigo-600 hover:text-indigo-700 font-medium text-sm group-hover:underline transition-colors duration-300"
                 >
                   <span>Saiba mais</span>
-                  <Icon name="ArrowRight" size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
+                  <Icons.ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
 
@@ -317,7 +317,7 @@ const PracticeAreasSection = () => {
             className="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             <span>Ver todas as áreas de atuação</span>
-            <Icon name="ArrowRight" size={18} />
+            <Icons.ArrowRight size={18} />
           </Link>
         </div>
       </div>
@@ -359,7 +359,7 @@ const FAQPreviewSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
-            <Icon name="HelpCircle" size={16} className="text-slate-600" />
+            <Icons.HelpCircle size={16} className="text-slate-600" />
             <span className="text-sm font-medium text-slate-600">Dúvidas Frequentes</span>
           </div>
           
@@ -392,7 +392,7 @@ const FAQPreviewSection = () => {
                 <div className={`flex-shrink-0 transform transition-transform duration-300 ${
                   openFAQ === index ? 'rotate-180' : ''
                 }`}>
-                  <Icon name="ChevronDown" size={20} className="text-slate-500" />
+                  <Icons.ChevronDown size={20} className="text-slate-500" />
                 </div>
               </button>
               
@@ -417,7 +417,7 @@ const FAQPreviewSection = () => {
         <div className="text-center">
           <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
             <div className="mb-6">
-              <Icon name="MessageCircle" size={32} className="text-indigo-600 mx-auto mb-4" />
+              <Icons.MessageCircle size={32} className="text-indigo-600 mx-auto mb-4" />
               <h3 className="font-lora text-xl font-semibold text-slate-900 mb-2">
                 Precisa de outras orientações?
               </h3>
@@ -431,7 +431,7 @@ const FAQPreviewSection = () => {
                 to="/perguntas-frequentes"
                 className="inline-flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700 px-6 py-3 rounded-lg font-medium transition-colors duration-300"
               >
-                <Icon name="Search" size={18} />
+                <Icons.Search size={18} />
                 <span>Ver todas as perguntas</span>
               </Link>
               
@@ -439,7 +439,7 @@ const FAQPreviewSection = () => {
                 onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
                 className="inline-flex items-center space-x-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300"
               >
-                <Icon name="MessageCircle" size={18} />
+                <Icons.MessageCircle size={18} />
                 <span>Fazer pergunta</span>
               </button>
            </div>
@@ -493,7 +493,7 @@ const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-slate-100 px-4 py-2 rounded-full mb-6">
-            <Icon name="Star" size={16} className="text-slate-600" />
+            <Icons.Star size={16} className="text-slate-600" />
             <span className="text-sm font-medium text-slate-600">Depoimentos</span>
           </div>
           
@@ -514,7 +514,7 @@ const TestimonialsSection = () => {
           {stats?.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-xl mb-4">
-                <Icon name={stat?.icon} size={24} className="text-indigo-600" />
+                {(() => { const IconComponent = Icons[stat?.icon]; return <IconComponent size={24} className="text-indigo-600" />; })()}
               </div>
               <div className="font-lora text-3xl font-bold text-slate-900 mb-1">
                 {stat?.number}
@@ -536,13 +536,13 @@ const TestimonialsSection = () => {
               {/* Rating Stars */}
               <div className="flex items-center space-x-1 mb-4">
                 {[...Array(testimonial?.rating)]?.map((_, starIndex) => (
-                  <Icon key={starIndex} name="Star" size={16} className="text-amber-400 fill-current" />
+                  <Icons.Star key={starIndex}  size={16} className="text-amber-400 fill-current" />
                 ))}
               </div>
 
               {/* Quote */}
               <div className="mb-6">
-                <Icon name="Quote" size={24} className="text-indigo-600 mb-3" />
+                <Icons.Quote size={24} className="text-indigo-600 mb-3" />
                 <p className="text-slate-700 leading-relaxed italic">
                   "{testimonial?.content}"
                 </p>
@@ -551,13 +551,13 @@ const TestimonialsSection = () => {
               {/* Case Details */}
               <div className="space-y-3 mb-6">
                 <div className="flex items-start space-x-2">
-                  <Icon name="FileText" size={14} className="text-slate-500 mt-1 flex-shrink-0" />
+                  <Icons.FileText size={14} className="text-slate-500 mt-1 flex-shrink-0" />
                   <span className="text-sm text-slate-600">
                     <strong>Caso:</strong> {testimonial?.case}
                   </span>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <Icon name="CheckCircle" size={14} className="text-green-600 mt-1 flex-shrink-0" />
+                  <Icons.CheckCircle size={14} className="text-green-600 mt-1 flex-shrink-0" />
                   <span className="text-sm text-slate-600">
                     <strong>Resultado:</strong> {testimonial?.outcome}
                   </span>
@@ -568,7 +568,7 @@ const TestimonialsSection = () => {
               <div className="pt-4 border-t border-slate-200">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-slate-600 rounded-full flex items-center justify-center">
-                    <Icon name="User" size={18} className="text-white" />
+                    <Icons.User size={18} className="text-white" />
                   </div>
                   <div>
                     <div className="font-medium text-slate-900 text-sm">
@@ -599,14 +599,14 @@ const TestimonialsSection = () => {
                   onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
                   className="inline-flex items-center space-x-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors duration-300"
                 >
-                  <Icon name="MessageCircle" size={18} />
+                  <Icons.MessageCircle size={18} />
                   <span>Agendar atendimento</span>
                 </button>
                 <button
                   onClick={() => window.location.href = 'tel:+5566999111314'}
                   className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-indigo-600 transition-all duration-300"
                 >
-                  <Icon name="Phone" size={18} />
+                  <Icons.Phone size={18} />
                   <span>(66) 99911-1314</span>
                 </button>
               </div>
@@ -687,7 +687,7 @@ const ContactSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
-            <Icon name="MessageCircle" size={16} className="text-slate-600" />
+            <Icons.MessageCircle size={16} className="text-slate-600" />
             <span className="text-sm font-medium text-slate-600">Entre em Contato</span>
           </div>
           
@@ -718,7 +718,7 @@ const ContactSection = () => {
                     className="text-left p-6 bg-white rounded-xl border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-300 card-hover group"
                   >
                     <div className={`inline-flex items-center justify-center w-12 h-12 ${method?.bgColor} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon name={method?.icon} size={24} className={method?.color} />
+                      {(() => { const IconComponent = Icons[method?.icon]; return <IconComponent size={24} className={method?.color} />; })()}
                     </div>
                     <h4 className="font-semibold text-slate-900 mb-1">
                       {method?.title}
@@ -737,7 +737,7 @@ const ContactSection = () => {
             {/* Office Hours */}
             <div className="bg-white rounded-xl border border-slate-200 p-6">
               <h4 className="font-lora text-lg font-semibold text-slate-900 mb-4 flex items-center">
-                <Icon name="Clock" size={20} className="text-indigo-600 mr-2" />
+                <Icons.Clock size={20} className="text-indigo-600 mr-2" />
                 Horário de atendimento
               </h4>
               <div className="space-y-2 text-sm">
@@ -890,7 +890,7 @@ const StickyCTABar = () => {
             {/* Left - Info */}
             <div className="hidden sm:flex items-center space-x-4">
               <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-indigo-600 to-slate-900 rounded-lg">
-                <Icon name="Scale" size={20} className="text-white" />
+                <Icons.Scale size={20} className="text-white" />
               </div>
               <div>
                 <h4 className="font-lora font-semibold text-slate-900 text-sm">
@@ -905,7 +905,7 @@ const StickyCTABar = () => {
             {/* Center - Mobile Info */}
             <div className="sm:hidden flex items-center space-x-3">
               <div className="flex items-center justify-center w-8 h-8 bg-gradient-to-br from-indigo-600 to-slate-900 rounded-lg">
-                <Icon name="Scale" size={16} className="text-white" />
+                <Icons.Scale size={16} className="text-white" />
               </div>
               <div>
                 <h4 className="font-lora font-semibold text-slate-900 text-sm">
@@ -951,10 +951,9 @@ const StickyCTABar = () => {
         className="absolute -top-10 right-4 bg-indigo-600 hover:bg-indigo-700 text-white p-2 rounded-t-lg shadow-lg transition-colors duration-200"
         aria-label={isMinimized ? 'Mostrar barra de contato' : 'Ocultar barra de contato'}
       >
-        <Icon 
-          name={isMinimized ? "ChevronUp" : "ChevronDown"} 
+        {(() => { const IconComponent = Icons[isMinimized ? "ChevronUp" : "ChevronDown"]; return <IconComponent 
           size={16} 
-        />
+        />; })()}
       </button>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Icon from '../AppIcon';
+import * as Icons from 'lucide-react';
 import Button from './Button';
 import SocialLinks from './SocialLinks';
 import { CONTACT } from '../../config/contact';
@@ -55,8 +55,7 @@ const Header = () => {
             onClick={closeMenu}
           >
             <div className="flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg shadow-md group-hover:shadow-lg transition-all duration-300">
-              <Icon 
-                name="Scale" 
+              <Icons.Scale 
                 size={24} 
                 color="white" 
                 className="group-hover:scale-110 transition-transform duration-300" 
@@ -128,10 +127,9 @@ const Header = () => {
             className="lg:hidden p-2 rounded-lg text-text-primary hover:text-brand-accent hover:bg-accent/10 transition-colors duration-200"
             aria-label="Toggle menu"
           >
-            <Icon 
-              name={isMenuOpen ? "X" : "Menu"} 
+            {(() => { const IconComponent = Icons[isMenuOpen ? "X" : "Menu"]; return <IconComponent 
               size={24} 
-            />
+            />; })()}
           </button>
         </div>
 
@@ -154,7 +152,7 @@ const Header = () => {
                       ? 'text-brand-accent bg-accent/10' :'text-text-primary hover:text-brand-accent hover:bg-accent/5'
                   }`}
                 >
-                  <Icon name={item?.icon} size={18} />
+                  {(() => { const IconComponent = Icons[item?.icon]; return <IconComponent size={18} />; })()}
                   <span>{item?.name}</span>
                 </Link>
               ))}

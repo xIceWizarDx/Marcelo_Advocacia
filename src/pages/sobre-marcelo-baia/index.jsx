@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/ui/Header';
-import Image from '@/components/AppImage';
-import Icon from '@/components/AppIcon';
+import * as Icons from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Footer from '@/components/ui/Footer';
@@ -59,11 +58,11 @@ const HeroSection = ({ onContactClick, onWhatsAppClick }) => {
           <div className="order-1 lg:order-2">
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                <Image
+                <img
                   src="public\assets\images\Marcelo.png"
                   alt="Marcelo Baía - Advogado especialista em Direito Civil, Consumidor, Família e Empresarial"
                   className="w-full h-full object-cover"
-                />
+                 onError={(e) => { e.target.src = '/assets/images/no_image.png'; }} />
               </div>
               
               {/* Floating credential card */}
@@ -202,7 +201,7 @@ const ProfessionalJourney = () => {
                   <div className="bg-slate-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
                     <div className="flex items-center space-x-3 mb-4">
                       <div className={`w-12 h-12 ${milestone?.color} rounded-lg flex items-center justify-center shadow-sm`}>
-                        <Icon name={milestone?.icon} size={24} color="white" />
+                        {(() => { const IconComponent = Icons[milestone?.icon]; return <IconComponent size={24} color="white" />; })()}
                       </div>
                       <div>
                         <span className="inline-block px-3 py-1 bg-brand-accent/10 text-brand-accent text-sm font-semibold rounded-full">
@@ -333,7 +332,7 @@ const MethodologySection = () => {
             >
               <div className="flex items-start space-x-4 mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${step?.color} rounded-xl flex items-center justify-center shadow-lg`}>
-                  <Icon name={step?.icon} size={28} color="white" />
+                  {(() => { const IconComponent = Icons[step?.icon]; return <IconComponent size={28} color="white" />; })()}
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center space-x-3 mb-2">
@@ -353,7 +352,7 @@ const MethodologySection = () => {
               <div className="space-y-2">
                 {step?.features?.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center space-x-3">
-                    <Icon name="Check" size={16} color="rgb(34 197 94)" />
+                    <Icons.Check size={16} color="rgb(34 197 94)" />
                     <span className="text-sm text-text-primary">{feature}</span>
                   </div>
                 ))}
@@ -372,7 +371,7 @@ const MethodologySection = () => {
             {principles?.map((principle, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-brand-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name={principle?.icon} size={24} color="rgb(79 70 229)" />
+                  {(() => { const IconComponent = Icons[principle?.icon]; return <IconComponent size={24} color="rgb(79 70 229)" />; })()}
                 </div>
                 <h4 className="font-semibold text-brand-primary mb-3">
                   {principle?.title}
@@ -490,7 +489,7 @@ const CredentialsSection = () => {
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-brand-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Icon name="GraduationCap" size={24} color="rgb(79 70 229)" />
+                    <Icons.GraduationCap size={24} color="rgb(79 70 229)" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center space-x-2 mb-2">
@@ -527,7 +526,7 @@ const CredentialsSection = () => {
                 className="bg-gradient-to-br from-brand-accent/5 to-brand-accent/10 rounded-xl p-6 text-center hover:shadow-md transition-shadow duration-300"
               >
                 <div className="w-16 h-16 bg-brand-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name={cert?.icon} size={28} color="rgb(79 70 229)" />
+                  {(() => { const IconComponent = Icons[cert?.icon]; return <IconComponent size={28} color="rgb(79 70 229)" />; })()}
                 </div>
                 <h4 className="font-semibold text-brand-primary mb-2">
                   {cert?.title}
@@ -640,9 +639,9 @@ const TestimonialsSection = () => {
 
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, index) => (
-      <Icon
+      <Icons.Star
         key={index}
-        name="Star"
+        
         size={16}
         color={index < rating ? "rgb(245 158 11)" : "rgb(209 213 219)"}
         className={index < rating ? "fill-current" : ""}
@@ -673,7 +672,7 @@ const TestimonialsSection = () => {
             >
               {/* Quote Icon */}
               <div className="w-12 h-12 bg-brand-accent/10 rounded-lg flex items-center justify-center mb-6">
-                <Icon name="Quote" size={24} color="rgb(79 70 229)" />
+                <Icons.Quote size={24} color="rgb(79 70 229)" />
               </div>
 
               {/* Rating */}
@@ -716,7 +715,7 @@ const TestimonialsSection = () => {
             {trustIndicators?.map((indicator, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-brand-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name={indicator?.icon} size={24} color="rgb(79 70 229)" />
+                  {(() => { const IconComponent = Icons[indicator?.icon]; return <IconComponent size={24} color="rgb(79 70 229)" />; })()}
                 </div>
                 <h4 className="font-semibold text-brand-primary mb-3">
                   {indicator?.title}
@@ -844,7 +843,7 @@ const ContactSection = () => {
                 >
                   <div className="flex items-start space-x-4">
                     <div className={`w-14 h-14 bg-gradient-to-br ${method?.color} rounded-xl flex items-center justify-center shadow-lg flex-shrink-0`}>
-                      <Icon name={method?.icon} size={24} color="white" />
+                      {(() => { const IconComponent = Icons[method?.icon]; return <IconComponent size={24} color="white" />; })()}
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-brand-primary mb-2">
@@ -870,7 +869,7 @@ const ContactSection = () => {
             {/* Office Info */}
             <div className="mt-8 p-6 bg-gradient-to-br from-brand-accent/5 to-brand-accent/10 rounded-xl">
               <h4 className="font-semibold text-brand-primary mb-4 flex items-center">
-                <Icon name="MapPin" size={20} className="mr-2" />
+                <Icons.MapPin size={20} className="mr-2" />
                 Escritório em Rondonópolis/MT
               </h4>
               <div className="space-y-2 text-sm text-text-secondary">
@@ -951,7 +950,7 @@ const ContactSection = () => {
 
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
                 <div className="flex items-start space-x-3">
-                  <Icon name="Info" size={20} color="rgb(245 158 11)" className="flex-shrink-0 mt-0.5" />
+                  <Icons.Info size={20} color="rgb(245 158 11)" className="flex-shrink-0 mt-0.5" />
                   <div className="text-sm text-amber-800">
                     <p className="font-medium mb-1">Consulta Inicial Gratuita</p>
                     <p>
