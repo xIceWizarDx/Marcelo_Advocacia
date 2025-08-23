@@ -1,8 +1,7 @@
 import React from "react";
-import { cn } from "../../utils/cn";
 
 const Input = React.forwardRef(({
-    className,
+    className = "",
     type = "text",
     label,
     description,
@@ -22,10 +21,7 @@ const Input = React.forwardRef(({
         return (
             <input
                 type="checkbox"
-                className={cn(
-                    "h-4 w-4 rounded border border-input bg-background text-primary focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-                    className
-                )}
+                className={`h-4 w-4 rounded border border-input bg-background text-primary focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
                 ref={ref}
                 id={inputId}
                 {...props}
@@ -38,10 +34,7 @@ const Input = React.forwardRef(({
         return (
             <input
                 type="radio"
-                className={cn(
-                    "h-4 w-4 rounded-full border border-input bg-background text-primary focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-                    className
-                )}
+                className={`h-4 w-4 rounded-full border border-input bg-background text-primary focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
                 ref={ref}
                 id={inputId}
                 {...props}
@@ -55,10 +48,7 @@ const Input = React.forwardRef(({
             {label && (
                 <label
                     htmlFor={inputId}
-                    className={cn(
-                        "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
-                        error ? "text-destructive" : "text-foreground"
-                    )}
+                    className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${error ? "text-destructive" : "text-foreground"}`}
                 >
                     {label}
                     {required && <span className="text-destructive ml-1">*</span>}
@@ -67,11 +57,7 @@ const Input = React.forwardRef(({
 
             <input
                 type={type}
-                className={cn(
-                    baseInputClasses,
-                    error && "border-destructive focus-visible:ring-destructive",
-                    className
-                )}
+                className={`${baseInputClasses} ${error ? "border-destructive focus-visible:ring-destructive" : ""} ${className}`}
                 ref={ref}
                 id={inputId}
                 {...props}
