@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import * as Icons from 'lucide-react';
 import Button from './Button';
 import SocialLinks from './SocialLinks';
-import { CONTACT } from '../../config/contact';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,8 +26,9 @@ const Header = () => {
       { name: 'Contato', path: '/contato-consulta', icon: 'MessageCircle' }
     ];
 
-  const whatsappLink = CONTACT.whatsapp;
-  const phoneLink = CONTACT.phone.href;
+  const whatsappLink = import.meta.env.VITE_WHATSAPP_LINK || 'https://wa.me/5566999111314';
+  const phoneLink = import.meta.env.VITE_PHONE_LINK || 'tel:+5566999111314';
+  const phoneDisplay = import.meta.env.VITE_PHONE_DISPLAY || '(66) 99911-1314';
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -99,7 +99,7 @@ const Header = () => {
               iconSize={16}
               className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
             >
-              <a href={phoneLink} aria-label={`Ligar para ${CONTACT.phone.display}`}>{CONTACT.phone.display}</a>
+              <a href={phoneLink} aria-label={`Ligar para ${phoneDisplay}`}>{phoneDisplay}</a>
             </Button>
             <Button
               asChild
@@ -171,7 +171,7 @@ const Header = () => {
                 fullWidth
                 className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
               >
-                <a href={phoneLink} aria-label={`Ligar para ${CONTACT.phone.display}`}>{CONTACT.phone.display}</a>
+                <a href={phoneLink} aria-label={`Ligar para ${phoneDisplay}`}>{phoneDisplay}</a>
               </Button>
               <Button
                 asChild
