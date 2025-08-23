@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
-import ScrollToTop from "components/ScrollToTop";
-import ErrorBoundary from "components/ErrorBoundary";
-import PaginaNaoEncontrada from "pages/PaginaNaoEncontrada";
-import PaginaAreaDeAtuacao from './pages/pagina-area-de-atuacao';
-import SobreMarceloBaia from './pages/sobre-marcelo-baia';
-import PerguntasFrequentes from './pages/perguntas-frequentes';
-import AreasDeAtuacao from './pages/areas-de-atuacao';
-import ContatoConsulta from './pages/contato-consulta';
-import PaginaInicial from './pages/pagina-inicial';
+import ScrollToTop from "@/components/ScrollToTop";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import PaginaNaoEncontrada from "@/pages/PaginaNaoEncontrada";
+import PaginaAreaDeAtuacao from '@/pages/pagina-area-de-atuacao';
+import SobreMarceloBaia from '@/pages/sobre-marcelo-baia';
+import PerguntasFrequentes from '@/pages/perguntas-frequentes';
+import AreasDeAtuacao from '@/pages/areas-de-atuacao';
+import ContatoConsulta from '@/pages/contato-consulta';
+import PaginaInicial from '@/pages/pagina-inicial';
 
 const Routes = () => {
   return (
