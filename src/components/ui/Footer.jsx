@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Icon from '../AppIcon';
+import * as Icons from 'lucide-react';
 import SocialLinks from './SocialLinks';
 
 const Footer = () => {
@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-lg shadow-md">
-                <Icon name="Scale" size={24} color="white" />
+                <Icons.Scale size={24} color="white" />
               </div>
               <div>
                 <h3 className="font-lora font-semibold text-lg">Marcelo Baía</h3>

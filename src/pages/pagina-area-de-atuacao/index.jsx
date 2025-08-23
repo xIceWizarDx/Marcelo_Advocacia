@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSearchParams, Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/ui/Header';
-import Icon from '@/components/AppIcon';
+import * as Icons from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Select from '@/components/ui/Select';
@@ -56,7 +56,7 @@ const PracticeAreaHero = ({ practiceArea, onWhatsAppClick, onCallClick }) => {
           <div className="text-white">
             <div className="flex items-center space-x-3 mb-6">
               <div className="flex items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg">
-                <Icon name={content.icon} size={24} color="white" />
+                {(() => { const IconComponent = Icons[content.icon]; return <IconComponent size={24} color="white" />; })()}
               </div>
               <span className="text-white/80 font-inter font-medium text-sm uppercase tracking-wider">
                 Área de Atuação
@@ -104,15 +104,15 @@ const PracticeAreaHero = ({ practiceArea, onWhatsAppClick, onCallClick }) => {
             {/* Trust Indicators */}
             <div className="flex items-center space-x-6 mt-8 pt-8 border-t border-white/20">
               <div className="flex items-center space-x-2">
-                <Icon name="CheckCircle" size={20} color="white" className="opacity-80" />
+                <Icons.CheckCircle size={20} color="white" className="opacity-80" />
                 <span className="text-white/80 font-inter text-sm">OAB/MT 14.159-B</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Icon name="Clock" size={20} color="white" className="opacity-80" />
+                <Icons.Clock size={20} color="white" className="opacity-80" />
                 <span className="text-white/80 font-inter text-sm">Resposta em 24h</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Icon name="MapPin" size={20} color="white" className="opacity-80" />
+                <Icons.MapPin size={20} color="white" className="opacity-80" />
                 <span className="text-white/80 font-inter text-sm">Rondonópolis/MT</span>
               </div>
             </div>
@@ -124,7 +124,7 @@ const PracticeAreaHero = ({ practiceArea, onWhatsAppClick, onCallClick }) => {
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl"></div>
               <div className="relative">
                 <div className="flex items-center justify-center w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full mb-6 mx-auto">
-                  <Icon name={content.icon} size={48} color="white" />
+                  {(() => { const IconComponent = Icons[content.icon]; return <IconComponent size={48} color="white" />; })()}
                 </div>
                 <div className="text-center">
                   <h3 className="font-lora font-semibold text-xl text-white mb-4">
@@ -139,10 +139,10 @@ const PracticeAreaHero = ({ practiceArea, onWhatsAppClick, onCallClick }) => {
 
             {/* Floating Elements */}
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-              <Icon name="Star" size={24} color="white" className="opacity-60" />
+              <Icons.Star size={24} color="white" className="opacity-60" />
             </div>
             <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-              <Icon name="Award" size={20} color="white" className="opacity-60" />
+              <Icons.Award size={20} color="white" className="opacity-60" />
             </div>
           </div>
         </div>
@@ -301,11 +301,10 @@ const ServiceBreakdown = ({ practiceArea }) => {
             >
               {/* Icon */}
               <div className="flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-xl mb-6 group-hover:bg-indigo-600 group-hover:scale-110 transition-all duration-300">
-                <Icon 
-                  name={service?.icon} 
+                {(() => { const IconComponent = Icons[service?.icon]; return <IconComponent 
                   size={28} 
                   className="text-indigo-600 group-hover:text-white transition-colors duration-300" 
-                />
+                />; })()}
               </div>
 
               {/* Content */}
@@ -322,7 +321,7 @@ const ServiceBreakdown = ({ practiceArea }) => {
                 {service?.features?.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center space-x-3">
                     <div className="flex items-center justify-center w-5 h-5 bg-indigo-100 rounded-full flex-shrink-0">
-                      <Icon name="Check" size={12} className="text-indigo-600" />
+                      <Icons.Check size={12} className="text-indigo-600" />
                     </div>
                     <span className="font-inter text-sm text-slate-700">
                       {feature}
@@ -333,7 +332,7 @@ const ServiceBreakdown = ({ practiceArea }) => {
 
               {/* Hover Arrow */}
               <div className="flex items-center justify-end mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Icon name="ArrowRight" size={20} className="text-indigo-600" />
+                <Icons.ArrowRight size={20} className="text-indigo-600" />
               </div>
             </div>
           ))}
@@ -355,14 +354,14 @@ const ServiceBreakdown = ({ practiceArea }) => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-100 transition-colors duração-200"
               >
-                <Icon name="MessageCircle" size={20} className="mr-2" />
+                <Icons.MessageCircle size={20} className="mr-2" />
                 Consulta via WhatsApp
               </a>
               <a
                 href="tel:+5566999111314"
                 className="inline-flex items-center justify-center px-6 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors duração-200"
               >
-                <Icon name="Phone" size={20} className="mr-2" />
+                <Icons.Phone size={20} className="mr-2" />
                 (66) 99911-1314
               </a>
             </div>
@@ -501,7 +500,7 @@ const ContextualFAQ = ({ practiceArea }) => {
                 <div className={`flex-shrink-0 transform transition-transform duration-200 ${
                   openIndex === index ? 'rotate-180' : ''
                 }`}>
-                  <Icon name="ChevronDown" size={24} className="text-slate-400" />
+                  <Icons.ChevronDown size={24} className="text-slate-400" />
                 </div>
               </button>
               
@@ -523,7 +522,7 @@ const ContextualFAQ = ({ practiceArea }) => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
-            <Icon name="MessageSquare" size={48} className="text-indigo-600 mx-auto mb-4" />
+            <Icons.MessageSquare size={48} className="text-indigo-600 mx-auto mb-4" />
             <h3 className="font-lora font-semibold text-xl text-slate-900 mb-4">
               Precisa de outras orientações?
             </h3>
@@ -537,14 +536,14 @@ const ContextualFAQ = ({ practiceArea }) => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors duration-200"
               >
-                <Icon name="MessageCircle" size={20} className="mr-2" />
+                <Icons.MessageCircle size={20} className="mr-2" />
                 Perguntar via WhatsApp
               </a>
               <a
                 href="tel:+5566999111314"
                 className="inline-flex items-center justify-center px-6 py-3 border border-slate-300 text-slate-700 font-semibold rounded-lg hover:bg-slate-50 transition-colors duração-200"
               >
-                <Icon name="Phone" size={20} className="mr-2" />
+                <Icons.Phone size={20} className="mr-2" />
                 (66) 99911-1314
               </a>
             </div>
@@ -725,7 +724,7 @@ const CaseStudyApproach = ({ practiceArea }) => {
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="flex items-center justify-center w-10 h-10 bg-indigo-100 rounded-lg">
-                    <Icon name={caseStudy?.icon} size={20} className="text-indigo-600" />
+                    {(() => { const IconComponent = Icons[caseStudy?.icon]; return <IconComponent size={20} className="text-indigo-600" />; })()}
                   </div>
                   <span className="font-inter font-medium text-sm text-indigo-600 uppercase tracking-wider">
                     {caseStudy?.category}
@@ -763,14 +762,14 @@ const CaseStudyApproach = ({ practiceArea }) => {
 
                 <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                   <h4 className="font-inter font-semibold text-green-900 mb-2 flex items-center">
-                    <Icon name="CheckCircle" size={18} className="text-green-600 mr-2" />
+                    <Icons.CheckCircle size={18} className="text-green-600 mr-2" />
                     Resultado:
                   </h4>
                   <p className="font-inter text-green-800 leading-relaxed mb-3">
                     {caseStudy?.outcome}
                   </p>
                   <div className="flex items-center space-x-2">
-                    <Icon name="Target" size={16} className="text-green-600" />
+                    <Icons.Target size={16} className="text-green-600" />
                     <span className="font-inter text-sm text-green-700 font-medium">
                       {caseStudy?.methodology}
                     </span>
@@ -784,22 +783,22 @@ const CaseStudyApproach = ({ practiceArea }) => {
                   <div className="bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl p-8 lg:p-12">
                     <div className="text-center">
                       <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg mb-6 mx-auto">
-                        <Icon name={caseStudy?.icon} size={32} className="text-indigo-600" />
+                        {(() => { const IconComponent = Icons[caseStudy?.icon]; return <IconComponent size={32} className="text-indigo-600" />; })()}
                       </div>
                       <h4 className="font-lora font-semibold text-xl text-slate-900 mb-4">
                         Metodologia Aplicada
                       </h4>
                       <div className="space-y-4">
                         <div className="flex items-center justify-center space-x-2">
-                          <Icon name="Search" size={16} className="text-slate-600" />
+                          <Icons.Search size={16} className="text-slate-600" />
                           <span className="font-inter text-sm text-slate-700">Análise Detalhada</span>
                         </div>
                         <div className="flex items-center justify-center space-x-2">
-                          <Icon name="Users" size={16} className="text-slate-600" />
+                          <Icons.Users size={16} className="text-slate-600" />
                           <span className="font-inter text-sm text-slate-700">Abordagem Humanizada</span>
                         </div>
                         <div className="flex items-center justify-center space-x-2">
-                          <Icon name="Target" size={16} className="text-slate-600" />
+                          <Icons.Target size={16} className="text-slate-600" />
                           <span className="font-inter text-sm text-slate-700">Resultado Efetivo</span>
                         </div>
                       </div>
@@ -818,7 +817,7 @@ const CaseStudyApproach = ({ practiceArea }) => {
         {/* Disclaimer */}
         <div className="mt-16 p-6 bg-slate-100 rounded-xl border border-slate-200">
           <div className="flex items-start space-x-3">
-            <Icon name="Info" size={20} className="text-slate-600 flex-shrink-0 mt-0.5" />
+            <Icons.Info size={20} className="text-slate-600 flex-shrink-0 mt-0.5" />
             <div>
               <h4 className="font-inter font-semibold text-slate-900 mb-2">
                 Importante sobre os Casos Apresentados
@@ -919,7 +918,7 @@ const PracticeAreaSelector = ({ currentArea }) => {
                   <div className={`p-6 rounded-xl border-2 ${colors?.border} ${colors?.bg} transition-all duration-200`}>
                     <div className="text-center">
                       <div className="flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg mb-4 mx-auto">
-                        <Icon name={area?.icon} size={24} className={colors?.icon} />
+                        {(() => { const IconComponent = Icons[area?.icon]; return <IconComponent size={24} className={colors?.icon} />; })()}
                       </div>
                       <h4 className={`font-inter font-semibold text-sm ${colors?.text} mb-2`}>
                         {area?.name}
@@ -929,7 +928,7 @@ const PracticeAreaSelector = ({ currentArea }) => {
                       </p>
                       <div className="mt-4 flex items-center justify-center">
                         <span className="inline-flex items-center px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium text-white">
-                          <Icon name="Eye" size={14} className="mr-1" />
+                          <Icons.Eye size={14} className="mr-1" />
                           Visualizando
                         </span>
                       </div>
@@ -942,7 +941,7 @@ const PracticeAreaSelector = ({ currentArea }) => {
                   >
                     <div className="text-center">
                       <div className="flex items-center justify-center w-12 h-12 bg-white rounded-lg mb-4 mx-auto group-hover:scale-110 transition-transform duration-200">
-                        <Icon name={area?.icon} size={24} className={colors?.icon} />
+                        {(() => { const IconComponent = Icons[area?.icon]; return <IconComponent size={24} className={colors?.icon} />; })()}
                       </div>
                       <h4 className={`font-inter font-semibold text-sm ${colors?.text} mb-2`}>
                         {area?.name}
@@ -953,7 +952,7 @@ const PracticeAreaSelector = ({ currentArea }) => {
                       <div className="mt-4 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                         <span className={`inline-flex items-center text-xs font-medium ${colors?.text}`}>
                           Ver detalhes
-                          <Icon name="ArrowRight" size={14} className="ml-1" />
+                          <Icons.ArrowRight size={14} className="ml-1" />
                         </span>
                       </div>
                     </div>
@@ -970,7 +969,7 @@ const PracticeAreaSelector = ({ currentArea }) => {
               to="/areas-de-atuacao"
             className="inline-flex items-center px-6 py-3 bg-white border border-slate-300 text-slate-700 font-semibold rounded-lg hover:bg-slate-50 hover:border-slate-400 transition-all duration-200"
           >
-            <Icon name="ArrowLeft" size={18} className="mr-2" />
+            <Icons.ArrowLeft size={18} className="mr-2" />
             Ver Todas as Áreas de Atuação
           </Link>
         </div>
@@ -1065,7 +1064,7 @@ const ContactCTA = ({ practiceArea }) => {
         <div className="max-w-4xl mx-auto px-4 lg:px-6 text-center">
           <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg border border-green-200">
             <div className="flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mx-auto mb-6">
-              <Icon name="CheckCircle" size={40} className="text-green-600" />
+              <Icons.CheckCircle size={40} className="text-green-600" />
             </div>
             <h3 className="font-lora font-bold text-2xl text-slate-900 mb-4">
               Mensagem Enviada com Sucesso!
@@ -1118,7 +1117,7 @@ const ContactCTA = ({ practiceArea }) => {
             <div className="space-y-6 mb-8">
               <div className="flex items-center space-x-4">
                 <div className="flex items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg">
-                  <Icon name="MessageCircle" size={24} color="white" />
+                  <Icons.MessageCircle size={24} color="white" />
                 </div>
                 <div>
                   <h4 className="font-inter font-semibold text-white mb-1">WhatsApp</h4>
@@ -1128,7 +1127,7 @@ const ContactCTA = ({ practiceArea }) => {
 
               <div className="flex items-center space-x-4">
                 <div className="flex items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg">
-                  <Icon name="Phone" size={24} color="white" />
+                  <Icons.Phone size={24} color="white" />
                 </div>
                 <div>
                   <h4 className="font-inter font-semibold text-white mb-1">Telefone</h4>
@@ -1138,7 +1137,7 @@ const ContactCTA = ({ practiceArea }) => {
 
               <div className="flex items-center space-x-4">
                 <div className="flex items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg">
-                  <Icon name="Mail" size={24} color="white" />
+                  <Icons.Mail size={24} color="white" />
                 </div>
                 <div>
                   <h4 className="font-inter font-semibold text-white mb-1">E-mail</h4>

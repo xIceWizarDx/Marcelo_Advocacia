@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import Header from '@/components/ui/Header';
-import Icon from '@/components/AppIcon';
+import * as Icons from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import { Checkbox } from '@/components/ui/Checkbox';
-import Image from '@/components/AppImage';
 import Footer from '@/components/ui/Footer';
 
 
@@ -14,7 +13,7 @@ const ContactHero = ({ onWhatsAppClick, onPhoneClick }) => {
       <div className="max-w-7xl mx-auto px-4 lg:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full mb-6">
-            <Icon name="MessageCircle" size={32} color="white" />
+            <Icons.MessageCircle size={32} color="white" />
           </div>
           
           <h1 className="font-lora text-4xl lg:text-5xl font-bold mb-6 leading-tight">
@@ -55,15 +54,15 @@ const ContactHero = ({ onWhatsAppClick, onPhoneClick }) => {
           
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
             <div className="flex items-center gap-2">
-              <Icon name="Clock" size={16} />
+              <Icons.Clock size={16} />
               <span>Resposta imediata</span>
             </div>
             <div className="flex items-center gap-2">
-              <Icon name="Shield" size={16} />
+              <Icons.Shield size={16} />
               <span>Consulta confidencial</span>
             </div>
             <div className="flex items-center gap-2">
-              <Icon name="CheckCircle" size={16} />
+              <Icons.CheckCircle size={16} />
               <span>Primeira orientação gratuita</span>
             </div>
           </div>
@@ -147,14 +146,13 @@ const ContactMethods = ({ onWhatsAppClick, onPhoneClick, onEmailClick }) => {
                   method?.id === 'whatsapp' ? 'bg-green-100' :
                   method?.id === 'phone' ? 'bg-blue-100' : 'bg-slate-100'
                 }`}>
-                  <Icon 
-                    name={method?.icon} 
+                  {(() => { const IconComponent = Icons[method?.icon]; return <IconComponent 
                     size={32} 
                     color={
                       method?.id === 'whatsapp' ? '#059669' :
                       method?.id === 'phone' ? '#2563eb' : '#475569'
                     }
-                  />
+                  />; })()}
                 </div>
                 
                 <h3 className="font-lora text-xl font-bold mb-3">
@@ -187,7 +185,7 @@ const ContactMethods = ({ onWhatsAppClick, onPhoneClick, onEmailClick }) => {
 
         <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 text-amber-800 rounded-full text-sm font-medium">
-            <Icon name="Info" size={16} />
+            <Icons.Info size={16} />
             <span>Primeira consulta gratuita para avaliação do caso</span>
           </div>
         </div>
@@ -279,7 +277,7 @@ const ContactForm = () => {
           {submitStatus === 'success' ? (
             <div className="text-center py-12">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
-                <Icon name="CheckCircle" size={32} color="#059669" />
+                <Icons.CheckCircle size={32} color="#059669" />
               </div>
               <h3 className="font-lora text-2xl font-bold text-slate-900 mb-4">
                 Mensagem Enviada com Sucesso!
@@ -433,7 +431,7 @@ const ContactForm = () => {
               {/* LGPD Compliance */}
               <div className="space-y-4 p-4 bg-slate-50 rounded-lg">
                 <h4 className="font-semibold text-slate-900 flex items-center gap-2">
-                  <Icon name="Shield" size={18} />
+                  <Icons.Shield size={18} />
                   Consentimento LGPD
                 </h4>
                 
@@ -548,7 +546,7 @@ const OfficeLocation = () => {
                 onClick={handleDirectionsClick}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
-                <Icon name="Navigation" size={18} />
+                <Icons.Navigation size={18} />
                 <span>Como Chegar</span>
               </button>
             </div>
@@ -559,7 +557,7 @@ const OfficeLocation = () => {
             {/* Address */}
             <div className="bg-slate-50 rounded-2xl p-6">
               <h3 className="font-lora text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                <Icon name="MapPin" size={24} color="#4f46e5" />
+                <Icons.MapPin size={24} color="#4f46e5" />
                 Endereço
               </h3>
               <div className="space-y-2 text-slate-700">
@@ -572,7 +570,7 @@ const OfficeLocation = () => {
             {/* Business Hours */}
             <div className="bg-slate-50 rounded-2xl p-6">
               <h3 className="font-lora text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                <Icon name="Clock" size={24} color="#4f46e5" />
+                <Icons.Clock size={24} color="#4f46e5" />
                 Horário de Funcionamento
               </h3>
               <div className="space-y-2">
@@ -592,7 +590,7 @@ const OfficeLocation = () => {
               </div>
               <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
                 <p className="text-sm text-green-800 flex items-center gap-2">
-                  <Icon name="Info" size={16} />
+                  <Icons.Info size={16} />
                   <span>Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.</span>
                 </p>
               </div>
@@ -601,13 +599,13 @@ const OfficeLocation = () => {
             {/* Facilities */}
             <div className="bg-slate-50 rounded-2xl p-6">
               <h3 className="font-lora text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                <Icon name="Building" size={24} color="#4f46e5" />
+                <Icons.Building size={24} color="#4f46e5" />
                 Comodidades
               </h3>
               <div className="grid grid-cols-2 gap-3">
                 {facilities?.map((facility, index) => (
                   <div key={index} className="flex items-center gap-2 text-slate-700">
-                    <Icon name={facility?.icon} size={16} color="#059669" />
+                    {(() => { const IconComponent = Icons[facility?.icon]; return <IconComponent size={16} color="#059669" />; })()}
                     <span className="text-sm">{facility?.label}</span>
                   </div>
                 ))}
@@ -621,7 +619,7 @@ const OfficeLocation = () => {
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3">
-                <Icon name="Phone" size={24} />
+                <Icons.Phone size={24} />
               </div>
               <h4 className="font-semibold mb-1">Telefone</h4>
               <p className="text-indigo-100">(66) 99911-1314</p>
@@ -629,7 +627,7 @@ const OfficeLocation = () => {
             
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3">
-                <Icon name="Mail" size={24} />
+                <Icons.Mail size={24} />
               </div>
               <h4 className="font-semibold mb-1">E-mail</h4>
               <p className="text-indigo-100">contato@marcelobaia.adv.br</p>
@@ -637,7 +635,7 @@ const OfficeLocation = () => {
             
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3">
-                <Icon name="MessageCircle" size={24} />
+                <Icons.MessageCircle size={24} />
               </div>
               <h4 className="font-semibold mb-1">WhatsApp</h4>
               <p className="text-indigo-100">WhatsApp 24h por dia, 7 dias por semana.</p>
@@ -829,7 +827,7 @@ const ConsultationPrep = () => {
               <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
-                    <Icon name={item?.icon} size={24} color="#4f46e5" />
+                    {(() => { const IconComponent = Icons[item?.icon]; return <IconComponent size={24} color="#4f46e5" />; })()}
                   </div>
                   <div className="flex-1">
                     <h3 className="font-lora text-xl font-bold text-slate-900 mb-2">
@@ -841,7 +839,7 @@ const ConsultationPrep = () => {
                     <ul className="space-y-2">
                       {item?.items?.map((listItem, itemIndex) => (
                         <li key={itemIndex} className="flex items-start gap-2 text-sm text-slate-700">
-                          <Icon name="Check" size={16} color="#059669" className="flex-shrink-0 mt-0.5" />
+                          <Icons.Check size={16} color="#059669" className="flex-shrink-0 mt-0.5" />
                           <span>{listItem}</span>
                         </li>
                       ))}
@@ -882,7 +880,7 @@ const ConsultationPrep = () => {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {consultation?.includes?.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex items-start gap-2">
-                      <Icon name="CheckCircle" size={16} color="currentColor" className="flex-shrink-0 mt-0.5 opacity-70" />
+                      <Icons.CheckCircle size={16} color="currentColor" className="flex-shrink-0 mt-0.5 opacity-70" />
                       <span className="text-sm">{item}</span>
                     </div>
                   ))}
@@ -896,7 +894,7 @@ const ConsultationPrep = () => {
         {activeTab === 'emergency' && (
           <div className="space-y-6">
             <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-6 text-center">
-              <Icon name="AlertTriangle" size={32} color="#dc2626" className="mx-auto mb-4" />
+              <Icons.AlertTriangle size={32} color="#dc2626" className="mx-auto mb-4" />
               <h3 className="font-lora text-xl font-bold text-red-800 mb-2">
                 Protocolo de Emergência
               </h3>
@@ -910,7 +908,7 @@ const ConsultationPrep = () => {
               {emergencyProtocol?.map((protocol, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 border border-slate-200">
                   <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
-                    <Icon name="AlertCircle" size={18} color="#dc2626" />
+                    <Icons.AlertCircle size={18} color="#dc2626" />
                     {protocol?.situation}
                   </h4>
                   <div className="space-y-2 text-sm">
@@ -933,24 +931,24 @@ const ConsultationPrep = () => {
 
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
               <h4 className="font-bold text-amber-800 mb-3 flex items-center gap-2">
-                <Icon name="Info" size={18} />
+                <Icons.Info size={18} />
                 Importante Lembrar
               </h4>
               <ul className="space-y-2 text-sm text-amber-700">
                 <li className="flex items-start gap-2">
-                  <Icon name="Check" size={16} className="flex-shrink-0 mt-0.5" />
+                  <Icons.Check size={16} className="flex-shrink-0 mt-0.5" />
                   <span>Mantenha a calma e não tome decisões precipitadas</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Icon name="Check" size={16} className="flex-shrink-0 mt-0.5" />
+                  <Icons.Check size={16} className="flex-shrink-0 mt-0.5" />
                   <span>Preserve todos os documentos e evidências</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Icon name="Check" size={16} className="flex-shrink-0 mt-0.5" />
+                  <Icons.Check size={16} className="flex-shrink-0 mt-0.5" />
                   <span>Não assine nada sem orientação jurídica</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Icon name="Check" size={16} className="flex-shrink-0 mt-0.5" />
+                  <Icons.Check size={16} className="flex-shrink-0 mt-0.5" />
                   <span>Anote detalhes importantes enquanto estão frescos na memória</span>
                 </li>
               </ul>
@@ -1040,9 +1038,9 @@ const TrustSignals = () => {
 
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, index) => (
-      <Icon
+      <Icons.Star
         key={index}
-        name="Star"
+        
         size={16}
         color={index < rating ? "#f59e0b" : "#e5e7eb"}
         className={index < rating ? "fill-current" : ""}
@@ -1067,7 +1065,7 @@ const TrustSignals = () => {
             {credentials?.map((credential, index) => (
               <div key={index} className="text-center p-6 bg-slate-50 rounded-2xl hover:bg-slate-100 transition-colors">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
-                  <Icon name={credential?.icon} size={28} color="#4f46e5" />
+                  {(() => { const IconComponent = Icons[credential?.icon]; return <IconComponent size={28} color="#4f46e5" />; })()}
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">
                   {credential?.title}
@@ -1096,7 +1094,7 @@ const TrustSignals = () => {
             {commitments?.map((commitment, index) => (
               <div key={index} className="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl">
                 <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                  <Icon name={commitment?.icon} size={24} color="#059669" />
+                  {(() => { const IconComponent = Icons[commitment?.icon]; return <IconComponent size={24} color="#059669" />; })()}
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-2">
@@ -1127,11 +1125,11 @@ const TrustSignals = () => {
             {testimonials?.map((testimonial, index) => (
               <div key={index} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-4 mb-4">
-                  <Image
+                  <img
                     src={testimonial?.avatar}
                     alt={`Foto de ${testimonial?.name}`}
                     className="w-12 h-12 rounded-full object-cover"
-                  />
+                   onError={(e) => { e.target.src = '/assets/images/no_image.png'; }} />
                   <div>
                     <h4 className="font-bold text-slate-900">
                       {testimonial?.name}
@@ -1155,7 +1153,7 @@ const TrustSignals = () => {
 
           <div className="mt-12 text-center">
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-green-50 text-green-800 rounded-full">
-              <Icon name="Shield" size={18} />
+              <Icons.Shield size={18} />
               <span className="font-medium">
                 Todos os depoimentos são de clientes reais e foram autorizados para publicação
               </span>

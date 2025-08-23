@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/ui/Header';
-import Icon from '@/components/AppIcon';
+import * as Icons from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Footer from '@/components/ui/Footer';
@@ -19,7 +19,7 @@ const SearchBar = ({ searchTerm, onSearchChange, onClearSearch }) => {
           className="pl-12 pr-12 py-4 text-base"
         />
         <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-text-secondary">
-          <Icon name="Search" size={20} />
+          <Icons.Search size={20} />
         </div>
         {searchTerm && (
           <button
@@ -27,7 +27,7 @@ const SearchBar = ({ searchTerm, onSearchChange, onClearSearch }) => {
             className="absolute right-4 top-1/2 transform -translate-y-1/2 text-text-secondary hover:text-text-primary transition-colors duration-200"
             aria-label="Limpar busca"
           >
-            <Icon name="X" size={20} />
+            <Icons.X size={20} />
           </button>
         )}
       </div>
@@ -55,7 +55,7 @@ const CategoryFilter = ({ categories, activeCategory, onCategoryChange }) => {
               : 'bg-white text-text-primary hover:bg-accent/10 hover:text-brand-accent border border-border'
           }`}
         >
-          <Icon name={category?.icon} size={18} />
+          {(() => { const IconComponent = Icons[category?.icon]; return <IconComponent size={18} />; })()}
           <span>{category?.name}</span>
           <span className={`text-xs px-2 py-1 rounded-full ${
             activeCategory === category?.id
@@ -107,7 +107,7 @@ const FAQAccordion = ({ faqs, searchTerm }) => {
     return (
       <div className="text-center py-12">
         <div className="w-16 h-16 mx-auto mb-4 bg-muted rounded-full flex items-center justify-center">
-          <Icon name="Search" size={24} className="text-text-secondary" />
+          <Icons.Search size={24} className="text-text-secondary" />
         </div>
         <h3 className="font-lora font-semibold text-lg text-text-primary mb-2">
           Nenhuma pergunta encontrada
@@ -145,17 +145,16 @@ const FAQAccordion = ({ faqs, searchTerm }) => {
               </h3>
               {faq?.isPopular && (
                 <span className="inline-flex items-center space-x-1 text-xs font-medium text-brand-accent bg-accent/10 px-2 py-1 rounded-full">
-                  <Icon name="TrendingUp" size={12} />
+                  <Icons.TrendingUp size={12} />
                   <span>Popular</span>
                 </span>
               )}
             </div>
             <div className="flex-shrink-0">
-              <Icon
-                name={openItems?.has(faq?.id) ? "ChevronUp" : "ChevronDown"}
+              {(() => { const IconComponent = Icons[openItems?.has(faq?.id) ? "ChevronUp" : "ChevronDown"]; return <IconComponent
                 size={20}
                 className="text-text-secondary transition-transform duration-200"
-              />
+              />; })()}
             </div>
           </button>
           
@@ -225,7 +224,7 @@ const PopularQuestions = ({ questions, onQuestionClick }) => {
     <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-6 lg:p-8 text-white">
       <div className="flex items-center space-x-3 mb-6">
         <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-          <Icon name="TrendingUp" size={20} />
+          <Icons.TrendingUp size={20} />
         </div>
         <div>
           <h3 className="font-lora font-semibold text-xl">Perguntas Mais Frequentes</h3>
@@ -250,8 +249,7 @@ const PopularQuestions = ({ questions, onQuestionClick }) => {
                 {question?.category}
               </p>
             </div>
-            <Icon 
-              name="ArrowRight" 
+            <Icons.ArrowRight 
               size={16} 
               className="text-white/60 group-hover:text-white/80 group-hover:translate-x-1 transition-all duration-200" 
             />
@@ -306,7 +304,7 @@ const ContactCTA = () => {
     return (
       <div className="bg-white rounded-2xl border border-border shadow-lg p-8 text-center">
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <Icon name="CheckCircle" size={24} className="text-green-600" />
+          <Icons.CheckCircle size={24} className="text-green-600" />
         </div>
         <h3 className="font-lora font-semibold text-xl text-text-primary mb-2">
           Pergunta Enviada!
@@ -323,7 +321,7 @@ const ContactCTA = () => {
       <div className="bg-gradient-to-r from-brand-primary to-brand-secondary p-6 lg:p-8 text-white">
         <div className="flex items-center space-x-3 mb-4">
           <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-            <Icon name="HelpCircle" size={20} />
+            <Icons.HelpCircle size={20} />
           </div>
           <div>
             <h3 className="font-lora font-semibold text-xl">Precisa de outras orientações?</h3>
@@ -396,7 +394,7 @@ const ContactCTA = () => {
             <div className="space-y-4">
               <div className="flex items-start space-x-4 p-4 bg-muted/30 rounded-lg">
                 <div className="w-10 h-10 bg-brand-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon name="MessageCircle" size={20} className="text-brand-accent" />
+                  <Icons.MessageCircle size={20} className="text-brand-accent" />
                 </div>
                 <div className="flex-1">
                   <h5 className="font-inter font-medium text-text-primary mb-1">WhatsApp</h5>
@@ -418,7 +416,7 @@ const ContactCTA = () => {
               
               <div className="flex items-start space-x-4 p-4 bg-muted/30 rounded-lg">
                 <div className="w-10 h-10 bg-brand-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon name="Phone" size={20} className="text-brand-accent" />
+                  <Icons.Phone size={20} className="text-brand-accent" />
                 </div>
                 <div className="flex-1">
                   <h5 className="font-inter font-medium text-text-primary mb-1">Telefone</h5>
@@ -440,7 +438,7 @@ const ContactCTA = () => {
               
               <div className="flex items-start space-x-4 p-4 bg-muted/30 rounded-lg">
                 <div className="w-10 h-10 bg-brand-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon name="Calendar" size={20} className="text-brand-accent" />
+                  <Icons.Calendar size={20} className="text-brand-accent" />
                 </div>
                 <div className="flex-1">
                   <h5 className="font-inter font-medium text-text-primary mb-1">Consulta Presencial</h5>
@@ -685,7 +683,7 @@ const PerguntasFrequentes = () => {
             <div className="text-center text-white">
               <div className="flex items-center justify-center space-x-3 mb-6">
                 <div className="w-12 h-12 lg:w-16 lg:h-16 bg-white/20 rounded-xl flex items-center justify-center">
-                  <Icon name="HelpCircle" size={28} />
+                  <Icons.HelpCircle size={28} />
                 </div>
                 <div className="text-left">
                   <h1 className="font-lora font-bold text-3xl lg:text-5xl leading-tight">
@@ -769,7 +767,7 @@ const PerguntasFrequentes = () => {
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-brand-accent/10 rounded-lg flex items-center justify-center">
-                        <Icon name="FileText" size={16} className="text-brand-accent" />
+                        <Icons.FileText size={16} className="text-brand-accent" />
                       </div>
                       <div>
                         <p className="font-inter font-medium text-text-primary">{faqData?.length} Perguntas</p>
@@ -779,7 +777,7 @@ const PerguntasFrequentes = () => {
                     
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-brand-accent/10 rounded-lg flex items-center justify-center">
-                        <Icon name="Clock" size={16} className="text-brand-accent" />
+                        <Icons.Clock size={16} className="text-brand-accent" />
                       </div>
                       <div>
                         <p className="font-inter font-medium text-text-primary">24h</p>
@@ -789,7 +787,7 @@ const PerguntasFrequentes = () => {
                     
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-brand-accent/10 rounded-lg flex items-center justify-center">
-                        <Icon name="Users" size={16} className="text-brand-accent" />
+                        <Icons.Users size={16} className="text-brand-accent" />
                       </div>
                       <div>
                         <p className="font-inter font-medium text-text-primary">500+</p>
@@ -816,11 +814,11 @@ const PerguntasFrequentes = () => {
                         href={area?.url}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted/30 transition-colors duration-200 group"
                       >
-                        <Icon name={area?.icon} size={16} className="text-brand-accent" />
+                        {(() => { const IconComponent = Icons[area?.icon]; return <IconComponent size={16} className="text-brand-accent" />; })()}
                         <span className="text-text-primary font-inter text-sm group-hover:text-brand-accent transition-colors duration-200">
                           {area?.name}
                         </span>
-                        <Icon name="ArrowRight" size={14} className="text-text-secondary group-hover:text-brand-accent group-hover:translate-x-1 transition-all duration-200 ml-auto" />
+                        <Icons.ArrowRight size={14} className="text-text-secondary group-hover:text-brand-accent group-hover:translate-x-1 transition-all duration-200 ml-auto" />
                       </a>
                     ))}
                   </div>
@@ -841,7 +839,7 @@ const PerguntasFrequentes = () => {
         <section className="py-12 lg:py-16 bg-gradient-to-r from-brand-primary to-brand-secondary">
           <div className="max-w-4xl mx-auto px-4 lg:px-6 text-center text-white">
             <div className="mb-6">
-              <Icon name="MessageCircle" size={48} className="mx-auto mb-4 opacity-80" />
+              <Icons.MessageCircle size={48} className="mx-auto mb-4 opacity-80" />
               <h2 className="font-lora font-bold text-2xl lg:text-3xl mb-4">
                 Ainda tem dúvidas?
               </h2>
@@ -856,7 +854,7 @@ const PerguntasFrequentes = () => {
                 onClick={() => window.open('https://wa.me/5566999111314', '_blank')}
                 className="flex items-center justify-center space-x-3 px-8 py-4 bg-white text-brand-primary rounded-xl font-inter font-semibold hover:bg-white/90 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                <Icon name="MessageCircle" size={20} />
+                <Icons.MessageCircle size={20} />
                 <span>Conversar no WhatsApp</span>
               </button>
               
@@ -864,7 +862,7 @@ const PerguntasFrequentes = () => {
                 onClick={() => window.location.href = 'tel:+5566999111314'}
                 className="flex items-center justify-center space-x-3 px-8 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-inter font-semibold hover:bg-white/20 transition-all duration-300"
               >
-                <Icon name="Phone" size={20} />
+                <Icons.Phone size={20} />
                 <span>Ligar Agora</span>
               </button>
             </div>

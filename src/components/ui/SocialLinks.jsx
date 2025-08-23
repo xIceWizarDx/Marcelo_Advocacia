@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../AppIcon';
+import * as Icons from 'lucide-react';
 
 const SocialLinks = ({ className = '', iconClassName = 'text-slate-400 hover:text-white' }) => {
   const links = [
@@ -20,7 +20,7 @@ const SocialLinks = ({ className = '', iconClassName = 'text-slate-400 hover:tex
           aria-label={link.label}
           className={`flex h-5 w-5 items-center justify-center ${iconClassName}`}
         >
-          <Icon name={link.icon} size={18} strokeWidth={1.25} />
+          {(() => { const IconComponent = Icons[link.icon]; return <IconComponent size={18} strokeWidth={1.25} />; })()}
         </a>
       ))}
     </div>
