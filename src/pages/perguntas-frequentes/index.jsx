@@ -1,13 +1,472 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
-import Header from '../../components/ui/Header';
-import SearchBar from './components/SearchBar';
-import CategoryFilter from './components/CategoryFilter';
-import FAQAccordion from './components/FAQAccordion';
-import PopularQuestions from './components/PopularQuestions';
-import ContactCTA from './components/ContactCTA';
-import Icon from '../../components/AppIcon';
-import Footer from '../../components/ui/Footer';
+import Header from '@/components/ui/Header';
+import Icon from '@/components/AppIcon';
+import Button from '@/components/ui/Button';
+import Input from '@/components/ui/Input';
+import Footer from '@/components/ui/Footer';
+
+
+const SearchBar = ({ searchTerm, onSearchChange, onClearSearch }) => {
+  return (
+    <div className="relative max-w-2xl mx-auto">
+      <div className="relative">
+        <Input
+          type="search"
+          placeholder="Busque por palavras-chave, área de atuação ou tipo de processo..."
+          value={searchTerm}
+          onChange={(e) => onSearchChange(e?.target?.value)}
+          className="pl-12 pr-12 py-4 text-base"
+        />
+        <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-text-secondary">
+          <Icon name="Search" size={20} />
+        </div>
+        {searchTerm && (
+          <button
+            onClick={onClearSearch}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-text-secondary hover:text-text-primary transition-colors duration-200"
+            aria-label="Limpar busca"
+          >
+            <Icon name="X" size={20} />
+          </button>
+        )}
+      </div>
+      {searchTerm && (
+        <p className="mt-2 text-sm text-text-secondary text-center">
+          Buscando por: <span className="font-medium text-text-primary">"{searchTerm}"</span>
+        </p>
+      )}
+    </div>
+  );
+};
+
+
+
+const CategoryFilter = ({ categories, activeCategory, onCategoryChange }) => {
+  return (
+    <div className="flex flex-wrap justify-center gap-2 lg:gap-3">
+      {categories?.map((category) => (
+        <button
+          key={category?.id}
+          onClick={() => onCategoryChange(category?.id)}
+          className={`flex items-center space-x-2 px-4 py-2 lg:px-6 lg:py-3 rounded-full font-inter font-medium text-sm lg:text-base transition-all duration-300 ${
+            activeCategory === category?.id
+              ? 'bg-brand-accent text-white shadow-md'
+              : 'bg-white text-text-primary hover:bg-accent/10 hover:text-brand-accent border border-border'
+          }`}
+        >
+          <Icon name={category?.icon} size={18} />
+          <span>{category?.name}</span>
+          <span className={`text-xs px-2 py-1 rounded-full ${
+            activeCategory === category?.id
+              ? 'bg-white/20 text-white' :'bg-muted text-text-secondary'
+          }`}>
+            {category?.count}
+          </span>
+        </button>
+      ))}
+    </div>
+  );
+};
+
+
+
+const FAQAccordion = ({ faqs, searchTerm }) => {
+  const [openItems, setOpenItems] = useState(new Set());
+
+  const toggleItem = (id) => {
+    const newOpenItems = new Set(openItems);
+    if (newOpenItems?.has(id)) {
+      newOpenItems?.delete(id);
+    } else {
+      newOpenItems?.add(id);
+    }
+    setOpenItems(newOpenItems);
+  };
+
+  const highlightText = (text, searchTerm) => {
+    if (!searchTerm) return text;
+    
+    const regex = new RegExp(`(${searchTerm})`, 'gi');
+    const parts = text?.split(regex);
+    
+    return parts?.map((part, index) => 
+      regex?.test(part) ? (
+        <mark key={index} className="bg-yellow-200 text-text-primary px-1 rounded">
+          {part}
+        </mark>
+      ) : part
+    );
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/5566999111314', '_blank');
+  };
+
+  if (faqs?.length === 0) {
+    return (
+      <div className="text-center py-12">
+        <div className="w-16 h-16 mx-auto mb-4 bg-muted rounded-full flex items-center justify-center">
+          <Icon name="Search" size={24} className="text-text-secondary" />
+        </div>
+        <h3 className="font-lora font-semibold text-lg text-text-primary mb-2">
+          Nenhuma pergunta encontrada
+        </h3>
+        <p className="text-text-secondary mb-6">
+          Não encontramos perguntas que correspondam à sua busca.
+        </p>
+        <Button
+          variant="outline"
+          onClick={handleWhatsAppClick}
+          iconName="MessageCircle"
+          iconPosition="left"
+        >
+          Fazer Pergunta Personalizada
+        </Button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      {faqs?.map((faq) => (
+        <div
+          key={faq?.id}
+          className="bg-white rounded-xl border border-border shadow-sm hover:shadow-md transition-all duration-300"
+        >
+          <button
+            onClick={() => toggleItem(faq?.id)}
+            className="w-full px-6 py-5 text-left flex items-start justify-between hover:bg-muted/30 transition-colors duration-200 rounded-xl"
+            aria-expanded={openItems?.has(faq?.id)}
+          >
+            <div className="flex-1 pr-4">
+              <h3 className="font-lora font-semibold text-lg text-text-primary mb-1">
+                {highlightText(faq?.question, searchTerm)}
+              </h3>
+              {faq?.isPopular && (
+                <span className="inline-flex items-center space-x-1 text-xs font-medium text-brand-accent bg-accent/10 px-2 py-1 rounded-full">
+                  <Icon name="TrendingUp" size={12} />
+                  <span>Popular</span>
+                </span>
+              )}
+            </div>
+            <div className="flex-shrink-0">
+              <Icon
+                name={openItems?.has(faq?.id) ? "ChevronUp" : "ChevronDown"}
+                size={20}
+                className="text-text-secondary transition-transform duration-200"
+              />
+            </div>
+          </button>
+          
+          {openItems?.has(faq?.id) && (
+            <div className="px-6 pb-6 border-t border-border/50">
+              <div className="pt-4">
+                <div className="prose prose-slate max-w-none">
+                  <p className="text-text-primary leading-relaxed mb-4">
+                    {highlightText(faq?.answer, searchTerm)}
+                  </p>
+                </div>
+                
+                {faq?.relatedLinks && faq?.relatedLinks?.length > 0 && (
+                  <div className="mt-4 p-4 bg-muted/30 rounded-lg">
+                    <h4 className="font-inter font-medium text-sm text-text-primary mb-2">
+                      Conteúdo Relacionado:
+                    </h4>
+                    <div className="space-y-1">
+                      {faq?.relatedLinks?.map((link, index) => (
+                        <a
+                          key={index}
+                          href={link?.url}
+                          className="block text-sm text-brand-accent hover:text-brand-accent/80 underline-animation"
+                        >
+                          {link?.title}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-4 border-t border-border/30">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleWhatsAppClick}
+                    iconName="MessageCircle"
+                    iconPosition="left"
+                    className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
+                  >
+                    Conversar sobre isso
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => window.location.href = 'tel:+5566999111314'}
+                    iconName="Phone"
+                    iconPosition="left"
+                    className="text-text-secondary hover:text-brand-accent"
+                  >
+                    (66) 99911-1314
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+
+
+const PopularQuestions = ({ questions, onQuestionClick }) => {
+  return (
+    <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-6 lg:p-8 text-white">
+      <div className="flex items-center space-x-3 mb-6">
+        <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+          <Icon name="TrendingUp" size={20} />
+        </div>
+        <div>
+          <h3 className="font-lora font-semibold text-xl">Perguntas Mais Frequentes</h3>
+          <p className="text-white/80 text-sm">As dúvidas mais comuns dos nossos clientes</p>
+        </div>
+      </div>
+      <div className="grid gap-3">
+        {questions?.map((question, index) => (
+          <button
+            key={question?.id}
+            onClick={() => onQuestionClick(question?.id)}
+            className="flex items-start space-x-4 p-4 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-300 text-left group"
+          >
+            <div className="flex-shrink-0 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm font-semibold">
+              {index + 1}
+            </div>
+            <div className="flex-1">
+              <h4 className="font-inter font-medium text-white group-hover:text-white/90 transition-colors duration-200">
+                {question?.question}
+              </h4>
+              <p className="text-white/70 text-sm mt-1">
+                {question?.category}
+              </p>
+            </div>
+            <Icon 
+              name="ArrowRight" 
+              size={16} 
+              className="text-white/60 group-hover:text-white/80 group-hover:translate-x-1 transition-all duration-200" 
+            />
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
+
+const ContactCTA = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    question: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e?.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e?.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({ name: '', email: '', question: '' });
+    }, 3000);
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/5566999111314', '_blank');
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="bg-white rounded-2xl border border-border shadow-lg p-8 text-center">
+        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <Icon name="CheckCircle" size={24} className="text-green-600" />
+        </div>
+        <h3 className="font-lora font-semibold text-xl text-text-primary mb-2">
+          Pergunta Enviada!
+        </h3>
+        <p className="text-text-secondary">
+          Recebemos sua pergunta e responderemos em breve por email.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-white rounded-2xl border border-border shadow-lg overflow-hidden">
+      <div className="bg-gradient-to-r from-brand-primary to-brand-secondary p-6 lg:p-8 text-white">
+        <div className="flex items-center space-x-3 mb-4">
+          <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+            <Icon name="HelpCircle" size={20} />
+          </div>
+          <div>
+            <h3 className="font-lora font-semibold text-xl">Precisa de outras orientações?</h3>
+            <p className="text-white/80 text-sm">Envie sua pergunta ou entre em contato diretamente</p>
+          </div>
+        </div>
+      </div>
+      <div className="p-6 lg:p-8">
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Contact Form */}
+          <div>
+            <h4 className="font-inter font-semibold text-lg text-text-primary mb-4">
+              Envie sua pergunta
+            </h4>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <Input
+                label="Nome completo"
+                type="text"
+                name="name"
+                value={formData?.name}
+                onChange={handleInputChange}
+                placeholder="Seu nome"
+                required
+              />
+              
+              <Input
+                label="Email"
+                type="email"
+                name="email"
+                value={formData?.email}
+                onChange={handleInputChange}
+                placeholder="seu@email.com"
+                required
+              />
+              
+              <div>
+                <label className="block text-sm font-medium text-text-primary mb-2">
+                  Sua pergunta
+                </label>
+                <textarea
+                  name="question"
+                  value={formData?.question}
+                  onChange={handleInputChange}
+                  placeholder="Descreva sua dúvida jurídica..."
+                  rows={4}
+                  required
+                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent resize-none"
+                />
+              </div>
+              
+              <Button
+                type="submit"
+                variant="default"
+                loading={isSubmitting}
+                iconName="Send"
+                iconPosition="left"
+                fullWidth
+                className="bg-brand-accent hover:bg-brand-accent/90"
+              >
+                {isSubmitting ? 'Enviando...' : 'Enviar Pergunta'}
+              </Button>
+            </form>
+          </div>
+          
+          {/* Direct Contact */}
+          <div>
+            <h4 className="font-inter font-semibold text-lg text-text-primary mb-4">
+              Contato direto
+            </h4>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-4 p-4 bg-muted/30 rounded-lg">
+                <div className="w-10 h-10 bg-brand-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Icon name="MessageCircle" size={20} className="text-brand-accent" />
+                </div>
+                <div className="flex-1">
+                  <h5 className="font-inter font-medium text-text-primary mb-1">WhatsApp</h5>
+                  <p className="text-text-secondary text-sm mb-3">
+                    Resposta rápida e atendimento personalizado
+                  </p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleWhatsAppClick}
+                    iconName="ExternalLink"
+                    iconPosition="right"
+                    className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
+                  >
+                    Conversar agora
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4 p-4 bg-muted/30 rounded-lg">
+                <div className="w-10 h-10 bg-brand-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Icon name="Phone" size={20} className="text-brand-accent" />
+                </div>
+                <div className="flex-1">
+                  <h5 className="font-inter font-medium text-text-primary mb-1">Telefone</h5>
+                  <p className="text-text-secondary text-sm mb-3">
+                    Atendimento presencial mediante agendamento. Atendimento por telefone entre as 7:00h e 17:00h de segunda-feira à sexta-feira e via WhatsApp 24h por dia 7 dias por semana.
+                  </p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => window.location.href = 'tel:+5566999111314'}
+                    iconName="Phone"
+                    iconPosition="left"
+                    className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
+                  >
+                    (66) 99911-1314
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4 p-4 bg-muted/30 rounded-lg">
+                <div className="w-10 h-10 bg-brand-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Icon name="Calendar" size={20} className="text-brand-accent" />
+                </div>
+                <div className="flex-1">
+                  <h5 className="font-inter font-medium text-text-primary mb-1">Consulta Presencial</h5>
+                  <p className="text-text-secondary text-sm mb-3">
+                    Agende seu atendimento em nosso escritório
+                  </p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => window.location.href = '/contato-consulta'}
+                    iconName="MapPin"
+                    iconPosition="left"
+                    className="text-brand-accent border-brand-accent hover:bg-brand-accent hover:text-white"
+                  >
+                    Agendar atendimento
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 const PerguntasFrequentes = () => {
   const [searchTerm, setSearchTerm] = useState('');

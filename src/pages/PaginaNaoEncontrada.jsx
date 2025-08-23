@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Button from 'components/ui/Button';
-import Icon from 'components/AppIcon';
-import Footer from 'components/ui/Footer';
+import Button from '@/components/ui/Button';
+import Icon from '@/components/AppIcon';
+import Footer from '@/components/ui/Footer';
 
 const PaginaNaoEncontrada = () => {
   const navigate = useNavigate();
